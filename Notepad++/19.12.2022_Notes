@@ -1,0 +1,17 @@
+ITR6 23-24 development issues
+Import Generate is not done now - They are sharing the Schema
+CFL - A Validation is dependent on 170 but cannot tell which field they are referring to
+
+
+OS, SI, 112 and 115 Skipped
+tds is for last
+
+ITR6 Status Tracker SI is not made -> Whoever made the tracker needs to add it (SI Efiling)
+os and si status pending to be added in tracker file
+Import and generate is pending for all 
+and especially TDS
+
+First check whether any field is empty - On validation
+then check validity of all the values - On validation (required will be called on change)
+
+Grey and green validations

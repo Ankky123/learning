@@ -1,0 +1,1017 @@
+ITR1 Enhancements with Ankit
+SIT-71586 -> Updated
+SIT-66332 -> Duplicate
+SIT-62419 -> Updated
+SIT-62420 -> Updated
+SIT-62422 -> Updated
+SIT-62425 -> Updated
+SIT-62427 -> Updated
+SIT-62511 -> Updated
+SIT-62430 -> Already working as expected
+SIT-62577 -> Updated
+SIT-62364 -> Already working as expected
+SIT-62346 -> Updated
+SIT-62516 -> Updated
+BA -> SIT-62489 -> The updated requirement is invalid (Primary v/s Secondary) (HP -> type of HP)
+BA -> SIT-62583 -> Mapping logic is still missing, (Primary v/s Secondary) (Select account for credit) requesting BA/prefill technical team to provide proper mapping logic for import.
+BA -> SIT-62582 -> Updated -> Discussion Required -> (Logic column issue) Since required logic is updated in Prefill Source column, it will create issues, can't accept such clarification
+BA -> SIT-62357 -> Updated -> Discussion Required -> (First time filing flag??) -> Prefill Source Column is not for ADP reference as per discussions with prefill team, this is Infy's internal mapping.
+						ADP would require a logic in the prefill json field based on the schema fields. But a comment is provided, based on which incomplete prefill can be done.
+	Since the Prefill Source/Logic column is not for specific offline util reference by ADP, it would be great if the prefill import logic is provided in a new column or in the primary
+	Prefill json field
+
+Rishabh
+SIT-62438
+SIT-62492
+SIT-63336
+
+To get the requirement document for the "Show computation" fields -> Done
+Need a generic requirement document -> Done
+PFA/DEF to check-in for ITR7 RA -> Done
+ITR4 V2 RA to prepare -> Done
+
+To request SRS and change document for the latest prefill -> Awaiting from Sanket
+P1. Enhancements to do in ITR1 -> Done
+P2. AY 21-22 meeting to schedule -> Done
+P3. The small work for copying the fieldtypes/classes, seqID, groupID, directives into the elementID -> Done
+P4. ITR2, ITR3, ITR5(DPM) JIRA tickets (5) -> ITR2 and ITR3 have ETA today -> Rishabh to inform about the 2 long pending issues in ITR5 (Done at my end, Rishabh pending)
+	-> One discussion required for BP Issue -> Done
+P5. To put mail about 4 points in prefill enhancement after receipt of updated SRS.
+
+
+
+
+BP Table E issue of going blank -> Need to discuss with Rishabh
+
+
+
+
+To prepare birdeye view for the Auxilio tasks and completion using canvas
+To set the tasks and follow up using excel -> To set a meeting time for this
+	The database structure for the Salary is to be prepared
+	Finance module to start right after the leave module
+Go through the code for Auxilio server for better understanding
+Learn some of the important functions
+Learn about the clean architecture
+Learn about the Business rules difference
+
+
+
+
+HTML offline requirement by Friday 
+
+ITR1 -> Approved We are getting sporadic issues open even after approval
+ITR2 -> Pending for 2c -> Computation, confirmed testing but still getting sporadic open issues (Arun Sir will give) Thrusday afternoon
+ITR3 -> Should be approved but DPM is discussed to be implemented new (Base requirement is not correct) will go to support (who is responsible for 700 hours?) -> Madhu Agrawal
+ITR4 -> Approved
+ITR5 -> Require Approval -> Jay has not yet given approval for DPM-DOA
+ITR6 -> 28 issues are there
+ITR7 -> received computation closure (23 issues are there)
+
+-sc------------------------------------------
+ITR2 fixed tickets
+ITR3 fixed tickets, DPM-DOA
+ITR5 fixed tickets
+To be submitted by Thursday (ITR6 and ITR7)
+-------------------------------------------
+
+ITR6 ->
+VIA labels to update -> Done
+dd/mm/yyyy to clean -> Done
+CFL is not good looking -> Rishabh
+Prefill issue identified by Sanket -> Rishabh
+Testing team to identify any label issues pending in the latest build -> Sanket
+ITR6 proper testing before testing -> Sanket
+Minor bug in DPM Edit button
+
+
+SIT-67016 -> BA -> Not Applicable (Label should be removed)
+SIT-66735 -> BA -> Enhancement
+SIT-66626 -> BA -> Total will be shown up (an Enhancement)
+
+SIT-67436 -> Done
+SIT-66605 -> Done
+
+SIT-66159 -> Ankit (out of 4 points, 3 done, 1 point is remaining for Arun Sir)
+SIT-65602 -> Ankit  (DPM-DOA) -> Done
+
+SIT-72424 -> Arun Sir
+SIT-65981 -> Arun Sir
+SIT-66160 -> Arun Sir
+------------------------------------------
+
+ITR7 one formula is received from Dipika
+One discussion to hold with her
+------------------------------------------
+ITR5 has one interesting blocker (BP Table E)-> Rishabh
+ITR5 DPM Round off for decimal multiplication
+
+ITR6 BFLA issue (circular referencing??)
+
+115B income can be adjusted with -> same loss           and     remaining business loss
+                                    115B loss from CFL  and     (bus loss from CFL - (bus loss that is set off with (bus inc + spec inc + specif inc)) )
+)))
+for now, making for 115B as independent
+
+bus income can be adjusted with -> same CFL loss  and remaining 115B loss     
+                                   -> bus loss form CFL and (115B loss from CFL - (income of 115B ))
+)))
+looks like a circular reference 
+specul income can be adjusted with -> same CFL loss         and remaining business loss
+                                   -> specul loss form CFL  and (bus loss from CFL - (bus loss that is set off with bus inc )) 
+)))
+
+specif income can be adjusted with -> same CFL loss         and remaining business loss
+                                   -> specif loss form CFL  and (bus loss from CFL - (bus loss that is set off with (bus inc + specul inc))
+)))
+
+25.04.2024------------- Report-----------------------
+Base requirements approval status
+ITR2 approval -> Ayushi -> Agreed (As of now no initiaion)
+ITR3 approval -> No confirmation for approval -> Madhu to disuss with Riya -> ?? follow up with Sanket
+ITR5 approval -> No confirmation for approval, Pending for some test cases, by Friday JIRA logging will complete
+				 Then again we will send a build then what will happen?
+				 Jay to confirm with Riya
+				 Need to inform Jay that the AMT was causing us to block the development of ITR5 due to which computation development was stopped
+ITR6 approval -> ??
+ITR7 approval -> Next Tuesday retesting will complete after build submission, then "might" get approval -> Testing is complete, will receive approval after closure of the currently open/reopen JIRA tickets
+
+We do not want a testing closure approval, we want an approval for the base consistent requirement, this approval will not be dependent upon the current testing status
+
+system date issue in ITR5 - Done
+To discuss again with Jay and Rubi -> Mail Done
+ITR7 build generation -> Dipika -> Done
+Interest formulae to change json creation date to system date -> Done
+DPM-DOA Round Off -> Done
+fixed tickets for all ITRs that might have not gone to RTT to be resolved -> Ishita -> Done
+
+ITR7 JIRA tickets resolution -> Done
+LearnHTML/CSS
+----------------------------------------------
+ITR6 Remaining JIRA tickets
+SIT-66626 -> BA -> Total will be shown up (an Enhancement)
+SIT-66735 -> BA -> Enhancements
+
+SIT-72424 -> Arun Sir
+SIT-66160 -> Arun Sir
+SIT-66159 -> Arun Sir
+----------------------------------------------
+ITR7 Remaining JIRA tickets
+SIT-73362 -> Arun Sir
+SIT-73354 -> Arun Sir
+SIT-73130 -> Arun Sir
+SIT-73077 -> Arun Sir
+SIT-69095 -> Arun Sir
+
+SIT-65977 -> Ankit (Calculation)
+SIT-67892 -> Piyush (Updated implementation required -> Nested array) -> Piyush (to forward mail)
+
+SIT-65043 -> BA (Updated requirement) -> The UI part will be implemented in the UX enhancement build, functional working has been verified to make sure there are no blockers
+SIT-67681 -> BA (instead of warning message, to be implemented as i-message)
+----------------------------------------------
+Open/Reopen Computation tickets
+ITR2 -> 1 (SIT-73567)
+ITR5 -> 3 (SIT-66577, SIT-66467, SIT-66530)
+ITR6 -> 3 (SIT-72424, SIT-66160, SIT-66159)
+ITR7 -> 5 (SIT-73362, SIT-73354, SIT-73130, SIT-73077, SIT-69095)
+
+Please have a discussion with Sanket for clarity of which have to be done by you still
+
+Follow Ups
+Rishabh 	-> ITR7 tickets discussion
+Ishita 		-> The radio button issue in ITR5 -> Done
+Sanket 		-> The ITR4 blocker build issue of "Server Exception"
+			-> ITR6 computation issues
+			-> ITR7 computation issues
+Roshni		-> Prefill points to get clarified -> Ishita -> Done
+
+
+
+26.04.2024 Report------------------------------
+Online Utility Sanity (MOM 26.04.2024)
+	Manisha to explain us the workflow, 
+	ITRs to be divided between the devs as per their own development!!!
+	Ankit to identify the Diverse points for testing
+	UI -> By Dev team
+	Validation -> Testing team
+	Should look like offline Utility
+	Sanket to make a timeline for the online utility testing
+	Testers to be explained about how the testing is to be done by Manisha, Sanket, Ankit
+	Test PANs_SIT_UAT for ADP Team -> Path -> DE and Schema/Online Offline Utility Requirements/Test PANs_SIT_UAT for ADP Team
+
+To do 
+ITR7 interim build to be shared -> Done
+To identify the workflow for utility
+To get the testing status of shared builds for ITR6 23-24, ITR1 and ITR4 21-22 and 22-23 -> Requested
+Auxilio project PR
+get the change list for latest RA for ITR1, ITR2, ITR4 so that prior AY updated can be done
+DEF/PFA prior AY 3,5,6 -> To analyze the requirements and give an ETA
+Some change might be required in the ITR7 bankaccountdetails isAvailable condition
+Password change for VPN -> ADPTeam@1234
+
+createUIMapV2
+PriorAY Builds
+Ehnancements
+Need to check how git behaves when 3 different branches have 3 different folders inside a same folder
+
+Todo 29.04.2024-------------------------
+
+ITR7 AY23-24 build to be shared -> Get from Dipika
+Approvals status?? -> To put a mail
+Mail for the server exception issue? -> Seems resolved now
+ITR1 blocker issue at the validation page -> Done
+AY 22-23 -> SchemaVer to update -> Done
+
+
+ITR3 -> Approval -> DPM-DOA to implement (To put a mail since not an original requirement)
+ITR5 -> Approval -> After computation resolution and system date issue (Why the system date issue raised only recently?)
+
+
+DEF/PFA prior AY 3,5,6 -> To analyze the requirements and give an ETA
+To identify the workflow for utility
+To get the testing status of shared builds for ITR6 23-24, ITR1 and ITR4 21-22 and 22-23 -> 
+	ITR6 shared -> Done
+	PriorAY -> Builds reshared with testing team -> Awaiting confirmation -> Shared with Infy??
+Auxilio project PR
+get the change list for latest RA for ITR1, ITR2, ITR4 so that prior AY updated can be done -> To teach to Ishita, Satyaprakash, Sushil
+Some change might be required in the ITR7 bankaccountdetails isAvailable condition
+
+
+Todo 30.04.2024-------------------------
+ITR6 Prefill issue -> Done
+ITR6 code merge remaining -> Done -> Manisha will share one more build -> Sanket to test and share and mark RTT
+ITR3 DPM-DOA??
+ITR7 interim build to release -> Done -> Awaiting testing completion for compressed build ->......
+DEF-PFA ITR6 22-23 -> Seems some issue -> To check after the meeting -> Checked-in -> Done
+DEF-PFA ITR7 ?? Discussion with Rishabh -> To receive requirements from Rubi by EOD
+Mini documentation for local sanity instructions -> Done
+
+Auxilio project PR
+get the change list for latest RA for ITR1, ITR2, ITR4 so that prior AY updated can be done -> To teach to Ishita, Satyaprakash, Sushil
+Some change might be required in the ITR7 bankaccountdetails isAvailable condition
+
+
+
+
+We use two repositories 
+1. CreateUIMap
+2. E-Filing-Sandbox
+
+Steps
+1. Make sure the branch in the CreateUIMap is as per correct ay (master_ay)
+2. Pull the branch for its ay (if never done or if instructed to do so again)
+3. Pull the dev_merge
+4. Update the env.json file as per the type of work and proper folder location
+5. Make sure the RuleAuthors are in correct ay folder and updated
+6. Make sure the branch in the E-Filing-Sandbox is as per correct ay (internal_merge_sanity_ay)
+7. Pull the branch for its ay
+8. In CreateUIMap -> go run. ITRx
+9. In E-Filing-Sandbox -> npm start
+
+
+first update CreateUIMap as per the AY then pull dev_merge on it (first time users will need to pull master_ay before pulling dev_merge)
+
+Todo 01.05.2024-------------------------
+
+Followup
+ITR7 interim build to release -> Done -> Awaiting testing completion for compressed build -> Some failures, Dipika is notified. -> 
+DEF-PFA ITR7 ?? Discussion with Rishabh -> To receive requirements from Rubi by EOD -> Received
+ITR6 build shared -> Under Testing -> Can be shared?
+
+Todo
+Meeting for approvals with Infy -> On 2nd May -> Done
+ITR7 DEF/PFA Analysis
+To read links for PR Approval -> Done
+ITR7 Utility -> Awaiting Dipika's input -> Received -> Build is shared again -> Awaiting results -> Demoed
+
+Auxilio project PR -> Rishabh told something to do the PR -> To discuss with Rishabh -> One PR is approved, Aleena and Suraj will do a code pull and again raise a PR
+get the change list for latest RA for ITR1, ITR2, ITR4 so that prior AY updated can be done -> To teach to Ishita, Satyaprakash, Sushil -> Done
+Some change might be required in the ITR7 bankaccountdetails isAvailable condition -> To discuss with Manisha/Rishabh -> Done
+ITR7 issue as identified by Sanket -> Critical (Related to computation) (234A) (To get the difference between map service files -> The solution might not be accurate -> Reverted
+
+
+offline utility RA -> base for v2 (version)
+updated RA 
+
+Todo 03.05.2024-------------------------
+Follow up
+ITR7 23-24 Util -> Dipika is notified again for some failures as per demo -> Awaiting resolution
+ITR5 23-24 Util -> Computation resolution from Dipika -> ITR5 build to prepare
+
+Todo
+
+ITR5 AMT issue -> Not an issue, one array element must be present in the json being imported
+ITR3 DPM-DOA (to submit by 10th)
+ITR7 DEF/PFA Analysis -> Reconciliation and testing ->
+V2 and enhancements
+tickets discussion with BA ITR5, ITR6, ITR7
+
+Todo 03.05.2024-------------------------
+
+ITR3 DPM-DOA (to submit by 10th)
+ITR7 DEF/PFA Analysis -> Reconciliation and testing -> Done
+V2 and enhancements -> 
+tickets discussion with BA ITR5, ITR6, ITR7
+
+08.05.2024
+ITR3 DPM-DOA (to submit by 10th) -> Build can be made -> Beta submitted to Sanket
+V2 and enhancements -> 
+tickets discussion with BA ITR5, ITR6, ITR7
+Prior AY tickets resolution ITR1 and ITR4 AY 22-23
+Prior AY tickets resolution ITR1 and ITR4 AY 21-22
+ITR6 DEF/PFA one rule failure -> Need to schedule a meeting -> Mail Sent -> Done
+Prior AY DEF/PFA RAs to upload on drive, Utility RAs to upload on drive -> Done
+New issues are raised for Current AY 23-24
+ITR5 AMT issue of 2a to be checked
+Auxilio project PR
+
+Todo 09.05.2024-------------------------
+V2 and enhancements -> Ishita
+tickets discussion with BA ITR5, ITR6, ITR7
+Prior AY tickets resolution ITR1 and ITR4 AY 22-23 -> Ishita and Sushil
+Prior AY tickets resolution ITR1 and ITR4 AY 21-22 -> Ishita and Sushil
+Some points need to be discussed with Rishabh for Prior AY -> First I need to have a look there -> 2 points are discussed already -> Done
+Auxilio project PR -> Done (Comments and test are required in the next PRs)
+ITR5 AMT issue of 2a to be checked -> Done (No issue)
+ITR3 build to be shared
+ITR5 build to be shared
+Online Utility issue resolution
+front-end testing -> How testing should go for frontend -> Khyati's link will be used up to check the possibility
+back-end testing -> How is the testing going for the backend -> How the UI will react to the different kind of inputs by the backend
+	There are 2 types of testing here -> 1st is API end-point testing currently being done via postman -> It needs to be shifted to golang for automation
+									  -> 2nd is the business rules testing (that usually covers the edge cases) -> It is required to be done in golang test package
+
+
+
+
+
+
+Todo 20.05.2024-------------------------
+tickets discussion with BA ITR5, ITR6, ITR7
+Auxilio Project PR, front-end testng, back-end testing -> To discuss these
+ITR2 22-23 and 21-22 are under testing (400+ tickets) -> Expecting in 2 days -> Need to discuss with Sanket about how they are doing the division
+Online Utility issue resolution -> Manisha and Ishita
+ITR6 current AY tickets to be provided (3 days)
+
+Priority 
+ITR3 22-23 and 21-22 build to be shared for testing
+ITR5 22-23 (to check for sanity) and 21-22 to be prepared from scratch
+ITR2, ITR3, ITR5, ITR6 pending points to be discussed with BA before release
+
+Prior AY ITR5 Update Tips
+Critical Assumption -> If a change is mentioned, it is with respect to the AY 23-24 (for both the AYs -> 22-23 and 21-22)
+To delete an element from the RA if it is removed from the schema, this element will then be removed from everywhere else
+if change is mentioned, then make according to the provided sheet 
+error messages are to be done from the DE sheet
+In change sheet if change is done ->Green
+				if no change required -> yellow
+				if discussion required or pending for other reasons -> red
+Important Notes
+Schedule VDA is deleted
+To have a look at TCS -> Done
+To see if there is any change in the DPM/DOA for Prior AY wrt 23-24 in the change sheet
+
+
+Now implement the changes of the latest RA -> then look at the red points and schedule a discussion if required
+then move on to the 21-22
+
+1. 153C to be removed from PAG in ITR5
+2. Surcharge,234A, 234B, 234C, 234F will have to be looked by Arun Sir before Sending. (But this can be done after testing by Infy)
+3. 80G Eligible point is remaining from my side
+5. Error messages are pending on my side
+6. Testing team will check the error messages from where?
+Build is now ready to be built
+	ITR5 -> CFL Parents are to be changed
+
+
+Schema change implementation
+Date reduction
+
+ITR6 21-22 Important Notes
+5. DPM might need a relook due to new tags added ->Done
+6. ITR6 AY 23-24 is missing country name formula at many places, same is repeated in AY 22-23 and 21-22 -> This is a blocker -> Need to check if there was an RA issue -> No issue
+8. dd/mm/yyyy related changes are to be checked -> Done
+
+1. 153C to be removed from PAG in ITR6 -> Manisha
+2. Schedule VDA and IF are removed in ITR6
+3. Need to check if removing the TR commented code had some effect
+7. 139_8A and 170A are not put
+15. 80M for VIA -> Need to discuss with Ishita
+16. BTI Sr 12 formula might have issues in 23-24
+17. Surcharge will have to be looked upon by Arun Sir (change seems to be minor) -> Can be looked upon after Infy testing
+
+
+10. HP needs to be checked -> HP ifletOut Issue -> Sequencing issue identified -> Might need a check for SITs
+11. OS country list might need be checked -> No change required
+12. OS conditional enums are missing and need be added -> Later
+
+4. Ankit and Rishabh will need to look at the TPSA -> Array into static object -> Pending due to insufficient requirements
+9. AMTC and CFL need to be checked in the UI -> Done
+
+13. SI need be tested and updated -> This might need some discussion
+14. 80G PAN Duplicate is not done yet -> Done
+18. 80GGA PAN and date, eligible amount conditions is pending
+
+Pending due to insufficient requirements, 
+Pending due to implementation in enhancement (139_8A)
+
+what about 170??
+
+26.05.2024
+21-22 -> to remove the schedules from build, to resove the blockers -> Done
+
+21-22 two issues to be tackled
+	1 in ITR3 234c
+	1 in ITR4 
+
+
+E_Blocklist for block elements is not working (add and delete button)
+R_List is not showing add button option (there is not entry in the json)
+RadioButton is not saving in the CG (amount deemed Sr.6)
+
+atob wrapper is required for enhancement build
+ITR4 enhancements and v2 to complete
+
+
+There should be two different Rule Authors, 
+	One for Validations
+	One for UI -> Where each page will have separate sheet
+
+
+Issues identified for ITR4 UI
+E_R_Table?? -> Issue in BP -> Table editing page labels not showing
+CollapsibleDisplay??
+
+Contact -> Editing page, we want two fields in one row but only 1 is coming -> Not an issue
+B1. Income from Salary (Need space below) -> Done
+Type of house property issue rowfield in NE and clubbed in editing -> rowfield -> Done
+hr on NE but not in Editing ->hr-top-ne -> Done
+80G -> Left alignment -> Already done
+	-> Fields required on NE but not on Default -> Done
+
+OS -> Amount field to shift to right -> In Progress
+Default dropdown is not coming in E_dropdown (total deductions 80DD) -> In Progress
+parentArray formulae are not working for allowances exempt -> In Progress
+How to shift the amount field to last in allowance in salary -> In Progress
+
+Should we give total on TDS? -> Only if Infy requests
+Total Taxes Paid -> Show calculation not coming
+
+ITR1 issues
+Show Computation Labels for tax and 234a
+
+ITR3 issues
+PAG -> Audit Info b -> blue blank bg
+P&L is not good (62)
+DPM-DOA is not good
+CFL Date issue
+
+Amt deemed to be STCG -> radio is not saving
+
+
+What to do now
+ITR4 enhancement tickets
+ITR5 21-22 Pending
+Enhancement -> ITR5, ITR7
+ITR6 Submission today
+ITR1 and ITR4 proper testing -> Done
+	ITR1 log prefill issue
+	ITR4 enhancement tickets for prefill
+	Will be done tomorrow (today will be for ITR6)
+
+AY 21-22 DEF/PFA 3, 5, 6, 7 (last)
+
+Goal
+Enhancement builds with JIRA tickets to be submitted for all AYs, all ITRs
+
+ITR1 and ITR4 testing
+ITR1
+Bank account is not getting deleted -> Done
+When error messages are shown, alignment is getting unset
+OS amount field to change alignment to right
+Sl.No. with checkbox is not yet reduced
+80U default dropdown
+
+ITR4
+Amount not coming -> Resolved
+
+ITR3
+CG - 198 -> Display
+CG - 404 -> 1301 GroupID
+CG - 412 -> 1301 GroupID
+P&L -> demo the UI
+DPM-DOA -> Require the finalized requirements, also vernacularity for dynamic error message
+
+ITR2 
+OS -> Label issue in DTAA table (E_R_Table) -> Done
+
+To put conditions in the CFL -> ITR2 and ITR3 -> Done
+
+Prefill v/s default
+
+Primary V/S secondary fields -> Will lead to multiple elements addition
+	If both are available, we will import the primary fields and ignore the secondary fields
+For schduleHP and bank details there are two different primary fields, so we need a point of comparison for a unique mapping
+Multiple primary field reference for an array -> Will lead to multiple elements addition
+	HP (array -> array)
+		source1 -> form26as
+			an array element will be made and imported
+		source2 -> lastfiledITR
+			an array element wil be made and imported
+
+Import Utility
+	one array element with inputs from both the sources -> Not feasible
+
+
+New errors as sent by Harini for the enhancement build -> Most points are for Manisha
+ITR7 will be prioritized by me
+
+
+ITR2 build to be shared for 22-23 for internal testing
+ITR7 build to be shared to infy
+
+Enhancemcents ITR2 Prefill
+bankaccount details might not be working for two sources
+
+
+delete bank account issues -> Working in v2 builds
+
+Works to do------------------
+DPM-DOA enhancement for the user value and computed value
+Discussion with Dipika and Sanket for OS 3c
+The pending enhancement tickets for ITR1-4
+ITR6 computation tickets??		
+DEF/PFA for 21-22
+Check how prefill is working already?
+Check the implementation of DPM DOA -> Is it feasible as rishabh said?
+23-24 enhancement build for ITR5 to be tested -> ITR5 branch 23-24
+
+
+Ishita
+ITR5 JIRA tickets 23-24 (including enhancements)
+ITR5 Prior AY - AY21-22 - AY22-23
+ITR1 & ITR4 - AY21-22 - AY22-23 + JIRA (23-24)
+
+1a, 3c, 6 itr2
+interest claimed eligibility
+1a - 1lakh
+3c claimed
+computed
+
+cannot claim more than 20% of 1lakh
+computed interest cannot be more than Min(20% of 1a, total taxable normal after deduction, claimed)
+1a 1lakh
+deduction -> 50000
+maximum interest 20k
+
+1a 1lac
+3c claimed 20k
+deduction - 50k
+total normal income after deduction ??
+
+TNIAF - ?
+3c computed -> 0
+TNIAF -> ?
+
+
+
+Round 1 -> 
+TNIAF -> ? (1 lac - 50k) -> 50k (Limit1)
+
+Round2
+20% of Min(1a, TNIAF) -> Limit1 (l0k)
+3c claimed value -> Limit2 (20k)
+
+3c computed -> Min (Limit1, Limit2, Limit3) -> 10k
+
+6 -> 90K
+
+PartB-TI changes then, 
+part bti -> you compute total income after deduction normal the value of 3c, 
+
+
+ITR3 issue for 234C -> Pending
+Build for ITR2 -> Done
+
+
+
+NoZip -> Done
+
+Formula of bank account flag is not triggering -> in prefill file, the var is not created -> Rishabh
+80D and PartAOI issue as discussed with Sanket -> ??
+234A and F -> Arun Sir -> Done
+Aadhaar masking -> Awaiting revert from Rubi -> Received
+Verification labels individual-> Ankit -> Done
+
+
+for enhancement build
+schedule top row to be brought to home page
+applicable for formulae present and non-editable elementId fieldtype to be set as Output
+
+
+Discussion
+Masking can not be done in the input fields. We have received no clarification for the field to remain output field
+	suggestion -> we will route same as contact page
+
+
+zipcode check -> Done
+
+going back from internal validation page, zipcode is getting blank
+pincode is mandatory error
+alignment is too far
+How to write validations on it?
+	checkbox should be available only when foreign state is selected or india is other than country
+
+OS 3c psuedo code -> Dipika, Ankit
+234B in all -> Dipika, Ankit
+ITR6 23-24 JIRA tickets
+21-22 VF DEF/PFA
+foreign details -> Rishabh
+Pop up -> Rishabh
+22-23 enhancement local branch -> Rishabh
+21-22 enhancement local branch -> Rishabh
+
+------
+To copy en.json from ITRs
+To copy common object from common.js createUIMap
+copy style files from createUIMap
+------
+
+dpm-doa dynamic error message
+112,115AD
+nob save validation formula type 4
+cg save validation formula type 4
+
+----------
+13.06.2024
+OS3c discussion with Sanket -> Done
+ITR7 common changes -> Done
+ITR7 pending JIRA tickets
+DEF/PFA 21-22
+Refresh issue
+Requirement counting
+
+ITR7 pending JIRA tickets
+ITR7 CG blocker (check -> Done in RA
+I -> Done in RA
+DA formula -> Change in map service
+OS revert  -> Change in map service
+
+
+ITR6 22-23, 21-22 computation?? awaiting test case from Sanket
+ITR1 to be submitted for 23-24?
+ITR6 23-24 to be prepared??
+
+
+VF DEF/PFA
+
+Latest RA on drive
+ITR6 - 23-24
+ITR1 - 23-24
+ITR5 - 22-23 (v2)
+
+
+
+
+
+
+
+common keys to add for 2022-23
+file renaming (itr-online, itr-shared-parent-fy2023)
+renane the library for the ITR html files
+
+frontend\tsconfig.json (replace the ay)
+
+flag false if computation is happening
+
+gti and total deduction
+if this.value != sum
+set the flag to true -> this will cause the os3c computation to run
+
+variance in map service (online_sanity and itr6)
+save data
+computeOnDelete
+Os3c
+
+
+//     static startLoader(){
+        
+//         let el = document.getElementsByTagName("body")[0]
+//         let loaderNode = document.createElement('div')
+//         loaderNode.id = "loader-wrapper-ap"
+//         loaderNode.style.position="absolute"
+//         loaderNode.style.top="0px"
+//         loaderNode.style.left="0px"
+//         loaderNode.style.display = "flex"
+//         loaderNode.style.justifyContent="center"
+//         loaderNode.style.alignItems="center"
+//         loaderNode.style.width= "100%"
+//         loaderNode.style.height = "100%"
+//         loaderNode.innerHTML = `<div class="loader-container">
+//   <div class="loader">
+//   </div>
+//   <div class="loader-text">
+//     {{ "common.labels.loading" | translate }}
+//   </div>
+// </div>`
+//         el.appendChild(loaderNode)
+//     }
+//     static stopLoader(){
+//         let el = document.getElementById("loader-wrapper-ap")
+//         if (el!=undefined){
+//             el.remove()
+//         }
+//     }
+
+Release Notes:
+CFL can be tested
+
+---------
+ITr6 22-23 computation
+ITR5 22-23 build making
+
+
+common changes update -> Done
+
+Interim build to give to testers -> Done
+ITr5 22-23 branch update and to submit to testers -> Done
+ITR2 interim build to submit to testers -> Done
+
+ITR1 and ITR4 JIRA issues resolution
+ITR2 JIRA Issues resolution
+ITR7 DEF/PFA
+Roshni's message?
+
+
+Already discussed in earlier stages of development , Error messages are in sync with other ITRs. 
+
+labels.feedback
+
+0.5 -> 10
+0.6 -> 15 (Related to UR)
+Updated Returns
+
+ITR2 Issues
+ITR2 dropdowns are not importing from prefill (issue raised for OS) -> Getting blank
+
+80P issue, need discussion
+status issue ->
+
+
+Dev team is unable to accept any new requirements at this stage.
+
+ITR5 (50 issues) (Today)
+ITR2 (20 issues) (Today)
+ITR1-4 -> 0.6 (6th July)
+
+ITR3 (100 issues)
+
+ITR7
+
+ITR6
+
+ITR3 issue by Roshni for PAG and CG
+ITR1 and ITR4 -> 0.6
+Meeting with Aayushi at 4 PM for ITR2 issues discussion
+ITR2 issue by Sanket
+
+ITR3 TR might need a check -> Updated as per ITR2
+
+
+
+adpak1.701005120
+
+Common changes
+Root service file for adding route path
+return-file-sec html file update
+common en.json
+
+"139_8a": "139(8A)",
+"139_8a_desc": "Updated Return",
+
+schedule summary components .ts
+
+offline utility to be prepared for Updated Returns
+
+
+ITR5 interim build -> Done	`
+ITR3 blocker build to be shared
+ITR2 remaining 2-3 issues build to be shared
+
+
+To give to Sushil the columns in UtilRA
+
+Input cannot be more than {{min}} -> value is not coming -> Corrected in json service file
+In ITR2 OS alignment for field 6 is manually corrected
+
+    //console.log("saveTempData() with parent:", parent)
+        //only save tempdata of input/select/radio/checkbox fields
+        let tempObj = {}
+        // const form = (document.querySelector("#" + parent)! as HTMLFormElement)
+        const form = document.getElementById(parent) as HTMLFormElement
+
+
+
+Serial number size to be reduced
+Whether left alignment is possible in CFL Column 2 (Assessment Year) -> To discus with Rishabh
+Roman numbers in cfl -> Done
+CFL issue of label
+
+One computation cycle after import -> If json is imported for wrong values, generation will happen with the imported values only
+BTTI surcharge grouping?
+
+Open 5A -> (Don't save it, click on breadcrumbs (Summary Dashboard), -> Open next schedule (BS) -> Click on confirm -> Instead of schedule summary, we are getting on schedule 5A
+OS blocker -> Routing page values are getting blank when coming back without saving due to the validaiton -> Blocker is specifically resolved, but 2d and 2e are not moved, no point
+
+No requirement received for one cycle after import -> Assumption is that the json is correct
+
+
+CSV error message (require the error message, please send over mail)
+BreadCrumbs issue -> Please update the description
+OS blocker -> Blocker is resolved but 2d and 2e are kept same
+Import issue -> The json is assumed to be working as per final formulae. Computation to be trigerred only when page opens for optimization. Neither received requirement for one cycle of 
+				computation
+
+
+-------
+ITR5 DPM-DOA -> Awaiting Rishabh's revert
+ITR5 meeting -> Done
+ITR2 and ITR1 issue by Manisha -> 
+
+ITR7 build -> Done
+
+
+Formula type 5 -> Will trigger the formula on an error message from the ChangeValidation (specific for DPM)
+
+ITR7
+115TD -> to implement the month end point
+SI -> Awaiting Dipika's response
+OS3c -> Need tags from Rubi/Sanket
+
+ITR6 build to be made -> File on drive
+UR discussion
+ITR7 discussion
+
+ITR6 AMTC to converto to MATC
+ITR5 to confirm latest
+-----------
+
+ITR2 2 prefill issues
+ITR3 csv issues
+------------
+
+ITR2 build, en.json to be copied
+
+
+ITR3 issues
+SIT-79193 -> Discussion Ishita (Type of HP)
+SIT-78887 -> Discussion Ishita then Rishabh (Table details not saving)
+SIT-76152 -> Discussion Rishabh (CSV)
+SIT-65247 -> Discussion Rishabh (DPM autopopulation)
+SIT-63111 -> Discussion Rishabh (Delete button)
+
+
+
+
+
+Mail{
+Error message is in sync with other ITRs. -> Why the testing team is opening such issues?
+
+
+}
+
+Aadhaar is editable on object
+
+
+R_MatExpansionNonDelete
+R_MatCardNonDelete
+
+
+Aadhar card change of prefill issue
+
+
+refund tag to be added in schema for ITR1 and ITR4
+RefundTag()
+
+TaxSummaryTags(taxpayable,refund)
+R_TaxSummary
+
+R_MatExpansionBlockList -> TypeOfSlNo(Item)
+font-16-d
+
+Build for ITR5 surcharge 
+
+-------------------
+            "tax_calc_2.5": "For your income upto Rs. 2,50,000",
+            "tax_calc_3": "For your income upto Rs. 3,00,000",
+            "tax_calc_5": "For your income upto Rs. 5,00,000",
+            "tax_calc_2.5": "For your income upto Rs. 2,50,000",
+            "tax_calc_2.5": "For your income upto Rs. 2,50,000",
+            "tax_calc_2.5": "For your income upto Rs. 2,50,000",
+            "tax_calc_2.5": "For your income upto Rs. 2,50,000",
+            "tax_calc_2.5": "For your income upto Rs. 2,50,000",
+------------------
+
+
+
+ITR7 SI issue, 
+case "22": 112 proviso (LTCG on listed securities/ units without indexation)
+sum = CG_B3ie
+var CG_B3ie = @ScheduleCG.LongTermCapGain.Proviso112Applicable.Proviso112Applicabledtls.BalanceCG -> B4c
+
+case "5AC1c": 115AC(1)(c)- Long term capital gains arising from their transfer of bonds or GDR purchased in foreign currency in case of a non-resident
+sum = CG_B6iie,
+<--
+	var ltcgb7arr = @ScheduleCG.LongTermCapGain.NRIOnSec112and115.NRIOnSec112and115Dtls[]
+	if (ltcgb7arr.SectionCode == "5AC1c") {
+		CG_B6iie = ltcgb7arr.BalanceCG
+	}
+	-->
+
+
+case "5AB1b": 115AB(1)(b)- Income by way of long-term capital gains arising from the transfer of units purchase in foreign currency by a off-shore fund
+sum = CG_B7iii
+
+case "5ADiii": 115AD(1)(b)(iii)- Long term capital gains (other than on equity share or equity oriented mutual fund referred to in section 112A )by an FII
+sum = CG_B6iiie
+
+SIT-77947 -> Input cannot be more than {{min}}
+
+
+OC3c in ITR6 might create in issue in online build since the code in different for all ITRs
+Need to make a unified code for this
+
+Homepage, every schedule line should have a note
+DE sheet has the note -> To be added
+
+ITR2 issue to be discussed wit Rishabh
+LTCG formula is not getting computed just as we enter causing autopopulated input field that are greyed-off to appear blank and triggering message of mandatory
+and 4 other JIRA tickets
+
+
+issue in ITR4 for refresh or formula -> Done
+
+ITR7 PTI bold headers
+ITR5 jira tickets 37
+ITR6 computation tickets 20
+
+back issue? -> next build
+CSV point to check -> Not working
+formula for radio is not triggering
+default is not working for radio
+
+ITR5 -> computation tickets for offline
+SIT-79219
+SIT-79188
+SIT-79179
+SIT-79222
+SIT-79184
+
+prefill capacity -> post sit -> discussion -> Marked back to Jay for better mapping
+header mismatch GST -> discussion -> Enhancement
+hp landing page -> discussion -> Closed
+os landing page -> discussion -> Closed
+Undertaking Sch 80 -> Rishabh (comment) -> Invalid
+
+80P info icon -> Rishabh (comment) -> discussion -> in the header is fine
+PAG2 mandatory error message -> Ankit -> To debug
+Dipika Surcharge
+E2E AssetOutsideIndiaFlg?? -> Ankit -> Test
+
+health and education cess, if less then CV, it is ok, to be recomputed for greater value -> Done
+os field validation negative 1b -> Done
+OS 2c and 2d table -> Done
+SI amount not reflecting -> Done
+
+234B and 234C -> template for show computation
+prefill merge?
+
+autopopulation and editable??
+Can undertaking be removed?
+
+ITR1-4
+E2E issue for seventhprovisio
+Back issue
+
+
+ITR3
+E2E issue for methodofaccounting oi -> SIT confirmation pending
+
+ITR7
+refresh issue in bank details (68195) -> SIT confirmation pending
+
+
+online for 2 and 3 -> ETA today
+
+ITR5 -> SIT confirmation pending
+branch merge -> done
+ne class to merge in dev -> done
+2 tickets for ITR5
+	PAG issue done
+	80P roll over, will be taken post SIT
+E2E issue (might be due to radio button?) -> correction made, to test
+computation ticket to discuss with dipika -> Done
+Radio button default updated
+
+
+Bank details issue -> Done

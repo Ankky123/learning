@@ -1,0 +1,108 @@
+
+
+Age-> for AY 23-24
+For AY 2023-24 Super Senior Citizen(80 years+) - Born before 2 April 1943 
+For AY 2023-24 Senior Citizen(60 years+) - Born on or after 2 April 1943 but on or before 1 April 1963
+For AY 2023-24 Individuals(Normal) - Born on or after 2 April 1963 
+
+Some Important dates->
+Due date for filing - Generally 01/07/2022
+System Date (i.e. The date on which utility is being filled)
+Original date of filing - The date on which original file was filled
+
+Filing type enum is necessary
+11-139(1)-On or before due date; 
+12-139(4)-Belated; 
+					13-142(1); - (Inquiry Notice before Assessment)
+					14-148;    - (Notice for Assessment or Reassessment )
+16-153C
+17-139(5)-Revised; 
+					18-139(9); - (Notice for defective return)
+19-92CD - Modified return; 
+20 - 119(2)(b)- after condonation of delay; 
+21 - 139(8A)",
+
+
+BAs and Testers for ITRs -> Senior BA Infy -> Madhu
+ITR1 Ananya	, Shahina
+ITR2 Ayushi	, Sneha
+ITR3 Madhu Agrawal	, Sunil
+ITR4 Aparna , Shilpa
+ITR5 Jay	, Suhasini
+ITR6 Tolaram, Niraj
+ITR7 Rubi	, Rubi
+
+-----------Code Block for Aggregate Income------------------
+if((@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 1)|| (@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 3)){
+ xntr = 1
+}
+if (DateDiff(@PartA_GEN1.PersonalInfo.DOB,"1963-04-01")>0) {
+xnr = 1
+}else if (DateDiff(@PartA_GEN1.PersonalInfo.DOB,"1943-04-01")>0) {
+xsr =1
+}else {
+xssr=1
+}
+
+if (xntr == 1) {
+	Exem_TI = 250000
+} else {
+	if (status == "I" && (res == "RES" || res == "NOR") && xsr == 1) {
+		Exem_TI = 300000
+	} else {
+		if (status == "I" && (res == "RES" || res == "NOR") && xssr == 1) {
+			Exem_TI = 500000
+		} else {
+			if (status == "I" || status == "H") {
+				Exem_TI = 250000
+			} else {
+				Exem_TI = 0
+			}
+		}
+	}
+}
+----------
+
+-------------Code block for Tax at normal rates--------
+if (DateDiff(@PartA_GEN1.PersonalInfo.DOB,"1963-04-01")>0) {
+xnr = 1
+}else if (DateDiff(@PartA_GEN1.PersonalInfo.DOB,"1943-04-01")>0) {
+xsr =1
+}else {
+xssr=1
+}
+var txn = 0.0
+var status = @PartA_GEN1.PersonalInfo.Status
+var res = @PartA_GEN1.FilingStatus.ResidentialStatus
+var  aggregateInc = @PartB_TI.AggregateIncome
+
+if((@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 2)|| (@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 4)|| (@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 5)){
+txn = Max(0,  ( aggregateInc - 250000 )*5/100) + Max(0,  ( aggregateInc - 500000 )*15/100)+ Max(0,  ( aggregateInc - 1000000 )*10/100) 
+if ((status == "I") && (res == "RES" || res == "NOR")) {
+if (xssr == 1) {
+txn = Max(0,  ( aggregateInc - 500000 )*5/100) + Max(0,  ( aggregateInc -500000 )*15/100)+ Max(0,  ( aggregateInc - 1000000 )*10/100)
+}else if (xsr == 1) {
+txn = Max(0,  ( aggregateInc - 300000 )*5/100) + Max(0,  ( aggregateInc -500000 )*15/100)+ Max(0,  ( aggregateInc - 1000000 )*10/100)
+}
+}
+}
+
+if((@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 1)|| (@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 3)){
+ txn = Max(0,  ( aggregateInc - 250000 )*5/100) + Max(0,  ( aggregateInc - 500000 )*5/100) + Max(0,  ( aggregateInc - 750000 )*5/100) + Max(0,  ( aggregateInc - 1000000 )*5/100) + Max(0,  ( aggregateInc - 1250000 )*5/100) + Max(0,  ( aggregateInc - 1500000 )*5/100)
+}
+-----------------
+General Interpretation-----
+
+if (xntr == 1) {
+	some code // 250000
+} else {
+	some code // 250000
+	if ((status == "I") && (res == "RES" || res == "NOR")) {
+		if (xssr == 1) {
+			some code // 500000
+		}else if (xsr == 1) {
+			some code // 300000
+		}
+	}
+}
+--------------------------

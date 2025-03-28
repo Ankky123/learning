@@ -1,0 +1,9 @@
+156 TC 7 is not detected -> all nulls ?? Not being detected - Help
+
+
+pdm.ITR_5_PDM.BusinessIncOthThanSpec_BalancePLOthThanSpecBus_hLgBp -> ITR_5_BusinessIncOthThanSpec_BalancePLOthThanSpecBus_hLgBp
+pdm.ITR5_PDM_GROUP3.DeductUndChapVIA_Section80GGAdonation_8YCB6    -> ITR5_PDM_GROUP3.DeductUndChapVIA_Section80GGAdonation_8YCB6
+
+replace - ITR_5_ -> ITR_5_PDM.
+
+2454

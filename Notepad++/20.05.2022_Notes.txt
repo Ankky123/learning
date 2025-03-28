@@ -1,0 +1,22 @@
+ISIN code - INE2216d08093
+
+kanabararun@arundataprocessing.com
+
+ITR3 - 112 and 115 have problem in generating
+			(and probably in importing)
+			
+		ScheduleAL - value was not in json
+		but during generate, it is asking to select
+		
+
+2A - ISIN
+2A1 - Name of share
+2A2 - No. of share
+2A3 - Sale prie per share
+2A4 - cost of acquisition
+2A5 - Fair market value
+2A7 - Wholly expenditure
+2A8 - Share/Unit Acquired
+2A9 - Full Value Consideration
+
+Two issues in Part A General ITR5

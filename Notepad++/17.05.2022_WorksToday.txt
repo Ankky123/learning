@@ -1,0 +1,25 @@
+ITR5 - To verify the change to resolve the issues,(30)
+Identify the validate issues in the ITR5 (Nishi)
+
+ITR7 - Solve the issues raised in the defect sheet
+Ankit and Chirag
+
+ITR7 - Test the issues solved last day (Vishal and Jinesh)
+(And Ami)
+	- Find new and old issues in ITR7 (Ami)
+
+
+ITR5 - to merge the valdation issues (princi)
+	- to validate generated jsons(Vishal, Nishi,Jinesh)
+
+
+changes in A13
+one change in generate-No - NO
+one change in mdTPSA
+one change in mdIT
+
+Change in sheet1 and importjson
+
+
+
+

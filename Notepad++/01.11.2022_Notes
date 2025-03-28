@@ -1,0 +1,36 @@
+
+Start with 0 depth
+scan for elements with 0 depth overall
+if 0-0 is found, make a boundary or <div>
+	rest all elements with 0 depth and same ancestory will come in the same <div> with their respective type of inputs
+	now scan for elements with 1 depth overall
+	if 1-1 is found, make a boundary or <div>
+		rest all elements with depth and same ancestory will come in the same <div> with their respective type of inputs
+		now scan for elements with 2 depth overall
+			if 2-0 is found, make a boundary or <div>
+				rest all elelmets with depth and same ancestory will come in the same <div> with their respective type of inputs
+			recur until max depth
+				if depth > max-depth {
+					return ""
+				}
+
+rule Author could have a colulmn of increments in case of number and integer
+some elementID are repeating
+How to tackle a table
+How to tackle a block
+
+
+In my code I am hoping that radio buttons and switch comes in no arrays and blocks also
+
+Addrows button stopped working
+
+for class DisplayTable with div elements with class heading -> hidden (div.DisplayTable>div.heading {display:hidden}
+for class DisplayTable with div elements with class data -> display:flex or inlineflex div.DisplayTable>div.heading {display:hidden}
+
+To add accordian use field type should be "DisplayAccordion"
+To make in the table format -> field type should be "Table"
+To make a structure like Phone number use field type "Phone"
+
+show
+data
+heading

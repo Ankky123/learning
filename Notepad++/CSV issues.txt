@@ -1,0 +1,15 @@
+change import and generate
+also md112A module
+
+Issues found in csv module
+In all tables D E date is given in wrong format
+in table E - 13 out of 14 column (others column is not present)
+in table I - 5 out of 6 column (others column is not present)
+
+Sh1 C - wrong input for pan and aadhaar, 
+	date format, date of ceasing
+Sh2 A - One column missing
+
+Date format is wrong in all the tables
+
+

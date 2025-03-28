@@ -1,0 +1,13 @@
+Is coding dead?
+
+As per me coding jobs came to much hype in India after the covid pandemic.
+Although even in my earlier life, that is in 10 standard, I had heard that cs branch guys are earning much much money.
+Now that I am here, it seems that The advent of AI/ML, The coders will become obsolete in near future of 10 years.
+This is evident in the mass layoffs done by many IT companies line Meta, Twitter, Amazon and many more companies.
+For other engineering branches, there was already no Future for high paying jobs or some breakthrough technology startup.
+There are following concepts which might cause the loss of coding jobs
+1. The rise of AWS, GCC, Azure, etc., as general platform/infrastructure providers
+2. The rise of "comput on-demand".
+3. The rise of "database on-demand".
+4. The API-ization of everything
+5. The rise of RPA and other similar GUI-based programming methods

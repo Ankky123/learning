@@ -1,0 +1,135 @@
+To make form -> The utility
+
+Schedules -> A separate page (form) for each schedule
+To make it accessible -> proper divisions, labels
+Fieldsets,legend label, input, select, output, textarea
+
+Label -> P tag with some more paroperties.
+How one knows which text belongs to which input field.
+<label for = ""> Don't use <p>  unless much required
+
+If the json tag doesn't exist, use output.
+
+can define different classes in input element.
+display, read only
+For inputs, use input element even if it is disabled.
+Must write always, "id", "name",
+
+Label -> for consistency -> Write id also.
+
+Error message -> can use <p> tag/<label>
+err msg will always be related to input, position will be absolute, div will be relative.
+
+
+total fields to given kept as input. There will be 3 different types of input elemtns.
+
+Fieldsets -> Grouping
+Legend tells the heading of field set
+
+use heading tags for mostly schedule names
+
+How to add validations
+A generic map is made -> changeMap
+for an element ID, its validation will be available in its key.
+
+"checkChange"
+
+"saveValidations"
+
+"Formula" -> What value a fiel will take. formula will be called in the dependend fields.
+
+getValueById(Arr) will return array
+Arr.0 will return an object
+Arr.0.B ->
+
+
+[disabled] = "functionIsDisabled("theElementID")"
+
+isdisabled(id) {
+ Mapid = this.cm.getMapid(id)
+	!this.cm.get.mapid.get("").get("idEdidtable")
+
+
+}
+
+Inside checkChange
+this.disable(elemid)
+else
+this.enable(elemid)
+
+
+Fields that are permanently disabled will only be disabled(to delete the value) and not enabled
+
+
+this.sharedJSONService.deleteJSONDataByKey(elemid)
+
+
+
+Work To be done
+
+ITR2 Utility to update
+ITR7 and ITR3 schema discussion
+
+
+
+required for btti3j - added
+yrinwhichadded - updated
+minimum - added
+Extra layer of object to be removed - removed
+
+Fields to be locked in schedules added in ITR7
+
+
+Works that are there or will be there
+
+ITR5 0.3 regression issues Excel
+ITR3 0.3 regression issues Excel
+
+ITR5 0.4 implementation Excel
+ITR3 0.4 implementation Excel
+
+ITR5 0.4 implementation VF
+ITR3 0.4 implementation VF
+
+ITR5 0.4 issues resolution (SIT and regression) (Excel and VF)
+ITR3 0.4 issues resolution (SIT and regression) (Excel and VF)
+
+ITR7 Schema update
+ITR7 Database Mapping update - Roshni
+
+ITR7 Excel utility update for schema change
+ITR7 Issues resolution
+
+ITR7 VF to check-in
+ITR7 VF SIT issues resolution
+ITR7 regression issues
+
+ITR7 0.4 implementation
+
+ITR6 regression issues Excel
+ITR6 0.4 implementation
+
+AY 22-23 VFs (ITR4 -> ITR2 -> ITR3 -> ITR5 -> ITR6 -> ITR7)
+AY 21-22 VFs
+
+
+Priority for today -> 
+
+ITR3 Excel 5 issues -> 
+		ITR3 0.4 Excel implementation -> Pending
+				-> ITR3 0.4 VF implementation ->
+ITR5 Excel 5 issues -> Done
+		ITR5 0.4 Excel implementation -> 
+				ITR5 0.4 VF implementation
+
+ITR 22-23 Sanities (ITR1, ITR2, ITR4) 
+ITR7 Schema update - Done
+
+ITR3 VF issues -> 5 ( 3 rules updated, rest require clarification)
+
+
+Priority for tomorrow
+22-23 Sanities
+ITR3 VF Issues
+ITR7 Issue resolution
+ITR3 0.4 implementation

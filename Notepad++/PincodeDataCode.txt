@@ -1,0 +1,164 @@
+'Change-16.01.2023.ANK
+        If Not Application.Intersect(Sheet1.Range("sheet1.StateCode1"), Sheet1.Range(Target.Address)) Is Nothing Then
+            If Sheet1.Range("sheet1.PinCode").value <> "" Then
+                'if state and pincode doesn't match, empty the pincode.
+                Dim State1 As Variant
+                State1 = Application.VLookup(Sheet1.Range("sheet1.PinCode").value, SheetALL.Range("All_PinCode_V"), 2, False)
+                If Not (State1 = UCase(Mid(Sheet1.Range("sheet1.StateCode1").value, 4)) Or StateMatchesPin(Target.value)) Then
+                        Sheet1.Range("sheet1.PinCode").value = ""
+                End If
+            End If
+        End If
+
+        If Not Application.Intersect(Sheet1.Range("sheet1.PinCode"), Sheet1.Range(Target.Address)) Is Nothing Then
+         Dim DupFlag As Boolean
+         DupFlag = False
+                 'If the pincode is not in the duplicate list, populate, else don't populate---
+                 For Each PinCode In SheetALL.Range("Duplicate_Pincode_list")
+                    If Sheet1.Range("sheet1.PinCode").value = PinCode Then
+                        DupFlag = True
+                        Exit For
+                    End If
+                 Next PinCode
+                 
+                 If DupFlag = True Then
+                    If Sheet1.Range("sheet1.StateCode1").value <> "" Then
+                        If Not StateMatchesPin(Sheet1.Range("sheet1.StateCode1").value) Then
+                            Sheet1.Range("sheet1.StateCode1").value = "(Select)"
+                        End If
+                    End If
+                 End If
+                 If DupFlag = False Then
+                    Dim StateName
+                    Dim StateCode
+                    
+                    StateName = Application.VLookup(Sheet1.Range("sheet1.PinCode").value, SheetALL.Range("All_PinCode_V"), 2, False)
+                    If IsError(StateName) Then
+                        MsgBox ("Invalid Pincode")
+                        'Sheet1.Range("sheet1.StateCode1").value = "(Select)"
+                        Application.EnableEvents = False
+                        Sheet1.Range("sheet1.PinCode").value = ""
+                        Application.EnableEvents = True
+                        
+                    Else
+                        StateCode = Application.VLookup(StateName, SheetALL.Range("DW:DX"), 2, False)
+                        Sheet1.Range("sheet1.StateCode1").value = StateCode
+                        Sheet1.Range("sheet1.CountryCode").value = "91-INDIA"
+                        Sheet1.Range("sheet1.MobileCountryCode").value = "91"
+                    End If
+                 End If
+         
+         End If
+
+'                 For Each PinCode In SheetALL.Range("PincodeList")
+'                      Dim code As String
+'                    code = Left(CStr(Sheet1.Range("sheet1.PinCode").value), 3)
+'                    If CStr(PinCode.value) = CStr(code) Then
+'                        Sheet1.Range("sheet1.StateCode1").value = SheetALL.Range("CX" & PinCode.row).value
+'                        Exit For
+'                    End If
+'                Next PinCode
+'------------------------------------
+
+Function StateMatchesPin(StateCode As Variant) As Boolean
+    StateMatchesPin = False
+    Dim State1, State2 As Variant
+    
+    
+    State1 = Application.VLookup(Sheet1.Range("sheet1.PinCode").value, SheetALL.Range("Duplicate_V"), 2, False)
+    State2 = Application.VLookup(Sheet1.Range("sheet1.PinCode").value, SheetALL.Range("Duplicate_V"), 3, False)
+
+    If IsError(State1) Or IsError(State2) Then
+    StateMatchesPin = False
+	Exit Function
+    End If
+    
+    If UCase(Mid(StateCode, 4)) = State1 Or UCase(Mid(StateCode, 4)) = State2 Then
+    StateMatchesPin = True
+    End If
+    
+End Function
+'---------------------------------
+'if the pincode is in the duplicate
+                            If Not StateMatchesPin(Target.value) Then
+                                Sheet1.Range("sheet1.PinCode").MergeArea.ClearContents
+                            End If
+                            Sheet1.Range("sheet1.PinCode").MergeArea.Locked = False
+                            Sheet1.Range("sheet1.PinCode").MergeArea.Interior.Color = (&HCCFFCC)
+'                            Sheet1.Range("sheet1.PinCode").value = ""
+'--------------
+
+=IF(bacValue=1,0,IF(OR(AMT.AdjustedUnderSec115JC <=2000000, AMT.DeductClaimSec6A=0),0,MAX(0,IF(sheet1.Foreign_Exchange="Yes",ROUND(AMT.AdjustedUnderSec115JC3aNew+AMT.AdjustedUnderSec115JC3bNew,0),ROUND(AMT.AdjustedUnderSec115JC3aNew+AMT.AdjustedUnderSec115JC3bNew,0)))))
+'--------------------------
+All_Pincode_list
+All_Pincode_V
+
+Duplicate_Pincode_list
+Duplicate_V
+
+States_list
+StateCode_list
+'-----------------
+adpak4.701005120
+If Status1 = "I" Then
+    Status1 = "I - INDIVIDUAL"
+    ElseIf Status1 = "H" Then
+    Status1 = "H - HUF"
+    ElseIf Status1 = "F" Then
+    Status1 = "F - FIRM(Other than LLP)"
+    End If
+
+
+Change-27.01.2023.101.IDS.5
+Change-25.01.2023.101.IDS.5
+
+qd to be added in the status tracker
+'Change-22.01.2023.101.S.3A
+    If Not Intersect(Range("sheet.EmployerCategory" & i), Range(Target.Address)) Is Nothing Then
+        SalaryExemptAllowanceDropdown
+    End If
+'Change-28.01.2023.101.S.3D
+SalaryExemptAllowanceDropdown
+
+Status tracker to add
+'Change-28.01.2023.101.S.3A..
+'Change-28.01.2023.101.QD.2A..
+'Change-28.01.2023.101.ESOP.7A..
+'Change-28.01.2023.101.CFL.XA
+'Change-28.01.2023.100.ESOP.3A..
+'Change-20.01.2023.101.24C
+
+
+Per10080G.DoneePAN -> A
+PerNO5080G.DoneePAN -> B
+PerYES10080G.DoneePAN -> C
+Per5080G.DoneePAN -> D
+
+adpak1.701005120
+
+For i = 1 To Sheet6.Range("Per5080G.DoneeARN").count
+        'ArnNumber_80GD(i) = rangecells.item(i).Value
+        PANValue = Range("Per5080G.DoneePAN").Cells(i, 1).value
+        
+        For j = 1 To Range("Per5080G.DoneeARN").count
+            If PANValue <> "" And PANValue = Range("Per5080G.DoneePAN").Cells(j, 1).value And Range("Per5080G.DoneeARN").Cells(i, 1).value = "" Then
+                fmsgbox TbCod & Chr(10) & "* Please enter ARN (Donation reference Number) at Sr.NO " & i & " in Schedule 80G_D."
+                Exit For
+            End If
+        Next
+    Next
+
+errmsg80G = errmsg80G & "* Please
+
+StoreEventsStatus
+RestoreEventsStatus
+
+BP - 31, 4bc, 4bd, 47, 49
+Sheet16.Range("stcg.IncOfCurYrAfterSetOffBFLosses3b").value
+calcBFLA is two times defined inside different module
+Calculate Tax is calling "calcBFLA" defined in "CYLACalculations"
+Calculate SetOff is calling "calcBFLA" defined in "CYLACalculations"
+CYLACalculations.CYLABFLASetOff inside ValidatAllSchedule should also be called before validating schedule CG to avoid the
+	double calculatetax click problem
+CYLACalculations.calcBFLA should be called inside calculate tax before validateAllSchedule to avoid double click problem 
+	But should it be done?-can it be done without any issues?

@@ -1,0 +1,26 @@
+EOD of last 15 Days for Ankit Mangal
+
+1. Generation of ITR2 2020, ITR3 2020, ITR5 2020, ITR6 2020, ITR7 2020 ImportXML module - 
+	a. Guiding developers in the development of the ImportXML module
+	b. CG and Part A General(1 & 2 wherever available) sub develop, Guiding testers for testing, Resolving Compile time and runtime errors
+	c. Resolving the issues found by the testers
+	d. File submission to Infosys
+	e. Resolving the Issues found by Infosys testing team
+	f. Guiding testers to find phantom values in the utility
+	g. Guiding developers to resolve the phantom values issues
+
+2. Resolving the defect sheet of various ITRs raised by Infosys mainly
+	ITR2 2022, ITR3 2022, ITR6 2022, ITR7 2022 (for prefill issues, Generation issues, Import issues, Validation issues)
+	ITR2 2021, ITR3 2021, ITR6 2021, ITR7 2021 (for prefill issues, Generation issues, Import issues)
+
+3. Submitted build versions of ITR6, ITR3, ITR2 (2022) to Infosys
+
+4. Learning GoLang
+	Completing the GoTour
+	Completing 4 other modules (Getting started, Making modules, Multimodule workspace, Generics)
+
+
+Task List
+1. To develop ImportXML module for ITR2 2020, ITR3 2020, ITR5 2020, ITR6 2020, ITR7 2020
+2. To keep resolving the issues as they are received from Infosys and testers
+3. To learn Golang(via documentaion)

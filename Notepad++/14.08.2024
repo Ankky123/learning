@@ -1,0 +1,412 @@
+14.08.2024-------------
+ITR6 tickets
+ITR6 invalid tickets discussion
+ITR3 computation ticket -> to identify further action
+
+ITR2 and ITR3 
+Sanket to be informed to test the online issues. Are they not coming in offline and are they really coming in online now (the latest)?
+	If the issues are there really, Ankit and Rishabh might neet to sit together with manisha
+ITR2 UR
+
+DEF/PFA issues
+
+ITR6 3 refresh issues
+json value is not changing -> SIT-77552
+CG deemed amount field 'c' not updating as per table total -> SIT-77489
+ESR to BP 29 -> SIT-78077
+Delete button in 115AD label is wrong -> SIT-77822
+
+
+merge issue in ITR1_4 ??
+ITR1 and ITR4 schema update and issue in autogen
+
+
+Common changes for UR in ITR2
+root file update
+return-file-sec component for UR radio in filing section
+
+ITR2 online
+one ticket to discuss with Rishabh
+two ticket to receive from dipika -> Received
+
+itr3 offline and online
+button label -> resolved
+online testing confirmation not yet received
+
+once I receive ITR2 updated formula from dipika, one build will be released
+
+AY 22-23 and 21-22 builds to be made
+	awaiting branch from manisha
+
+ITR3 online tickets to check
+ITR5 offline tickets to check
+
+DEF/PFA on priority
+The requirement reference is not accesible to Rishabh hence requested the accesss for the same, once the access is provided, our team will verify and revert.
+
+ITR1 and ITR4, one issue to be discussed with Rishabh e2e
+ITR2 CFL colour JIRA ticket, csv ticket
+
+Teams issues
+ITR2 UR Pending update
+
+ITR3 
+PL and NOB issue for validation page, -> Done
+DTAA to SI, 
+JJAA,-> Invalid
+80G -> Done
+(error in importing the file due to amtc) -> JSON is not from our utility, must match schema -> Not an issue
+VIA issues
+P&L issues
+OS issues
+
+
+
+ITR2 today ETA
+ESOP schema issue, radio issue resolved but date tag is still generating with blank -> Why no error is triggering in internal validations page?
+FII prefill issue
+mandatory for 139_8A -> Condition added on the mandatory
+
+23.08.2024--------------------------------------
+
+common preview pdf button label issue -> Done
+ITR1 label issue -> Ankit -> Done
+ITR2 Schema ESOP issue -> Rishabh
+ITR3 DTAA to SI issue -> Dipika
+ITR6 DTAA to SI issue -> Dipika
+
+ITR3 UR to make -> Ankit
+
+PriorAY branches to make
+	ITR1_4_22_23 made -> Testing pending
+root files to update in online sanity
+
+
+
+
+ITR7 UR
+
+ITR5 and ITR6
+online and offline issues
+
+-fy-2023
+
+wireframe, vernacularity, email/discussions, AT team discussions in which functional team was notified
+testing team was looped in all of these discussions
+
+
+PDF field type to be blanked for all the RAs -> Done
+ITR7 UR sheet remaining -> Done
+AY 21-22 branch to make -> Done
+Update the schema references in the CreateUIMap -> Done
+	-> Prior AY schema for ITR1 and ITR4 needs update related to client schema (hard to keep same with 23-24) -> Done
+Schema Updates for PriorAY to be included in the UISchema -> Done
+AY 21-22 build to make and give for testing -> Done
+ITR2 ack and date field editable condition is changed/to confirm with BA or to revert -> condition is controlled by available -> No need -> Done
+ITR2 UR JIRA tickets -> Done
+ITR7 build issue -> Done
+ITR7 JIRA tickets for ITR2 -> Done
+ITR7 UR testing team issues -> Done
+ITR7 build submission -> Done
+
+31/08/2024------------------------------
+common changes to update -> Done
+3 prior AY branches to make -> Under Progress
+5 21-22 -> Build shared -> Done
+root file to update for ITR7 -> Done
+7
+7
+6
+6
+ITR7 5 JIRA tickets to resolve for the UR build
+ScheduleCG point of Edit/delete button coloring
+80P issue in ITR5
+Nat of bus common list to update
+Schema to reUpdate for 21-22 and 22-23 -> There are new schemas for UR
+Online Utility issue to check -> Checked by Rishabh -> Done
+
+ITR5, ITR6 and ITR7 Online/Offline issue resolution
+
+AY 22-23 -> ITR3 to add
+AY 22-23 -> UR to confirm in all ITRs and branch will be updated accordingly
+AY 21-22 -> UR to confirm in all ITRs and branch will be updated accordingly (not present in ITR5)
+ITR6 Prior AY
+AY 22-23 issues to resolve
+
+formPdf: 'itrweb/auth/v0.1/returns/pdf ', -> Will this space create issues? -> Seems lite, only effected in online build
+
+Online build systemDate field to enable in ITR1 and ITR4 - Manisha -> Done
+
+UR Pendencies---
+TR change
+Schedule IT Popup
+Filing section Popup
+JSON generation requirement
+
+Prior AY builds instructions
+3, 5, 6, 7
+1. PreUR build
+2. UR build
+3. PostUR build
+
+BA Discussion for Prior AY
+
+Need to confirm with Saytaprakash and Ishita
+Whether schema changes for properties/attributes are included in-sync with schema?
+
+
+
+ITR5 Offline build issues
+Radio Default (SIT-76710) -> Done
+80P issue
+
+ITR5 one CG issue
+ITR7 issues
+ITR5 reverted issues
+
+Point 1
+common components -> PDF Preview.html/ts -> Copy all
+showdata_pdf update (copy all)
+json service
+
+ITR5
+AMT issue to be discussed with Rishabh -> Done in CreateUIMapV2
+common nature of business change -> Ankit -> Done
+Download prefill issue also to be resolved by Rishabh-> Ankit -> Done
+ISIN Point -> Ankit -> To discuss with Rishabh
+
+recompute flag to set in ITR2, ITR3 and ITR7
+
+importDataFromFormJSON
+
+Testing team is now claiming that the UR build testing is not possible due to the current tickets that are raised after testing confirmation of offline build and SIT approval for the same.
+
+Prior AY issue resolution
+
+
+ITR7 Online issue -> Two tickets pending to be discussed with Rishabh
+ISIN issue (ITR5 and other ITRs)
+1-4 Updated Returns
+
+
+ITR7 build for SI issue on priority
+
+ITR7 data saving issue
+	this issue is not present in the ITR2
+ITR7 Rounding off
+
+
+
+ITR3 21-22 issue for ITR3 80G
+ITR7 21-22 issue of new schdules
+
+
+
+
+modifyInternalJSON to modify to take the values in RA instead of the code
+
+ITR3 UR to send for testing -> 12th ETA -> Submitted for internal testing
+ITR3 enhancement and deferred tickets
+
+ITR6 tickets ETA 12
+ITR6 234F issue on mail
+
+formulae to be updated for prior AYs
+
+PriorAY build to be shared with Infy
+computation to be extended with a for loop
+
+Some error in check basic -> need to discuss with rishabh -> done
+
+
+files to put on drive !!!!!! -> Done
+offline 1-4 push -> Done
+
+isin issue -> Manisha
+
+DELI05280C
+PDFFieldType
+
+ITR6 build to prepare after merging common changes
+ITR6 remaining computation tickets (and 234F on mail) to check (surcharge) -> Dipika
+ITR3 CY UR computation update (the 234A point to be informed to Dipika) -> Dipika
+
+ITR3 enhancement and deferred to check and discuss with Rishabh
+Prior AY computation to update -> Done
+21-22 build to reprepare -> Done
+
+Test cases
+ITR3
+Min any
+Filing status (139_1, 139_8, 139_4)
+RES -> NTR Y -> Max
+NRI -> NTR N -> Max
+
+Pending -> ITR3 22-23 UR testing is pending due to Infy approval for UR
+
+ITR5 22-23 build
+ITR5 21-22 build
+ITR7 22-23 build
+
+formver, schema Ver to update in online_sanity_21_22
+
+Author: ankitadp <ankit_mangal@arundataprocessing.co.in>
+Date:   Fri Sep 6 11:37:25 2024 +0530
+
+    Project-432:: PDF Preview updated ts file by Infosys.....................................................................
+
+12.09.2024-------------------------------------
+Awaiting ITR6 and ITR3 formula update by Dipika -> Done
+ITR3 enhancements to be made -> Done
+ITR6 OS computation to be updated -> Done
+ITR6 MATC to check -> Done
+
+Point by Rishabh -> Table alteast one field needs to be mandatory (found issue in ITR3 GST, same issue was in ITR7)
+
+Advance Tax and self assessment tax date to update in 21-22
+computation in 21-22 to update with 24 more years
+
+common change for validateJSONR -> Rishabh -> Done
+
+ITR3 and ITR6 common changes to update and a build is to be made
+Meanwhile Sanket will let me know if compresseion can be started
+
+13.09.2024
+22-23 and 21-22 ITR5 build to make again -> Under processs by Suraj
+Suraj issue to correct for build creation -> RA issue identified -> Done
+
+ITR4 computation issue and ITR2 countryname issue -> Possible after common changes
+
+common changes in 22-23 and 21-22 online sanity
+ITR6 and ITR7 common changes to update in 23-24
+ITR6 and ITR7 branches to be made
+
+BRF on priority -> Done
+
+ITR5 -> ETA -> To be discussed with Rishabh
+ITR7 -> ETA -> tickets 40
+
+21-22 and 22-23 builds to share
+
+16-09-2024--------------------
+make the remaining branches and share the builds -> First builds will have to be made by me
+make the common changes 90 to 98 in all the braches, else they will not work due to mapv2 changes
+
+recheck preview.html in 21-22 -> Done
+to check if json and map service files for online_sanity for different ays are same or different -> this will confirm copy paste of the changes of online_sanity in to prior ay sanity branches
+
+prior Ay build issues to check
+	ITR4 computation issue -> Done
+	ITR2 county name issue -> Done
+
+To confirm testing status, if they are sharable to Infy now
+
+itr4 21-22 advance tax date issue -> Done
+
+ITR7 and ITR6 branches to be made -> (Done for 7 22-23, for others, RA not ready yet)
+
+21-22 computation is priority -> Done and build is shared
+
+merge is to be done for ITR4 for better build
+
+
+File_your_tax_return_for_the_AY -> This is to be replaced in 22-23 and 21-22 builds -> Done
+21-22 build to be made after issue resolution for ITR1, ITR2, ITR4 -> Will be made after testing completion
+ITR7 22-23 build to be shared -> Done
+
+ITR5 JIRA tickets to check and let Rishabh know about any requirements from him
+	There might be some computation issues, Dipika need to be notified for the same -> Received from Dipika
+	4:00 PM -> Two hours should be enough
+
+Requested ETA with internal testing team -> received
+Testing teams asked to put the test cases for 234A, 234B, 234C, 234F, Surcharge and OS3c on drive
+Testing team asked to put Sample JSONs on drive
+
+
+SchemaVer and FormVer for 21-22 Offline
+ITR2 21-22 one issue 80GGA Date issue -> Done
+
+
+18.09.2024-----------------------
+
+21-22->Computation issue in ITR2 and ITR4 -> Done
+21-22 build to be reshared for final submission -> Three ITR2 issues to be checked -> Noted
+ITR5 23-24 UR to update -> Done
+Arun Meeting for Validations -> Done
+ITR5 UR computation updated -> To be sent to Dipika -> Done
+ITR5 tickets to discuss with Rishabh -> Done
+
+ITR7 22-23 Roshni Issue -> Done
+Suraj compressed build -> Done
+ITR2 21-22 internal testing issues to go through -> Done
+ITR5 some JIRA tickets to go through
+ITR7 20 issue resolution
+
+
+Personal JSON should not upload -> Offline issue resolved, online requirement is not received
+139_8A sequence to update -> Pending
+Pops are being modified as per AT teams' discussion. Once existing are approved, new pop ups will be developed accordingly. -> Under Discussion
+
+
+20-09-2024--------------------------------------------
+21-22 build will be on priority on Friday (half an hour thing) -> Given to team
+
+then ITR7 issues will be done (3-4 hour including discussions)
+Documentation by Satyaprakash
+ITR1 BRF work
+prefill itr7 22-23, 21-22 -> To discuss with Rishabh or Rubi
+ITR7 21-22 CYLA, SI, BTTI(surcharge and interest) -> Formula
+
+
+TR issue on duplicate value in FSI
+
+
+
+
+--------------------------------------------------------------------------------
+
+ITR7 Computation issue -> Dipika
+ITR5 Computation issue -> Dipika
+ITR3 Computation issue -> Dipika
+
+Prior AY build status and computation issues required
+BRF thing?
+Auxilio or some other project overseeing??
+
+
+
+"solemnly_declare5": "solemnly declare that to the best of my knowledge and belief, the information given in the return and the schedules thereto is correct and complete is in accordance with the provisions of the Income Tax Act, 1961.",
+"solemnly_declare7": "solemnly declare that to the best of my knowledge and belief, the information given in this return and the schedules, statements, etc., accompanying it is correct and complete is in accordance with the provisions of the Income Tax Act, 1961.",
+
+
+
+
+SWVersion point in common change
+ITR6 blocker to check
+ITR7 21-22 CYLA to be done then to be given to dipika for btti points
+
+Computations of 234A, 234B, 234C will need constant update due to issues still popping up in current AY -> Shame for both teams
+
+ITR3, ITR5, ITR7 -> To update for date of prior AY and to extend for 12 and 24 months
+
+
+
+"labels": {
+		"confirmation": "Confirmation",
+		"yes": "Yes",
+		"no": "No",
+		"feedback": "Feedback",
+		"using_portal": "Using the Portal",
+		"website_policies": "Website Policies",
+		"accessibility_statement": "Accessibility Statement",
+		"site_map": "Site Map",
+		"browser_support": "Browser Support",
+		"coBrowse_help": "CoBrowse Help",
+		"last_viewed_updated_on": "Last reviewed and updated on"
+	},
+-------------------------------------
+
+
+----------
+
+

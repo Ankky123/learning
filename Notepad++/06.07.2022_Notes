@@ -1,0 +1,26 @@
+If Not Application.Intersect(Sheet1.Range("sheet1.NRI_115BA_1"), Sheet1.Range(Target.address)) Is Nothing Then
+
+If (getRangeName(Target) = "sheet1.AuditorName") Or (getRangeName(Target) = "sheet1.AuditorMemNo") Or _
+            (getRangeName(Target) = "sheet1.AudFrmName") Or (getRangeName(Target) = "sheet1.AudFrmRegNo") Or 
+			(getRangeName(Target) = "sheet1.AudFrmPAN") Or _
+            (getRangeName(Target) = "sheet1.AudFrmAadhaar") Or (getRangeName(Target) = "sheet1.AuditDate") Or _
+            (getRangeName(Target) = "Sheet1.AuditReportFurnishDate") Then
+			
+		If (Not Application.Intersect(Sheet1.Range("sheet1.AuditorName"), Sheet1.Range(Target.address)) Is Nothing) Or 
+		(Not Application.Intersect(Sheet1.Range("sheet1.AuditorMemNo"), Sheet1.Range(Target.address)) Is Nothing) Or 
+		(Not Application.Intersect(Sheet1.Range("sheet1.AudFrmName"), Sheet1.Range(Target.address)) Is Nothing) Or 
+		(Not Application.Intersect(Sheet1.Range("sheet1.AudFrmRegNo"), Sheet1.Range(Target.address)) Is Nothing) Or 
+		(Not Application.Intersect(Sheet1.Range("sheet1.AudFrmPAN"), Sheet1.Range(Target.address)) Is Nothing) Or 
+		(Not Application.Intersect(Sheet1.Range("sheet1.AudFrmAadhaar"), Sheet1.Range(Target.address)) Is Nothing) Or 
+		(Not Application.Intersect(Sheet1.Range("sheet1.AuditDate"), Sheet1.Range(Target.address)) Is Nothing) Or 
+		(Not Application.Intersect(Sheet1.Range("Sheet1.AuditReportFurnishDate"), Sheet1.Range(Target.address)) Is Nothing) Then
+        
+		Change to make in validation message for 80GGA PAN Field 
+		"Donee PAN cannot be same as assesse PAN or verification PAN"
+		
+ITR 6 FI schedule is not importing
+Itr 6 Schedule SH last table is not flowing to json
+ITR6 - change the message greater with earlier - Done
+ITR6 - FA data validation to change
+
+

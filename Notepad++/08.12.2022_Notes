@@ -1,0 +1,20 @@
+To make the UI,
+You will need to  use root element for the tree 
+and traverse over its child array
+This will be a recursive function so whole tree will be traversed
+
+There will be objects, arrays, Primitives with their display types and field types
+
+Each tree node has its respective Tag information, display type and field type
+Call the respective template for each display type and field type
+
+like if the field is an object, call templates for making the object UI
+if the field is an array call the template to make the array UI
+if the field is a primitive call the template for the primitive
+inside that template other templates are called for object, array, primitive
+
+
+need to ask testers to put rules and de reference number
+
+
+

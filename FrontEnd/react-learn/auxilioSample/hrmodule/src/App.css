@@ -1,0 +1,117 @@
+h3,
+h4 {
+  color: white;
+}
+
+.breadcrumbs {
+  height: 30px
+}
+
+#head-frame {
+  background-color: #3B2A47;
+}
+
+#emp-data {
+  display: inline-block;
+  width: 70%;
+  margin-left: 20px;
+}
+
+#head-frame-button {
+  width: 60px;
+  height: 30px;
+  position: relative;
+  left: 12%;
+  bottom: 120px;
+  background-color: #815C9D;
+}
+
+#profile-image {
+  margin-left: 20px;
+  height: 150px;
+  width: 150px;
+}
+
+#page-action {
+  background-color: #F7F9FB;
+}
+
+#page-action button {
+  width: 12%;
+  height: 40px;
+  border: none;
+  background-color: #F7F9FB;
+}
+
+#project-data>.detail-box {
+  width:16%;
+}
+
+.detail-box {
+  display: inline-block;
+  width: 30%;
+}
+
+.detail-box p:first-child, .section-title p:last-child {
+  color: #988484;
+}
+
+#project-data .detail-box p:last-child, .section-title p:first-child, #stepper label, .detail-box-container>p {
+  font-weight: bold;
+}
+
+#stepper {
+  height: 60px;
+  background-color: #F7F9FB;
+  align-content: center;
+}
+
+.arrow {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.section {
+  display: flex;
+}
+
+.section-title {
+  width:40%;
+  padding-right: 10%;
+}
+
+.w-100 {
+  width: 90%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.color-dirtywhite {
+  background-color: #F7F9FB;
+}
+
+.detail-box-container {
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.file-input {
+  display: block;
+  border: dashed;
+  border-color: #988484;
+  border-width: 1px;
+  background-color: white;
+  margin-top: 20px;
+  width: 100%;
+  height: 80px;
+}
+
+.section-data {
+  width: 50%;
+}

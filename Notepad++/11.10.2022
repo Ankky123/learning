@@ -1,0 +1,32 @@
+
+
+How to validate a field in the html
+E.g. -> First Name
+	max length allowed is 25 characters
+	numbers not allowed
+	it is not mandatory
+	
+I will have an ID for the field
+	using the ID, I will need to navigate the map of UserInputValues to find the validation fields and function to call for the field
+	The submit button will be called to call the all the validations
+	the ID needs to be map navigable
+	need to use javascript getelementbyid() inside the submit button function for all the fields
+	This idea can be extended to every field for group id also and other formulas and functions
+
+frist lets add submit button in the html page
+then add a simple validation automatically
+
+to generate a file including all the elements ids
+to add the parameter in the function of insert field
+to add the parameter in the function of insert table
+parent id -> To remove "struct" from the string
+
+
+
+	
+Start from a field
+make for a object
+make for a table
+make for a block
+make for a schedule
+make for the ITR

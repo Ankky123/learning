@@ -1,0 +1,59 @@
+ID for elements - Develop IDs from the struct such that i can use unmarshalled json to get the various properties
+				- can simply use dotted path or zz'd path -> this approach might not help me use unmarshalled json properties.
+	inside the definitions and inside the tag path
+	ITR.Definitions[objectTag].Properties[childTag]....	ITR.Definitions[objectTag].Properties[subOjbect].Properties.[subObject].Properties[childTag]
+But to make a basic UI, 
+Using struct to traverse
+Using unmarhalled json to set properties.
+
+ID examples
+
+ITR2.ScheduleHP.PropertyDetails.Rentdetails.TotalUnrealizedAndTax	->ITR.Definitions[Rentdetails].Properties[TotalUnrealizedAndTax]...
+ITR2.ScheduleHP.PropertyDetails.PropertyOwner						->ITR.Definitions[PropertyDetails].Properties[PropertyOwner]...
+ITR2.ScheduleHP.PassThroghIncome									->ITR.Definitions[ScheduleHP].Properties[PassThroghIncome]...
+
+ITR2.ScheduleTCS.ScheduleTCSzzTCS.TotalTCS							->ITR.Definitions[ScheduleTCS].Properties[TCS].Properties[TotalTCS]...
+ITR2.ScheduleTCS.ScheduleTCSzzTCS.EmployerOrDeductorOrCollectDetl.TAN	->ITR.Definitions[EmployerOrDeductorOrCollectDetl].Properties[TAN]...
+
+ITR2.ScheduleCGFor23.ShortTermCapGainFor23.ShortTermCapGainFor23zzSaleofLandBuild.ShortTermCapGainFor23zzSaleofLandBuildzzSaleofLandBuildDtls.
+.ShortTermCapGainFor23zzSaleofLandBuildzzSaleofLandBuildDtlszzTrnsfImmblPrprty.TrnsfImmblPrprtyDtls.Amount
+																	->ITR.Definitions[TrnsfImmblPrprtyDtls].Properties[Amount]...
+ITR2.ScheduleCGFor23.ShortTermCapGainFor23.ShortTermCapGainFor23zzSaleofLandBuild.ShortTermCapGainFor23zzSaleofLandBuildzzSaleofLandBuildDtls.
+.PropertyValuation
+								->ITR.Definitions[ShortTermCapGainFor23].Properties[SaleofLandBuild].Properties[SaleofLandBuildDtls].Properties[PropertyValuation]....
+ITR2.ScheduleCGFor23.TotScheduleCGFor23								->ITR.Definitions[ScheduleCGFor23].Properties[TotScheduleCGFor23]...
+
+ITR2.ScheduleCGFor23.ShortTermCapGainFor23.UnutilizedStcgFlag
+								->ITR.Definitions[ShortTermCapGainFor23].Properties[UnutilizedStcgFlag]....
+
+
+Enums can be accessed using enumMap if available
+Pattern can be accessed directly or from pattern map if avaliable
+
+Individual tabs and routing - Now to make a page that has a navigation bar and routing
+common css for values
+
+insertDropdownElementEnum - To modify for enumMap -> Combining objectTagzzelementTag will give me the key for enumMap travel
+							traversal in the nested map will be done using enumArr[i] as key
+elementIDs of Table elements are missing in elementID file
+
+insertDropdownElementPattern
+insertDropdownElementEnum
+
+different elements with me
+<label>
+<p>
+<input type="radio"
+<input type="text"
+<input type="number"
+<input type="radio"
+
+<select
+	<option
+
+<button
+
+github.com/360EntSecGroup-Skylar/exelize/v2
+
+
+

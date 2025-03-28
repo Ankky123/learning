@@ -1,0 +1,377 @@
+DOA -> 12
+FSI -> 18
+TR1 -> 16
+TCS -> 26
+AMTC -> 8
+TDS3 -> 2
+TDS2 -> 3
+----------	
+
+The Build in which error was resolved (the error which is coming in latest versions)
+		
+Clarification Point -> 
+CG -> "Section under which deduction claimed in that year"
+The validationo is conflicting
+
+
+General Notes for development
+
+1. How one field is depending on other fields should be written in one field function only
+2. Don't call enableevent (true/flase) inside subs or functions. Let it be called inside worksheet_change only
+3. A sheet can be enabled and disabled and its internal fields can be enabled and disabled at the same time. Make it all in one sub. Let the sub decide what happens
+4. Make the code such that you will not need to call enable events much.
+
+
+ITR2 Rule 165
+
+
+A(1)(a)(i)} , A(2)(a),A(3)(a) (only if  positive),A(3)(b)(only if  positive),
+A(4)(aia),A(4)(aii),A(5)(aia), A(5)(aii), A7, 
+
+
+
+var sum2 = 0.0
+<--
+	var Element1 = @ScheduleCGFor23.ShortTermCapGainFor23.SaleofLandBuild.SaleofLandBuildDtls[]
+	sum2 += Element1.FullConsideration50C -> A1ai (200)
+-->
+
+<--
+	var Element2 =@ScheduleCGFor23.ShortTermCapGainFor23.EquityMFonSTT[]EquityMFonSTTDtls
+	sum2 += Element2.FullConsideration (A2a) (120)
+-->
+if (@ScheduleCGFor23.ShortTermCapGainFor23.NRITransacSec48Dtl.NRItaxSTTPaid > 0) {
+	sum2 += @ScheduleCGFor23.ShortTermCapGainFor23.NRITransacSec48Dtl.NRItaxSTTPaid A3a (130)
+}
+if (@ScheduleCGFor23.ShortTermCapGainFor23.NRITransacSec48Dtl.NRItaxSTTNotPaid > 0) {
+	sum2 += @ScheduleCGFor23.ShortTermCapGainFor23.NRITransacSec48Dtl.NRItaxSTTNotPaid A3b (140)
+}
+
+sum2 += @ScheduleCGFor23.ShortTermCapGainFor23.NRISecur115AD.FullValueConsdRecvUnqshr A4aia (150)
+sum2 += @ScheduleCGFor23.ShortTermCapGainFor23.NRISecur115AD.FullValueConsdOthUnqshr A4aii
+sum2 += @ScheduleCGFor23.ShortTermCapGainFor23.SaleOnOtherAssets.FullValueConsdRecvUnqshr A5aia (160)
+sum2 += @ScheduleCGFor23.ShortTermCapGainFor23.SaleOnOtherAssets.FullValueConsdOthUnqshr A5aii (160)
+
+sum2 += @ScheduleCGFor23.ShortTermCapGainFor23.PassThrIncNatureSTCG 7 (90)
+
+
+{Total of all Sl.no. B(1)(a)(i)}, B(2)(a),B(3)(i)(a),B(3)(ii)(a), B(4)(a), B5a, 
+B6(i)a(ia), B6(i)(aii), B6(ii)(a)(ia), B6(ii)(aii),B6(iii)(a)(ia), 
+B6(iii)(aii), ,B8a,B8d, B9a(ia), B9(aii),
+
+
+<--
+	var Element3 = @ScheduleCGFor23.LongTermCapGain23.SaleofLandBuild.SaleofLandBuildDtls[]
+	sum2 += Element3.FullConsideration50C  B1ai (100)
+-->
+sum2 += @ScheduleCGFor23.LongTermCapGain23.SaleofBondsDebntr.FullConsideration B2a (120)
+<--
+	var Element4 = @ScheduleCGFor23.LongTermCapGain23.Proviso112Applicable[]Proviso112Applicabledtls
+	sum2 += Element4.FullConsideration (B3ia, B3iia) (130)
+-->
+
+sum2 += @ScheduleCGFor23.LongTermCapGain23.SaleOfEquityShareUs112A.BalanceCG (B4a)
+sum2 += @ScheduleCGFor23.LongTermCapGain23.NRIProvisoSec48.LTCGWithoutBenefit B5a (140)
+<--
+	sum2 += @ScheduleCGFor23.LongTermCapGain23.NRIOnSec112and115.NRIOnSec112and115Dtls[]FullValueConsdRecvUnqshr B6iaia (150)
+	sum2 += @ScheduleCGFor23.LongTermCapGain23.NRIOnSec112and115.NRIOnSec112and115Dtls[]FullValueConsdOthUnqshr B6iaii (150)
+-->
+
+
+sum2 += @ScheduleCGFor23.LongTermCapGain23.NRISaleofForeignAsset.SaleonSpecAsset B8a (160)
+sum2 += @ScheduleCGFor23.LongTermCapGain23.NRISaleofForeignAsset.SaleOtherSpecAsset B8d (170)
+
+sum2 += @ScheduleCGFor23.LongTermCapGain23.SaleofAssetNA.FullValueConsdRecvUnqshr B9aia (180)
+sum2 += @ScheduleCGFor23.LongTermCapGain23.SaleofAssetNA.FullValueConsdOthUnqshr B9aii (180)
+
+sum2 += @ScheduleCGFor23.LongTermCapGain23.PassThrIncNatureLTCG 12 (140)
+sum2 += @Schedule112A.SaleValue112A col6 (250)
+sum2 += @Schedule115AD.SaleValue115AD col6 (0)
+
+sum4 += @ScheduleCGFor23.LongTermCapGain23.SlumpSaleInLtcg.FullConsideration (2a -> 2aiii)
+sum4 += @ScheduleCGFor23.LongTermCapGain23.SaleofBondsDebntr.FullConsideration  3a
+sum4 += @ScheduleCGFor23.LongTermCapGain23.SaleofAssetNA.FullConsideration  10aiii
+sum4 += @ScheduleCGFor23.LongTermCapGain23.PassThrIncNatureLTCG 12
+
+sum4 += @Schedule112A.SaleValue112A
+
+
+ITR3
+Prefill SRS Updated to be implemented (confirmation for latest required)-> 3 onhold issues 
+TDS2 blocker will be resolved after clarification -> Onhold blocker
+Pincode masterlist to be implemented
+
+
+ITR3 Some Rule 
+In Part A gen, if 115H is "yes" and in Schedule FSI, if value at column ( e ) > 0 against "Capital Gain" income then value at column (b ) for capital gains in 
+all blocks is more than "{ sale consideration at point A of  ( sl.no.1ai of all blocks + Sl.no. 2a + Sl.no.3a of all blocks + sl.no.4a +sl.no.4b + 
+sl.no.5aiii + sl.no. 6aiii + Sl.no.8)  + 
+at point B of (sl.no.1ai of all blocks + sl.no.2a+sl.no.3a+ sl.no.4a of all blocks+sl.no.6a +sl.no.7aiii of all blocks + 
+sl.no.9a +sl.no.9d + sl.no.10aiii+sl.no.12)} in Schedule CG + Sum of   Col (6) "Full consideration" of schedule 112A + Sum of   Col (6) "Full consideration" of schedule 115AD)
+
+
+Else (i.e., if 115H is "No") and  in Schedule FSI, if value at column ( e ) > 0 against "Capital Gain" income then value at column (b ) for capital 
+gains in all blocks is more than should be minimum of "{ sale consideration at point A of  ( sl.no.1ai of all blocks + Sl.no. 2a + Sl.no.3a of all blocks + 
+sl.no. 6aiii + Sl.no.8)  + at point B of (sl.no.1ai of all blocks + sl.no.2a+sl.no.3a+ sl.no.4a of all blocks+ sl.no.10aiii+sl.no.12)} in 
+Schedule CG + Sum of   Col (6) "Full consideration" of schedule 112A )
+
+Rule 902 -> TC3
+var sum1 = 0.0
+<--
+	sum1 += @ScheduleFSI.ScheduleFSIDtls[]IncCapGain.IncFrmOutsideInd  2b  (2649)
+-->
+var sum4 = 0.0
+var sum2 = 0.0
+<--
+	var Element1 = @ScheduleCGFor23.ShortTermCapGainFor23.SaleofLandBuild.SaleofLandBuildDtls[]
+	sum2 += Element1.FullConsideration50C -> 1ai (200)
+	sum4 += Element1.FullConsideration50C -> 1ai (200)
+-->
+
+<--
+	var Element2 =@ScheduleCGFor23.ShortTermCapGainFor23.EquityMFonSTT[]EquityMFonSTTDtls
+	sum2 += Element2.FullConsideration (3a -> 3ia) (120)
+	sum4 += Element2.FullConsideration (3a -> 3ia) (120)
+-->
+sum2 += @ScheduleCGFor23.ShortTermCapGainFor23.SlumpSaleInStcg.FullConsideration (2a -> 2aiii) (110)
+sum2 += @ScheduleCGFor23.ShortTermCapGainFor23.NRITransacSec48Dtl.NRItaxSTTPaid 4a (130)
+sum2 += @ScheduleCGFor23.ShortTermCapGainFor23.NRITransacSec48Dtl.NRItaxSTTNotPaid 4b (140)
+sum2 += @ScheduleCGFor23.ShortTermCapGainFor23.NRISecur115AD.FullConsideration 5aiii (150)
+sum2 += @ScheduleCGFor23.ShortTermCapGainFor23.SaleOnOtherAssets.FullConsideration 6aiii (160)
+sum2 += @ScheduleCGFor23.ShortTermCapGainFor23.PassThrIncNatureSTCG 8 (90)
+
+sum4 += @ScheduleCGFor23.ShortTermCapGainFor23.SlumpSaleInStcg.FullConsideration (2a -> 2aiii)
+sum4 += @ScheduleCGFor23.ShortTermCapGainFor23.SaleOnOtherAssets.FullConsideration 6aiii
+sum4 += @ScheduleCGFor23.ShortTermCapGainFor23.PassThrIncNatureSTCG 8
+
+<--
+	var Element3 = @ScheduleCGFor23.LongTermCapGain23.SaleofLandBuild.SaleofLandBuildDtls[]
+	sum2 += Element3.FullConsideration50C  1ai (100)
+	sum4 += Element3.FullConsideration50C 1ai (100)
+-->
+sum2 += @ScheduleCGFor23.LongTermCapGain23.SaleofBondsDebntr.FullConsideration 3a (120)
+sum2 += @ScheduleCGFor23.LongTermCapGain23.SlumpSaleInLtcg.FullConsideration (2a -> 2aiii) (110)
+<--
+	var Element4 = @ScheduleCGFor23.LongTermCapGain23.Proviso112Applicable[]Proviso112Applicabledtls
+	sum2 += Element4.FullConsideration (4a -> 4ia) (130)
+	sum4 += Element4.FullConsideration (4a -> 4ia) (130)
+-->
+sum2 += @ScheduleCGFor23.LongTermCapGain23.NRIProvisoSec48.LTCGWithoutBenefit 6a (140)
+<--
+	sum2 += @ScheduleCGFor23.LongTermCapGain23.NRIOnSec112and115.NRIOnSec112and115Dtls[]FullConsideration 7aiii (150)
+-->
+
+
+sum2 += @ScheduleCGFor23.LongTermCapGain23.NRISaleofForeignAsset.SaleonSpecAsset 9a (160)
+sum2 += @ScheduleCGFor23.LongTermCapGain23.NRISaleofForeignAsset.SaleOtherSpecAsset 9d (170)
+
+sum2 += @ScheduleCGFor23.LongTermCapGain23.SaleofAssetNA.FullConsideration 10aiii (180)
+
+sum2 += @ScheduleCGFor23.LongTermCapGain23.PassThrIncNatureLTCG 12 (140)
+sum2 += @Schedule112A.SaleValue112A col6 (250)
+sum2 += @Schedule115AD.SaleValue115AD col6 (0)
+
+sum4 += @ScheduleCGFor23.LongTermCapGain23.SlumpSaleInLtcg.FullConsideration (2a -> 2aiii)
+sum4 += @ScheduleCGFor23.LongTermCapGain23.SaleofBondsDebntr.FullConsideration  3a
+sum4 += @ScheduleCGFor23.LongTermCapGain23.SaleofAssetNA.FullConsideration  10aiii
+sum4 += @ScheduleCGFor23.LongTermCapGain23.PassThrIncNatureLTCG 12
+
+sum4 += @Schedule112A.SaleValue112A
+
+var sum3 = 0.0
+<--
+	sum3 += @ScheduleFSI.ScheduleFSIDtls[]IncCapGain.TaxReliefinInd 3e (250)
+-->
+
+if(sum3 > 0 && sum1 > sum2) && (@PartA_GEN1.FilingStatus.BenefitUs115HFlg == "Y"){
+	addError(1)
+}
+
+if(sum3 > 0 && sum1 > sum4) && (@PartA_GEN1.FilingStatus.BenefitUs115HFlg == "N"){
+	addError(1)
+}
+
+50172
+50352
+50362
+50390	 
+
+ITR2 Production Build - 50641
+
+ITR3 0.4 Runtime Error - done
+ITR5 1 issue to be moved from computation to excel
+ITR5 17 defects RCA - To send mail for 12/8 issues
+ITR7 substatus blocker to be shared => To share in morning
+ITR7 3 reopen blocker -> Same thing tested? -> RCA -> mailed
+
+
+Rule 553 -> `ITR2_PDM_Group1.IncomeNotified89AType_NOT89ACountrycode_rti1y`
+Rule 554 -> `ITR2_PDM_Group1.IncomeNotified89ATypeOS_NOT89ACountrycode_HUocw`
+
+
+'Change-08.05.2023.101.ESR -> RuntimeError
+'    If Sheet12.Range("ESR1ii.ExcessAmtOverDebPL").value > 0 Or Sheet12.Range("ESR1iia.ExcessAmtOverDebPL").value Or Sheet12.Range("ESR1iii.ExcessAmtOverDebPL").value Or Sheet12.Range("ESR2AA.ExcessAmtOverDebPL").value Then
+    If Sheet12.Range("ESR1ii.ExcessAmtOverDebPL").value > 0 Or Sheet12.Range("ESR1iia.ExcessAmtOverDebPL").value > 0 Or Sheet12.Range("ESR1iii.ExcessAmtOverDebPL").value > 0 Or Sheet12.Range("ESR2AA.ExcessAmtOverDebPL").value > 0 Then
+    If Not end80GGA1 > 0 Then
+    MsgBox_80GGA = MsgBox_80GGA + "* Schedule RA is mandatory as there is entry in Schedule ESR[deduction under sections 35(1)(ii) or 35(1)(iia) or 35(1)(iii) or 35(2AA)]" & Chr(13)
+        Validate80GGA_1 = False
+        Exit Function
+    End If
+    End If
+
+
+ITR7 B1, B2, B3
+At a time, only 1 B is open, rest all are closed.
+
+
+Sheet3.Range("B3.ExamptionFlag").value = "False"
+       LOCKRANGE_BTI (b1rng)
+       LOCKRANGE_BTI (b3rng)
+
+
+DB Mapping sheet -> SumSTLTCG to be replaced by ShortTermLongTermTotal
+					-> Bti3 -> GrossInc1 -> SumTotal and updathe the label
+							-> STTotal, LTTotal,  -> 
+
+
+ITR3 
+Rule 142 is a big rule -> For last
+
+
+ITR3 142
+Rule 142
+
+In Schedule HP , Sum of 
+ [  Sr.no {1a+(1j*10/7)} (of all the house properties ) (i .e., Annual let able value or rent received or receivable and Arrears/Unrealized 
+ rent received during the year after factoring for the  30% deducted in the he return)
++ 
+ Sl.no. 2 only if value is positive (i.e., Pass thorugh Income) ] =
+  is EQUAL TO ZERO or Null
++
+In Schedule Salary Sl. No. 2 Total Gross Salary
++
+In  Schedule CG  sum of {Total of all blocks of Sl.no. A(1)(a)(i)} , A(2)(aiii),A(3)(a), A(4)(a)(only if  positive),A(4)(b)(only if  positive),A(5)(aia), A(5)(aii),
+A(6)(aia),A(6)(aii), A8(a) only if positive,A8(b) only if positive,A8(c)  only if positive {Total of all blocks of  Sl.no. B(1)(a)(i)},
+ B(2)(aiii),B(3)(a), B(4)(a), Column no 6 of schedule 112A, B6a (only if positive),B(7)(aia),B(7)(aii) of all 4 sections , Column no 6 of schedule 115AD, 
+ B(9)(aia),B(9)(d),B(10)(aia),B(10)(aii) and B12a only if positive, B12a2 only if positive, B12b only if positive ,  sum of Sl.no 5 & 8 of Schedule DPM & DOA
+ is EQUAL TO ZERO or Null
++
+SR.NO  4D of Trading account+( positive values of Sl.no.14 of Schedule profit and loss  - SL.no 14 (xi)(a) of Profit and loss)+ 
+Sr.no 61(i),62(i), 63(i), 64(ia),(64iia), 65(i) - sum of ( 3a,3b,3c,3d & 5d  from Schedule BP)  ,
++
+Schedule OS- Sl.no 1a+ Sum of  Positive values of sl.no.1b +1c+1e+2a+2c+2d+2e+  is EQUAL TO ZERO or Null
++
+Schedule EI- Sl.no 1+3+4+5 is EQUAL TO ZERO or Null
+AND
+(Sum of “Total Tax deducted” from schedule “TDS 1” + Sum of "TDS claimed in own hands" from schedule "TDS 2" excluding  
+TDS claimed when head of income dropdown is selected as  194N  in Sch TDS2   +sum of "TDS in claimed in own hand" from schedule "TDS 3) IS MORE THAN 1,000"
+
+-------------
+var sumHP = 0.0
+<--
+var Element = @ScheduleHP.PropertyDetails[]
+	sumHP += (Element.Rentdetails.AnnualLetableValue) + (Element.Rentdetails.ArrearsUnrealizedRentRcvd*10)/7
+-->
+if(@ScheduleHP.PassThroghIncome > 0) {
+	sumHP += @ScheduleHP.PassThroghIncome
+}
+
+var sum = 0.0
+<--
+sum += @ScheduleCGFor23.ShortTermCapGainFor23.SaleofLandBuild.SaleofLandBuildDtls[]FullConsideration
+-->
+sum += @ScheduleCGFor23.ShortTermCapGainFor23.SlumpSaleInStcg.FullConsideration
+<--
+sum += @ScheduleCGFor23.ShortTermCapGainFor23.EquityMFonSTT[]EquityMFonSTTDtls.FullConsideration
+-->
+sum += @ScheduleCGFor23.ShortTermCapGainFor23.NRITransacSec48Dtl.NRItaxSTTPaid
+sum += @ScheduleCGFor23.ShortTermCapGainFor23.NRITransacSec48Dtl.NRItaxSTTNotPaid
+sum += @ScheduleCGFor23.ShortTermCapGainFor23.SaleOnOtherAssets.FullConsideration
+sum += Max(@ScheduleCGFor23.ShortTermCapGainFor23.PassThrIncNatureSTCG15Per,0)
+sum += Max(@ScheduleCGFor23.ShortTermCapGainFor23.PassThrIncNatureSTCG30Per,0)
+sum += Max(@ScheduleCGFor23.ShortTermCapGainFor23.PassThrIncNatureSTCGAppRate,0)
+sum += @ScheduleCGFor23.ShortTermCapGainFor23.NRISecur115AD.FullConsideration
+<--
+sum += @ScheduleCGFor23.LongTermCapGain23.SaleofLandBuild.SaleofLandBuildDtls[]FullConsideration
+-->
+sum += @ScheduleCGFor23.LongTermCapGain23.SlumpSaleInLtcg.FullConsideration
+sum += @ScheduleCGFor23.LongTermCapGain23.SaleofBondsDebntr.FullConsideration
+<--
+sum += @ScheduleCGFor23.LongTermCapGain23.Proviso112Applicable[]Proviso112Applicabledtls.FullConsideration
+-->
+sum += @ScheduleCGFor23.LongTermCapGain23.NRIProvisoSec48.LTCGWithoutBenefit
+<--
+sum += @ScheduleCGFor23.LongTermCapGain23.NRIOnSec112and115.NRIOnSec112and115Dtls[]FullConsideration
+-->
+sum += @ScheduleCGFor23.LongTermCapGain23.SaleofAssetNA.FullConsideration
+sum += Max(@ScheduleCGFor23.LongTermCapGain23.PassThrIncNatureLTCGUs112A,0)
+sum += Max(@ScheduleCGFor23.LongTermCapGain23.PassThrIncNatureLTCG10Per,0)
+sum += Max(@ScheduleCGFor23.LongTermCapGain23.PassThrIncNatureLTCG20Per,0)
+sum += @ScheduleCGFor23.LongTermCapGain23.NRISaleofForeignAsset.SaleOtherSpecAsset
+sum += @ScheduleCGFor23.LongTermCapGain23.NRISaleofForeignAsset.SaleonSpecAsset
+
+sum += @Schedule112A.SaleValue112A
+sum += @Schedule115AD.SaleValue115AD
+
+var sumCG = 0.0
+sumCG = sum
+sum = 0.0
+var sumDPM_DOA = 0.0
+
+sumDPM_DOA += @ScheduleDPM.PlantMachinery.Rate45.DepreciationDetail.RealizationTotalPeriod
+sumDPM_DOA += @ScheduleDPM.PlantMachinery.Rate15.DepreciationDetail.RealizationTotalPeriod
+sumDPM_DOA += @ScheduleDPM.PlantMachinery.Rate30.DepreciationDetail.RealizationTotalPeriod
+sumDPM_DOA += @ScheduleDPM.PlantMachinery.Rate40.DepreciationDetail.RealizationTotalPeriod
+
+sumDPM_DOA += @ScheduleDPM.PlantMachinery.Rate15.DepreciationDetail.RealizationPeriodLessThan180days
+sumDPM_DOA += @ScheduleDPM.PlantMachinery.Rate30.DepreciationDetail.RealizationPeriodLessThan180days
+sumDPM_DOA += @ScheduleDPM.PlantMachinery.Rate40.DepreciationDetail.RealizationPeriodLessThan180days
+
+sumDPM_DOA += @ScheduleDOA.Building.Rate5.DepreciationDetail.RealizationTotalPeriod
+sumDPM_DOA += @ScheduleDOA.Building.Rate10.DepreciationDetail.RealizationTotalPeriod
+sumDPM_DOA += @ScheduleDOA.Building.Rate40.DepreciationDetail.RealizationTotalPeriod
+sumDPM_DOA += @ScheduleDOA.FurnitureFittings.Rate10.DepreciationDetail.RealizationTotalPeriod
+sumDPM_DOA += @ScheduleDOA.IntangibleAssets.Rate25.DepreciationDetail.RealizationTotalPeriod
+sumDPM_DOA += @ScheduleDOA.Ships.Rate20.DepreciationDetail.RealizationTotalPeriod
+
+sumDPM_DOA += @ScheduleDOA.Building.Rate5.DepreciationDetail.RealizationPeriodLessThan180days
+sumDPM_DOA += @ScheduleDOA.Building.Rate10.DepreciationDetail.RealizationPeriodLessThan180days
+sumDPM_DOA += @ScheduleDOA.Building.Rate40.DepreciationDetail.RealizationPeriodLessThan180days
+sumDPM_DOA += @ScheduleDOA.FurnitureFittings.Rate10.DepreciationDetail.RealizationPeriodLessThan180days
+sumDPM_DOA += @ScheduleDOA.IntangibleAssets.Rate25.DepreciationDetail.RealizationPeriodLessThan180days
+sumDPM_DOA += @ScheduleDOA.Ships.Rate20.DepreciationDetail.RealizationPeriodLessThan180days
+
+sumCG += sumDPM_DOA
+
+var sumTD_PL_BP = 0.0
+
+sumTD_PL_BP += @TradingAccount.TotRevenueFrmOperations
+
+sumTD_PL_BP += @PARTA_PL.CreditsToPL.OthIncome.ProfitOnCnvInvntryToCapAsst
+sumTD_PL_BP += @PARTA_PL.CreditsToPL.OthIncome.InterestInc
+sumTD_PL_BP += @PARTA_PL.CreditsToPL.OthIncome.ProfitOnSaleFixedAsset
+sumTD_PL_BP += @PARTA_PL.CreditsToPL.OthIncome.ProfitOnCurrFluct
+sumTD_PL_BP += @PARTA_PL.CreditsToPL.OthIncome.Dividends
+sumTD_PL_BP += @PARTA_PL.CreditsToPL.OthIncome.ProfitOnInvChrSTT
+sumTD_PL_BP += @PARTA_PL.CreditsToPL.OthIncome.ProfitOnOthInv
+sumTD_PL_BP += @PARTA_PL.CreditsToPL.OthIncome.ProfitOnAgriIncome
+sumTD_PL_BP += @PARTA_PL.CreditsToPL.OthIncome.MiscOthIncome
+sumTD_PL_BP += @PARTA_PL.CreditsToPL.OthIncome.Comissions
+sumTD_PL_BP += @PARTA_PL.CreditsToPL.OthIncome.TotOthIncome
+sumTD_PL_BP += @PARTA_PL.CreditsToPL.OthIncome.RentInc
+
+sumTD_PL_BP -= @PARTA_PL.CreditsToPL.OthIncome.LiabilityWrittenBack
+
+sumTD_PL_BP += @PARTA_PL.PersumptiveInc44AD.GrsTrnOverOrReceipt
+sumTD_PL_BP += @PARTA_PL.PersumptiveInc44ADA.GrsReceipt
+sumTD_PL_BP += @PARTA_PL.TotalPrsumptvIncUs44E
+sumTD_PL_BP += @PARTA_PL.NoBooksOfAccPL.GrossReceipt
+sumTD_PL_BP += @PARTA_PL.NoBooksOfAccPL.GrossReceiptPrf
+sumTD_PL_BP += @PARTA_PL.TurnverFrmSpecActivity
+
+sumTD_PL_BP -= @ITR3ScheduleBP.BusinessIncOthThanSpec.IncRecCredPLOthHeadDtls.Salary 
+sumTD_PL_BP -= @ITR3ScheduleBP.BusinessIncOthThanSpec.IncRecCredPLOthHeadDtls.HouseProperty
+sumTD_PL_BP -= @ITR3ScheduleBP.BusinessIncOthThanSpec.IncRecCredPLOthHeadDtls.CapitalGains
+sumTD_PL_BP -= @ITR3ScheduleBP.BusinessIncOthThanSpec.IncRecCredPLOthHeadDtls.OtherSources
+
+

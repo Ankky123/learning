@@ -1,0 +1,72 @@
+Git help
+git init
+git remote add origin https://github.com/Rishabh-ADP/Offline_Utility.git
+git pull origin	
+git pull origin rishabh
+git checkout -b ankit (make local branch)
+git push origin ankit (if ankit not available on remote, branch will be added)
+
+git config --global user.name "ankitmangal"
+git config --global user.email "ankitmangal@arundataprocessing.com"
+
+delete branch
+git branch --delete <branchname>
+git push origin -d branch-name
+
+
+To stop tracking a file, we must remove it from the index:
+git rm --cached <file>
+To remove a folder and all files from the track in the folder recursively:
+git rm -r --cached <folder>
+
+Abort a git merge
+git merge --abort
+
+Set upstream
+git branch --set-upstream-to <remote-branch>
+
+git push --set-upstream origin ITR7_22_23
+
+
+If you're already in conflicted state, and you want to just accept all of theirs:
+git checkout --theirs .
+git add .
+If you want to do the opposite:
+git checkout --ours .
+git add .
+
+After writing commit message, just press Esc Button and then write :wq or :wq! and then Enter to close the unix file.
+
+
+git count lines of code
+git ls-files | xargs cat | wc -l
+
+To unstage a file from staging area (git add)
+git reset <file>
+
+git diff and git apply file.patch
+
+git add -p (this will ask us to add hunkwise)
+
+
+To obtain only the remote URL:
+git config --get remote.origin.url
+
+If you require full output, and you are on a network that can reach the remote repo where the origin resides:
+git remote show origin
+
+git remote -v
+# View existing remotes
+# origin  https://github.com/user/repo.git (fetch)
+# origin  https://github.com/user/repo.git (push)
+
+git remote set-url origin https://github.com/user/repo2.git
+# Change the 'origin' remote's URL
+
+git remote -v
+# Verify new remote URL
+# origin  https://github.com/user/repo2.git (fetch)
+# origin  https://github.com/user/repo2.git (push)
+
+
+git config --global credential.useHttpPath true

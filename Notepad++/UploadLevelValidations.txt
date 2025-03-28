@@ -1,0 +1,647 @@
+Problematic Rules
+166 -> Pending due to TAN rule
+225 -> Pending if form 10EE is filed
+We might need a max and round function
+65 - 0.2*value -> what is the meaning of +1 and -1 rounding off ( 2> 2.2, 2> 3.2, 2>1.2)
+
+errCtg and errCtgType to be added from now on
+Error Category and Error Category Type to be added from now on
+Rule 67 -> (R5) value equal to sum of other fields
+if (this.value != @ITR1_IncomeDeductions.Salary + @ITR1_IncomeDeductions.PerquisitesValue + @ITR1_IncomeDeductions.ProfitsInSalary + @ITR1_IncomeDeductions.IncomeNotified89A + @ITR1_IncomeDeductions.IncomeNotifiedOther89A ) {
+	addError(1)
+}
+ErrorMessage [
+	`In the Schedule "Gross total Income", Gross salary should be equal to the sum total of the individual fields`;
+]
+
+Suggestion [
+	`Please Enter the sum of individual fields of salary in "Gross Salary"`
+]
+
+Rule 223 -> (R10) the same dropdown cannot be selected twice
+<--
+if (@ITR1_IncomeDeductions.IncomeNotified89AType[i!=j]NOT89ACountrycode == this.value) {
+	addError(1)
+}
+-->
+ErrorMessage [
+	`In  "Income from retirement benefit account maintained in a notified country u/s 89A " in country  drop-down, one country cannot be selected more than one time.`
+]
+Suggestion [
+	`Please enter total income accrued in one country under one dropdown for each country.`
+]
+
+Rule 220,221 -> The array that has only 1 element
+
+<--
+if (this.value == @ITR1_IncomeDeductions.OthersInc.OthersIncDtlsOthSrc[i!=j].OthSrcNatureDesc) && (this.value != "OTH") {
+	if (this.value == "NOT89A") {
+		addError(1)
+	}
+	if (this.value == "OTHNOT89A") {
+		addError(2)
+	}
+}
+-->
+
+ErrorMessage [
+	`"Income from retirement benefit account maintained in a notified country u/s 89A " drop-down cannot be selected more than one time under Income from other sources.`;`"Income from retirement benefit account maintained in a country other than u/s 89A" drop-down cannot be selected more than one time under Income from other sources.`
+
+]
+Suggestion [
+	`Please Enter the total amount of "Income from retirement benefit account maintained in a notified country u/s 89A "" in the field "Income from retirement benefit account maintained in a notified country u/s 89A ""`;`Please Enter the total amount of "Income from retirement benefit account maintained in a country other than u/s 89A "" in the field "Income from retirement benefit account maintained in a notified country u/s 89A ""`
+
+]
+
+Rule 72 -> R13) -> value equal to sum of other fields,
+
+if (this.value > @ITR1_IncomeDeductions.Salary + @ITR1_IncomeDeductions.PerquisitesValue + @ITR1_IncomeDeductions.ProfitsInSalary) {
+	addError(1)
+}
+
+ErrorMessage [
+	`Total exempt allowance is more than Salary u/s 17(1), 17(2) and 17(3)`
+]
+Suggestion [
+	`Restrict the total of exempt allowances to Salary u/s 17(1), 17(2) and 17(3)`
+]
+
+Rule -> 174,175,190,191,192,193,227 -> (R15) -> We found redundant error messages, we didn't gave them, Rule 81
+if (@ITR1_IncomeDeductions.AllwncExemptUs10.AllwncExemptUs10Dtls[i]SalOthAmount > 0) {
+	if (@FilingStatus.NewTaxRegime  == "Y"){
+		if (this.value == "10(5)" || this.value == "10(13A)" || this.value == "10(14)(i)" || this.value == "10(14)(ii)"){
+			addError(1)
+		}
+	} else if (@FilingStatus.NewTaxRegime  == "N") {
+		if (this.value == "10(14)(i)(115BAC)" || this.value == "10(14)(ii)(115BAC)") {
+			addError(2)
+		}
+	}
+	if (@PersonalInfo.EmployerCategory == "CGOV" || @PersonalInfo.EmployerCategory == "SGOV" || @PersonalInfo.EmployerCategory == "PE" || @PersonalInfo.EmployerCategory == "PESG" ) {
+		if (this.value == "10(10B)(i)" || this.value == "10(10B)(ii)"){
+			addError(3)
+		}
+	}
+}
+<--
+var ta = @ITR1_IncomeDeductions.AllwncExemptUs10.AllwncExemptUs10Dtls[i!=j]
+if (this.value == "10(10C)" || this.value == "10(10B)(ii)" || this.value == "10(10B)(i)")&& (ta.SalNatureDesc=="10(10C)"||ta.SalNatureDesc=="10(10B)(ii)"||ta.SalNatureDesc=="10(10B)(i)"){
+	addError(4)
+}
+-->
+
+
+ 
+ErrorMessage [
+	`"Since Option ""Yes"" is selected for 'Are you opting for new tax regime u/s 115BAC ?', Hence, Exempt allowances under
+""Sec 10(5)-Leave Travel concession/assistance""
+""Sec 10(13A)-Allowance to meet expenditure incurred on house rent""
+""Sec 10(14)(i)- Prescribed Allowances or benefits (not in a nature of perquisite) specifically granted to meet expenses wholly, necessarily and exclusively and to the extent actually incurred, in performance of duties of office or employment""
+""Sec 10(14)(ii) -Prescribed Allowances or benefits granted to meet personal expenses in performance of duties of office or employment or to compensate him for increased cost of living"" 
+cannot be allowed"`;`"Since Option ""No"" is selected for 'Are you opting for new tax regime u/s 115BAC ?', Hence, Exempt allowances under
+""Section 10(14)(i) - Allowances referred in sub-clauses (a) to (c) of sub-rule (1) in Rule 2BB""
+""Section 10(14)(ii) -  Transport allowance granted to certain physically handicapped assessee"" 
+cannot be allowed"`;`Exempt allownace u/s 10(10B)(i) and 10(10B)(ii) cannot be claimed by Central government or state government employees.`;`More than one dropdown cannot be selected from Section 10(10B) (i), Section 10(10B)(ii), Section 10(10C).`
+
+]
+Suggestion [
+	`Kindly restrict value to "0'`;`Kindly restrict value to "0'`;`For employer category Central Government, State Government, CG- pensioners, SG- pensioners, exempt allowance u/s 10(10B)(i) and 10(10B)(ii) cannot be claimed.`;`Kindly Select either of Section 10(10B) (i), Section 10(10B)(ii), Section 10(10C) from the dropdown`
+]
+
+
+Rule -> 72,74,75,76,79,81,83,86,166,173,203,204 -> (R16) -> 81 is not for this field, it is for nature dropdown, 81 is same as 204
+
+if (@ITR1_IncomeDeductions.AllwncExemptUs10.AllwncExemptUs10Dtls[i]SalNatureDesc == "10(6)") {
+	if (this.value > @ITR1_IncomeDeductions.Salary + @ITR1_IncomeDeductions.PerquisitesValue + @ITR1_IncomeDeductions.ProfitsInSalary) {
+		addError(1)
+	}	
+} else if (@ITR1_IncomeDeductions.AllwncExemptUs10.AllwncExemptUs10Dtls[i]SalNatureDesc == "10(7)") {
+	if (this.value > @ITR1_IncomeDeductions.Salary + @ITR1_IncomeDeductions.PerquisitesValue + @ITR1_IncomeDeductions.ProfitsInSalary) {
+		addError(2)
+	}
+} else if (@ITR1_IncomeDeductions.AllwncExemptUs10.AllwncExemptUs10Dtls[i]SalNatureDesc == "10(10)") {
+	if (this.value > 2000000) {
+		addError(3)
+	}
+} else if (@ITR1_IncomeDeductions.AllwncExemptUs10.AllwncExemptUs10Dtls[i]SalNatureDesc == "10(10B)(i)") {
+	if (this.value > 500000) {
+		addError(4)
+	}
+} else if (@ITR1_IncomeDeductions.AllwncExemptUs10.AllwncExemptUs10Dtls[i]SalNatureDesc == "10(14)(ii)(115BAC") {
+	if (this.value > 38400) {
+		addError(7)
+	}
+}
+if (@FilingStatus.NewTaxRegime  == "N"){
+	if (@ITR1_IncomeDeductions.AllwncExemptUs10.AllwncExemptUs10Dtls[i]SalNatureDesc == "10(13A)" && this.value > @ITR1_IncomeDeductions.Salary) {
+		addError(5)
+	}
+	if (@ITR1_IncomeDeductions.AllwncExemptUs10.AllwncExemptUs10Dtls[i]SalNatureDesc == "10(13A)" && this.value > @ITR1_IncomeDeductions.Salary*0.50) {
+		addError(8)
+	}
+
+}
+
+var sum = 0
+<--
+sum += @ITR1_IncomeDeductions.AllwncExemptUs10.AllwncExemptUs10Dtls[]SalOthAmount
+-->
+if (sum != ITR1_IncomeDeductions.AllwncExemptUs10.TotalAllwncExemptUs10) || (sum > @ITR1_IncomeDeductions.Salary + @ITR1_IncomeDeductions.PerquisitesValue + @ITR1_IncomeDeductions.ProfitsInSalary) {
+	addError(6)
+}
+
+ErrorMessage [
+	`Sec 10(6)-Remuneration received as an official, by whatever name called, of an embassy, high commission etc. is more than salary u/s 17(1), 17(2) and 17(3).`;`Section 10(7)-Allowances or perquisites paid or allowed as such outside India by the Government to a citizen of India for rendering service outside India is more than salary u/s 17(1), 17(2) and 17(3).`;`Section 10(10)-Death-cum-retirement gratuity received is more than Rs. Rs. 20,00,000.`;`Exempt Allowance u/s 10(10B)-First Proviso-  Compensation limit notified by CG in the Official Gazette is more than Rs.500,000`;`Kindly restrict the exemption u/s 10(13A) to salary under section 17(1)`;`In "schedule "Income Details" allowances to extent exempt u/s 10 should be equal to the sum of individual values entered subject to salary u/s 17(1),17(2) and 17(3).`;`Exempt allowance under Section 10(14)(ii) cannot exceed Rs 38,400`;`In Schedule Part A General, in Field 'Nature of exempt allowances' dropdown value of "Sec 10(13A)-Allowance to meet expenditure incurred on house rent " should not be more than 50% of salary as per section 17(1)`
+
+]
+
+Suggestion [
+	`Kindly Restrict the exemption u/s 10(6)-Remuneration received as an official, by whatever name called, of an embassy, high commission etc.to Salary u/s 17(1), 17(2) and 17(3)`;`Kindly Restrict the exemption u/s 10(7)-Allowances or perquisites paid or allowed as such outside India by the Government to a citizen of India for rendering service outside India Salary u/s 17(1), 17(2) and 17(3)`;`Amount entered cannot be more than Rs.20,00,000 in the field exemption u/s 10(10)`;`Kindly Restrict the exemption u/s10(10B)-First Proviso-  Compensation limit notified by CG in the Official Gazette to Rs. 500,000`;`Sec 10(13A)-Allowance can not be more than salary under section 17(1)`;`Kindly Enter the sum of individual values of allowances exempt u/s 10 in the field " allowance to the extent exempt u/s 10" in schedule - Part B Gross Total income.`;`Kindly restrict value to Rs. 38,400`;`Restrict the exempt allowance u/s 10(13A)-Allowance to meet expenditure incurred on house rent to 50% of Salary as per section 17(1)`
+
+]
+
+Salary (Less: Income claimed for relief from taxation u/s 89A)
+R-18 - Rule 217, 225 - (ITR1_IncomeDeductions.Increliefus89A)
+if (this.value > @ITR1_IncomeDeductions.IncomeNotified89A) {
+	addError(1)
+}
+`Income claimed for relief from taxation u/s 89A cannot be claimed more than income entered in income from retirement benefit account maintained in a notified country u/s 89A`
+
+
+`Please enter Income claimed for relief from taxation u/s 89A limited to salary income offered under 'Income from retirement benefit account maintained in a notified country u/s 89A'.`
+
+Salary (Deductions u/s 16  (iva + ivb + ivc))
+R-20 - Rule 69 - (ITR1_IncomeDeductions.DeductionUs16)
+if (this.value != @ITR1_IncomeDeductions.DeductionUs16ia + @ITR1_IncomeDeductions.EntertainmentAlw16ii + @ITR1_IncomeDeductions.ProfessionalTaxUs16iii) {
+	addError(1)
+}
+
+`In Schedule 'Gross total Income ' Deductions u/s 16' should be sum of individual fields.`
+
+`Please Enter the sum of individual fields of deduction u/s 16 in the field "Deduction u/s 16"`
+
+
+
+Standard Deduction u/s 16(ia) 
+R - 21 - Rule 125 (Wrongly written as 1, 25) , 195 - (ITR1_IncomeDeductions.DeductionUs16ia)
+if (this.value > 50000) && (@FilingStatus.NewTaxRegime == "N"){
+	addError(1)
+}
+if (this.value > 0) && (@FilingStatus.NewTaxRegime == "Y") {
+	addError(2)
+}
+
+`Standard deduction cannot exceed Rs.50000`;`Since option 'Yes' is selected for 'Are you opting for new tax regime u/s 115BAC?' Deduction u/s 16(ia)  cannot be claimed"  `
+
+`Kindly restrict the standard deduction to 50000`;`Since option "Yes" is selected for 'Are you opting for new tax regime u/s 115BAC ?', 
+Kindly restrict the amount to "0"`
+
+Standard Deduction u/s 16(ia)
+R - 22 - Rule 65, 66, 189 - (ITR1_IncomeDeductions.EntertainmentAlw16ii)
+if (@FilingStatus.NewTaxRegime == "N") {
+	if (@PersonalInfo.EmployerCategory == "CGOV" || @PersonalInfo.EmployerCategory == "SGOV" ||@PersonalInfo.EmployerCategory == "PSU") {
+		if (this.value > 5000 || this.value > (@ITR1_IncomeDeductions.Salary)*0.20) {
+			addError(1)
+		}
+	}
+	if !(@PersonalInfo.EmployerCategory == "CGOV" || @PersonalInfo.EmployerCategory == "SGOV" ||@PersonalInfo.EmployerCategory == "PSU") {
+		if (this.value > 0) {
+			addError(2)
+		}
+	}
+}
+if (@FilingStatus.NewTaxRegime == "Y") && (this.value > 0){
+	addError(3)
+}
+
+`Entertainment allowance will be allowed only to the extent of Rs 5000 or 1/5 of Salary whichever is less for Central Govt and State Government employees  or PSU  u/s 16(ii) `;`Deduction for Entertainment allowance u/s 16(ii)  for the employer category other than Central, State Government and PSU employees will not be allowed `;`Since option 'Yes' is selected for 'Are you opting for new tax regime u/s 115BAC?' Deduction u/s 16(ii)  cannot be claimed"  `
+
+`Please Enter Rs. 5,000 or 1/5 th of Salary  of section 17(1) whichever is less in "Entertainment allowance u/s 16(ii)`;`Kindly verify employment category and amount of claim`;`Note : Since option "Yes" is selected for 'Are you opting for new tax regime u/s 115BAC ?', 
+Kindly restrict the amount to "0"`
+
+`A`;`A`;`A`
+
+`PFA(B)`;`PFA(B)`;`PFA(B)`
+
+
+Professional tax u/s 16(iii)
+R - 23 - Rule 194 - (ITR1_IncomeDeductions.ProfessionalTaxUs16iii)
+if (@FilingStatus.NewTaxRegime == "Y") && (this.value > 0){
+	addError(1)
+}
+
+`Since option 'Yes' is selected for 'Are you opting for new tax regime u/s 115BAC?' Deduction u/s 16(iii)  cannot be claimed"  `
+
+` Since option "Yes" is selected for 'Are you opting for new tax regime u/s 115BAC ?', 
+Kindly restrict the amount to "0"`
+
+`A`
+
+`PFA(B)`
+
+Income chargeable under the Head ‘Salaries’  (iii - iv)
+R - 24 - Rule 70 - (ITR1_IncomeDeductions.IncomeFromSal)
+if (@ITR1_IncomeDeductions.NetSalary - @ITR1_IncomeDeductions.DeductionUs16 < 0) {
+	if (this.value > 0) {
+		addError(1)
+	}
+} else {
+	if (this.value != @ITR1_IncomeDeductions.NetSalary - @ITR1_IncomeDeductions.DeductionUs16) {
+		addError(1)
+	}
+}
+
+`In Schedule  Gross total Income, 'Income chargeable under Salaries' should be difference of 'Net salary' and 'Deductions u/s 16'`
+
+`Please Enter the difference between "Net Salary" and "Deductions u/s 16" in field " 'Income chargeable under Salaries"`
+
+`A`
+
+`PFA(A)`
+
+Gross rent received/ receivable/ lettable value during the year
+R - 26 - Rule 52 - (ITR1_IncomeDeductions.GrossRentReceived)
+if (@ITR1_IncomeDeductions.TypeOfHP == "L" || @ITR1_IncomeDeductions.TypeOfHP == "D") {
+	if (this.value == 0) {
+		addError(1)
+	}
+}
+
+`Gross rent received/ receivable/ lettable value' cannot be zero or null if 'type of property' is 'let out' or 'deemed let out'`
+
+`Please Enter the amount in field "Gross rent received/ receivable/ lettable value'' in  House Property section`
+
+`A`
+
+`PFA(B)`
+
+Tax paid to local authorities
+R - 27 - Rule 51 56 - (ITR1_IncomeDeductions.TaxPaidlocalAuth)
+if (this.value > 0 && @ITR1_IncomeDeductions.GrossRentReceived == 0) {
+	addError(1)
+}
+if (this.value > 0 && @ITR1_IncomeDeductions.TypeOfHP == "S") {
+	addError(2)
+}
+
+`The Assessee shall not claim municipal tax where the gross rent received/ receivable/ let table value is zero.`;`In "Schedule Income Details" Tax paid to local authorities shall not be allowed for Type of House Property as "Self-Occupied"`
+
+`Please Remove the value of municipal taxes`;`Do not claim " Tax paid to local authorities" for the Self Occupied property`
+
+`A`;`A`
+
+`PFA(A)`;PFA(B)
+
+Annual Value (i – ii)
+R - 28 - Rule 53 - (ITR1_IncomeDeductions.AnnualValue)
+if (@ITR1_IncomeDeductions.GrossRentReceived - @ITR1_IncomeDeductions.TaxPaidlocalAuth < 0){
+	if ( this.value > 0 ) {
+		addError(1)
+	}
+} else {
+	if (this.value != @ITR1_IncomeDeductions.GrossRentReceived - @ITR1_IncomeDeductions.TaxPaidlocalAuth) {
+		addError(1)
+	}
+}
+
+`In the Schedule "Gross total Income", 'Annual Value' should be the difference between 'Gross rent received/ receivable/ lettable value ' and 'Tax paid to local authorities'`
+
+`Enter the difference between "Gross rent received/ receivable/ letable value' and 'Tax paid to local authorities '' in "Annual Value"`
+
+`A`
+
+`PFA(A)`
+
+30% of Annual Value (30% * iii)
+R - 29 - Rule 50 - (ITR1_IncomeDeductions.StandardDeduction)
+if (@ITR1_IncomeDeductions.AnnualValue > 0) {
+	if !(this.value < 0.3*(ITR1_IncomeDeductions.AnnualValue + 2) && this.value > 0.3*(ITR1_IncomeDeductions.AnnualValue - 2) ) {
+		addError(1)
+	}
+}
+
+`Deduction on annual value of House property should  be  30% of Annual value.`
+
+`Calculate 30% of Annual Value and enter in the field "30% of annual value"`
+
+`A`
+
+`PFA(A)`
+
+
+Interest payable on borrowed capital
+R - 30 - Rule 55, 187 - (ITR1_IncomeDeductions.InterestPayable)
+if (@FilingStatus.NewTaxRegime == "N") {
+	if (@ITR1_IncomeDeductions.TypeOfHP == "S" && this.value > 200000) {
+		addError(1)
+	}
+}
+if (@FilingStatus.NewTaxRegime == "Y") {
+	if (@ITR1_IncomeDeductions.TypeOfHP == "S" && this.value > 0) {
+		addError(2)
+	}
+}
+
+`In case of self occupied property, maximum interest allowed is Rs. 200000`;`Since option 'Yes' is selected for 'Are you opting for new tax regime u/s 115BAC?' Interest on borrowed capital  cannot be claimed for "Self Occupied" house property.`
+
+`Please Enter Rs. 2,00,000.  in the field "Interest on borrowed capital"`;`Since option "Yes" is selected for 'Are you opting for new tax regime u/s 115BAC ?', 
+Kindly restrict the amount to "0"`
+
+`A`;`A`
+
+`PFA(B)`;`PFA(B)`
+
+"Income chargeable under the head ‘House Property’ (iii-iv-v)+vi)
+R - 32 - Rule 54, 185 ()
+if (@ - @ - @ + @ < 0) {
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+ITR4 Upload Level Validations
+
+FilingStatus.NewTaxRegime
+if (@PersonalInfo.Status == "F" && this.value == "Y") {
+	addError(1)
+}
+
+
+----
+if (@FilingStatus.NewTaxRegime == "Y") {
+	if (this.value == "") then {
+		addError(1)
+	}
+}
+-----
+FilingStatus.OptingNewTaxRegime
+if (@PersonalInfo.Status == "F" && (this.value == 1) || this.value == 3) {
+	addError(1)
+}
+if (@PersonalInfo.Status == "I" || @PersonalInfo.Status == "H") && (@FilingStatus.NewTaxRegime == "Y" ){
+	if (this.value == 1 || this.value == 2) {
+		addError(2)
+	}
+}
+if (@PersonalInfo.Status == "I" || @PersonalInfo.Status == "H") && (@FilingStatus.NewTaxRegime == "N" ){
+	if (this.value == 3 || this.value == 4) {
+		addError(3)
+	}
+}
+if (@PersonalInfo.Status == "I" || @PersonalInfo.Status == "H") && (@FilingStatus.NewTaxRegime == "N" || @FilingStatus.NewTaxRegime == "Y" ){
+	if (this.value == 0) {
+		addError(4)
+	}
+}
+-----
+if (@FilingStatus.OptingNewTaxRegime == 1 || @FilingStatus.OptingNewTaxRegime == 3 || @FilingStatus.OptingNewTaxRegime == 4) {
+	if (this.value == "") {
+		addError(1)
+	}
+}
+----
+if (@IncomeDeductions.AllwncExemptUs10.AllwncExemptUs10Dtls[i]SalOthAmount > 0) {
+	if (@FilingStatus.OptingNewTaxRegime  == 1 || @FilingStatus.OptingNewTaxRegime  == 3 ){
+		if (this.value == ""10(5)"" || this.value == ""10(13A)"" || this.value == ""10(14)(i)"" || this.value == ""10(14)(ii)""){
+			addError(1)
+		}
+	} else if (@FilingStatus.OptedOutOptedOutNewTaxRegime  == ""N"") {
+		if (this.value == ""10(14)(i)(115BAC)"" || this.value == ""10(14)(ii)(115BAC)"") {
+			addError(2)
+		}
+	}
+	if (@PersonalInfo.EmployerCategory == ""CGOV"" || @PersonalInfo.EmployerCategory == ""SGOV"" || @PersonalInfo.EmployerCategory == ""PE"" || @PersonalInfo.EmployerCategory == ""PESG"" ) {
+		if (this.value == ""10(10B)(i)"" || this.value == ""10(10B)(ii)""){
+			addError(3)
+		}
+	}
+}
+<--
+var ta = @IncomeDeductions.AllwncExemptUs10.AllwncExemptUs10Dtls[i!=j]SalNatureDesc
+if (this.value == ""10(10C)"" || this.value == ""10(10B)(ii)"" || this.value == ""10(10B)(i)"")&& (ta==""10(10C)""||ta==""10(10B)(ii)""||ta==""10(10B)(i)""){
+	addError(4)
+}
+-->
+
+-------
+if (@IncomeDeductions.AllwncExemptUs10.AllwncExemptUs10Dtls[i]SalOthAmount > 0) {
+	if (@FilingStatus.OptingNewTaxRegime  == 1 || @FilingStatus.OptingNewTaxRegime  == 3 ){
+		if (this.value == "10(5)" || this.value == "10(13A)" || this.value == "10(14)(i)" || this.value == "10(14)(ii)"){
+			addError(1)
+		}
+	}
+	if (@FilingStatus.OptingNewTaxRegime  == 2 || @FilingStatus.OptingNewTaxRegime  == 4 ) {
+		if (this.value == "10(14)(i)(115BAC)" || this.value == "10(14)(ii)(115BAC)") {
+			addError(2)
+		}
+	}
+
+}
+-----
+Net Salary
+@IncomeDeductions.GrossSalary - @IncomeDeductions.AllwncExemptUs10.TotalAllwncExemptUs10 - @IncomeDeductions.Increliefus89A
+
+if ( @IncomeDeductions.GrossSalary - @IncomeDeductions.AllwncExemptUs10.TotalAllwncExemptUs10 - @IncomeDeductions.Increliefus89A < 0)  {
+	if (this.value > 0) {
+		addError(1)
+	}
+} else if (this.value != Round(@IncomeDeductions.GrossSalary - @IncomeDeductions.AllwncExemptUs10.TotalAllwncExemptUs10 - @IncomeDeductions.Increliefus89A,0) {
+	addError(1)
+}
+
+-----
+
+
+if (@IncomeDeductions.GrossRentReceived - @IncomeDeductions.TaxPaidlocalAuth < 0) {
+	if (this.value > 0) {
+		addError(1)
+	}
+} else if(this.value != Round(@IncomeDeductions.GrossRentReceived - @IncomeDeductions.TaxPaidlocalAuth,0){
+	addError(1)
+}
+-----
+80CCD1
+if (@PersonalInfo.Status == "F"){
+	if (this.value > 0){
+		addError(1)
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 2 || @FilingStatus.OptingNewTaxRegime  == 4 ) {
+	if (@PersonalInfo.Status == "I" || @PersonalInfo.Status == "H") {
+		if (@IncomeDeductions.DeductUndChapVIA.Section80C + @IncomeDeductions.DeductUndChapVIA.Section80CCC + @IncomeDeductions.DeductUndChapVIA.Section80CCDEmployeeOrSE > 150000) {
+			addError(2)
+		}
+	}
+}
+if (@PersonalInfo.EmployerCategory == "PE" || @PersonalInfo.EmployerCategory == "PESG" || @PersonalInfo.EmployerCategory == "PEPS" || @PersonalInfo.EmployerCategory == "PEO" || @PersonalInfo.EmployerCategory == "NA" ) {
+	if (this.value > ( (@IncomeDeductions.GrossTotIncome )*1/5 )){
+		addError(3)
+	}
+}
+if (@PersonalInfo.Status == "H") || (@PersonalInfo.Status == "F"){
+	if (this.value > 0){
+		addError(4)
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 2 || @FilingStatus.OptingNewTaxRegime  == 4 ) {}
+	if (@PersonalInfo.EmployerCategory == "CGOV" || @PersonalInfo.EmployerCategory == "SGOV" || @PersonalInfo.EmployerCategory == "PSU" || @PersonalInfo.EmployerCategory == "OTH" ) {
+		if (this.value >( (@IncomeDeductions.Salary+@IncomeDeductions.ProfitsInSalary-@IncomeDeductions.AllwncExemptUs10.TotalAllwncExemptUs10 )*1/10) ){
+			addError(5)
+		}
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 1 || @FilingStatus.OptingNewTaxRegime  == 3 ) {
+	if (this.value > 0){
+		addError(6)
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 1 || @FilingStatus.OptingNewTaxRegime  == 3 ) {
+	if (@IncomeDeductions.DeductUndChapVIA.Section80C + @IncomeDeductions.DeductUndChapVIA.Section80CCC + @IncomeDeductions.DeductUndChapVIA.Section80CCDEmployeeOrSE > 0) {
+		addError(7)
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 1 || @FilingStatus.OptingNewTaxRegime  == 3 ) {
+	if (this.value > 0) {
+		addError(8)
+	}
+}
+-----
+80CCD1B
+30, 160, 209, 238
+
+if (@PersonalInfo.Status == "H") || (@PersonalInfo.Status == "F"){
+	if (this.value > 0){
+		addError(1)
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 2 || @FilingStatus.OptingNewTaxRegime  == 4 ) {
+	if (this.value > 50000) {
+		addError(2)
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 1 || @FilingStatus.OptingNewTaxRegime  == 3 ) {
+	if (this.value > 0){
+		addError(3)
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 1 || @FilingStatus.OptingNewTaxRegime  == 3 ) {
+	if (this.value > 0){
+		addError(4)
+	}
+}
+
+----
+80CCD2
+if (@IncomeDeductions.GrossTotIncome > 0) {
+	if (@PersonalInfo.EmployerCategory == "PSU" || @PersonalInfo.EmployerCategory == "OTH" ) {
+		if (this.value > Round( (@IncomeDeductions.Salary + @IncomeDeductions.ProfitsInSalary - @IncomeDeductions.AllwncExemptUs10.TotalAllwncExemptUs10)*1/10 ,0)){
+			addError(1)
+		}
+	}
+}
+if (@PersonalInfo.Status == "H") || (@PersonalInfo.Status == "F"){
+	if (this.value > 0){
+		addError(2)
+	}
+}
+if (@PersonalInfo.EmployerCategory == "CGOV" || @PersonalInfo.EmployerCategory == "SGOV" ) {
+	if (this.value > Round( (@IncomeDeductions.Salary + @IncomeDeductions.ProfitsInSalary - @IncomeDeductions.AllwncExemptUs10.TotalAllwncExemptUs10)*14/100 ,0)){
+		addError(3)
+	}
+}
+if (@PersonalInfo.EmployerCategory == "PE" || @PersonalInfo.EmployerCategory == "PESG" || @PersonalInfo.EmployerCategory == "PEPS" || @PersonalInfo.EmployerCategory == "PEO" || @PersonalInfo.EmployerCategory == "NA" ) {
+	if (this.value > 0){
+		addError(4)
+	}
+}
+-----
+80D
+Schedule80D.Sec80DSelfFamSrCtznHealth.EligibleAmountOfDedn
+
+if (@FilingStatus.OptingNewTaxRegime  == 2 || @FilingStatus.OptingNewTaxRegime  == 4 ) && @Schedule80D.Sec80DSelfFamSrCtznHealth.EligibleAmountOfDedn == 0 {
+	if (this.value > 0) {
+		addError(1)
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 1 || @FilingStatus.OptingNewTaxRegime  == 3 ){
+	if (this.value > 0) {
+		addError(2)
+	}
+}
+------
+80DD
+
+if (@PersonalInfo.Status == "F"){
+	if (this.value > 0){
+		addError(1)
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 2 || @FilingStatus.OptingNewTaxRegime  == 4 ) && (IncomeDeductions.UsrDeductUndChapVIA.Section80DDUsrType == "") {
+	if (this.value > 0) {
+		addError(2)
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 2 || @FilingStatus.OptingNewTaxRegime  == 4) {
+	if(@IncomeDeductions.UsrDeductUndChapVIA.Section80DDUsrType == "1") {
+		if (this.value > 75000){
+			addError(3)
+		}
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 2 || @FilingStatus.OptingNewTaxRegime  == 4) {
+	if(@IncomeDeductions.UsrDeductUndChapVIA.Section80DDUsrType == "2") {
+		if (this.value > 125000){
+			addError(4)
+		}
+	}    
+}
+if (@FilingStatus.OptingNewTaxRegime  == 1 || @FilingStatus.OptingNewTaxRegime  == 3 ){
+	if (this.value > 0) {
+		addError(5)
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 1 || @FilingStatus.OptingNewTaxRegime  == 3 ){
+	if (this.value > 0) {
+		addError(6)
+	}
+}
+
+-------
+80DDB
+if (@FilingStatus.OptingNewTaxRegime  == 2 || @FilingStatus.OptingNewTaxRegime  == 4 ) && (IncomeDeductions.UsrDeductUndChapVIA.Section80DDBUsrType == "") {
+	if (this.value > 0) {
+		addError(1)
+	}
+}
+if (@PersonalInfo.Status == "F"){
+	if (this.value > 0){
+		addError(2)
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 2 || @FilingStatus.OptingNewTaxRegime  == 4) {
+	if(@IncomeDeductions.UsrDeductUndChapVIA.Section80DDBUsrType == "1") {
+		if (this.value > 40000){
+			addError(3)
+		}
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 2 || @FilingStatus.OptingNewTaxRegime  == 4) {
+	if(@IncomeDeductions.UsrDeductUndChapVIA.Section80DDBUsrType == "2") {
+		if (this.value > 100000){
+			addError(4)
+		}
+	}    
+}
+if (@FilingStatus.OptingNewTaxRegime  == 1 || @FilingStatus.OptingNewTaxRegime  == 3 ){
+	if (this.value > 0) {
+		addError(5)
+	}
+}
+if (@FilingStatus.OptingNewTaxRegime  == 1 || @FilingStatus.OptingNewTaxRegime  == 3 ){
+	if (this.value > 0) {
+		addError(6)
+	}
+}

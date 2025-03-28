@@ -1,0 +1,13 @@
+ITR5 Change made in sheet4
+		in sheet of cg
+		
+A new issue notices in tds1 -> Fields are going 
+permanet greyed (not getting green even if base
+field value deleted
+
+The validation changes made in C4A28 are 
+not implemented in DA28 (only 3 changes
+tojson, date of sale stcgg and ltcgt
+
+
+Focus on ITR7 22-23

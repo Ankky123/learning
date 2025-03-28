@@ -1,0 +1,107 @@
+Pin code resolution
+
+110 -> Delhi
+121-127, 131-136 -> Haryana
+140-148, 151-152, 160 -> Punjab
+160 -> Chandigarh
+171-177 -> Himachal Pradesh
+180-182, 184-185, 190-194 -> Jammu Kashmir
+194 ->Ladakh
+201-212, 221-233, 241-247, 250, 251, 262 -> Uttarpradesh
+244, 246-249, 251, 261-263, 271-277, 281-285,  -> Uttarakhand
+301-307, 311-314, 321-328, 331-335, 341-345,  -> Rajasthan
+360-362 -> Gujarat
+362 -> Daman and Diu
+
+
+
+
+
+Clashes
+140, 160 (Punjab, Chandigrah)  (All chandigarh first check)
+194 (Jammu Kashmir, Ladakh)  (All ladakh first check)
+244, 246, 247, 251, 262   (Uttarpradesh, Uttarakhand) (All Uttarakhand first check)
+362 (Gujarat and Daman & Diu) (All diu to handle first)
+396 (Gujarat and Dadra & Nagar Haveli) (All haveli to handle first)
+517 (Andhra Pradesh and TamilNadu) (TamilNadu to check first)
+533 (Andhra Pradesh and Telangana) (Telangana to be checked first)
+571 (Karnataka and Uttar Pradesh) (Uttarpradesh to be checked first)
+605, 607, 609 (Pondicherry and TamilNadu) (Pondicherry to be checked first)
+631, 635 (TamilNadu and Andhra Pradesh) (Anchrapradesh to be checked first)
+682 (Kerala and Lakshadweep) (Lakshadweep to be checked first)
+781, 782, 783,  (Assam and Meghalaya) 
+813, 814 (Bihar and Jarkhand)
+
+Point to throw
+
+During development we noticed that one same pincode is referring to two different state codes.
+The validation rules are inconsistent here.
+Please clarify as what validation to apply in this case and also give us a list of such pincodes.
+
+
+, AMT.DeductClaimSec6A=0
+
+OR(AMT.AdjustedUnderSec115JC <=2000000, AMT.DeductClaimSec6A=0)
+
+To make the schema of ITR7 23-24
+it will have to be made on a base version
+Get a base version
+first make new schedules, (decide names) (Required or not will be decided later)
+then add new fields, (decide names)
+then remove old fields
+
+
+YrOfAccDtls
+
+Mail to Ayushi about amt issue that pincode will be 
+
+to add schema change, Previous Schema, Current Schema column in ITR7 Status Tracker Only (This will be the mapping document)
+Mapping will have to be done at the earliest by Ishita
+Chirag -> ITR7 Utility
+Ishita -> Schema Mapping
+
+Ishita Tomorrow -> 170A of 20-21 -> ITR4 Completion and Issues -> ITR 7 Schema Mapping -> ITR5 Continue
+Chirag -> ITR2 Issues -> ITR6 import generate -> ITR7 Continue
+Satyaprakash -> ITR1 Issues -> ITR3 Continuation
+Testers -> ITR1 and ITR4 calculation testing along with overall changes testing
+
+ITR4 is priority
+
+Explain the work
+ITR2 Clarification mail
+ITR4 Issue to see
+ITR7 Schema to complete
+
+Talk to ayushi regarding ITR2 Clarifications
+
+
+Autopopulated fields can be put into required category
+Schedule A remaining - Need to see the notified form and draft form
+
+the dropdown field in the utilities have to be protected against import - the validation must contains a check against the database values
+
+
+Send ITR2 23-24 for calculations
+Send itr6 170A for Calculations 
+Develop the Pincode code and implement it in all the utilities
+20-21 salary issue
+amtc issue
+tan issue
+ITR4 22-23 utility "continue To opt" to be converted to "continue to opt"
+ITR7 Schema
+TAN Codes
+
+
+515281
+503145
+803203
+396230
+
+Don't populate the state,
+Don't clean the pincode when state is being filled
+If duplicate pincode is there, Allow to change the state only if it is the one of two
+The pincode will not get cleaned or state change will be allowed only in duplicate
+
+If UCase(Trim(ValueOfPerquisitesNature_Salary(cntr, j))) = "TAX PAID BY EMPLOYER ON NON-MONETARY PERQUISITE" Then ValueOfPerquisitesNature_Salary(cntr, j) = "17"
+
+adp1398A6

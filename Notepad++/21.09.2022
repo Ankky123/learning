@@ -1,0 +1,22 @@
+Task - To automate the Process of front design of  ITR2
+	- Need to make modules for individual types of objects such that from the json schema, the module 
+		can give us a layout ready.
+	- Custom layout in fyne
+	a. if json has simple fields - the layout will be prepared accordingly
+	b. if json has a field within field - the layout will be prepared accordingly
+	c. if json has a table  - the layout will be prepared accordingle
+	d. if json has a block in a which there is a table - the layout will be prepared accordingly
+	e. if json has some combination of the above - it will be prepared accordingly
+
+
+ITR7 AY 22-23 -> Submitted to Rubi - She might ask the production version
+ITR 21-22 -> Waiting for confirmation mail from Infosys - Achal - To submit the production version
+
+
+
+80GGA in ITR3 22-23 is not getting selected - when we select 80GGA, 80G is getting selected.
+in ITR2 AY 22-23 - exemption claimed field is not getting enabled on selecting 139(8A)
+
+ITR2 and ITR3 22-23 is getting tested by satyaprakash
+
+to submit Ay 21-22 for dropdown issue  most for 

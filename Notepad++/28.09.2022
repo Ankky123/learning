@@ -1,0 +1,55 @@
+Tolaram says - The issue of CG as mentioned by Megha will come in other utilities also
+			Rishabh probably told me that the he will resolve this issue in all the utilitiesl-> 112A change
+			To add the partBATI validation in all of the utilities - Make sure all the taxes are paid before submitting updated return
+
+
+ITR5 22-23 Problem identified in schedule BP - empty msgbox is coming after a validation is not satisfied. msgbox10
+			#NA value problem
+
+ITR1 22-23 -> mIncmDtls.calcItr1 in CalculateTax_Click_Click
+
+112A Revised Rules And DE
+last point is of changes
+356 online and ud - both
+27 only ud
+6 see which version
+
+
+3372088
+
+ITR6 22-23 Prod Changes to be included in Updated Returns (Defect sheet is not yet solved)
+Changes to implement in ITR6 22-23 updated returns - CG indexation issue, CG add block issue, 115 AD and 112AD decimal issue.
+													Rules and De for 112AD and 115AD - One calculation and one validation
+													ThisWorkbook.protect is covered with if statement
+
+ITR7 22-23 Prod Changes to be included in Updated Returns (Updated Returns is not yet submitted)
+To make the change of OS Note condition 4 in the calculation corrected version for ITR7 22-23 to include "10(21) read with section 35(1)"
+to make the change of OS Note condition 6 in the calculation corrected version for ITR7 22-23 to include more than or equal to 50% of sr. No. 3
+To make the change of json tag "dateofinvestment" in calculation corrected version for ITR7 22-23 in schedule J to not send the blank value in json.
+Rules and Changes to be implemented in Audit and BS
+To inclule netcurrentassest change to latest file
+To include dateofinvestement change to latest file
+
+
+
+
+To Implement in all ITRs 22-23 UD
+Prefill module
+139(8A) json generation needs to change for all the ITRs.
+PartBATI -> to remove sheet validate from calculation and put it into generatejson
+
+
+
+
+to copy in the non editable date version
+module import
+module interestcalculation
+
+to share itr4
+to share itr6 with defects resolved - Satyaprakash - Under progress
+to implement the issue change of ITR5 schema issue in all the itr - resolved by Ishita
+ITR3 and ITR5 to share disable UR - To be done by Ankit
+ITR6 to to AS in satyaprakash utility also (I will share in Updated Returns) - done
+
+To share latest versions with Rishabh
+

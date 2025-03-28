@@ -1,0 +1,114 @@
+For Arun Sir
+
+SIT-64653 -> Schedule CG (STLAR is not setting against STCGAR)
+SIT-65242 -> Tax at normal Rates and Rebate (Computation sheet already shared)
+SIT-65245 -> Surcharge for Income u/s 115BBE (Computation sheet already shared)
+SIT-65230 -> 234F should be zero (Computation sheet already shared)
+SIT-64488 -> BFLA (Order of setoff issue)
+SIT-64558 -> BFLA (Brought forward Loss setoff order issue)
+SIT-64590 -> BFLA (Business Loss setoff order issue)
+SIT-64637 -> BFLA (HP setoff order issue)
+
+SIT-65247 -> DPM-DOA Circular Reference (Needs discussion with BA)
+
+SIT-64866
+
+
+
+Fixed not going to RTT
+SIT-63260 -> RTT TR Country Code -> To be done in the ITR3
+SIT-63244 -> RTT -> TR calculation field
+SIT-63604 -> OS field is available but now just below the column -> RTT, if reopened, need to be done by Rishabh since Piyush is on leave
+
+SIT-63574 -> AY not in chronological order (Issue to be resolved by Rishabh, to update the json.service file)
+
+SIT-63701 -> FA issue (Enhancement)
+
+
+
+
+**RTT TR Country Code -> To be done in the ITR3 (Done), along with 4 other issues
+
+To discuss 
+SIT-62024 -> TRP alphanumeric issue (Not yet implemented) (Verification page will be updated later on altogether, so issues will be taken later on) -> To discuss
+SIT-61718 -> Select default (Not yet implemented) (Enhancement) -> To discuss
+By default (Select) to be selected, Blank values everywhere will be same. to be discussed with Ayushi -> Enhancement (Assignee me)
+AMTC issue is invalid
+OS -> Please discuss with Arun Sir.
+
+ITR3
+SIT-64355 -> Invalid JSON is being used, the field must not take duplicates (Need to discuss with Rishabh, should we mark the issue invalid or show error of duplicate
+SIT-64264 -> Unable to test the validity of the issue since the flag is autoselected even if not present in the import file
+SIT-63898 -> Although done but, merging remaining
+SIT-64286 -> If already added 115A, then it is not removed
+
+Corrections to be done in ITR3 Utilty
+1. Schema -> Ifletout
+String '' does not match regex pattern '[0-9]{1,10}'.
+Schema path:
+2. #/definitions/Address/properties/Phone/properties/PhoneNo/pattern
+
+Tasks for today
+1. ITR4 fixed but not RTT issues - Done (2 issues of 80G needs discussion with Rishabh -> to be resolved as enhancements)
+2. ITR5 Issues to check (ITR5 schema issues might pop up and to correct) -> 
+3. ITR3 Issues discussion with Risahbh (To discuss with Piyush about the changes he made in the RA)
+4. Dipika calculation json files to discuss
+5. Dipika JSONs to update for schema issues
+6. Discuss with Nandani about the issue that are to be taken up by Rishabh
+7. ITR6 JSON schema issues to be corrected by Nandani (Working)
+
+
+Gross_Total_Income.Income_From_BP.P44ADObject.PersumptiveInc44AD.TotPersumptiveInc44AD
+Gross_Total_Income.Income_From_BP.P44ADAObject.PersumptiveInc44ADA.TotPersumptiveInc44ADA
+
+
+As discussed earlier for all ITRs, this will be enhancement.
+As discussed in the the meeting, Not an issue.
+
+
+OS dropdowns needs checking
+
+65247
+
+What to do now in all ITRs
+DPM DOA to be implemented as per discussion with Madhu (in all ITRs) -> Should the issues in ITR5 be marked as fixed or enhancement and fixed?
+Tenant serial number to be implemented as per new implementation (in all ITRs)
+80G formulae to be implemented as per new implementation ( Considered ehnancement since the validation is given at wrong place) (in all ITRs)
+80G template for the all total to be added in all the ITRs in sync with ITR2
+Schedule FA Table B issue of Non-editing template
+Defaults to be removed
+
+ITR5
+DPMDOA some issue of not calculating value
+P&L Total field is not available in schema. (is it not applicable or not in schema?)
+
+
+RuleAuthors for all the ITRs to be sent to Arun Sir
+Tomorrow schedule a call with Arun Sir for ITR5 computational issues
+
+
+CSS
+Flex
+Position
+display
+border
+::after, ::before
+selectors -> Advanced
+sizes (pixel, em, rem)
+box-shadow (minimal)
+transform
+animations
+
+website -> css battles
+
+MSP02162998	ygnxYAdB1-	Ankit
+
+ITR6 Pending works
+To correct the Labels of VI-A
+
+SIT-67671
+SIT-67673
+SIT-67677
+SIT-67679
+
+Code change in GetUniqueEnum

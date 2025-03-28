@@ -1,0 +1,64 @@
+.Form_ITR1.FormName is not working directly from schema
+
+I will need to use
+.ITR.ITR1.Form_ITR1.FormName
+
+ITR1_TaxComputation in Home
+PART D - COMPUTATION OF TAX PAYABLE in the sheet header
+
+
+Schedule TCS - Details of Tax Collected at Source [As per form 27D issued by the Collector(s)] in Home
+ScheduleTCS in Sheet header
+
+
+To see which is header is passed in the tree and hence the PDF -> in the sheet header
+HTML file is names as per sheet header
+To see whether the sheets are sorted automatically - Yes they are sorted automatically
+
+(A15) Filed u/s (Tick) [Please see instruction] A17) Or Filed in response to notice u/s
+
+(A21) Are you filing return of income under Seventh proviso to section 139(1) but otherwise not required to furnish return of income?
+If yes, please furnish following information
+[Note: To be filled only if a person is not required to furnish a return of income under section 139(1) but filing return of income due to fulfilling 
+one or more conditions mentioned in the seventh proviso to section 139(1)]
+
+
+if datatype -> object
+	PDFFieldType -> BlockObject
+	PDFFieldType -> CommonLabel
+	PDFFieldType -> Objectll
+	PDFFieldType -> ObjectT
+
+else if datatype -> array
+
+
+else 
+(it is a valued field) - string, integer, dropdown, switch
+	if PDFFieldType -> BlockElement
+	elseif PDFFieldType -> TextBox -> Common Box for value and label
+	elseif PDFFieldType -> 
+
+
+Pending -> To give grouping to Seventh Provisio questions
+Pending -> To not generate an object or array if d2-1 kind is applied
+Pending -> To add Error Code	Error Category	Error Category Description	Error Category Type	Suggestion columns in Rule Author
+
+Templates to define
+BlockObject
+BlockElement
+BlockArray
+TableArray
+None
+DropdownSingle
+DropdownArray
+
+
+Defined Templates
+TextBox
+RadioButton
+Switch
+ObjectLL
+ObjectT
+Display
+GroupSheet
+GroupElement

@@ -1,0 +1,101 @@
+Roles and Responsibilities
+
+Let's consider modules, 
+HR Module > Emp Details, Payroll > Related to each employee
+Finance Module > Task for company level
+Project Module > Task details, performance > Relate to each employee
+
+Admin Access > anyone who has admin access for a submodule for the task/employee will be able to provide admin access, write access, read access to the persons that are his subordinates.
+SuperAdmin  > SA > COO
+Organisation ->
+SA, 4 TLs, 8 Sr, 24 Jr, 96 Emps
+SA will supervise 4 TLs
+Each TL will superwise 2 Srs,
+Each Sr will superwise 3 Jrs,
+Each Jr will superwise 4 Emps
+
+For Emp Details (Admin, Write, Read)
++SA will have admin, read, write access for all the persons > SA will be able to provide admin, write, read access to anyone under him (i.e. all the persons)
+
+ SA will provide TL1 Admin access for all his (TL1's) subordinates 
+	and read, write for TL1 >
+
+TL1 will provide Sr1 Admin access for all his (Sr1's) subordinates (Js and Es)
+	read and write of Sr1 will be with TL1
+
+Sr1 will provide Jr1 read and write access for all his (Jr1's) subordinates
+	read and write of Jr1 will be with Sr1
+--------------------------
+
+Need UI for Adding/Updating CTC for current employees
+Need UI for onboarding the employees
+Need UI for updating managers/HR for current employees (i.e. first and second level managers)
+
+1)	Original ITR is filed within due date U/s 139(1) (extended due date if any).
+
+MOM for 20.03.2025--------------------
+
+Following is the MOM after the demo meeting with Rishabh.
+There are some critical tasks identified to be done before going live.
+1. Development of Employee on-boarding flow
+	Most of the design is already created by Arindam. Employees Tab will have Add new employee button which will have 3 options
+		a. Add new employee
+		b. Add bulk employee
+		c. Download bulk template
+
+2. On clicking of Add new employee, HR will have to fill some mandatory fields in the personal details, (First name, Last name, Personal mail, Reporting Manager, Reporting HR (which will be same as the HR that is onboarding)) CTC field will also be available. Work mail will also be filled by HR. If work mail is not available then work mail will be same as personal mail. The request to signup will be sent to personal mail with an option to send the mail at work mail also. The mail will have a link with JWT authentication so that he can be verified. On clicking, user will set password post which he will be directed to his dashboard. In info pop up will be displayed to him mentioning that he will need to fill all the mandatory details within 30 days, the pop up will ask the user complete profile with an option of "Do it Later". The user will be added to the database when the signup mail is sent.
+
+3. Add bulk employee will provide a window to upload an excel sheet as per the given tempelate which will then add all the provided employees in the database with the provided details. Any other details will be added by the employees later on. If the user account already exist (password already available), user will be able to login else signup request will be sent to the user. Primary key will be "Personal mail + Org Id".
+	
+4. Download bulk template button will download a template excel file. The template will have columns 
+	First name*
+	Last name*
+	Personal Mail*
+	Work Mail
+	Reporting Manager
+	CTC
+* fields are mandatory
+
+5. The role management system page will be modified to have the following structure
+	Module > HR
+		SM> Employee (All the current within it will be assigned in a single click, there will be no division in it, i.e. assets, details, leave history, task etc will be merged as Employee)	
+		SM> Payroll Listing (for updating CTC and initiating payments)
+
+	Module > Finance
+		SM> Payroll Settings
+		SM> Bills
+
+	Module > Projects (this will be added in next scope)
+		SM> NA
+
+6. Manager dashboard will be renamed as Team dashboard
+
+7. WFH report summary will have monthly and yearly dropdown
+
+8. Edit limit of WFH report will be increased from 2 days to 1 week
+
+9. HR will have an option to enable the WFH for a requested date for an employee. A reason will be asked. HR will fill the appropriate reason to enable.
+
+10. HR will have an option to add the leave detail for any employee via a "Add leave" button. The detail of HR (name) will be captured at the time of leave addition.
+
+11. Payslip structure will be updated to have 2 columns.
+	1. First column will have a division of a. Earnings b. Employer Contribution
+	2. Deduction
+
+12. A new design of payslip is under preparation by Arindam, breakup is under discussion between Ankit and Parv.
+
+13. 1 template for payroll setting is under discussion between Ankit and Parv. We might have more templates
+
+14. Payroll settings will have an option to chose which payroll will be applicable to which employee
+
+Doubt arrived > Template selection for any employee will be changeable? if yes, then is this work passable? if yes then should this be addedd in the sub-module Payroll Listing.
+
+15. Personal details will have two additional fields of Reporting Manager and Reporting HR which is not editable by the user but editable by HR. This reporting manager will be updated in the employee lifecycle with a new node.
+
+It is understandable that all the members will have many doubts in this list. Please list out the doubts, we will schedule meetings to resolve them.
+Requesting all the members to go through this MOM and provide feedback if they feel something is missing.
+
+Our Go-Live timeline is 27-March-2025 Thursday.
+
+
+

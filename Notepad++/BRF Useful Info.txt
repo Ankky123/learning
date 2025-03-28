@@ -1,0 +1,174 @@
+
+BRF Requirement Clarifications
+ITR1 27-Jan
+Deductions -> 80DD, 80DDB, 80U -> User value to ignore to compute minimum, flat values to provide when claimed of more than 0 rs. -> BA discussion (JIRA ticket)(Just Clarification)
+Rebate -> to ignore user value (mail) (JIRA ticket) (Just Clarification)
+234B -> to use newly added schema field AdditionalDetails.DateOfProcessing (mail received) (JIRA ticket)
+Allowance Exempt -> 10(10AA) -> if TAN is not in the list, allowance to be restricted to 25L for PSU, PSU-Pensioners -> (mail received)(Just Clarification)
+In deductions, which value to use to compute min?? -> User field value, system field value -> system field value
+80GGA(VIA) -> DeductUndChapVIA to be referred for considerations of min (Usr value to ignore) -> (mail received)
+Deductions -> DeductUndChapVIA to be referred for considerations of min. (for 80U, 80DD, 80DDB -> JIRA tickets were closed based on Usr field value of claim (mail received)
+Section89 -> Correct requirement is in 0.7, not in the mail of section89 issue
+output Total normal income: ITR1_IncomeDeductions TotalIncome
+output tax at normal rate: ITR1_TaxComputation TotalTaxPayable
+DDB > User value of system calculated is considered for min, specified in DE (sync update for > ITR4 ticket raised SIT-84811)
+List of element IDs that are updated post testing closure
+ValidatedAsEntered.ITR1_IncomeDeductions.DeductionUs57iia	> 15.03.2024
+ValidatedAsEntered.Schedule80G.Don100Percent.DoneeWithPan.DonationAmtCash > 15.03.2024
+ValidatedAsEntered.Schedule80G.Don50PercentNoApprReqd.DoneeWithPan.DonationAmtCash > 15.03.2024
+ValidatedAsEntered.Schedule80G.Don100PercentApprReqd.DoneeWithPan.DonationAmtCash > 15.03.2024
+ValidatedAsEntered.Schedule80G.Don50PercentApprReqd.DoneeWithPan.DonationAmtCash > 15.03.2024
+ValidatedAsEntered.Schedule80G.Don50PercentNoApprReqd.DoneeWithPan.DonationAmtCash > 15.03.2024
+ValidatedAsEntered.Schedule80D.Sec80DSelfFamSrCtznHealth.PrevHlthChckUpSlfFamSrCtzn > 24.03.2024
+ValidatedAsEntered.Schedule80D.Sec80DSelfFamSrCtznHealth.PrevHlthChckUpParents > 24.03.2024
+ValidatedAsEntered.Schedule80D.Sec80DSelfFamSrCtznHealth.PrevHlthChckUpParentsSrCtzn > 24.03.2024
+ValidatedAsEntered.ITR1_IncomeDeductions.Increliefus89A > 24.03.2024
+ValidatedAsEntered.ITR1_IncomeDeductions.Increliefus89AOS > 24.03.2024
+ValidatedAsEntered.ITR1_TaxComputation.Section89 > 24.03.2024
+ValidatedAsEntered.ITR1_TaxComputation.IntrstPay.IntrstPayUs234C > 28.03.2025
+
+List of element IDs that might require update
+ValidatedAsEntered.TaxPaid.BalTaxPayable > Round off 10 is not applied
+ValidatedAsEntered.ITR1_IncomeDeductions.DeductUndChapVIA.Section80CCDEmployeeOrSE > All salary fields of Income details to be considered 0 ?
+ValidatedAsEntered.Refund.RefundDue > Round off 10 is not applied
+
+
+ITR4/ 11-Feb
+To add enhancements of ITR4 JIRA tickets
+Total deductions (Add items 6a to 6t) > if gti negative, computed value is 0 > SIT-83310
+80DD - Maintenance including medical treatment of a dependent who is a person with disability > if gti negative, computed value is 0 > SIT-83330
+	This change is done 80DD schedule, and in VI-A, automatic change will occur
+6h. 80DDB - Medical treatment of specified disease > if gti negative, computed value is 0 > SIT-83359
+Deduction > 80U > if gti negative, computed value is 0 > SIT-83410, SIT-83422
+Schedule 80U - Self with severe disability > if gti negative, computed value is 0 > SIT-83411, SIT-83423
+Schedule 80GGC > Eligible Amount of Contribition (Individual row field) > if gti negative, computed value is 0 > SIT-83416, SIT-83428
+Deduction > 80U - In case of a person with disability > if gti negative, computed value is 0 > SIT-83410
+DDB > User value of system calculated is considered for min, specified in DE (ticket raised SIT-84811)
+
+BA confirmed on call the DB mapping sheet for E5 and E7 in BP is correct and to be used.
+
+ITR2
+for Schedule SI tickets such as
+SIT-85269, we are using following 
+For resident status, DTAA benefit claimed at lower rates in Sch OS/CG should not be allowed. Such income/s to be taxed at normal applicable rates. (Refer DTAA Approach sheet in BRD)
+
+Field SL. No. :Sl no. 1d||Field :Income from retirement benefit account maintained in a notified country u/s 89A
+	> As entered= As Computed (Only positive, if negative, ignore negative sign)
+
+SI Updates that were done from utility to BRF>
+
+1. @ is replaced by @ValidatedAsEntered., Max( is replaced by max(, Min( is replaced by min(
+2. (@ValidatedAsEntered.PartA_GEN1.FilingStatus.ResidentialStatus =="NRI" && STCGDTAAArr.TaxRescertifiedFlag == "Y")
+	is converted to
+	(@ValidatedAsEntered.PartA_GEN1.FilingStatus.ResidentialStatus == "NRI" && STCGDTAAArr.CountryCodeExcludingIndia == @StatForms.Form10F.Country)
+3. Case for 5BBJ is added
+4. return statement have a condition of max and passing the difference to GTI
+5. if condition for DTAAOS, PTI_5BBF, 5BBF
+
+
+
+
+ITR3
+If OptOutNewTaxRegime is “Y” then it’s a old tax and if it’s “N” then it’s a new tax regime. No need to verify whether case is with in duedate or not because we (Infosys) kept that check already.
+
+
+http://10.144.16.146/itd/adp/brfcomputationay2425
+
+
+ITR2 TR point is pending on Infy, rest of the point to be implemented as discussed and mentioned in release note
+
+infy_brf@arundataprocessing.co.in
+Infybrfadp@123
+
+ITR2 Discussion for new tickets 01.02.2025 >
+WRT SIT-86958
+Computed > 3crore, User Entered > 5 Crore Diff (User - Computed) 2 Crore
+			abs(User - Computed)
+
+SIT-86968
+normal income -> ValidatedAsEntered.PartB_TI.AggregateIncome - ValidatedAsEntered.PartB_TI.NetAgricultureIncomeOrOtherIncomeForRate
+			(15-14)
+tax on normal income -> ValidatedAsEntered.PartB_TTI.ComputationOfTaxLiability.TaxPayableOnTI.TaxAtNormalRatesOnAggrInc - PartB_TTI.ComputationOfTaxLiability.TaxPayableOnTI.RebateOnAgriInc
+		(2a - 2c)
+
+Monday Meeting, 03.02.2025
+ITR2
+5BBF, PTI_5BBF >
+if condition of normal income is satisfied, will be added to sr1, the json output for the field will be 0 but user entered value will be added to sr1
+if condition of speical income is stisfied, will be added to sr2, the json output for the field will be the user value
+
+if additional details source name is  ITBAWSC or ITBAWSA
+for  the field value, 
+RES/NOR > the computed will be user enterd value since statform check is to be ignored > considered as special income
+NRI > Direct value > normal income
+
+To make a script for . with second character of depth
+
+if getG("SIMaxRuleDiff") == nil{
+	setG("SIMaxRuleDiff",diff)
+}else{
+	setG("SIMaxRuleDiff",diff + getG("SIMaxRuleDiff").(float64))
+}
+
+Meeting Wednesday, 05.02.2025
+3. If entered value of sl. no. 2i(Total loss of HP) of Schedule CYLA is greater than zero and entered value of column 2 from sl. no. (ii to xii)in total is zero and entered value in column no. 1 from sl no. (ii to xii, except sl no. iii) is greater then zero after setting of OS  loss if any. 
+> Need more explanation (after setting off OS loss??) >  (whatever the case is)
+If OS loss is concluded to be manual, for cheking this condition, manual entries by user are going to be used
+If OS loss is concluded to be CPC, for cheking this condition, CPC ordered Computation is going to be used > We do not need to check the condition at all since if OS is cpc, HP will be cpc
+
+5. If entered value of sl. no. 2i(Total loss of HP) of Schedule CYLA is less than or equal to 200000 and entered value of column 2 from sl. no. (ii to xii) in total is greater than 2i provided entered value of sufficient income in column no. 1 from sl. no (ii to xii excluding sr. no (iii )of HP income) of Schedule CYLA is available to set off. 
+> Need more explanation (sufficient income in....)
+Update, after OS loss setoff, 
+if 
+1. (2i <= 200000)
+2. (column 2 total > 2i ) user entered values
+3. (total of column 1 after OS loss setoff < total of column 2) user entered values
+    then CPC will trigger
+
+6. If entered value of sl. no. 2i(Total loss of HP) of Schedule CYLA is greater than 200000 and entered value of column 2 from sl. no. (ii to xii) in total is greater than 200000 provided entered value of sufficient income in column no. 1 from sl. no (ii to xii excluding sr. no (iii )of HP income) of Schedule CYLA is available to set off. 
+> Need more explanation (sufficient income in....)
+if 
+(2i > 200000) And (column 2 total > 200000 ) And (total of column 1 after OS loss setoff < total of column 2) user entered values
+ user entered values
+    then CPC will trigger
+
+for CYLA 06.05.2025
+On Call with Madhu, HP and OS schedule values to be taken are entered values for comparison 
+abs to be used
+sequencing causing circular referencing due to auto set off ordering flow
+
+
+OS 2c/3c will need discussion for ITR2 and ITR3 > Infy might not have tested it yet.
+the dropdown part is also not updated yet in any ITR.
+BTTI-> TR90/91 > Two fields > 1d of TR to be compared for F67 claimed value logic
+Are there going to be unique values in CG exemption arrays > No > Confirmed by BA in Meeting on 7th Feb > Implemented
+
+
+CG Section Exemptions
+Clarification Point 1.
+Field -> Deduction under section 54B  (Specifiy details in Item D below)
+And other such fields, 
+BRD -> Min of as entered or As computed in Table D -D1b (Deductions claimed u/s 54B  from columnn - Total of Amount of deductions claimed )
+Clarification -> In all such places, if arrays hold the sections then sections can be repeated and total of section amount over the schedule CG should be restricted to respective Table D value.
+
+Clarification Point 2.
+Field -> Deduction under section 54  (Specifiy details in Item D below)
+BRD -> Min of as entered or As computed in Table D - D1a (Deductions claimed u/s 54 from columnn - Total of Amount of deductions claimed )
+	Amount against section 54 shall be restricted to 10 crores.
+	Total amount against deduction u/s 54 & 54F shall be restricted to 10 crores. Deduction to be claimed first from section 54 and balance from 54F.
+Clarification -> 
+
+
+OS 2c/3c > Requested test case from Sanket
+Tax formulae
+	year change
+	tax limit update for new tax regime
+234A > system date
+234B > system date
+234C > year, tax limit
+234F > year
+SI
+CG tables sum
+BTTI TR Fields
+CYLA manual set-off condition
+

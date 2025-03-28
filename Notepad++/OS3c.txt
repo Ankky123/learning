@@ -1,0 +1,158 @@
+
+var specialGTIforOS = ?
+var os1a = @ScheduleOS.IncOthThanOwnRaceHorse.DividendGross
+var VIAdeductions = 0.0
+var os3cClaimed = @ScheduleOS.IncOthThanOwnRaceHorse.Deductions.UsrIntExp57
+
+var os3cComputed = 0.0
+
+var btiNormalIncome = 0.0
+var tniaf = 0.0
+
+var osNormalIncome = 0.0
+
+var sum1a= 0.0
+var sum1b= 0.0
+var sum1c= 0.0
+var sum1d= 0.0
+var sumabcd= 0.0
+<--
+var arry = @ScheduleOS.IncOthThanOwnRaceHorse.IncChargblSplRateOS.NRIOsDTAA.NRIDTAADtlsSchOS[]
+if ((@PartA_GEN1.FilingStatus.ResidentialStatus != "NRI") || (arry.TaxRescertifiedFlag == "Y")) {
+if(arry.NatureOfIncome == "1a"){
+sum1a += arry.DTAAamt
+}else if(arry.NatureOfIncome == "1b"){
+sum1b += arry.DTAAamt
+}else if(arry.NatureOfIncome == "1c"){
+sum1c += arry.DTAAamt
+}else if(arry.NatureOfIncome == "1d"){
+sum1d += arry.DTAAamt
+}
+}
+
+sumabcd = sum1a+sum1b+sum1c+sum1d 
+-->
+var os3cCompDummy = 0.0
+var os3total = @ScheduleOS.IncOthThanOwnRaceHorse.Deductions.Expenses + @ScheduleOS.IncOthThanOwnRaceHorse.Deductions.DeductionUs57iia + os3cCompDummy + @ScheduleOS.IncOthThanOwnRaceHorse.Deductions.Depreciation
+osNormalIncome = (@ScheduleOS.IncOthThanOwnRaceHorse.GrossIncChrgblTaxAtAppRate - sumabcd - os3total + @ScheduleOS.IncOthThanOwnRaceHorse.AmtNotDeductibleUs58+@ScheduleOS.IncOthThanOwnRaceHorse.ProfitChargTaxUs59-@ScheduleOS.IncOthThanOwnRaceHorse.Increliefus89AOS)
+
+btiNormalIncome = @PartB_TI.Salaries + @PartB_TI.IncomeFromHP + @PartB_TI.CapGain.ShortTerm.ShortTermAppRate + osNormalIncome
+tniaf = btiNormalIncome - deduction
+os3cComputed = Min(0.2*Min(os1a, tniaf), os3cClaimed)
+
+return os3cComputed
+--------------------------------------------------------------------------------
+
+
+var osNormalIncome = 0.0
+var sum1a= 0.0
+var sum1b= 0.0
+var sum1c= 0.0
+var sum1d= 0.0
+var sumabcd= 0.0
+<--
+var arry = @ScheduleOS.IncOthThanOwnRaceHorse.IncChargblSplRateOS.NRIOsDTAA.NRIDTAADtlsSchOS[]
+if ((@PartA_GEN1.FilingStatus.ResidentialStatus != "NRI") || (arry.TaxRescertifiedFlag == "Y")) {
+if(arry.NatureOfIncome == "1a"){
+sum1a += arry.DTAAamt
+}else if(arry.NatureOfIncome == "1b"){
+sum1b += arry.DTAAamt
+}else if(arry.NatureOfIncome == "1c"){
+sum1c += arry.DTAAamt
+}else if(arry.NatureOfIncome == "1d"){
+sum1d += arry.DTAAamt
+}
+}
+
+sumabcd = sum1a+sum1b+sum1c+sum1d 
+-->
+var os3cCompDummy = 0.0
+var os3Deductionstotal = @ScheduleOS.IncOthThanOwnRaceHorse.Deductions.Expenses + @ScheduleOS.IncOthThanOwnRaceHorse.Deductions.DeductionUs57iia + os3cCompDummy + @ScheduleOS.IncOthThanOwnRaceHorse.Deductions.Depreciation
+osNormalIncome = (@ScheduleOS.IncOthThanOwnRaceHorse.GrossIncChrgblTaxAtAppRate - sumabcd - os3Deductionstotal + @ScheduleOS.IncOthThanOwnRaceHorse.AmtNotDeductibleUs58+@ScheduleOS.IncOthThanOwnRaceHorse.ProfitChargTaxUs59-@ScheduleOS.IncOthThanOwnRaceHorse.Increliefus89AOS)
+
+
+var GTI = Max(0, Max(0, @PartB_TI.Salaries+@PartB_TI.IncomeFromHP+@PartB_TI.CapGain.TotalCapGains+osNormalIncome)-@PartB_TI.CurrentYearLoss-@PartB_TI.BroughtFwdLossesSetoff)
+var VIADeductions = 0.0
+var specialGTIforOSAfterVIADeduction = GTI - VIADeductions
+var os1a = @ScheduleOS.IncOthThanOwnRaceHorse.DividendGross
+var os3cClaimed = @ScheduleOS.IncOthThanOwnRaceHorse.Deductions.UsrIntExp57
+var os3cComputed = 0.0
+os3cComputed = Min(os3cClaimed,0.2*(Min(os1a,specialGTIforOSAfterVIADeduction)))
+return os3cComputed
+-----------
+
+var GTI = Max(0, Max(0, @PartB_TI.Salaries+@PartB_TI.IncomeFromHP+@PartB_TI.CapGain.TotalCapGains+osNormalIncome)-@PartB_TI.CurrentYearLoss-@PartB_TI.BroughtFwdLossesSetoff)
+var VIADeductions = 0.0
+var specialGTIforOSAfterVIADeduction = GTI - VIADeductions
+var os1a = @ScheduleOS.IncOthThanOwnRaceHorse.DividendGross
+var os3cClaimed = @ScheduleOS.IncOthThanOwnRaceHorse.Deductions.UsrIntExp57
+var os3cComputed = 0.0
+os3cComputed = Min(os3cClaimed,0.2*(Min(os1a,specialGTIforOSAfterVIADeduction)))
+return os3cComputed
+----------------------------
+var GTI = @PartB_TI.GrossTotalIncome //this will be calculated with this.value = 0 for calculating os3cComputed
+var VIADeductions = @PartB_TI.DeductionsUnderScheduleVIA //this will be calculated with this.value = 0 for calculating os3cComputed
+var specialGTIforOSAfterVIADeduction = GTI - VIADeductions
+var os1a = @ScheduleOS.IncOthThanOwnRaceHorse.DividendGross
+var os3cClaimed = @ScheduleOS.IncOthThanOwnRaceHorse.Deductions.UsrIntExp57
+var os3cComputed = 0.0
+os3cComputed = Min(os3cClaimed,0.2*(Min(os1a,specialGTIforOSAfterVIADeduction)))
+return os3cComputed
+//when we have value for os3cComputed, fields impacted by os3c will be recomputed but os3cComputed will be stopped
+----------------------------
+var GTI = @PartB_TI.GrossTotalIncome //this will be calculated with this.value = 0 for calculating os3cComputed
+var VIADeductions = @PartB_TI.DeductionsUnderScheduleVIA //this will be calculated with this.value = 0 for calculating os3cComputed
+var specialGTIforOSAfterVIADeduction = GTI - VIADeductions
+var os1a = @ScheduleOS.IncOthThanOwnRaceHorse.DividendGross
+var os3cClaimed = @ScheduleOS.IncOthThanOwnRaceHorse.Deductions.UsrIntExp57
+var os3cComputed = 0.0
+os3cComputed = Min(os3cClaimed,0.2*(Min(os1a,specialGTIforOSAfterVIADeduction)))
+return os3cComputed
+//when we have value for os3cComputed, fields impacted by os3c will be recomputed but os3cComputed will be stopped
+//os3c formula will be triggered if any of the dependency is updated (except if the dependency is updated due to a change in os3c), 
+//but after computation of the os3c, the dependent fields (which are again dependency fields) will be computed but will not lead to recomputation of os3c.
+
+ScheduleOS.IncOthThanOwnRaceHorse.Deductions.IntExp57
+
+ScheduleOS.IncOthThanOwnRaceHorse.Deductions.TotDeductions
+
+ScheduleOS.IncOthThanOwnRaceHorse.BalanceNoRaceHorse
+
+ScheduleOS.TotOthSrcNoRaceHorse
+
+ScheduleCYLA.TotalCurYr.TotOthSrcLossNoRaceHorse
+
+ScheduleCYLA.OthSrcExclRaceHorse.IncCYLA.IncOfCurYrUnderThatHead
+
+PartB_TI.IncFromOS.OtherSrcThanOwnRaceHorse
+
+----------------------
+
+case "ITR7":
+                os1aKey = 'ScheduleOS.IncOthThanOwnRaceHorse.DividendGross'
+                os3ckey = "ScheduleOS.IncOthThanOwnRaceHorse.Deductions.IntExp57"
+                os3cClaimedKey = 'ScheduleOS.IncOthThanOwnRaceHorse.Deductions.UsrIntExp57'
+
+                if (this.jsonService.globalVariables.get("recomputeOS3c")) {
+                    this.jsonService.setJsonDataByKey(os3ckey, 0)
+                    let aff = JSONService.serviceMap.get(os3ckey).get("AffectedIDs_Formula")
+                    let affU = []
+                    for (let i = 0; i < aff.length; i++) {
+                        affU.push([os3ckey, aff[i]])
+                    }
+                    this.workOnAffectedIDs_Formula(affU, 0)
+                    let GTI = this.jsonService.getJsonDataByKey("PartB_TI.TotalIncome", "") + this.jsonService.getJsonDataByKey("PartB_TI2.GrossTotalIncome", "") + this.jsonService.getJsonDataByKey("PartB_TI3.ComputationIncChargeable.TotalInc", "")
+                    let VIADeductions = 0.0
+                    let os1a = this.jsonService.getJsonDataByKey(os1aKey, "")
+                    let os3cClaimed = this.jsonService.getJsonDataByKey(os3cClaimedKey, "")
+                    var specialGTIforOSAfterVIADeduction = GTI - VIADeductions
+                    var os3cComputed = 0.0
+                    os3cComputed = Math.min(os3cClaimed, 0.2 * (Math.min(os1a, specialGTIforOSAfterVIADeduction)))
+                    this.jsonService.setJsonDataByKey(os3ckey, os3cComputed)
+                    this.workOnAffectedIDs_Formula(affU, 0)
+                    this.jsonService.globalVariables.set("recomputeOS3c", false)
+                }
+
+                break
+
+-----------------------

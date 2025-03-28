@@ -1,0 +1,21 @@
+Vlookup
+sumifs
+sumif
+iserror
+if
+mid
+trim
+search
+max
+ucase
+UVcase - Converting no value and 0 to 0
+CDbl - Type converter (Convert to Double)
+val - converts the string containing number to and
+	actual number.
+activex controls
+design mode
+UBound - 
+ReDim - Size or resize a dynamic array
+setTableInfo?
+
+

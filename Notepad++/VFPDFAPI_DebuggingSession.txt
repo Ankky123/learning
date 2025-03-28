@@ -1,0 +1,757 @@
+WebEx Links
+Aravindram -> ""https://infosys.webex.com/join/aravindram_m"
+Bharathi -> "https://infosys.webex.com/meet/bharathi_v04 "
+Madhu -> "https://infosys.webex.com/meet/beri.kiran"
+Achal -> "https://infosys.webex.com/meet/achal.singla"
+Murali -> "https://infosys.webex.com/join/Muralidhar_r"
+Ananya -> "https://Infosys.webex.com/meet/ananya.agarwal01"
+Ayushi -> "https://infosys.webex.com/meet/aayushi.jain07"
+Rahul -> "https://infosys.webex.com/meet/rahul.tayal"
+Mani -> "https://infosys.webex.com/meet/manikandan.va"
+Shruthi -> "https://infosys.webex.com/meet/shruthi_lingaraju"
+
+
+https://10.144.19.222/cpcenv/foitrgovalidations2324/health
+
+Please find the URLs, all the deployments till today are done from ADP branch.
+
+
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2324/health
+
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2223/health
+
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2021/health
+
+
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2324/itrintval/api/1.0.0
+
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2223/itrintval/api/1.0.0
+
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2021/itrintval/api/1.0.0
+
+Useful info regarding infy
+
+Below are the EPIC links for ADP AY20-21, 21-22 and 22-23.	
+	
+ADP AY 22-23	Epic links
+ITR-1	EITR-855
+ITR-2	EITR-853
+ITR-3	EITR-854
+ITR-4	EITR-856
+ITR-5	EITR-857
+ITR-6	EITR-858
+ITR-7	EITR-859
+	
+ADP AY 20-21	Epic links
+ITR-1	EITR-860
+ITR-2	EITR-861
+ITR-3	EITR-862
+ITR-4	EITR-863
+ITR-5	EITR-864
+ITR-6	EITR-865
+ITR-7	EITR-866
+	
+ADP AY 21-22	Epic links
+ITR-1	EITR-867
+ITR-2	EITR-868
+ITR-3	EITR-869
+ITR-4	EITR-870
+ITR-5	EITR-871
+ITR-6	EITR-872
+ITR-7	EITR-873
+
+
+Production Build -
+ITR2 -> SIT-50641
+
+
+infyxldev0115
+
+
+Please find the URLs, all the deployments till today are done from ADP branch.
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2324/health
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2223/health
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2021/health
+
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2324/itrintval/api/1.0.0
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2223/itrintval/api/1.0.0
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2021/itrintval/api/1.0.0
+
+
+PFB required details:-	
+	
+ITR	Excel Query
+ITR1	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-777 AND "Section Details" = "ITR Excel" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR2	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-778 AND "Section Details" = "ITR Excel" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR3	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-779 AND "Section Details" = "ITR Excel" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR4	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-780 AND "Section Details" = "ITR Excel" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR5	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-781 AND "Section Details" = "ITR Excel" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR6	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-782 AND "Section Details" = "ITR Excel" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR7	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-783 AND "Section Details" = "ITR Excel" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+	
+ITR	VF Query
+ITR1	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-777 AND "Section Details" = "ITR VF" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR2	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-778 AND "Section Details" = "ITR VF" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR3	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-779 AND "Section Details" = "ITR VF" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR4	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-780 AND "Section Details" = "ITR VF" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR5	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-781 AND "Section Details" = "ITR VF" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR6	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-782 AND "Section Details" = "ITR VF" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR7	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-783 AND "Section Details" = "ITR VF" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+
+
+Git commit message
+IPIP-0000: Added ITR1 22-23 VF module................................................................................
+
+
+
+AY 2021- Sanity to be confirmed for ITR 1,2,4
+
+AY 2223- Sanity to be confirmed for ITR 4
+
+Acknowledgement Form ->
+Header - Acknowledgement Number:107044820290123 
+Header - Date of filing : 29-Jan-202
+e-Filing Acknowledgement Number - 
+Bar Code/QR Code
+
+, "Error Code", "Error Category", "Error Category Description", "Error Category Type", "Suggestion"
+,"", "", "", "", ""
+, v.ErrorCode, v.ErrorCategory, v.ErrorCategoryDescription, v.ErrorCategoryType, v.Suggestion
+
+rowStr += ", ErrorCode: \"" + Node.NodeRowData.ErrorCode
+	rowStr += ", ErrorCategory: \"" + Node.NodeRowData.ErrorCategory
+	rowStr += ", ErrorCategoryDescription: \"" + Node.NodeRowData.ErrorCategoryDescription
+	rowStr += ", ErrorCategoryType: \"" + Node.NodeRowData.ErrorCategoryType
+	rowStr += ", Suggestion: \"" + Node.NodeRowData.Suggestion + "\""
+
+generateElementID
+getElementTag
+Ankit123@github
+
+Online Filing
+Resume
+View
+GetPrefill
+Save
+Validate
+Submit Wizard
+PDF (Download Form) Payload - JSON
+	Acknowledgement Number - ?
+	Date - ?
+	e-Filing Acknowledgement Number -
+PDF (Download Receipt) - JSON
+PDF (Download ITRV) - JSON
+
+Current Year Business Loss
+To implement
+To go to suresh
+Income from other sources - to reduce two values (incus89AOS, deductus57iia)
+30% round off value
+Sum to be replaced by 0.0
+80G -> donations is sum of other two - Done 
+80G -> 78 condition not written
+80G -> 24th Row validation is for 30th Row validations
+80G -> 50PercentAppr Required is repeating
+IncomeDeductions -> to apply one more condition of difference less than 0
+IncomeDeductions -> ITR1_IncomeDeductions.ExemptIncAgriOthUs10.ExemptIncAgriOthUs10Total - A sum2 has to be declared -> Agriculture enum to collect
+
+58960.6
+58950
+58949.4
+
+Epitaxial Devs Work
+Suresh - ITR1 PDF
+Suraj - ITR1 PDF
+
+Alina - XML to go parsing
+Naveen - 
+XML ITR1 20-21 Samples and Schema (To make struct from Schema - Auto or Manual)
+XML data in go (To store the XML Data in a go struct variable) - Aryaman will Mentor them
+Monday -> How to do parsing
+
+Tuesday -> Struct should be ready
+Aryaman -> Auto
+Alina and Naveen -> Static
+
+Submission 1st March VF
+
+adpak4.m.701005120
+
+21.02.2023
+With Rishabh JIRA Resolving session
+
+Done -> 
+Error codes changes (removed pdm)
+
+
+
+To do ->
+Check error codes of 80G
+Add error codes for new validations
+
+To Mail ->
+Schema "TotalIncomeOfHP" tag -> "maximum" property is not set
+enums description pairs must be delimited with ";"
+
+Schema is the first input point for our automation. - future iterations of the schema will disturb the rule author
+ 
+`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_pbWub`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_jyG2a`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_K6WfY`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_mdv3Z`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_KxF0C`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_r7bIP`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_DAhF2`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_OifN1`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_zknhG`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_47MDr`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_aWk46`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_Ls9SZ`
+
+`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_pbWub`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_jyG2a`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_K6WfY`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_mdv3Z`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_KxF0C`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_r7bIP`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_DAhF2`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_OifN1`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_zknhG`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_47MDr`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_aWk46`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_Ls9SZ`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_DWJGP`;`GrossTotalIncome.ITR1_Exempt_Income_Exempt_Income_Code_VlHn5`
+
+
+23.02.2023 discussion
+
+TotalTaxIntPay Round off issue
+
+ITR4 Utility changes pending to be implemented in production build
+Bankaccountdetails to remove extra space for schema error
+Phone number object not to be generated if phone is blank
+tdsoththansals -> To generate NA in headofincome
+AllowanceExemption first provisio and 10(13A) import and generate
+
+474000
+"TotPersumptiveInc44AD": 37000
+"TotPersumptiveInc44ADA": 160000
+"TotPersumInc44AE": 300000
+
+Project-1188 : Initializing PDF Generation code from ADP with some random characters.....................................
+
+Project-1188 : Updating PDF Generation for ITR1 and ITR4...............................................................
+
+
+45432 Blocker ITR1 -> House Property issue
+46327 Blocker ITR1 -> The same issue
+
+-200000
+
+45956 Blocker ITR4
+
+
+defect No. -> CG Issue ITR2
+
+ITR3 basic sanity clearance
+
+ITR3 utility to share
+
+ITR7 compile issues and 0.2 issues
+
+Category mail
+
+
+i18 keys
+
+Rule 227
+Rule 228
+Rule 229
+Rule 491
+
+Rule 441 or 491
+
+
+
+
+pdm.ITR2_PDM_Group2.Don50PercentNoApprReqd_TotDon50PercentNoApprReqd_nObbJ
+pdm.ITR2_PDM_Group2.Don100PercentApprReqd_TotDon100PercentApprReqd_r4TkV
+pdm.ITR2_PDM_Group2.Don50PercentApprReqd_TotDon50PercentApprReqd_G1EAA
+pdm.ITR2_PDM_Group3.SplCodeRateTax_SplRateInc_nZGBA
+
+
+
+Ishita -> P
+Ankit -> A
+SatyaPrakash -> S
+Rishabh -> R
+Chirag -> C
+Ami - T
+Nishi - N
+Vishal - V
+
+
+Brijesh -> B
+Suraj -> K
+Naveen -> Y
+Suresh -> U
+Abhilasha -> G
+
+Aleena -> V
+Amol -> M
+Roshni -> O
+Nivedita -> N
+
+SIT invalid
+46615
+46614
+46593
+46588
+46582
+46581
+46546
+46504
+46503
+
+
+
+
+
+46569
+
+45432
+45621
+
+
+
+ITR2 2 i18 Keys -> by 2 PM - Done
+Two fixed to be moved to RTT - Done
+ITR2 Excel priority fix - Done
+
+ITR2 VF Blocker issue - 46494
+
+SIT-46543,46614 (Reopen)
+
+ITR5 Sanity -> Tomorrow EOD
+ITR2 i18 Keys to be shared -> Tomorrow EOD
+
+Please don't club multiple issues into one. It will hinder the RCA.
+
+
+ITR 23-24
+issuetype = Bug AND status in (Reopened, Open, reopen) AND component = "ITR ADP" AND "Epic Link" = EITR-780 AND assignee in (currentUser()) ORDER BY assignee ASC
+
+
+46137
+
+
+46533
+45956
+
+
+Test-012
+Test-006
+Test-004
+
+
+Share the ITR3 Utility
+ITR5 and ITR5 ETA to be shared
+
+46494
+
+Epic Link ITR2 -> 778
+Epic Link ITR3 -> 779
+
+To let the team know about the marking the UI issue to Aravind instead of 
+
+46929 itr3
+46572 itr3
+46811 itr3
+
+
+JIRA Issues are not filterable by "Section Details"
+Section details are supposed to be only 2 types for proper filtering
+Screen shots are unclear
+AY Categorisation not avaiable in the Excel defects
+Will let you know any more issues
+
+"Actual" and "expected" are not following a standard
+
+Some Issues -> The description is not given properly and not mentioning actual and expected values
+Some Issues screenshots are missing
+Request BAs to vet the issues.
+
+SIT-46957
+
+DE reference is missing in many defects
+Incorrect sub-categorisation of the issues (label issues mentioned as error message issue)
+Please sanitize the issues for fast closure
+Defects raised are not actionable
+10 defects per AY for Current AY
+
+Incremental build will be given on the stable build
+Prior AY Regression testing was not completed due to which now blockers are coming
+
+Approach and Requirement has changed -> Utility level validations and Upload level validations are now asked differently
+If it is massive effort for you, it will be even bigger effort from our side, your team has test cases scenarios, jsons, utilities
+
+more people -> we will have to bring more number of people
+
+not expected from our team, Rajendra has to take a call -> he has set different expectations for your teams and our teams
+
+ITR3 blocker and critical issues
+and 20 issues and ITR3 RCA for so much failures
+
+
+47077 -> ITR5
+
+47168 -> ITR2 blocker
+47169 -> ITR2 blocker
+
+
+Entertainment Allowance Issue
+
+
+Watermark 1,2,4
+ITR3 PDF -> ETA to be provided
+ITR5 PDF Sanity -> Done
+ITR2 -> Production Version -Done
+
+
+ITR3 0.4 Runtime Error
+ITR5 1 issue to be moved from computation to excel
+ITR5 17 defects RCA
+ITR7 substatus blocker to be shared
+ITR7 3 reopen blocker -> Same thing tested? -> RCA
+
+
+ITR2 VF 3 i18 Keys by EOD
+ITR3 VF 3 blocker ??
+ITR3 Excel some issues for fully filled jsons -> Some discussion required before sharing the utility for 3 issues
+			Fully filled JSON to be provided.
+
+
+ITR3 0.4 8 Rules -> 6 PM
+ITR3 3 VF issues by 6 PM
+
+ITR5 Excel 2 issues are VF blocker
+ITR5 Excel to give an earlier ETA for Priority Issues -> Prefill can be ignored for later submissions
+
+997 is wrong mapping
+1000 is wrong mapping
+
+
+
+
+Range to swap
+
+
+
+
+ITR7 Status of the Issues
+Total issues fixed in the last submitted version -> 140+ (High, Blocker, Critical). Out of which 18(High) reopened.
+1. SIT-49276 -> No issue found. 						-> Wrong Representation				-> Invalid
+2. SIT-47251 -> Descripton change (Issue resolved) 		-> Wrong Representation				-> Fixed
+3. SIT-48630 -> Duplicate with another reopened issue  	-> Wrong Representation				-> Invalid
+4. SIT-48004 -> No issue found. Invalid					-> Wrong Representation				-> Invalid
+5. SIT-47945 -> Was reopened from Invalid.RnD			-> Wrong Representation				-> RnD
+6. SIT-48442 -> Invalid JSON. Invalid					-> Wrong Representation				-> Invalid
+7. SIT-48441 -> Invalid JSON. Invalid					-> Wrong Representation				-> Invalid
+8. SIT-47743 -> No issue found 							-> Wrong Representation				-> Invalid
+9.SIT-47750 -> Initially issue was for all 				-> Wrong Representation				-> Fixed
+schedule tags, reopened 1 tag only 
+(could be because of multiple schema change requiremnt)		
+10.SIT-47986 -> Issue description Changed				-> Wrong Representation				-> Fixed
+11.SIT-50421 -> Duplicate 47912(Reopened)  				-> Wrong Representation				-> Invalid
+12.SIT-47916 -> No issue found							-> Wrong Representation				-> Invalid
+13.SIT-49265 -> Was reopened from Invalid				-> Wrong Representation				-> Change Requirement Implemented
+14.SIT-49627 -> Valid									-> Valid							-> Fixed
+15.SIT-47711 -> Valid Reopen							-> Valid							-> Fixed
+16.SIT-48621 -> Valid									-> Valid							-> Fixed
+17.SIT-47923 -> Valid Reopen. Issue resolved			-> Valid							-> Fixed
+18.SIT-47912 -> RnD										-> Valid							-> RnD
+
+Out of 18  Reopened Issues -> 13 Led to wrong representation
+					8 were marked back as Invalid, 2 for RnD, 7 Fixed, 1 Requirement change implemented
+
+SIT-50733 -> clarified
+SIT-50400
+SIT-50763 -> 2a amt -> via 2c or bti_10 - via_1 - via_3 -> To take min
+SIT-50740 ->
+SIT- -> 2c of via -> no other condition required
+
+
+DPM45.WDVLastDay
+
+to verify import and generate for OS 5BBC dropdown
+To validate import of DA Schedule, ProvisionsSec1310Applcbl,
+Validates to call for new schedules in the calculate Tax
+Schedule DA, IA, R, BBI, A, VDA, TCS
+
+B3 enabled field to generate and import -> 
+B1 enabled field to generate and import -> Testing Pending
+
+Clarification for A26 Validation v/s mandatory
+
+
+PDF testing is raising issues for a different source of truth
+	We are using Prior AY UAT
+	Issue is being raised for with Excel screenshots
+
+ITR5 VF 8th May issues are pending?
+
+
+ITR3 VF 1 issue status to update -> 
+SIT-50843 vf to update
+
+	
+Max filled ITR5 json to be tested if there any blocker in it
+
+ITR5 2 VF issues are to be checked
+ITR5 1 Excel blocker is there
+
+ITR7 computational issues to be marked as RTT - Done
+
+AY 22-23 -> Issues to be taken up by Aleena's team
+
+ITR3 22-23 VF (Submission) -> Tuesday
+ 
+RTT movement to confirm
+Excel
+
+VF
+
+
+
+51189 - Aravind
+51190 - Fixed
+
+ITR6 4 issues marked as invalid
+-> A question in Part A Gen in part a ind as
+
+
+ITR5 Excel EOD
+ITR3 Excel Blocker EOD - Done
+ITR7 Excel Blocker EOD - Done
+
+ITR2 VF Production Issue - Done
+ITR2 Error Key issue - Done
+
+ITR3 VF 10 Issues - Ishita
+ITR5 VF 10 Issues - Ishita
+
+ITR6 VF SI to complete
+
+Discussion of IPIP bugs of 22-23 Excel
+	IPIP-32180
+	IPIP-33447
+	IPIP-32180
+
+23-24 VF Production Bugs
+	IPIP-34859
+	IPIP-34488
+
+ITR2 23-24 VF deployment confirmation
+
+
+ITR7 Schema update
+
+schema changes to be implemented
+AY tag change
+Schedule I tag to change fro 2016 -> 2022
+
+AY 22-23 ITR1 Defects
+Rule 9 -> to be verified and if required to be created in AY22-23 ITR1
+Rule 201 -> seems correct need to verify HP income condition
+Rule 166 -> getting caught in all positive JSONs need to verify
+Rule 176 -> To be created
+
+
+fmt.Fprintln(initFile, "package "+nameITR+"_assets\nimport \"fmt\"\nfunc Init(){")
+
+
+
+IPIP-35347
+
+22.05.2023
+
+
+
+Issue Number 1 analysis
+48785 -> (Closed -> 24 April)
+ITR 3(XL)_(AY 23-24) In Schedule S, If Employer category is Others in block 1 and CG/ SG/PSU in Block 2, 
+entertainment allowance is disabled
+
+49327 Resolved in  (Closed -> V0.3_S32A55P6R1, 29 April)
+ITR 3(XL)_(AY 23-24) In Schedule S, If Employer category is CG pensioners in block 1 and others in Block 2, 
+entertainment allowance should be disabled but it is not disabled in utility
+
+Issue Case-> now raised -> should be disabled when SG-Pensioners in Block1 and  others is selected is Block2
+
+Behaviour of the utility for the Issue Case -> (V0.3_S32A55P6R1) -> entertainment allowance is enabled in the utility
+Behaviour of the utility for the Issue Case -> (ITR 3_AY 2023-24_V1.0) -> entertainment allowance is enabled in the utility
+
+
+There are no code changes between these two utilities and behaviour of the utility for the said field is same.
+
+Issue Number 2 analysis
+Behaviour of the utility for the Issue Case -> (V0.3_S32A55P6R1) -> Schedule Salary Field "f" enabled in the utility
+Behaviour of the utility for the Issue Case -> (ITR 3_AY 2023-24_V1.0) -> Schedule Salary Field "f" enabled in the utility
+
+There are no code changes between these two utilities and behaviour of the utility for the said field is same.
+
+Issue Number 3 analysis
+when type of house property is selected as "Self occupied" 
+Behaviour of the utility for the Issue Case -> (V0.3_S32A55P6R1) -> Schedule House Property fields b and c (for the block) enabled in the utility
+Behaviour of the utility for the Issue Case -> (ITR 3_AY 2023-24_V1.0) -> Schedule House Property fields b and c (for the block) enabled in the utility
+
+There are no code changes between these two utilities and behaviour of the utility for the said field is same.
+
+Issue Number 4 analysis
+when BP Field "D" is greater than 250000,
+Behaviour of the utility for the Issue Case -> (V0.3_S32A55P6R1) -> the said Note is popping up
+Behaviour of the utility for the Issue Case -> (ITR 3_AY 2023-24_V1.0) -> the said Note is popping up
+
+There are no code changes between these two utilities and behaviour of the utility for the said field is same.
+
+Rule 573 key updated
+
+To send a mail to Aravind for regression issue in ITR2 -> HUF DOB
+To look into the ITR7 Schema changes
+To look into the ITR5 Schema changes
+ITR5 if schema changes are reverted to previous version, we will have issues there in PDF generation
+
+
+Make a list of manual changes in the VF schema parts
+
+ITR1 and ITR4 VF issue waiting for BA revert for 1, 1 Rule To also implement HUF DOB in ITR4 - To push on git - pushed
+ITR2 waiting for BA revert for 2 Rules - to push on git - pushed
+
+To verify the difference between rishabh ITR1 RA and my ITR1 RA - verified -> pushed
+
+ITR3 Rule 507 to push and note in RCA - Asked Chirag to push
+ITR5 Prod to share - Done
+ITR2 1 issue to resolve - In Progress
+
+606 619 ITR7 Rule both are same (619 is deleted)
+
+
+Rule 82 to recheck - Done
+To take the boundary cases as legal value Rule 226 - Done
+rule 442 -> All PE then 80CCD2 is not allowed - Done
+Rule 85 -> limited to 9-10 of BTI - 
+
+ITR3 -> Rule 279
+
+
+ITR3 RCA
+ITR6 Excel to be shared by 1 PM(with 1 open  issue to be resolved)
+ITR6 VF to be shared EOD
+ITR7 VF 35 issues with RCA
+
+37494
+
+37422
+37483
+
+
+ITR2 20-21
+To make 
+458,136,54,55,59,127
+
+To verify
+130, 132, 137, -> TDS
+116 -> AL
+261 -> HP
+63,66 -> SI
+441,423,163,274,443,107,82,48,121,230,68,338,26,28,140,349,333,210,237,236,58,12,144,444,252,96,,145,
+
+443 -> Complex
+
+
+
+
+ITR2 20-21 Positive test cases discussion
+Rule 58 -> To take total field (Require confirmation, require clarification of repeation of enum) -> Total field to be taken
+Rule 143 -> LT only positive
+Rule 416 -> Restrict to 0 if negative
+
+
+ITR7 23-24
+Rule 9 -> There might be a change in code after the rule closure. The change might be caused by some issue raised
+Rule 548 -> No change in code -> Testing team did not tested the cases after modification in the code.
+SIT-55004 -> Issue is reopened for different rule
+
+Rule 471 -> error key need to be updated in Rule author done (error key list needs to updated)
+Rule 515 -> New rule and error key added with ITR7_PDM3.PartB_TI2_ExemptionUs13_A_nrAsT (error key list needs to updated)
+
+IPIP-37576
+
+Rule 
+
+ITR2 20-21 blocked rules due to key 
+34
+45
+117
+187
+314
+327
+405
+406
+435
+436
+464
+
+
+ITR 20-21 keys to share
+ITR2 20-21 2 15 Rules to update for clarification
+ITR3 20-21 my rules to check
+ITR7 23-24 Excel
+
+All pushes to make
+
+ITR3 status code 400 and 500 
+ITR3 aakansha report
+ITR5 Sanitization confirmation to be given -> Drop a mail
+
+21-07-2023 Triage Call
+
+ITR6 Excel 2 Issues on Hold -> To be discussed with BA and Rishabh -> Ishita 1 issue
+ITR6 Excel 1 Issue to provide ETA after receipt of JSON
+ITR7 Excel 1 Issue after Clarification Tracker receipt - Chirag
+ITR7 Excel computaion Issue -> Utility Received
+
+ITR4 and ITR1 what to do -> Discuss with Nivedita
+
+ITR2 Deferred issues are already shared. One open issue to be shared -> Utility to be shared
+ITR3 Excel Utility to share?
+ITR3 Deferred issues -> Satyaprakash
+
+
+ITR3 VF 55093 -> what about it? why was it marked to divya?
+
+20-21
+ITR3 -> Today EOD
+ITR5 -> Monday EOD
+
+
+itr7 utility
+
+
+
+Discussion Required
+Prefill -> Rishabh (Call to be scheduled) -> Should be taken from a database that takes input from DE or SRS
+
+Prefill SRS to send
+
+integer to be allowed as negative -> Not to restrict if not given
+Duplicate values validation where to write -> In the miscellanous validations
+Use of Validation column -> For miscellanous validations
+Indexing to be discussed in the Validation (error v/s warning) -> Independend Indexing
+
+Multiple error messages in case of same failure (e.g. minimum value error message to be triggered or the validation message for the minimum)
+Screen 
+
+Next Saturday for UI meeting
+Routing,
+UI ScreenShots for salary
+
+
+While making validations in the Schedule Salary
+
+Whether Updated Returns rules are present in the AYs and ITRs
+ITR1 22-23 -> Done
+ITR2 22-23 -> Done
+ITR3 22-23 -> Done
+ITR4 22-23 -> Done
+ITR5 22-23 -> Done
+ITR6 22-23 -> Done (Schema issue of incometaxsec not included in schema)
+ITR7 22-23 -> Not done (To be done by Ishita ASAP)
+
+
+ITR1 21-22 -> Done
+ITR2 21-22 -> Done
+ITR3 21-22 -> Done
+ITR4 21-22 -> Done
+
+
+Blocker is resolved in ITR3 and ITR4 -> Struct Issue -> To be checked-in
+Verification of rules is being done by Mahesh and Leena
+

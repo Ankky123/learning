@@ -1,0 +1,111 @@
+
+VF
+
+New error codes to be added in ITR2 - 33
+ITR1 -> error codes to be modified and shared with Aravind - Made by Naveen -> To upload with Aravind in sync to avoid opening and reopening of issues.
+ITR7 DB Mapping to update
+ITR7 discussion with Rishabh and Madhu - Not done
+ITR7 Schema to update ->
+
+P0 -> ITR3 VF to updated for the 29 issues
+P1 -> ITR2 Excel Utility
+P2 -> ITR5 Sanity - to be done - Mailed for Sanity Blocker - Waiting for updated schema
+P3 -> ITR5 VF Issue Resolution for 3 JSONs - Pending
+P4 -> ITR5 to push to git - Rishabh - To redo EI, 80G, Part A QD, CFL, FA in ITR5 VF
+P5 -> ITR4 -> 15 issues resolution - Pending
+
+
+Imp -> There is a new Schema of ITR3 in which many changes are made. Need to incorporate those changes into the VF RuleAuthor
+
+
+ITR7 Schema to update - Bti btti pending
+
+
+
+
+
+Roshini to orient - In process
+
+
+Epic Link ITR1 - 777
+ITR4 - 45956
+
+
+Excel
+ITR2 prefill issue and ITR3 22-23 CG computational issue to submit - 
+ITR2 21-22 AMT issue
+ITR3 Runtime Error 23-24
+ITR6 20-21 Production issue
+
+
+Done
+ITR3 defect utilities - Mailed -> 2 Utilities are remaining - done
+ITR5 defect utilities - Mailed -> 17 - done
+P1 -> ITR7 Excel Utility to share done
+ITR1 utility ETA to be shared by 3 PM - done
+ITR4 utility ETA to be shared by 4 PM - done
+ITR5 computational issue to ADP - done
+ITR6 computational issue to ADP - Sent - done
+ITR2 computational issue to ADP - Sent - done
+ITR4 22-23 - Halted by 21 value too large issue - done
+ITR1 and ITR4 ETA to share - Shared
+ITR7 Rule author to generate - done
+ITR1 JIRA Issues - P-1 - Most Important - 2 remaining - 1 remaining - done
+P2 -> ITR5 Sanity - to be done - Mailed for Sanity Blocker
+
+
+Doubts
+
+
+TotalTaxAttributedAmt
+
+
+'Change-
+    Dim cellrange2 As Range
+    Dim formula2 As Variant
+    
+    blockcount = Sheet13.Range("PropertySectionCount_LTCG").value
+    Set cellrange2 = Sheet13.Range("LTCG.Bbi_AquisitCostTot" & blockcount)
+    formula2 = "=" & "SUM(LTCG.Bbii_ImproveCost" & blockcount & ")"
+    
+     sPassword = EfilingCommon.getmsgstate
+    Sheet13.Unprotect Password:=sPassword
+    
+    With cellrange2.Validation
+        .Delete _
+         Formula1:=formula2
+    End With
+'---end change
+
+
+'Change-
+    Dim cellrange2 As Range
+    Dim formula2 As Variant
+    
+    blockcount = Sheet13.Range("PropertySectionCount_LTCG").value
+    Set cellrange2 = Sheet13.Range("LTCG.Bbi_AquisitCostTot" & blockcount)
+    formula2 = "=" & "SUM(LTCG.Bbii_ImproveCost" & blockcount & ")"
+    
+     sPassword = EfilingCommon.getmsgstate
+    Sheet13.Unprotect Password:=sPassword
+    
+    cellrange2.formula = formula2
+'---end change
+
+
+'Change-
+    Dim cellrange2 As Range
+    Dim formula2 As Variant
+    
+    blockcount = Sheet13.Range("PropertySectionCount_LTCG").value
+    Set cellrange2 = Sheet13.Range("LTCG.Bbi_AquisitCostTot" & blockcount)
+    formula2 = "=" & "SUM(LTCG.Bbii_ImproveCost" & blockcount & ")"
+    
+     sPassword = EfilingCommon.getmsgstate
+    Sheet13.Unprotect Password:=sPassword
+    
+    cellrange2.formula = formula2
+    
+    sPassword = EfilingCommon.getmsgstate
+    Sheet13.Unprotect Password:=sPassword
+'---end change

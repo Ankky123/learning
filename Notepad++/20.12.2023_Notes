@@ -1,0 +1,173 @@
+Dear All,
+
+As discussed in the meeting, presence of a high number of invalid issues affects the timelines as they require checks and approvals from multiple members of our team. Requesting testing team to employ 
+initial checks so as to avoid raising requirement issues to the dev team. Also requesting the testing to avoid raising duplicate issues. 
+The build for fixed issues will be released shortly. ETA for remaining open/reopen tickets might not be shared since dev team might see more invalids again.
+
+Thanks,
+Ankit
+
+ITR3 blockers ESOP
+ITR1 Overall
+ITR2 Fixed issues SIT list by Sanket and Roshni
+
+
+
+Jira_Notification RUBI01
+
+ITR2 -> Following tickets can be marked RTT already
+SIT-62017
+SIT-61829
+SIT-62717
+SIT-63191
+SIT-63239
+SIT-63632
+SIT-63489
+SIT-63776
+SIT-63774
+SIT-64227
+SIT-63569
+SIT-63331
+SIT-61910
+13
+
+After sending new build
+SIT-61985
+SIT-62015
+SIT-61906
+SIT-61895
+SIT-62640
+SIT-63779
+6
+
+Piyush ITR2
+SIT-62024
+SIT-62075
+
+Rishabh ITR2
+SIT-61718 -> On Hold (fixed)
+SIT-62760 -> Ananya
+
+After BA discussion
+SIT-63701
+
+INE0A0Q08027
+
+
+How to add a new rule in the new rule list
+How to update an existing rule
+How to add a new rule in an element
+How to update/delete an existing rule in an element
+How to add validation to trigger the rule in the element
+	1. How to access an elements value
+		a. If element has an ancestor which is an array
+		b. If the element doesn't have an ancestor which is an array
+	2. How to write an if/else/elseif condition
+	3. How to use declare and use a variable
+	4. How to create a loop for accessing elements which an ancestor which has an array
+Special validation -> Accessing an element which has the same ancestral array as the current element. (i, i!=j)
+
+
+For Piyush ITR4
+SIT-64595 PAG Missing field
+SIT-65794, SIT-65711, -> Gross Total Income field is not visible in the schedule Gross Total Income
+SIT-65758 -> As per wireframe?
+SIT-65583 -> As per wireframe?
+SIT-65287, SIT-65294 -> The schedue should be greyed off for HUF as per RA, see the issue
+SIT-64495 -> Delete button not working
+
+
+
+For Rishabh ITR4
+SIT-65128 -> All in one TRP
+SIT-65741, SIT-65377, SIT-65224, SIT-65352, SIT-65219, SIT-65754 -> 80G (Field blank and non mandatory so blank error message is not triggering)
+SIT-65639 -> filing section warning
+SIT-65653 -> filing section error
+SIT-65440 -> STD cannot begin with zero
+SIT-65431 -> Phone number cannot begin with zero
+SIT-65427 -> Two fields sum of digits to be restriced to 10
+SIT-65327 -> Grey-off v/s available issue
+SIT-64505 -> Schedule Sequencing for PdF preview
+
+
+
+To be discussed with Aayushi
+FA
+Date
+Decimal
+Sl No. -> Should not be column 1 -> Not a good approach
+Verification page and seventh provisio pages should be common when workflow is same (Common component due to common workflow)
+	Requirement should be common for it
+Sequencing -> It will impact the perfomance of the utility. Not a standard practice when heavy use of dropdowns and dynamic dropdowns are there
+
+Sr. No. v/s Sl. No.
+
+
+Refund -> to be added in the UI page
+To remove the duplicates for some fields in ITR1 and ITR4
+
+
+To discuss with Rishabh
+ITR1 blocker
+SIT-66332 -> The radio for newtaxregime is not getting disabled or autopopulated. Do we have to mark the issue as invalid or change the assignee?
+ITR2 blocker
+SIT-63707 -> Again facing the issue of verification date -> To test in the latest submitted build if the issue presists
+SIT-64325 -> "e-verify Now" is not an adp module -> Invalid -> reassigned without comments
+SIT-63707 -> verification date issue is coming, formula issue is resolved
+ITR3 blocker
+SIT-63650 ->
+SIT-64969 -> CSV blocker
+SIT-63747 -> 
+
+
+saveData
+validatSheet
+modifyInternalJSONr
+
+
+setData -> JSON Service
+
+Anything that is mandatory as per schema should have isMandatory "return true"
+Some times those fields are not available, then we can follow the same.
+But if the field must be visible (even if the field is not mandatory) and it should be greyed off or not
+then we must write the condition in the "mandatory and editable"
+
+If there is a condition in "isAvailable" then the "isMandatory"
+
+if the 2 fields are mandatory in schema, and they are conditional mandatory in the DE sheet, the error message should appear if the field is not filled
+when the condition is satisfied, so the field itself will be hidden so that the field will not be visible but the non available fields are not generated fields if the parent object is not mandatory and therefore not generated. If the parent object is generated for some reason then 
+
+Anything that is mandatory as per schema should have isMandatory "return true"
+There is an exception to this rule -> PartAGen1 and PartAGen2 tags are not updated
+Mandatory fields are required to be generated if the parent object is present.
+Whenever the parent field is not present, the child lose their signifance
+
+
+All the available (visible fields and non blank) are generated in schema. (not dependend on "isMandatory")
+Hidden field is only generated when field is mandatory and the fields parent is being generated for some reason x.
+reason x -> some other field is visible and not blank and causing the parent to be generated.
+
+
+139(8A) changes not to be done now, will be done later
+Change sheet that is shared by Madhukiran will be used as requirement document
+If any change is missed, may mark it for mail.
+
+To put a mail for the mandatory true that might create seemingly regression issues.
+
+ITR2 to verify from the incremental schema so that All can be created and shared with Arun Sir.
+
+5 changes remaining in ITR4 22-23
+1. Static content related label change (filed in response) -> To be done by Manisha/Rishabh
+2. The new field of Dividend Income (Can't pinpoint the change) -> Needs discusion with BA
+3. Taxable Total Income (B5 -B6)  -> New field ? -> Needs discussion with Rishabh
+4. The computation changes of Interest and Fees -> To be done by Arun Sir/Dipika
+5. 139(8A) changes -> Later
+
+ITR2 to be generated incrementally
+1. In the incremental build, there might be issues in the the Home sheet, they will be needed to be settled before generating the Utility, extra schedules and absent schedules, grouped schedule need be corrected
+2. The elementIDs in the sheets are removed by the script, they will need to be added back (_group, _total)
+3. Some elementIDs might not be added by the script (like scheduleTCS is ITR2)
+4. Field coloring of Red is not considering isMandatory, isEditable, isAvailable, changeValidation, saveValidation, EnumCondition.
+
+
+There is a regression issue in ITR1 -> opting in now (Yes/No is disabled but "No" is not selected)

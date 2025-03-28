@@ -1,0 +1,177 @@
+Github
+BitBucket
+
+Version Management System
+
+PCs have -> Git
+Commands ->
+	Access Repository -> Git Remote add <name> <url>
+	Inside a folder -> Work-> Project1-> can open a terminal or cmd
+					git init -> git repository will be initialized
+	git add . (we are adding all the files, folders and subfolders) 
+	fit add ./folder/file 
+
+git commit -m "message" (local version is finalized in the git repository)
+
+git checkout id
+git status -> to get previous ids
+
+git makes branches
+
+Master branch ->
+
+git fetch (will fetch the data of all the available branches)
+git pull name (origin as the name)
+
+git clone <url> -> copies the repository
+
+git pull origin master
+git pull <repo> <branch>
+
+always do a git pull to -?
+
+git push <repo> <branch>
+
+To make a branch
+git branch <branh name>
+
+to go to the branch
+git checkout -b <bname>
+checkout changes the location of the "Head"
+
+git checkout -b master
+git merge <bname>
+conflict file is generated for receiver and sender
+
+git .user
+	.email
+
+
+Infosys Works
+To submit ITR1 and ITR4 Arun Sir Changes(Today-Done)
+To submit ITR1 and ITR4 production version.
+ITR7(Today-Now->Done)
+
+To submit ITR3(Monday)
+To submit 20-21 -> Monday
+To submit 21-22 ITR2 and some more utilites on Monday
+ITR6 20-21 and 21-22 changes have to be implemented again.
+
+
+Check the Rules and De changes in all AY  22-23 ITRs
+ITR1, ITR4, then all ITRs
+
+start using teams calendar
+
+isMandatory -> false
+isAvailable -> true
+isEditable -> true
+
+1. Make a struct for schema - Code ("MakeRuleAuthor.go")		("struct.go")
+2. Make a Init to store all details of schema ("MakeRuleAuthor.go") ("init.go")
+3. Make RuleAuthor from schema - Code ("MakeRuleAuthor.go") 	("RuleAuthor.xlsm")			Step 1 of the process
+4. Do required editing in the rule author - Manually			("RuleAuthorEdited.xlsm")	User will change the values
+5. Sort the rule author -> Code ("HTMLfromAuthor.go")			("RuleAuthorSorted.xlsm")	Step 2 of the process
+6. Make new schema tree from the Sorted Rule Author ("UISchemaFromRA.go") ("init.go", "propJson.js") 			Step 3 (a) of the process
+7. Make HTML Templates and Generate the HTML Code				(Individual schedules i.e. html files) // Skip the step
+8. Make the SPA and modify the templates accordingly			(A single page application - "SPAPage.html")	Step 3 (b) of the process	
+
+We will the base rule author and the binary files
+The base rule author will call the binary files ("Sort" button (step 2), "Generate UI" button (step 3 a and b) )
+	The "Generate UI" button will call the sort and generate binaries
+	The base rule author will have the rules for sorting, and special sheets that are to be ignored
+	I can directly merge both the files and get the binary called.
+
+To do 
+1. Merge the two steps
+2. Make the base rule author
+HTML templates for 
+	switch (can be dropdown) //Look for radio button toggle switch
+	radio, 
+	Display
+	Display Accordian
+	object
+	array
+	array in grid form
+	object in grid form
+
+make a handleLeaf template that handles all the primitive type of elements
+
+Add a function to get the proper template to add
+
+func getProperTemplate(Node) string {
+	temp := ""
+	if (Node.FieldType == "DropDown") {
+		//Assuming all the dropdowns are from enums only
+		temp = "dropdown"
+	} else if (Node.FieldType == "Switch") {
+		temp = "switchYesNo"
+	} else if (Node.FieldType == "RadioButton") {
+		temp = "radioYesNo"
+	} else if (Node.FieldType == "Textbox") {
+		if (Node.DataType == "string" {
+			if (Node.Min == 0 && Node.Max == 0 {
+				temp = "patternString"
+			} else {
+				temp = "lengthString"
+			}
+		} else if (Node.DataType == "integer" {
+		temp = "integer"
+		} else if (Node.DataType == "number" {
+		temp = "number"
+		}
+	}
+}
+
+[id1, id2]
+
+1. Put d3 in the Address and Contact - Done
+2. Name change of the Edited Rule Author - Done
+3. Convert the schema tree for whole ITR - Done
+4. Convert the html generation for whole ITR - Done
+5. Add the Table class for grid view as in cyla - Done
+	Special function to be made there
+
+** For table -> We need to add the SeqID in the grid col num - Done
+
+
+
+facing problems -> tree is not right for Schedule CYLA - Done
+
+
+ 
+onChange="onChangeFunc(this)"
+
+jsondata
+
+What will the onChange do?
+	-> 1. set the data entered into the json data file -> on input may be
+
+On clicking next, the data will be stored in the json
+
+make a  homepage to reach to all the schedules -> Done
+
+To Do
+0. Make the template handle object->object->object->child for table display
+0. Make the button of back and continue
+0. Replace RefID with Affected IDs - Done
+0. Merge various steps into one or two steps
+1, Don't use ./"" -> learn to use gopath
+2. Don't break the logic of d2-1 -> 
+3. To make the shiftChild function for more ease in UI Generation
+4. Make a library for Excel processing
+5. Revise (Reflection, HTML, CSS, Javascript, GoDocs, GoTemplate)
+
+
+Learning 1. API calls using fetch
+		2. Marshal and Unmarshal json
+		3. Enterprise intro
+		4. Javascript Routing
+		5. Go htttp server
+		6. Go Gin server 
+		7. Git revisit 
+		8. Go-Workspace 
+
+
+
+

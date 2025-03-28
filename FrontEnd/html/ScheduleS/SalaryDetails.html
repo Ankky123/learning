@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .Group2 {
+            border-style: solid;
+            border-width: 1px;
+            margin: 5px 0px 0px 0px;
+        }
+
+        .Group3 {
+            border-style: solid;
+            border-width: 1px;
+            margin: 5px 5px;
+        }
+
+        .Group2 select {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Edit breakup of details</h1>
+    <h1 hidden>Add breakup of details</h1>
+    <div class="Group3">
+        <div class="Group2">
+            <label for="ScheduleS.Salaries.[0].NameOfEmployer">Name of Employer</label>
+            <input type="text" id="ScheduleS.Salaries.[0].NameOfEmployer" value="ADP">
+            <label for="ScheduleS.Salaries.[0].TANofEmployer">TAN of Employer</label>
+            <input type="text" id="ScheduleS.Salaries.[0].TANofEmployer" value="AHMK12345J">
+            <br>
+            <label for="ScheduleS.Salaries.AddressDetail.[0].AddrDetail">Address of Employer</label>
+            <input type="text" id="ScheduleS.Salaries.AddressDetail.[0].AddrDetail" value="Synergy Tower">
+            <label for="ScheduleS.Salaries.AddressDetail.[0].CityOrTownOrDistrict">Town/City</label>
+            <input type="text" id="ScheduleS.Salaries.AddressDetail.[0].CityOrTownOrDistrict" value="707-B">
+            <br>
+            <label for="ScheduleS.Salaries.AddressDetail.[0].StateCode">State</label>
+            <input type="text" id="ScheduleS.Salaries.AddressDetail.[0].StateCode" value="Gujarat">
+            <br>
+            <label for="ScheduleS.Salaries.AddressDetail.[0].PinCode">Pin Code</label>
+            <input type="text" id="ScheduleS.Salaries.AddressDetail.[0].PinCode" value="456789">
+            <label for="ScheduleS.Salaries.AddressDetail.[0].ZipCode">Zip Code</label>
+            <input disabled type="text" id="ScheduleS.Salaries.AddressDetail.[0].ZipCode">
+            <br>
+            <label for="ScheduleS.Salaries.[0].NatureOfEmployment">Nature of Employer</label>
+            <select name="ScheduleS.Salaries.[0].NatureOfEmployment"
+                    id="ScheduleS.Salaries.[0].NatureOfEmployment">
+                    <option value=-999>Select</option>
+                    <option value=CGOV selected>Central Government</option>
+                    <option value=SGOV>State Government</option>
+                    <option value=PSU>Public Sector Unit</option>
+                    <option value=PE>Pensioners - Central Government</option>
+                    <option value=PESG>Pensioners - State Government</option>
+                    <option value=PEPS>Pensioners - Public sector undertaking</option>
+                    <option value=PEO>Pensioners - Others</option>
+                    <option value="OTH">Others</option>
+                </select>
+
+        </div>
+
+        <div class="Group2">
+            <label>a. Salary as per Section 17(1)</label>
+            <br>
+            <label for="ScheduleS.Salaries.Salarys.[0].Salary.Dummy">As per Form-16/ AIS (Annual Information
+                Statement)</label>
+            <input type="text" id="ScheduleS.Salaries.Salarys.[0].Salary.Dummy" value="1570000">
+            <br>
+            <label>Please provide the breakup of the above value</label>
+            <br>
+
+            <div>
+                <label for="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[0].NatureDesc">Nature of
+                    salary</label>
+                <select name="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[0].NatureDesc"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[0].NatureDesc">
+                    <option value=-999>Select</option>
+                    <option value=1 selected>Basic Salary</option>
+                    <option value=2>Dearness Allowance</option>
+                    <option value=3>Conveyance Allowance</option>
+                    <option value=4>House Rent Allowance</option>
+                    <option value=5>Leave Travel Allowance</option>
+                    <option value="OTH">Others</option>
+                </select>
+                <button type="button">Delete</button>
+                <label hidden
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[0].OthNatOfInc">Description</label>
+                <input hidden type="text"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[0].OthNatOfInc">
+
+                <label for="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[0].OthAmount">Total</label>
+                <input type="text" id="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[0].OthAmount"
+                    value="500000">
+
+            </div>
+
+            <div>
+                <label for="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[1].NatureDesc">Nature of
+                    salary</label>
+                <select name="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[1].NatureDesc"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[1].NatureDesc">
+                    <option value=-999>Select</option>
+                    <option value=1>Basic Salary</option>
+                    <option value=2 selected>Dearness Allowance</option>
+                    <option value=3>Conveyance Allowance</option>
+                    <option value=4>House Rent Allowance</option>
+                    <option value=5>Leave Travel Allowance</option>
+                    <option value="OTH">Others</option>
+                </select>
+                <button type="button">Delete</button>
+
+                <label hidden
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[1].OthNatOfInc">Description</label>
+                <input hidden type="text"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[1].OthNatOfInc">
+
+                <label for="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[1].OthAmount">Total</label>
+                <input type="text" id="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[1].OthAmount"
+                    value="1000000">
+
+            </div>
+
+            <div>
+                <label for="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[2].NatureDesc">Nature of
+                    salary</label>
+                <select name="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[2].NatureDesc"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[2].NatureDesc">
+                    <option value=-999>Select</option>
+                    <option value=1>Basic Salary</option>
+                    <option value=2>Dearness Allowance</option>
+                    <option value=3>Conveyance Allowance</option>
+                    <option value=4>House Rent Allowance</option>
+                    <option value=5>Leave Travel Allowance</option>
+                    <option value="OTH" selected>Others</option>
+                </select>
+                <button type="button">Delete</button>
+
+                <label
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[2].OthNatOfInc">Description</label>
+                <input type="text" id="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[2].OthNatOfInc"
+                    value="Some Other Salary">
+
+                <label for="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[2].OthAmount">Total</label>
+                <input type="text" id="ScheduleS.Salaries.[0].Salarys.NatureOfSalary.OthersIncDtls.[2].OthAmount"
+                    value="70000">
+
+            </div>
+
+            <label>Do you want to add more breakup values?</label><br>
+            <button type="button">+ Add Another</button><br>
+
+            <label for="ScheduleS.Salaries.Salarys.[0].Salary.Dummy2">Total</label>
+            <input type="text" id="ScheduleS.Salaries.Salarys.[0].Salary.Dummy2" value="1570000">
+
+        </div>
+
+        <div class="Group2">
+            <label>b. Value of perquisites as per Sectin 17(2)</label>
+            <br>
+            <label for="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.Dummy">As per Form-16/ AIS (Annual
+                Information
+                Statement)</label>
+            <input type="text" id="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.Dummy" value="180000">
+            <br>
+            <label>Please provide the breakup of the above value</label>
+            <br>
+
+            <div>
+
+                <label for="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[0].NatureDesc">Nature of
+                    perquisites</label>
+                <select name="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[0].NatureDesc"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[0].NatureDesc">
+                    <option value=-999>Select</option>
+                    <option value=1 selected>Accommodation</option>
+                    <option value=2>Cars / Other Automotive</option>
+                    <option value=3>Sweeper, gardener, watchman or personal attendant</option>
+                    <option value=4>Gas, electricity, water</option>
+                    <option value=5>Interest free or concessional loans</option>
+                    <option value="OTH">Other benefits or amenities</option>
+                </select>
+                <button type="button">Delete</button>
+
+                <label hidden
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[0].OthNatOfInc">Description</label>
+                <input hidden type="text"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[0].OthNatOfInc">
+
+                <label
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[0].OthAmount">Amount</label>
+                <input type="text" id="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[0].OthAmount"
+                    value="70000">
+            </div>
+
+            <div>
+
+                <label for="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[1].NatureDesc">Nature of
+                    perquisites</label>
+                <select name="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[1].NatureDesc"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[1].NatureDesc">
+                    <option value=-999>Select</option>
+                    <option value=1>Accommodation</option>
+                    <option value=2 selected>Cars / Other Automotive</option>
+                    <option value=3>Sweeper, gardener, watchman or personal attendant</option>
+                    <option value=4>Gas, electricity, water</option>
+                    <option value=5>Interest free or concessional loans</option>
+                    <option value="OTH">Other benefits or amenities</option>
+                </select>
+                <button type="button">Delete</button>
+
+                <label hidden
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[1].OthNatOfInc">Description</label>
+                <input hidden type="text"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[1].OthNatOfInc">
+
+                <label
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[1].OthAmount">Amount</label>
+                <input type="text" id="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[1].OthAmount"
+                    value="60000">
+            </div>
+
+            <div>
+
+                <label for="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[2].NatureDesc">Nature of
+                    perquisites</label>
+                <select name="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[2].NatureDesc"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[2].NatureDesc">
+                    <option value=-999>Select</option>
+                    <option value=1>Accommodation</option>
+                    <option value=2>Cars / Other Automotive</option>
+                    <option value=3>Sweeper, gardener, watchman or personal attendant</option>
+                    <option value=4>Gas, electricity, water</option>
+                    <option value=5>Interest free or concessional loans</option>
+                    <option value="OTH" selected>Other benefits or amenities</option>
+                </select>
+                <button type="button">Delete</button>
+
+                <label
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[2].OthNatOfInc">Description</label>
+                <input type="text" id="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[2].OthNatOfInc"
+                    value="Some other Nature of Perquisites">
+
+                <label
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[2].OthAmount">Amount</label>
+                <input type="text" id="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.OthersIncDtls.[2].OthAmount"
+                    value="50000">
+            </div>
+
+            <label>Do you want to add more breakup values?</label><br>
+            <button type="button">+ Add Another</button><br>
+
+            <label for="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.Dummy2">Total</label>
+            <input type="text" id="ScheduleS.Salaries.[0].Salarys.NatureOfPerquisites.Dummy2" value="180000">
+        </div>
+
+        <div class="Group2">
+            <label>c. Profit in lieu of salary as per section 17(3)</label>
+            <br>
+            <label for="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.Dummy">As per Form-16/ AIS (Annual
+                Information
+                Statement)</label>
+            <input type="text" id="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.Dummy" value="60000">
+            <br>
+            <label>Please provide the breakup of the above value</label>
+            <br>
+
+            <div>
+                <label
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[0].NatureDesc">Nature
+                    of
+                    profit in lieu of salary</label>
+                <select name="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[0].NatureDesc"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[0].NatureDesc">
+                    <option value=-999>Select</option>
+                    <option value=1 selected>Compensation due/received by an assessee from his employer or former
+                        employer in
+                        connection
+                        with the termination of his employment or modification thereto</option>
+                    <option value=2>Any payment due/received by an assessee from his employer or a former employer or
+                        from a
+                        provident or other fund, sum received under Keyman Insurance Policy including Bonus thereto
+                    </option>
+                    <option value=3>Any amount due/received by assessee from any person before joining or after
+                        cessation of
+                        employment with that person</option>
+                    <option value="OTH">Any Other</option>
+                </select>
+                <button type="button">Delete</button>
+
+                <label hidden
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[0].OthNatOfInc">Description</label>
+                <input hidden type="text"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[0].OthNatOfInc">
+
+                <label
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[0].OthAmount">Amount</label>
+                <input type="text"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[0].OthAmount"
+                    value="10000">
+
+            </div>
+
+            <div>
+                <label
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[1].NatureDesc">Nature
+                    of
+                    profit in lieu of salary</label>
+                <select name="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[1].NatureDesc"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[1].NatureDesc">
+                    <option value=-999>Select</option>
+                    <option value=1>Compensation due/received by an assessee from his employer or former employer in
+                        connection
+                        with the termination of his employment or modification thereto</option>
+                    <option value=2 selected>Any payment due/received by an assessee from his employer or a former
+                        employer or from a
+                        provident or other fund, sum received under Keyman Insurance Policy including Bonus thereto
+                    </option>
+                    <option value=3>Any amount due/received by assessee from any person before joining or after
+                        cessation of
+                        employment with that person</option>
+                    <option value="OTH">Any Other</option>
+                </select>
+                <button type="button">Delete</button>
+
+                <label hidden
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[1].OthNatOfInc">Description</label>
+                <input hidden type="text"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[1].OthNatOfInc">
+
+                <label
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[1].OthAmount">Amount</label>
+                <input type="text"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[1].OthAmount"
+                    value="20000">
+
+            </div>
+
+            <div>
+                <label
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[2].NatureDesc">Nature
+                    of
+                    profit in lieu of salary</label>
+                <select name="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[2].NatureDesc"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[2].NatureDesc">
+                    <option value=-999>Select</option>
+                    <option value=1>Compensation due/received by an assessee from his employer or former employer in
+                        connection
+                        with the termination of his employment or modification thereto</option>
+                    <option value=2>Any payment due/received by an assessee from his employer or a former employer or
+                        from a
+                        provident or other fund, sum received under Keyman Insurance Policy including Bonus thereto
+                    </option>
+                    <option value=3>Any amount due/received by assessee from any person before joining or after
+                        cessation of
+                        employment with that person</option>
+                    <option value="OTH" selected>Any Other</option>
+                </select>
+                <button type="button">Delete</button>
+
+                <label
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[2].OthNatOfInc">Description</label>
+                <input type="text"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[2].OthNatOfInc"
+                    value="Some other Nature of profit">
+
+                <label
+                    for="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[2].OthAmount">Amount</label>
+                <input type="text"
+                    id="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.OthersIncDtls.[2].OthAmount"
+                    value="30000">
+
+            </div>
+
+            <label>Do you want to add more breakup values?</label><br>
+            <button type="button">+ Add Another</button><br>
+
+            <label for="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.Dummy2">Total</label>
+            <input type="text" id="ScheduleS.Salaries.[0].Salarys.NatureOfProfitInLieuOfSalary.Dummy2" value="60000">
+        </div>
+
+        <div class="Group2">
+            <label>d . Income from retirement benefit account maintained in a notified country u/s 89A</label>
+            <input type="text" id="ScheduleS.Salaries.[0].Salarys.IncomeNotified89A" value="6500">
+            <br>
+
+            <div>
+                <label
+                    for="ScheduleS.Salaries.[0].Salarys.IncomeNotified89AType.[0].NOT89ACountrycode">Country/Region</label>
+                <select name="ScheduleS.Salaries.[0].Salarys.IncomeNotified89AType.[0].NOT89ACountrycode"
+                    id="ScheduleS.Salaries.[0].Salarys.IncomeNotified89AType.[0].NOT89ACountrycode">
+                    <option value=DummyEnum>Select</option>
+                    <option value="US" selected>United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="CA">Canada</option>
+                </select>
+                <button type="button">Delete</button>
+
+                <label for="ScheduleS.Salaries.[0].Salarys.IncomeNotified89AType.[0].NOT89AAmount">Amount</label>
+                <input type="text" id="ScheduleS.Salaries.[0].Salarys.IncomeNotified89AType.[0].NOT89AAmount" value="3000">
+            </div>
+
+            <div>
+                <label
+                    for="ScheduleS.Salaries.[0].Salarys.IncomeNotified89AType.[1].NOT89ACountrycode">Country/Region</label>
+                <select name="ScheduleS.Salaries.[0].Salarys.IncomeNotified89AType.[1].NOT89ACountrycode"
+                    id="ScheduleS.Salaries.[0].Salarys.IncomeNotified89AType.[1].NOT89ACountrycode">
+                    <option value=DummyEnum>Select</option>
+                    <option value="US">United States</option>
+                    <option value="UK" selected>United Kingdom</option>
+                    <option value="CA">Canada</option>
+                </select>
+                <button type="button">Delete</button>
+
+                <label for="ScheduleS.Salaries.[0].Salarys.IncomeNotified89AType.[1].NOT89AAmount">Amount</label>
+                <input type="text" id="ScheduleS.Salaries.[0].Salarys.IncomeNotified89AType.[1].NOT89AAmount" value="3500">
+            </div>
+
+            <button type="button">+ Add Another</button><br>
+
+        </div>
+
+        <div class="Group2">
+            <label>e. Income from retirement benefit account maintained in a Country "other than notified country u/s
+                89A"</label>
+            <input type="text" id="ScheduleS.Salaries.[0].Salarys.IncomeNotifiedOther89A" value="3500">
+            <br>
+        </div>
+    </div>
+
+    <div class="Group3">
+        <div class="Group2">
+            <label>Gross Salary (a + b + c + d + e)</label>
+            <input type="text" id="ScheduleS.Salaries.[0].Salarys.GrossSalary.Dummy" value="1820000">
+            <br>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

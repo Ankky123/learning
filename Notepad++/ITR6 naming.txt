@@ -1,0 +1,17 @@
+For internal build
+SWVersion - R2 (no importance)
+SWCreatedBy - SW92202223
+JSONCreatedBy - SW92202223
+
+For Production build
+SWVersion - R1......Rn (It gets updated every time)
+SWCreatedBy - SW90002223
+JSONCreatedBy - SW90002223
+
+UAT and build version credentials are same (atleast for ItR4 22)
+
+getHashIteration = "1034"
+getHashKey = "SaWc4W3DYlcLCCQv"
+
+hashcode = HMACSHA256A(str, StrConv(SecretKey, vbFromUnicode), iteration)
+"Digest" = hashcode

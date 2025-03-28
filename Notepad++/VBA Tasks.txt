@@ -1,0 +1,8 @@
+1. Define a Named range
+2. Give the named range a color and a border
+3. Make the range user uneditable
+4. Make the range user editable
+5. Protect the sheet from editing
+6. Make an "Add Row" button
+7. Program the "Add Row" button such that every time
+it is pressed, a new row is added to the range

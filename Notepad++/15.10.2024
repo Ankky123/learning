@@ -1,0 +1,820 @@
+
+
+ITR3 -> one sit in fixed but need to be checked -> Need discussion with Rishabh -> Date not clearing if invalid fromat and error message is of mandatory
+ITR1 -> return file section issue
+pdf  -> watermark
+ITR4 pdf ->  schedule seqience
+
+ITR3 -> Computation issue with Dipika -> received
+ITR1 -> pdf label issue -> Done
+Prior AY -> delete dialogue box -> informed to suraj
+get Version ID
+and
+Correct the normal increment issue of new Element
+
+<button class="btn btn-outline-primary"  onclick="selectionChanged(1,event)" data-value="ITR4">ITR-4</button>
+
+Connection with Database is required, to check what changes has been made
+
+
+
+"ob5Cx9H8X3JW" : "lLNV3vXNbH5ccYzceyV0tbemBl6oTBUgH6byuTyn"
+
+UpdateVersions
+ITR2_2023-24_V0.6_VC0.29
+When a Utility is made, the utility version should be
+ITR2_2023-24_V0.6_VC1.0
+Then when uploads are done, they should be over that
+ITR2_2023-24_V0.6_VC1.15
+
+
+New Database
+Name: Version Manager
+Object
+	Last Schema Version -> 0.6
+	Last Utility Version -> 3.0
+	Last Upload Version  -> 3.8
+	Latest Schema Version -> 0.7
+	Latest Utilty Version -> 9
+	Latest Upload Version -> 8.55/9.1
+if a new Schema is put, The object will be updated to 
+	Last Schema Version -> 0.7
+	Last Utility Version -> 9
+	Last Upload Version  -> 8.55/9.1
+	Latest Schema Version -> 0.8
+	Latest Utilty Version -> 0
+	Latest Upload Version -> 0.5
+
+ChangeValidation and save validation is not saving
+
+Documentation
+Alias
+FieldType from Ishita -> Received -> Object Table is pending -> To be discussed with Rishabh
+Prefill to be explained better
+Directives -> Ishita might exlain it better
+More on change and save validations -> Use of parentArryaObject  (Done)
+The points raised by Infy
+Enum Condition	
+Formula Type
+
+Autopulation and User Editable fields
+----------------------------------------
+ITR7 21-22 formulae to look into
+ITR7 online Issue -> for the pan sent by Manisha -> Blocker -> Sanket sent a request to Aravind
+Draft Issue in ITR6?
+Dipika to setup for priorAY
+
+---------------------------------------------
+
+Architecture decision for Auxilio -> Confirm with Rishabh
+DB diagram to view
+Codebase to review??
+PDF
+
+ADPutility#123
+online sanity issue in donation amounts not importing and generating -> Done
+
+pdf issues to discuss with Rishabh
+page breaks -> already discussed, no action to be taken here
+
+------------------------
+Need to get the steps for setup of postgress to see the database for Auxilio
+
+ITR4 pdf message issue in trp -> Done
+23-24 issue of mandatory -> Done
+23-24 new build to be shared -> Done
+21-22 itr6 139_8A -> Done
+itr7 21-22 -> Shared first internal build.
+
+dummymessages -> to be written -> Satyaprakash
+enhancements and deferred to make a list -> Sanket
+
+meeting for doubts clarification to Infy 12:00 PM
+
+addwarning in formula? arguments are not matching....
+
+to share a build for ITR6 21-22, with tr correction
+current AY itr6 build to verify for RA
+234C dipika to follow
+DB diagram to verify
+Auxilio code to review
+
+itr6 cy -> 234f -> no issue detected.
+
+
+adpinfy@123
+
+new method to implement
+
+generateUtility will now call updateVC function, 
+the updateVC function will replace the latest minor with next major
+
+
+insertVC
+
+BRF issues to resolve
+itr6 21-22 - login error -> to check
+Call to Arun Sir for itr7 21-22 234C
+Meeting to setup with Aravind -> Build for itr6 cy
+
+block A -> 100Per, Not reqd -> fine
+block B -> 50Per, Not reqd -> fine
+block c -> 100 Per, reqd -> 
+
+block relations are not specified
+
+in 234C, rebate needs to be computed at every quarter??
+
+regression issue in 23-24 build .33 and .34
+
+to share the directive document
+
+
+SIT-79567 -> Warning message to be given -> Already given
+ITR1 to run for contact note -> Not resolve yet -> Coming in internal page as of now -> To be discussed with BA
+upload json common change and testing -> Working -> Done
+
+
+ITR7 21-22 build to share internally -> Done -> Expecting compression confirmation by tomorrow first half (17/11/2024)
+ITR2 22-23 -> Pending
+ITR4 22-23 -> Pending
+
+
+BRF ITR2 RA sorting -> Done
+Rule Writing -> In Progress
+Auxilio -> PRs
+
+
+
+
+ITR2 BRF nots to share with Infy
+ITR2 BRF some points are pending
+
+Auxilio timelines -> Today completion will occur
+ITR1 BRF 3 tickets -> Done
+
+To check the status for Utility
+
+----
+
+
+ITR1 issues
+
+mail for 234B -> Please let us know the gap in the requirement wrt the requirement documentation
+getSystemDate() -> to experiment
+
+itr1 23-24 added schedules -> 80GGA, 80DD, Schedule80U
+
+ITR2 Lexium issues -> Mail sent
+ITR1 and ITR4 BRF issues to resolve
+	ITR4 issues to resolve
+
+To mention JIRA tickets for issue resolution or enhancements in RA first line
+Pending for ITR1 and ITR4
+
+
+Prefill/Warning 80C -> Awaiting for 0 value/null or tag not present
+Label/Alignment for draft -> Done
+deductions update in ITR1, ITR4, ITR2 -> Done
+BRF -> RAs and structs to update for new schema -> Done
+
+BRF ITR3 struct creation issues are there -> might be due to itr3 folder absent for ra
+
+02-12-2024
+pop up in scheduleIT -> To add in common changes -> Issue, Triggering in validations page
+
+
+BRF Issues of ITR1 -> No more issues
+BRF Issues of ITR2 -> Awaiting issues
+BRF Issues of ITR4 -> Awaiting issues
+BRF ITR3 development
+PDF issues of ITR2 and ITR3 -> To provide an ETA, first let us have a look
+ITR2 clarifications for BRF
+Follow Up on mails
+
+ITR4 BRF check-in mail -> Make a check on invalids first
+
+ITR2 and ITR3 statements are not understood
+race conditions -> To have more discussion with Rishabh first
+
+
+
+AMTC -> 
+FA -> Issue exists (Visible in preview pdf but not present in download pdf)
+Table -> Unable to confirm the schedule due to OS not present in downlod pdf, the issue doesn't exist in preview pdf
+Address -> Updated
+
+IT Pop Up flag to add, update -> Done
+ITR5 PDF build to share -> Done
+Macro or go code for identifying blank data types -> Done
+Prior AY Issues for ITR1, 2, 4
+ITR2 PDF issues
+Prior AY ITR2 ticket of TaxPaid -> Closed by Aayushi
+
+To discuss with Rishabh
+Dropdown error message alignment issue -> Under check by Manisha
+NaN issue -> Ankit -> Formula to check, single line formula -> Done
+ITR2 PDF issues -> Will be looked by Rishabh
+Header for pdf preview/Verification -> Done by Rishabh
+
+21-22 JIRA tickets for Utility
+Complete the golang project, mongoDB aggregation
+ITR3 BRF to complete
+ITR3 new DE sheet is there
+IT Pop Up is coming on adding every object in TDS
+Learn about git patching
+
+21-22 tickets -> Done
+ITR1-4 PDF issues, ETA on 6th Dec
+ITR4 pdf issues, need discussion with Rishabh
+JSON TAG kaise upate krne h 1 and 4 ke liye -> Done
+
+237000 -> Current CFL result of STCG and LTCG
+579900 -> LTCG + STCG in BFLA
+No requirement is failing, Upload level screenshot is provided, not enough reference to updade
+
+
+VI-A
+Bank Details -> Put in BTTI
+
+overflow elements are hidden in 112A and other schedules
+Schedule hidden -> Done
+
+06-12-2024
+PDF points to recheck for ITR2 and ITR3
+Table pdf to update like in ITR1
+VI-A -> Rishabh
+Bank Details -> Put in BTTI -> Done
+Utility Prior AY computation issue follow up from Sanket and Dipika
+ITR1 issue in 24-25 send on whatsapp -> Done
+ITR1 BRF -> Reverted
+
+
+
+07-12-2024
+PDF points to recheck for ITR2 and ITR3 -> Priority
+Table pdf to update like in ITR1 -> Priority
+VI-A -> Rishabh
+Utility Prior AY computation issue follow up from Sanket and Dipika
+ITR4 BRF (20 tickets) -> 
+
+Sanket's facing issue in task delegation and work distribution
+Roshni is doing the work distribution
+Roshni wants to be a part of client discussion
+Current improper review is impacting her career growth
+
+Sanket -> Assumed that timely written task delegation was done by you, when you when went on leave
+		-> Considering the ETAs of submission
+Roshni -> What kind of client discussion you want to be a part of, (
+
+
+PDF HP ITR2 issue -> PDFClasses(table-width) -> resolved
+
+Trimming 
+Tax paid
+112A
+115AD
+FA
+
+TDS2 and TDS3 issues -> Server stop and run issue
+VIA -> Total of individual blocks also to be displayed, To remove none from PDF field type (in favor of output)
+
+Version control locking in lexium for version overriding
+
+ITR3 doubts to send to Infy -> Sent
+ITR2 mail for testing completion, exclusion point will be submitted along with the issue resolution -> Done
+Mail to Aravind for unavailability of Rishabh -> Done
+TR point is pending in ITR2 BRF -> Follow Up
+Add Roshni in mail trail for BRF -> Keep adding her
+
+
+09.12.2024
+ITR3 PDF points to look -> Done
+ITR2 BRF updates to make -> Pending
+ITR4 BRF updates to make -> Done (234B pending, enhancements pending)
+ITR3 BRF development to check -> Under Progress
+Prior AY Build to share -> Informed to Suraj
+ITR1-4 build to share -> Done
+
+-----------------------
+Table Radio to be converted to TableText in PDFFieldtype (due to issue raised in OS/CG for the radio)
+arrays to update for pdf fields and PDFClasses(table-width)
+------------------------
+
+10.12.2024
+BRF to close (ITR1 and ITR4)
+	ITR1 -> Done
+	ITR2 ->
+	ITR4 > 234B issue remaining -> Invalid > Done
+	ITR3 > Ishita and Satyaprakash (doubts are to be resolved)
+Prefill Regression issue -> Requested Prefill fields that are failing > Awaiting Infy revert > Received mail of no issue
+
+Prior builds to share and close -> Some more issues are there, some tickets might need discussion
+
+	234F issue to check with Sanket if closable by us -> was invalid
+pdf meeting at 3:15PM
+
+Utility
+	C AY
+		ITR1 -> warning message ticket
+		ITR3 -> pdf, ESOP point -> Rishabh
+		ITR5, ITR6, ITR7 > ETAs??
+	PDF issue
+		Logs received -> Need to check the issue > Done by Rishabh
+	P AY
+		Blockers > Sanket to test and then put a mail > Awaiting Sanket's revert > Need to have discussion with Ishita for blockers
+		Received testing completion
+		The mail of testing completion and the blockers mail ??
+		Computation issues
+			22-23 ITR4 -> Done
+			22-23 ITR2 -> Done
+
+PDF changes might not be deployed yet, not able to see the fields
+
+Editable button in CYLA/BFLA
+80DD schedule style need to be two fields in one row -> classes sent, should work
+OS issue of selecting dropdown
+Formula issue in ITR1
+80GGC -> Grouping
+Document -> Class, which class to use -> Should go through the styles.css file
+
+
+Lexium -> RA server is getting stopped, Application is up and running, after login page, error is occuring and page is not loading
+	Getting logs, 
+
+----------------
+C AY > ITR1 > warning message ticket
+
+
+Regarding, SIT-79573, due to recent occurences, wherein implementation is done as per agreed approach but still infosys comments have suggested that there 
+were no such agreements, we will require a mail with change in requirement for prefill warning message. You can please update the same in the "remarks for prefill logic" column.
+Also make sure to share the change list for such requirement. Please note only the requirement of change list will be referred for making update.
+
+SIT-83759 -> Issues Observed in Preview PDF
+1. Return File sec label > 
+2. Portugese 5A, horizontal line
+3. Less allowances > header repeating
+4. Schedule 112A > Overflow
+5. ESOP > Date format > Invalid
+6. ESOP > Total Tax Attributed Amount 2021-22 > value not populating
+7. ESOP > Total Tax Attributed Amount 2022-23 > value not populating
+
+
+Lexium Code deployment > mail and deployment > Done
+----------------------------------------------------
+12.12.2024
+
+Lexium -> Sanity > Done
+BRF
+	ITR2 -> Clarification points and issues
+C AY
+	ITR1 > warning message ticket > Try to create it or let rishabh know P1 > Some points need discussion with BA
+	ITR3 -> pdf, ESOP point -> Rishabh > Awaiting Rishabh's response > table issue is unique to build it seems, no solution yet
+
+P AY
+		Blockers > Need to have discussion with Ishita for blockers > Done > CFL and BFLA point needs discussion with BA
+		ITR2 CFL and BFLA issue > P2
+ITR3 pdf issues of Case ITR3 need to be verified -> Done
+pdf common change to add -> Done
+
+cc 130 to add in frontend > Suraj
+
+16.12.2024
+C AY ->??
+Meeting for ITR1 warning messages > Done > development pending > Done
+One common build for ITR1-4
+
+Prior AY blockers
+ITR2 > BA discussion for CFL and BFLA point > No discussion required, can be updated, awaiting expected values in the fields >
+ITR5 > 
+	21-22 > Build Compression required > Received
+	22-23 > Build Compression required > Received
+ITR6 > 
+	22-23 > Marginal relief issue pending at Sanket > Critical/Blocker > Sent to Dipika
+	21-22 > Internal build to make >
+ITR7 > blocker is reopened, Sanket is retesting it > Invalid
+1-4> ETA??
+
+BRF 
+	ITR2 
+	ITR3 > ETA for 18th
+
+mail for brf requirements > Done
+meeting with Rishabh for itr3 pdf > what to say to jay
+
+DTAA point is pending due to data type variation, should we mail it to Infy or we should find internal solution
+
+File to update and sent to Infy > Done
+Mail to Aravind > Done
+build to upload > Done
+Sequence ID to update in file and documentation > Done
+ITR2 RA update for TDS2 > Done
+Mail for check-in > Done
+
+FollowUp for mails
+ITR1 and ITR4 BRF to close > Done
+ITR3 to finish, today, schedule meetings asap > Exercise to be redone
+	CFL > Done
+	BTTI points to merge > Pending
+ITR6 22-23 marginal relief to implement Dipika's point and make build > Done
+C AY -> 
+	ITR5, > Tomorrow
+	ITR6, ITR7 -> PDF updates to make > Today
+P AY -> 
+	
+Sanity to confirm > Done
+
+DateOfProcessing to be used for 234A and 234B
+
+---------------------------------------------
+
+ITR7 onlinesanity issue and build issue to discuss with rishabh
+itr3 brf to resolve and upload > Done
+pdf updates to make
+
+--------------------------------
+20.12.2024
+
+ITR7 blocker in onlinesanity issue > Done
+	build issue to discuss with rishabh > The table must have one field mandatory > The error to ignore for now
+----------------------------------------------------
+pdf updates to make
+ITR5 > Pending
+ITR6 > Done > Pending for max json at Manisha
+ITR7 > Done
+
+Prior AY JIRA tickets
+	ITR2 BFLA to update using global variables, to confirm with Aayushi that BFLA > To discuss with Aayushi and update
+	DPM/DOA point of serial number with Rishabh
+	Multiple ITRs -> TR issue of country repeat in prior AY
+
+BRF
+	ITR2 tickets are not in agreed format > Dev team cannot look at them
+	ITR2 Enhancement points
+	ITR3 > might need a meeting
+	ITR1 and ITR4 some more tickets
+	
+
+SIT-76782
+SIT-76287
+SIT-75642
+SIT-84239
+SIT-84237
+SIT-73562
+SIT-82391
+
+PDF points to implement in ITR5, ITR6, ITR7
+Table Radio to be converted to TableText in PDFFieldtype (due to issue raised in OS/CG for the radio)
+arrays to update for pdf fields and PDFClasses(table-width)
+for overflowing tables use >
+
+PDFClasses(table-width)
+PDFClasses(table-width break-word)
+Table
+TableText	
+TableDropDown
+
+(like 112A, 115AD)
+to check alignment for value fields in the tables
+VIA to update
+Bank Details to update
+Address > PDFClasses(d-flex flex-child-30)
+
+Table
+TableText
+TableDropDown
+
+
+ITR6 -> Schedule BBS issue
+
+ITR2 23-24
+PartA_GEN1.PersonalInfo
+PartA_GEN1.PartA_GEN1_Gr748
+
+
+ScheduleTDS2.ScheduleTDS2_Gr23
+ScheduleTDS2.TDSOthThanSalaryDtls
+ScheduleTDS2.TDSOthThanSalaryDtls.TaxDeductCreditDtls
+ScheduleTDS2.TDSOthThanSalaryDtls.TaxDeductCreditDtls
+ScheduleTDS2.TDSOthThanSalaryDtls
+
+
+------------
+23.12.2024
+ITR5 PDF update > Done
+ITR1 and ITR4 BRF > Done
+Multiple ITRs -> TR issue of country repeat in prior AY > Done
+ITR3 OS computation issue > Done
+ITR2 OS dropdown issue > Awaiting BA revert
+
+ITR2 BRF points > 
+Manisha
+ITR4 > Seventh Proviso > Done
+Ack download issues
+ITR6 pdf download issue
+
+E5	TotPersumInc44AE
+E6	SalInterestByFirm
+E7	TotalPersumptiveInc
+
+27.12.2024-------------------
+ITR2 JIRA tickets for BRF
+P AY ??
+C AY ??
+
+ITR6 21-22 OS issue for 2c, 2d, 2e
+BRF ITR2 submission tomorrow (06.01.2025)
+ITR3, ITR5, ITR6
+ITR5 RA to be made
+
+Prior AY on priority
+
+ITR5 CY PDF scheduleVIA issue
+ITR6 CY PDF
+ITR7 PDF to be made ready
+
+ITR3 22-23 2 tickets > SIT-83598, SIT-83595 > Done
+
+ITR2 SI issue to be checked
+Fixed but not fixed tickets > Only 2 computation tickets of ITR5 21-22 are remaining
+Current AY tickets, pdf issues
+
+ITR5 CY internal build
+	P&L issue grouping
+
+ITR2 BRF -> BFLA and CFL issue needs correction in both
+
+xi. Any other income (specify nature and amount)
+
+ITR5 21-22 ahead by 1 commit > RA update > Pushed
+ITR6 23-24 ahead by 1 commit > Ra update > Pushed
+
+CSS 4,479,323,851
+
+ITR2 awaiting Aayushi's revert for 112A then RA will be finalized
+	salary double label issue of allowances
+
+PDFClasses(w-100)
+PDFClasses(table-width)
+
+react -> Tables jitne bhi hai 
+TR # of tds
+for all trs td pe width equal to 100/n where in n is total no of tds -1 (sl no wala td)
+
+LTCGDTAA and STCGDTAA
+Their income field has no relevance
+Take income from BFLA after setoff value (the remaining income)
+
+Compare the CG DTAA table with form10F country
+if country matches, the amount 30L(CG) of the 55L(BFLA) will be added at the applicable rate
+the remaining amount will go to another row of the same country
+but if the same country have more than one rows, how will be the set off?? -> Highest to lowest rate
+
+border-top-ap
+
+PDF issues to discuss
+1. Radio button issue -> Vertical border is incomplete (Scheduel OA) > Done
+2. BTTI issue of alignment -> fieldset.w-100 class is causing it, what to do? > Done
+3. Bottom lines are missing in schedules -> going to next page > Sources of funds (PartA-BS) is an example > Not controlled
+4. Schedule A is working with style-table class in pdf-preview but not in download pdf > R&D
+
+115TD > isEditable  that is dependent upon Formula field is showing effect only after saving the schedule > Not a concern yet
+
+
+Meeting tomorrow for ITR3 BRF
+Awaiting ITR5 clarification update
+ITR2 BRF point for DTAASTCG > Need discussion with Rishabh
+
+Prior AY status?
+Meeting with Archit for Auxilio > API Calls required
+
+
+Half Day leave/WFH
+
+If an employee's biometric is available it will be taken into consideration for pay (by amount of hours), (WFH from auxilio will be considered due to half days)
+If an employees' biometric is not available, the approval of leave or WFH will be considered from Auxilio
+WFH needs reports
+
+As such,
+if any employee is taking half day leave, it will be considered from biometric because the employee was/would be in the premises via biometric record
+if any employee is taking WFH for half day (after coming to premises), a WFH request must be raised followed by WFH report
+
+---------
+return (
+    <div style={{
+      position: 'absolute',
+      backgroundColor: 'pink',
+      borderRadius: '50%',
+      opacity: 0.6,
+      transform: `translate(${position.x}px, ${position.y}px)`,
+      pointerEvents: 'none',
+      left: -20,
+      top: -20,
+      width: 40,
+      height: 40,
+    }} />
+  );
+
+Important works > 
+line breaks in i-message > Done
+scroll bar in pop message > opting in now, continue to opt > Done
+BRF 
+ITR2 one surcharge ticket with Dipika > Done
+	multiple entries issue for STCGDTAA
+ITR3 tickets to check -> Priority
+one check-in to make > Done
+ITR5 to submit > Done
+PDF VIA updates
+
+useContext
+\u000a > This character wil be used for newline in matToolTip (i-message)
+
+Discussion for null in the statform
+
+----------------------------------------
+
+version varialbe in config file will be compared with api response of the latest version
+if the version will not match with the response, upgrade to new version will be enabled
+if version matches, only "continue" button will be enabled which will open the utility available in the folder with the name that is set in mainApp variable in config
+
+backend call > This backend call will determine which button to show out of the two
+	zip > mainApp zip file
+	version > mainApp version latest
+
+To make an installer using NSIS to combine the three files of the folder.
+
+Release notes  : 
+Regex of the mainApp variable should be follow that of exe(s). i.e. <pretext><version><posttextwithextension>
+This will be followed for individual environment (the build of the ITRs) i.e. ITR1-4, will follow a constant pretext, 
+
+Icon to be updated for all the build branches
+
+Release notes  : 
+The "ITR-eFiling_Installer" will install the auto-updater in the location "$LOCALAPPDATA\ITR-eFiling"
+The folder structure for the installation directory will be 
+ITR-eFiling
+	>config.json
+	>ITR_EFiling 23-24 1-4 v1.0.49ENX.exe (the current latest version submitted along with every installer)
+	>ITR-eFiling.exe
+	>uninstall.exe
+
+On successfull installation of the setup, user will be able to open the auto-update window via the shortcut icon and through installed programs list in the windows startup menu
+For further flow, please refer the requirement documentation
+
+Important : Since the API call to the Infosys server returns the latest available version for the utility, it is imperative that the latest submitted file is uploaded on the file server and the version key is updated accordingly for expected flow.
+
+
+ITR6 pdf issues
+itr3 brf mail and 
+invalid analysis and mail > Done
+
+itr2 depenency on 
+	Rishabh for 3 tickets
+	Dipika for 2 tickets
+	Infy for 2 tickets
+
+04.02.2025-------------------------------------------
+To find the list of tickets that were marked to ADP, 
+the tickets that were marked invalid and were closed without marking fixed??
+reopened and invalid and closed
+
+tickets that were marked invalid by ADP > What happened to them?
+reopened > fixed > RTT >
+reopened > invalid >
+reopened > enhancement > fixed > RTT
+reopened (not ADP)
+closed
+rejected
+any other
+invalid tickets that are still with infy
+status in (Open, reopen, Closed)
+
+ITR6 PDF??
+ITR3 DE sheet updated required for clarification points.
+
+To prepare list of number of rules > Done
+
+Auxilio meeting with Sushant, Archit
+ITR2 to schedule a meeting > Done
+ITR3 BRF, to look at the issues > Under Progress
+Auxilio discussion for module names
+
+Team's Report
+WFH mail
+
+var arr := getG("ArrayID")
+
+if arr == nil{
+	arr = sort(@elementIDFoRArray,columid)
+	setG("ArrayID",arr)
+
+}
+
+if ((Tax_AMT_1a + AMT_tempSurcharge_1cr ) > (taxOnCutOffInc + AMT_extraInc )) {
+ITR3 > 1180000       177000                     0                  1000000
+ITR2 > 2360632.375   354094.85625               0                  2760175
+SC_1CR = AMT_tempSurcharge_1cr- MR_Deemed
+} else {
+SC_1CR = AMT_tempSurcharge_1cr
+}
+
+Dropdown points in BR?? what to do for them? > as entered == as computed for all the dropdowns
+5ADiiiP > requirement?? last line to be striked off
+STCG and LTCG DTAA Basic Exemption?? > to be removed from DE sheet
+TR in BTTI?? > Seems clear now
+Order of basic and l lac > awaiting
+
+field f
+Amount included in 1  and 2 above, which is claimed as chargeable at special rates in India as per DTAA (total of column (2) of table below)
+For Non Resident 
+Total of Col (2) subject to DTAA mentioned rules for NR.
+In case if DTAA provisons are not applied, consider col (2) as zero for respective line item.
+
+OS changes
+DTAA provisions applied
+TR and SI to update in ITR2
+
+To update the following in ITR3
+80ccd2
+80G schedule
+salary allowance exempt
+
+OS 2c/3c development still pending
+
+PDF download button to print button under testing > Done
+
+Automated test cases code to develop > Done by Rishabh
+Ishita > Devops > Done
+Auxilio
+ITR7 exclusion points > Sent
+ITR6 check-in > Done
+ITR3 checkin > Done
+------------
+19.02.2025
+To discuss Surcharge approach with Arun Sir or with Infy
+Auxilio internal meeting
+Auxilio meeting with Sushant
+Testing team -> Test Coverage by Path > Consistent Meetings required
+
+Application to dockerize
+Tables should have sort option on each column
+Tables should be pagenated (keyset pagenation)
+
+8871533626 > Bhaiya, in vietnam, kyc reverification, outgoing was supposed to be disabled at 15th but is being done on 13th 
+he is unable to connect to customer care also from that number, reach out to him asap
+varun > vikas
+
+ITR2 SI done but need a commonized way to preprocess for all the ITRs > Need discussion with Rishabh
+
+ITR3 tickets which are reopened without proper comments
+
+SIT-87854 > reopened(20th Feb) from fixed
+
+SIT-87860 > reopened(20th Feb) from fixed
+
+SIT-86575 > ticket was marked reopen(31st Jan) without any comment
+			Concern was raised in comment
+
+SIT-88539 > open to reopen (26th Feb), without any adp status change.
+			comment doesn't mention the reason of status change to reopening
+			BA was requested to look into it
+
+SIT-89275 > open to reopen (6th March), without any adp status change.
+			comment doesn't mention the reason of status change to reopening
+			BA was requested to look into it
+
+SIT-86515 > ticket was assigned to ADP first time with status reopen(18th March)
+			
+SIT-88931 > ticket was marked reopened(18th March) to ADP without any comment
+
+//Updated post testing completion by Infy 15.03.2025
+
+
+
+ValidatedAsEntered.TaxPaid.BalTaxPayable > Round off 10 is not applied
+ValidatedAsEntered.ITR1_IncomeDeductions.DeductUndChapVIA.Section80CCDEmployeeOrSE > All salary fields of Income details to be considered 0 ?
+ValidatedAsEntered.Refund.RefundDue > Round off 10 is not applied
+
+
+BRF Approvals? > mail is sent, to check for updates
+Prior AY tickets in Utility??
+Wizard work, ITR2 OS questions? Should I make another file for HUF > resolved, RA is ready
+To make some templates for payroll: To finalize the templates > for esic and conveyance allowance > Template is shared
+Employee Summary report > Pending for 3 employees > Done
+To go through the code base for Auxilio
+To check the Auxilio documentation shared by Sushant
+To move from bitbucket to github
+ITR4 unit test cases running error
+ITR2 CG sorting point
+
+
+Awaiting approvals for the submitted builds so that we can continue with the support ETAs.
+
+git clone https://ankit-adp@bitbucket.org/arun-data-processing/create-ui-mapv2.git
+git clone https://ankit-adp@bitbucket.org/arun-data-processing/vfdefpfa.git
+git clone https://ankit-adp@bitbucket.org/arun-data-processing/lexium_server.git
+git clone https://ankit-adp@bitbucket.org/arun-data-processing/adp_offline_utility_v2.git
+git clone https://ankit-adp@bitbucket.org/arun-data-processing/offline_utility_updater.git
+git clone https://ankit-adp@bitbucket.org/arun-data-processing/lexium_client_v2.git
+
+

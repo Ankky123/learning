@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+
+}
+
+.nav-list {
+    display: flex;
+    width: 50%;
+    /* background-color : black; */
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav-list li {
+    list-style: none;
+    padding: 20px 15px;
+
+
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.nav-list li a:hover {
+    text-decoration: none;
+    /* color:grey; */
+
+}
+
+.rightnav {
+    /* background-color: purple; */
+    width: 50%;
+    text-align: right;
+    padding: 0 23px;
+
+}
+
+.logo {
+    /* background-color:red; */
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo img {
+    width: 30px;
+    /* border:3px solid green; */
+    border-radius: 10px;
+
+
+}
+
+#search {
+    padding: 5px;
+    font-size: 17px;
+    /* border:2px solid burlywood; */
+    border-radius: 9px;
+
+}
+
+.background {
+    background: rgba(0, 0, 0, 0.7) url("../img/Red_Mountains.jpg");
+    background-size: cover;
+    background-blend-mode: darken;
+
+}
+
+.box-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    max-width: 50%;
+    margin: auto;
+    height: 70%;
+}
+
+.firstSection {
+    height: 80vh;
+
+}
+
+.firstHalf {
+    /* width:50%; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.secondHalf {
+    width: 100%;
+
+}
+
+.secondHalf img {
+    width: 70%;
+    border: 4px solid white;
+    border-radius: 30px;
+    display: block;
+    margin: auto;
+}
+
+.text-big {
+    font-size: 30px;
+    text-align: center;
+
+
+}
+
+.text-small {
+    font: size 18px;
+
+}
+
+.btn {
+    padding: 8px 20px;
+    margin: 8px 3px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: none;
+    color: white;
+    cursor: pointer;
+
+    /* font-size: 18px; */
+
+}
+
+.section {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 80%;
+    ;
+    margin: auto;
+}
+
+.left {
+    flex-direction: row-reverse;
+}
+
+.paras {
+    padding: 0 60px;
+
+}
+
+.thumbnail img {
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 20px;
+
+
+}
+
+.sectionTag {
+    text-align: left;
+
+}
+
+.contact {
+    background-color: #999;
+    height: 600px;
+}
+
+.text-center {
+    text-align: center;
+
+}
+
+.form {
+    max-width: 450px;
+    margin: 40px auto;
+
+}
+
+.form input {
+    margin: 10px;
+    padding: 5px 3px;
+    width: 100%;
+    font-size: 20px;
+    border: 2px solid grey;
+    border-radius: 6px;
+}
+
+.form-input {
+    margin: 10px;
+    padding: 5px 3px;
+    width: 100%;
+    font-size: 20px;
+    border: 2px solid grey;
+    border-radius: 6px;
+}
+
+.btn-dark {
+    border: 2px solid grey;
+    border-radius: 3px;
+    background-color: grey;
+    color: white;
+    margin: 3px 10px;
+
+
+}
+.text-footer {
+    
+    font-size:15px;
+    color:white;
+    height:50px;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+    align-items:center;
+    
+
+}
+
+@media only screen and (max-width:1200px){
+    .nav-list{
+        flex-direction:column;
+    }
+    .navbar{
+        flex-direction:column;
+    }
+    .rightnav{
+        text-align:center;
+
+    }
+    #search{
+        width:100%;
+        
+    }
+}

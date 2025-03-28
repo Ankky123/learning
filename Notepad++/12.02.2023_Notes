@@ -1,0 +1,82 @@
+Todo
+``;
+Learn a bit more about Taxation - In process
+Prepare for interview of a CA - In process
+AY 23-24 ITRs pincode and tan implementation
+ITR7 Schema -> To get it mapped
+ITR3 23-24 clarifications implementations - Pending
+Clarification Tracker for ITR2 ?? To search for it
+ITR7 Schema to be updated as per Aravindam's input - Todo - To make the change and share the utility
+ITR7 22-23 Json issue of alert showing 21-22 AY
+ITR2 Calculation Issue - ? Blocker - Pass it to ADP - Discussion Pending - ETA Given?
+ITR2 Sample JSONs - Verification Pending (Chirag - To send the JSONs to chirag and ask him to verify what????) - Pending
+
+Ishita relatives as tester(2) - To follow up - Scheduled
+Interview for BA (MBAs) - No Scheduling - Rishabh
+Interview for BA (CA) - Ayushi Agarwal - Scheduled
+Vicky and Vishnu Appreciation Token
+Epitaxial Setup
+Setup adp mail with outlook
+Some work for JSON test cases as discussed in meeting for POC
+
+
+Add ITR1 Validation Rules into the RA - Done
+Add ITR2 Validation Rules into the RA - Naveen
+Add ITR5 Validation Rules into the RA - Ishita
+ 
+Create RA's of ITR2, ITR3, ITR5, ITR6, ITR7
+To discuss clarification for ITR3 with MadhuKiran
+To discuss clarification for ITR2 with Ayushi
+
+To send a mail of schema enum description
+To setup a meeting?
+
+
+
+Done
+ITR4 apology mail to Gopal - Sent a mail
+Explain ITR1 utiilty to Aryaman and Manisha - Done
+Ubuntu Server Application deployment - Done
+ITR7 21-22 Production Version - Done
+Rules and DE sync with Madhu - Done
+ITR1 and ITR4 to discuss issues with Adrian -> ITR1 and ITR4 ETA to provide - Done
+Legacy Issues in the defect sheets? Mail of 7-Feb still pending - Done
+ITR5 23-24 Get it tested - Done
+ITR6 23-24 Get it tested - Done
+ITR5 23-24 to complete and send
+ITR6 23-24 to complete and send
+Ishita full day work - Done
+ITR6 Unit testing report and sample jsons to share - Done
+
+Some 20-21 ITR3 issue by Ayushi - Done
+ITR4 22-23 Gopal TCS issue - Waiting for confirmation - Call Today - Done
+Go through the defect sheets of ITR1, ITR4, ITR2 - Done
+I must focus on PDF generation (try to pass all the issues to Devs) - Done
+Some 21-22 ITR3 issue by MadhuKiran - Sent a mail of the utility - Issue is no more - Done
+
+SR something with Aravindram - Done
+Provide ETA for ITR2 Issues - Done
+The RA code to update to implement 5 Error columns - Done
+RA sorting to update to implement 5 Error columns - Done
+Update the ITR4 MakeUISchema - Done
+VF to Push inside the adp branch - Done
+Arrange the files that are sent on mail - Done
+Create RA's of ITR2 - Done
+Acknowledgement PDF - Done
+ITR1 Error codes to update - Aryaman - Done
+Create a go file to merge the validation and sorted RA - Aryaman
+ITR4 Sequence ID to put and sort the RA - Done
+Rule Author to merge for validatons and sorted - My Code is ready - Aryaman
+XML schema to go struct and unmarshalling - Aryaman
+
+
+
+
+
+
+
+
+
+
+
+

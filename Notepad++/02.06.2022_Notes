@@ -1,0 +1,25 @@
+ITR5 - Nishi-> Runtime Error in OS
+ITR3 - Jinesh -> Runtime Error in CG
+ITR2 - DTAA 2a value is 6000 but accepting 0 in quaterly breakup
+ITR5 - CG Acquit cost is required in json - All have UVCase
+ITR5 - Remaining Issues
+special characters not allowed
+
+
+isdropdownblank()
+CSV - TCS and TDS1 is inconsistent with the utility
+CSV - colulmn 2 will be self of other or can be both
+	How the values will be in both the cases
+	preferred values is "NA" in the CSV sheet for grey fields
+CSV - Tan of the deductor is not present in utility
+2 issues in tds
+link deduction in own hands with three columns
+
+tds 2 columns are not unlocking after getting locked
+we lock them by filling the 3rd field
+now select self these fields will not unlock
+ to enable events when the third field is getting blanked 
+ and greyed out
+ 
+ syntax error in itr5
+ 

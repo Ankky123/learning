@@ -1,0 +1,13 @@
+Who did the settableinfo_bs in PartA BS Ind AS ITR6 20?
+Who tested parta Pl ind as
+Find out who resolved and who tested these two schedules in ITR6 20
+
+Testers - 	Mapping format for ITR2 Ay 22-23 is distributed
+
+ITR1 22-23 - Verified Rules and DE changes for Validation and labels - (Vishal and Jinesh)
+		   - Verified Schema changes (Ankit)
+
+ITR6 22-23 - Two prefill issues - (Satyaprakash)
+
+ITR6 20-21 - Submitted Production version
+

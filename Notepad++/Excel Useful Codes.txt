@@ -1,0 +1,246 @@
+node --max_old_space_size=8024 node_modules/\@angular/cli/bin/ng serve
+
+Some VBA Coding Tips
+1. If a validation can be applied on input and worksheet change event, then it should be applied there
+2. If a validation has dependenies that are efore or after it, it should be applied on validate call
+3. Mandatory check should be applied on validate call
+3. There is no need to apply fmsgbox -> just use msgbox, If a common string like schedule name is to be used,
+	use a string to add the messages to that will be initiated on the call of validate button
+4. Messages should come in order of the fields so that an updated entry will not cause contradictory messages
+5. Worksheet Change can be called manually
+
+6. Prohibited/Invalid entries should be blocked at key stroke level
+
+If Application.intersect is inside the sub, we get info of it being called in worksheet change but it is useless at any place
+	-> But we can pass the range and call the sub and it will show intended changes
+If application.intersect is outside the sub, we cannot get info of where is it being called, so changing something can trigger unexpected consequences
+
+Correcting some issue in the code may generate another issue and this cycle can continue
+
+Reach to address bar in the browser -> Ctrl + L
+
+----------------------------------------------------------
+Sub addNewColumns()
+
+	Dim currSheet As Worksheet
+
+	For Each currSheet In ThisWorkbook.Worksheets
+
+	currSheet.Range("AJ1") = "ChangeValidation"
+	currSheet.Range("AK1") = "SaveValidation"
+	currSheet.Range("AL1") = "Classes"
+	currSheet.Range("AM1") = "Warning Messages"
+	currSheet.Range("AN1") = "Mandatory/Min/Max/Pattern/EnumError"
+	currSheet.Range("AO1") = "AffectedIDs Formula"
+	currSheet.Range("AP1") = "Formula Type"
+	currSheet.Range("AQ1") = "Directive"
+	currSheet.Range("AR1") = "EnumCondition"
+
+	Next currSheet
+End Sub
+----------------------------------------------------------
+Sub resetWorksheetsDiplay()
+	On Error Resume Next
+	Dim currSheet As Worksheet
+
+	For Each currSheet In ThisWorkbook.Worksheets
+	currSheet.showAllData
+	currSheet.Range("A:AP").EntireColumn.Hidden = False
+	currSheet.Range("A:AP").EntireColumn.WrapText = False
+	currSheet.Columns("A:AP").ColumnWidth = 10
+	currSheet.Columns("G").ColumnWidth = 50
+	currSheet.Columns("Q").ColumnWidth = 50
+
+	Next currSheet
+
+End Sub
+----------------------------------------------------------
+Sub setReturnTrueFalse()
+
+	'On Error Resume Next
+	Dim currSheet As Worksheet
+	Dim cell As Range
+
+	For Each currSheet In ThisWorkbook.Worksheets
+
+		For Each cell In currSheet.Range("L1:L1000")
+			If cell.Value = "true" Then
+				cell.Value = "return true"
+			End If
+			If cell.Value = "false" Then
+				cell.Value = "return false"
+			End If
+		Next cell
+		For Each cell In currSheet.Range("M1:M1000")
+			If cell.Value = "true" Then
+				cell.Value = "return true"
+			End If
+			If cell.Value = "false" Then
+				cell.Value = "return false"
+			End If
+		Next cell
+		For Each cell In currSheet.Range("N1:N1000")
+			If cell.Value = "true" Then
+				cell.Value = "return true"
+			End If
+			If cell.Value = "false" Then
+				cell.Value = "return false"
+			End If
+		Next cell
+
+	Next currSheet
+
+
+End Sub
+----------------------------------------------------------
+Sub lockAllSheet()
+	Dim sheet As Worksheet
+
+	For Each sheet In ThisWorkbook.Sheets
+	sheet.Protect Password:=getmsgstate
+	Next sheet
+
+End Sub
+----------------------------------------------------------
+Sub SetWorksheetsDiplayForUtilValidation()
+    On Error Resume Next
+    Dim currSheet As Worksheet
+
+    For Each currSheet In ThisWorkbook.Worksheets
+    currSheet.ShowAllData
+    currSheet.Range("A:AS").EntireColumn.Hidden = False
+    currSheet.Range("A:AS").EntireColumn.WrapText = False
+    currSheet.Columns("A:AS").ColumnWidth = 10
+    currSheet.Columns("G").ColumnWidth = 50
+    currSheet.Columns("H").ColumnWidth = 10
+    currSheet.Columns("Q").ColumnWidth = 10
+    currSheet.Columns("P").ColumnWidth = 10
+
+    currSheet.Range("A:F").EntireColumn.Hidden = True
+    currSheet.Columns("I").EntireColumn.Hidden = True
+    'currSheet.Columns("J").EntireColumn.Hidden = True
+    'currSheet.Columns("P").EntireColumn.Hidden = True
+    currSheet.Range("X:AH").EntireColumn.Hidden = True
+    currSheet.Columns("AI").EntireColumn.Hidden = True
+    'currSheet.Columns("AL").EntireColumn.Hidden = True
+    currSheet.Select
+    ActiveWindow.Zoom = 85
+    ActiveWindow.FreezePanes = False
+    Rows("1:1000").RowHeight = 15
+
+    Next currSheet
+
+End Sub
+----------------------------------------------------------
+Sub RemovePDFFieldlType()
+
+    'On Error Resume Next
+    Dim currSheet As Worksheet
+    Dim cell As Range
+    For Each currSheet In ThisWorkbook.Worksheets
+        For Each cell In currSheet.Range("AC2:AC1000")
+                cell.Value = ""
+        Next cell
+    Next currSheet
+
+End Sub
+----------------------------------------------------------
+Sub SetWorksheetsDiplayForBRF()
+    On Error Resume Next
+    Dim currSheet As Worksheet
+
+    For Each currSheet In ThisWorkbook.Worksheets
+    currSheet.ShowAllData
+    currSheet.Range("A:H").EntireColumn.Hidden = False
+    currSheet.Range("A:H").EntireColumn.WrapText = False
+    currSheet.Columns("A").ColumnWidth = 10
+    currSheet.Columns("B").ColumnWidth = 40
+    currSheet.Columns("C").ColumnWidth = 80
+    currSheet.Columns("D").ColumnWidth = 20
+    currSheet.Columns("E").ColumnWidth = 10
+    currSheet.Columns("F").ColumnWidth = 10
+    currSheet.Columns("G").ColumnWidth = 20
+    currSheet.Columns("H").ColumnWidth = 10
+    currSheet.Select
+    ActiveWindow.Zoom = 100
+    ActiveWindow.FreezePanes = False
+    Rows("1:1000").RowHeight = 15
+
+    Next currSheet
+
+End Sub
+----------------------------------------------------------
+Sub getBlankDataTypeIDsBRF()
+
+    'On Error Resume Next
+    Dim currSheet As Worksheet
+    Dim cell As Range
+    Dim elementIDs As String
+    For Each currSheet In ThisWorkbook.Worksheets
+        For Each cell In currSheet.Range("F2:F1000")
+            If cell.Value = "" And cell.Offset(0, -3).Value <> "" Then
+                elementIDs = elementIDs + cell.Offset(0, -3).Value + vbCrLf
+            End If
+        Next cell
+    Next currSheet
+    MsgBox (elementIDs)
+    Sheet67.Range("A1").Value = elementIDs
+End Sub
+----------------------------------------------------------
+Sub SetWorksheetsDiplayForPDF()
+    On Error Resume Next
+    Dim currSheet As Worksheet
+
+    For Each currSheet In ThisWorkbook.Worksheets
+    currSheet.ShowAllData
+    currSheet.Range("A:AP").EntireColumn.Hidden = False
+    currSheet.Range("A:AP").EntireColumn.WrapText = False
+    currSheet.Columns("A:AP").ColumnWidth = 10
+    currSheet.Columns("G").ColumnWidth = 50
+    currSheet.Columns("H").ColumnWidth = 10
+    currSheet.Columns("Q").ColumnWidth = 10
+    currSheet.Columns("P").ColumnWidth = 10
+
+    currSheet.Range("A:F").EntireColumn.Hidden = True
+    currSheet.Columns("I").EntireColumn.Hidden = True
+    'currSheet.Columns("J").EntireColumn.Hidden = True
+    'currSheet.Columns("P").EntireColumn.Hidden = True
+    currSheet.Range("L:AP").EntireColumn.Hidden = True
+    currSheet.Columns("AI").EntireColumn.Hidden = True
+    'currSheet.Columns("AL").EntireColumn.Hidden = True
+    currSheet.Columns("AC").EntireColumn.Hidden = False
+    currSheet.Select
+    ActiveWindow.Zoom = 85
+    ActiveWindow.FreezePanes = False
+    Rows("1:1000").RowHeight = 15
+
+    Next currSheet
+
+End Sub
+----------------------------------------------------------
+Sub getNumberOfBRFRequirements()
+
+    'On Error Resume Next
+    Dim currSheet As Worksheet
+    Dim cell As Range
+    Dim elementIDs As String
+    Dim BRFSheetMsg As String
+    Dim countBRF As Integer
+    For Each currSheet In ThisWorkbook.Worksheets
+        Dim countBRFSheet As Integer
+        For Each cell In currSheet.Range("H2:H1000")
+            If cell.Value <> "" Then
+                countBRFSheet = countBRFSheet + 1
+                countBRF = countBRF + 1
+            End If
+        Next cell
+        BRFSheetMsg = BRFSheetMsg + currSheet.Name + " : " + CStr(countBRFSheet) + vbCrLf
+        countBRFSheet = 0
+    Next currSheet
+    BRFSheetMsg = BRFSheetMsg + "Total Rules : " + CStr(countBRF) + vbCrLf
+    MsgBox BRFSheetMsg
+    MsgBox countBRF
+End Sub
+
+
+

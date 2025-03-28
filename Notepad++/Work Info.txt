@@ -1,0 +1,86 @@
+ankit_mangal@arundataprocessing.co.in
+
+To make a new branch for AY
+(Gloabl replace within itr_ay_23_24/)
+2023-24 -> 2022-23
+23-24 -> 22-23
+fy2023 -> fy2022
+ay2023 -> ay2022
+ay23??
+fy-2023 -> fy-2022
+"2023" -> "2022"
+/2023 -> /2022
+2023
+
+ignore -> *.json, isin.constant.ts, pinstate.constant.ts,
+
+DSA -> Graph
+Docker
+Kubernetes
+Golang concurrency, wait groups, semaphores, benchmarking, channels, pointers
+Scalability
+Angular, react
+
+Learn a lil bit about networking
+ip
+not about nginx
+review -> What to review??
+dependency injection
+pub/sub
+asynchronous subscriber
+
+to check auxilio codebase
+After testing
+documentation
+	functionalities
+Database model ?? on priority
+	Aggregates in a database
+
+gitlab credentials Manisha
+manisha_kaler@arundataprocessing.co.in
+Adp1@123
+
+⁠Email -> ankit_mangal@arundataprocessing.co.in
+Password -> arundata@123
+System 1 -> HP Pavillion Gaming Laptop 15-ec2xxx
+Password -> beprepared
+System 2 -> Victus by HP 15L Gaming Desktop TG02-1xxx
+Password -> beprepared
+Inventory -> Monitor, CPU, Laptop
+
+
+ADPutility#123
+utilityADP#123
+
+
+
+
+
+Let us see what login is doing... in Lexium
+Going to login page 
+Entering User Credentials and clicking on sign in
+"postLogin(e)" is called with "event" inside the js file
+fetch the "/login" with POST and credentials at client
+g1.POST("/login", handler.PostLogin) at client
+PostLogin(c *gin.Context) is called at client
+/login request is made at the server (http.post(**)
+controller.LoginPost() is called at server
+GetByUserName() is called at server -> Database query is made for the user, if found the user object is returned
+controller.LoginPost() -> matches the password received from client with the server object password and returns
+/login at the server revertes to client with a response
+PostLogin(c *gin.Contextat the client reverts with a response
+fetch /login at the client is met with response
+postLogin() at the js gets a response of fetch and sets the page accordingly
+
+
+How is gin.context is getting the username? -> Middleware -> Authorization
+call from browser uploadAll() -> fetch the /uploadAll from client
+g1.POST("/uploadAll", handler.UploadAll) at client
+UploadAll(c *gin.Context) -> post request to server "/uploadAll"
+
+
+When port is already in use error comes
+netstat -ano | findstr :4200 
+This will give the PID,
+taskkill /PID the_PID_in_above /F
+This will forcefully stop the process

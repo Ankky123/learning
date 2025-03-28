@@ -1,0 +1,48 @@
+Part A-General
+	-Date of Filing 10E - not unlocking for 
+	continue to opt
+	
+Can't find the text string and validations of 
+	-date of furnishing of the audit report
+	Ans. date of furnishing is found but rest
+		of the message is broken and added at
+		second place
+	-Date of audit report
+	Ans. same as above
+	-furnishing other reports
+	Ans. same as above
+	
+but can see their error messages
+
+How to debug a button action from the very beginning?
+Ans - Unprotect the sheet and activate the design
+mode, now right click and assign macro, you 
+can reach the start of that button
+
+how to reach to the validation of a cell?
+Ans - It is being controlled by the worksheet_change
+
+
+dropdown -> business exceeds 60 lakh rupees is
+giving error but also says sheet is ok, then
+again gives same error
+
+Why sub Worksheet_Change() is not getting called 
+anywhere?
+Ans - Because it a frameWork based function, it is 
+automatically called whenver there is a change in 
+a sheet we can override the method
+
+How to prompt a message in a value in a cell is 
+not how we want it to be?
+Ans- this is called data validation, it is available
+in the "Data validation Tab"
+
+In json, when we use reference, the referenced key is the 
+json tag which is used, the reference link is just 
+for showing the path, now the key in the reference 
+is not a json tag
+The same is also valid if an array is referenced
+to a link
+
+

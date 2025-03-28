@@ -1,0 +1,17 @@
+SPOCs for sending clarifications and utilities
+Adrian
+Rajendra
+Aravindam
+Murali
+Bharathi
+Rish, Arun Sir
+
+
+Legacy Issues - The issues are not a part of DE 23-24 change requirements and didn't come due to changes made by our team in the utility. 
+	Legacy issues are out of our coverage of the utility and we will not be resolving them. 
+	I am sorry, our team has their hand filled up with the upcoming submissions and current AY issues.
+	Their severity is high ? 
+	The utility was in production with these issues and it didn't cause any problem while its duration cannot be considered high 
+	We have limited resources that 
+there is only 1 current AY issue that is to be resolved
+Other current AY issues are not issues per se, but are changes that were added to change sheet later on.

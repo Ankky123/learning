@@ -1,0 +1,27 @@
+The following issues have been identified 
+in the json file
+
+Expected integer but got a number
+#/definitions/TaxPayableOnDeemedTI/properties/TaxDeemedTISec115JC/type
+#/definitions/TaxPayableOnDeemedTI/properties/TotalTax/type
+#/definitions/ComputationOfTaxLiability/properties/GrossTaxPayable/type
+#/definitions/ComputationOfTaxLiability/properties/TaxPaidUnderCredit/type
+#/definitions/ComputationOfTaxLiability/properties/NetTaxLiability/type
+#/definitions/ScheduleAMT/properties/TaxPayableUnderSec115JC/type
+#/definitions/ScheduleAMTC/properties/TaxSection115JC/type
+#/definitions/ScheduleAMTC/properties/CurrYrAmtCreditFwd/type
+#/definitions/ScheduleAMTC/properties/CurrYrCreditCarryFwd/type
+#/definitions/ScheduleAMTC/properties/TotAMTGross/type
+#/definitions/ScheduleAMTC/properties/TotBalAMTCreditCF/type
+#/definitions/ScheduleAMTC/properties/AmtLiabilityAvailable/type
+
+Validation Issue - PartA General 2, Nature of Business
+field is green but uneditable
+Calculation - (CG)(ST) b, deductions under sections 48 -> 
+the formula function is outdated and producing
+invalid result
+1. Validation Issue - PartA General 2, Admitted/Retired, field 
+is not validated properly
+2. Validation Issue -  When "Y" is selected for "Whether 
+there was any change during the previous year.."
+mandatory field is not getting validated for entry

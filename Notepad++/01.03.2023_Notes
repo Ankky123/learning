@@ -1,0 +1,220 @@
+VF
+
+New error codes to be added in ITR2 - 33
+ITR1 -> error codes to be modified and shared with Aravind - Made by Naveen -> To upload with Aravind in sync to avoid opening and reopening of issues.
+ITR7 DB Mapping to update
+ITR7 discussion with Rishabh and Madhu
+ITR3 defect utilities - Mailed -> 2 Utilities are remaining
+ITR5 defect utilities - Mailed -> 17
+
+
+
+P2 -> ITR5 Sanity - to be done
+P3 -> ITR5 VF Issue Resolution for 3 JSONs
+P4 -> ITR5 to push to git - Rishabh - To redo EI, 80G, Part A QD, CFL, FA in ITR5 VF
+P5 -> ITR4 -> 15 issues resolution
+
+
+ITR7 Rule author to generate
+ITR7 Schema to update
+
+
+ITR2 and ITR3 22-23 to submit
+ITR1 JIRA Issues - P-1 - Most Important - 2 remaining - 1 remaining
+ITR1 and ITR4 ETA to share - Shared
+Roshini to orient
+ITR4 22-23 - Halted by 21 value too large issue
+ITR5 computational issue to ADP
+ITR6 computational issue to ADP - Sent
+ITR2 computational issue to ADP - Sent
+
+
+
+Epic Link ITR1 - 777
+ITR4 - 45956
+ITR1 utility ETA to be shared by 3 PM
+ITR4 utility ETA to be shared by 4 PM
+
+Excel
+
+P1 -> ITR7 Excel Utility to share
+
+
+ITR2 Discussion Points
+1. Please make the consolidated defect sheet. It becomes challenging to manage multiple defect sheets.
+2. The calculation issue defect sheets.
+3. The CYLA implementation after Arun's approval for implementation
+4. Please let us know the 9 Reopen issues.
+
+
+
+Done
+ITR1 sanity report and mail
+interview summmary to discuss with Parv
+ITR1 reopened issues
+Aryaman follow up of ITR1 20-21
+ITR2 RA to update for 66 lines of min and max
+ITR2 2 push on master
+ITR2 jsons to remake and sanity - done
+Multiple times error messages in the VF, to send the mail for the 80C, 80CCC and 80CCD1 - done
+Error message repeating issue to mail? to discuss with Rishabh about what to mail and who to talk - implemented
+ITR2 and ITR3 ETAs to give by EOD - done
+ITR3 cyla-bfla approach to discuss with rishabh and adp - mailed
+ITR1 new error codes to be discussed with Aravind - Done
+
+ITR4 10 issues has to be resolved - aryaman
+ITR2 and ITR3 eta has to be reshared - done
+ITR2 testing blocker for vf team
+Rajendra mails to be replied - done
+ITR2 to be given to satyaprakash - done
+ITR7 status? - in process
+
+ITR1 -> VF to implement updated schema - done
+ITR1 -> open and reopen issues to be closed - done
+ITR1 22-23 -> Sanity after deployment - done
+
+p1 -> send ITR2 - Done
+p2 -> compile itr4 and push to git - Done
+p3 -> resolve ITR1 reopen - done
+p4 -> push ITR1 to git - Done
+To correct in the JSON Generation of ITR2 - done
+Sheet8b.TotalCapGains this field is not generated properly - done
+
+p0 -> send ITR1 - done
+p1 -> ITR1 -> Utility to be shared - done
+p2 -> ITR2 JSON issue to look - done
+p3 -> ITR1 22-23 sanity - done
+
+ITR1 to convert to RTT - Done
+ITR4 to convert to RTT - Done
+
+P0 -> ITR1 2-3 issues to close (1 reopen and Rule 216) - Done
+P1 -> ITR5 negative mins - Done
+P0 -> ITR2 Excel Utility to share - Done
+P6 -> ITR5 computational defect utilities to find out if shared or not - Mailed
+
+
+P1 -> ITR3 To Compile (80G to take from others) - done
+
+Doubts
+TDS3onOthThanSalDtls_TaxDeductedOwnHands_onMJM - where is this key?
+Schedule AL must be filled in case of total income > 50 lakh -> How to implement - to leave for now
+
+
+
+
+
+To discuss ITR1 SITs
+only 11 issues are reopened
+45487
+45485
+45464
+45371
+45578
+45617
+45621
+45435 - Issue not caught
+45316
+45466
+45429
+
+only 7 reopen were with me
+45464 -> Fixed
+45435 -> Invalid
+45434 -> Invalid
+45482 -> Fixed
+45485 > Invalid
+45429 -> Invalid
+45316 -> Invalid
+45487 -> Invalid
+45378 -> Marked as invalid
+45305
+45511
+45512
+45555
+
+
+If schema error are not shown in the UI, please discuss with Aravind
+
+-99999999999999
+
+
+5-6 issues are not resolvable
+5-6 were resolved
+
+
+ITR1 Reopen
+Majority of the Reopen issues are not pending on ADP
+Require confirmation for how many errors to be shown in case of repetition of dropdowns in array?
+The unified duplication rule for exempt allowance to be implemented or not?
+
+To be told to improve
+
+1. syntax of if and else if (don't give newline in a statement)
+if () {
+
+}
+
+if () {
+
+} else if() {
+
+} else {
+
+}
+
+2. Don't Use newline in a statement and if brackets
+
+3. looping
+var sum = 0.0
+
+
+<--
+var Elem = @id[]
+
+sum += Elem.othamount
+-->
+
+4. self array
+don't use "." near square brackets
+
+
+var sum1 = 0.0
+<--
+sum += @id[]othamount
+-->
+
+5. Don't declare same variable twice
+
+6. Declaration and initialization should be 1 liner (var sum = 0.0)
+
+7. Not equal to (!=) don't use syntax of vba (<>)
+
+8. Use round properly -> it might be a tolerance range instead
+	Round(calculated, 0) or Round(calculated, 1) 
+Not Round(calculated),0)
+
+9. equal to is "==" not "="
+
+10. no space between += 
+
+11. why are we writing target.value
+
+12. What is @value ??
+
+13. always write this.value
+
+14. if type is float or integer then don't check for empty string, check it for 0 only
+
+15. use [i] instead of . in self array
+
+16. Break the for loop
+
+
+
+if (@NewTaxRegime == "N") {
+	(@ITR1_IncomeDeductions.DeductUndChapVIA.Section80DDB > 40000){
+		addError(1)
+	}
+}
+

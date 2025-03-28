@@ -1,0 +1,15 @@
+Angular ke components? 
+
+
+Kyu banayenge hum  components  hum chutiye hai kya?
+
+Nahi hum chutiye nahi hai! Hum smart hai, Toh hum sabse pehle ek Array Object ka component banyenge jiske andar variables pass honge from That particular schedules component
+
+
+So basically removing all the bullshit
+
+
+1. Create generic component in Angular
+2. Call this generic component from our generated Code
+	2a. To call this component from our generated code we need equivalent templates to be created in the go code
+3. Done

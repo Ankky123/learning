@@ -1,0 +1,26 @@
+Changes in ITR5 24.05.2022
+	greened diii sl.No. 1
+	os sheet14 -> sheet16
+	SrlNoof Challan in IT and TPSA           
+	Tables in QD- make a function and added in import
+	TDS - PAN problem in case of greyed-off
+	
+status 4, sub - 1 or 2
+status 3, sub - 2 or 6
+only in these two cases not applicable is enabled
+
+Chirag Didn't see correct rule and used wrong code
+	(Test-062) for ITR5
+	
+Cost of improvement is remaining(not importing)
+New tax regime didn't import
+Aggr and no of users didn't greyed-off
+
+
+
+FSI_CountryCode1
+99999999999.9999
+99999999999999.9999
+99999999999999.9
+99999999999999
+	

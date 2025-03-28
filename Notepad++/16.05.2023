@@ -1,0 +1,194 @@
+=INDIRECT(IF(MID(Sheet1.115H,1,1)="Y","OS_ALL",IF(MID(sheet1.ResidentialStatus1,1,3)<>"NRI","OS_RESandNOR","OS_NRI")))
+
+OS_ALL
+OS_RESandNOR
+OS_NRI
+
+
+Part B-TI (Part B1)
+Part B-TI (Part B2)
+Part B-TI (Part B3)
+Part B-TTI
+
+Schema update?
+ScheduleR -> TotalReasonsofdiff
+One other change suggested by Mani on mail.
+
+ITR5 0.4 conditions are unclear for 115AD table
+if residential status is what and fii/fpi flag is what and table 112a is filled so what to do with the table
+Any dependency is CG
+
+TotalReasonsOfDiff
+
+to generate a rule author with latest schema -> go to "C:\Users\Ankit Mangal\Documents\goworkspace\src\ITR_GEN_WORKFLOW\AY23-24_ITR_Project\PDF_Generator-master"
+to update the rule author using previous rule author -> "C:\Users\Ankit Mangal\Documents\goworkspace\src\TempITR4Validation\Functionalities_on_RA-master_AllColumns"
+to merge the error codes in the RA -> "C:\Users\Ankit Mangal\Documents\goworkspace\src\ITR_GEN_WORKFLOW\Merge_Ra"
+
+ITR2 20-21 Verification
+
+Verified Rules
+1,2,3,14,17,24,25,27,29,30,33,34,44,46,51,52,52,57,62,64,69,70,71,72,73,76,77,78,79,80,
+81,82,83,86,87,88,89,92,93,94,95,96,99,100,101,107,108,(119),129,130,132,134,135,(137),
+138,141,142,
+143,144,145,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,163,165,166,167,
+168,170,171,172,173,174,175,177,178,179,180,181,182,184,186,187,188,191,192,193,196,197,
+198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,216,217,218,219,220,221,
+222,223,224,225,232,239,240,241,242,243,244,245,246,247,248,249,250,251,252,254,256,258,
+259,260,262,263,264,265,266,267,270,271,272,273,274,275,276,277,278,279,281,282,283,284,
+285,286,287,289,290,292,293,294,295,296,297,298,303,304,305,
+306,307,308,309,310,312,313,314,315,316,317,318,319,320,321,322,325,326,328,329,332,333,
+334,335,336,337,340,344,345,346,347,349,350,351,352,353,354,355,356,357,358,359,360,361,
+363,367,368,370,371,372,373,374,375,376,377,378,378,379,380,381,382,383,384,385,386,
+387,388,389,390,391,392,393,394,395,396,397,398,401,403,,,423,424,425,426,427,428,429,
+
+
+	Corrected
+	9,10,11,12,26,28,56,58,65,67,68,74,75,84,(102,103,104 - Reverify),105,109,110,111,
+	,114,115,122,124,131,133,140,
+	214,215,226,227,228,229,230,231,233,234,235,236,237,238,253,255,257,269,280,288,291,
+	,299,300,302,
+	311,331,338,339,341,342,343,348,362,366,402,,,,459
+
+
+Pending Rules
+6,7,8,13,113 -> Selected Y but details not filled -> What is the extent of details that are required
+54,55,60,63, -> SI
+85, 133
+116 -> AL (Require Clarification)-> Null is being used
+	To be made
+	35,36,37,38,39,40,41,42,43,45,48,49,50,
+	59 - SI
+	,120,121,123,
+	127 -> Salary TAN with TDS TAN (Clarification Required)
+	128,136,
+
+66 -> Require Enum Values which needs to be checked,
+146-> Require clarification,
+189 -> Require Clarification
+194
+261 -> Require Clarification
+405 - 421, 422 -> CG Table E Rules (17 Rules)
+430-438,441-444,458,461,463,464,465 (17)
+Clarification Tracker Updated Rules (14,45,119,128,184,242,243,244,245,253,274,327, 
+									405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,)
+
+ITR2 20-21 Issue resolution
+
+
+07 - 
+431 -> Aleena
+403 - Verified
+194 - Pending Large
+183 - Pending Large
+146 - Pending Large
+54, 55, 63 -> Pending SI (Large)
+
+165 - Verified - 	Invalid
+
+426 - Verified -> Infy might be referring wrong error key
+368 - Verified -> Invalid
+
+56 -> Made
+58 -> Corrected
+65 -> Already Fixed
+75 -> Verified -> Already Fixed
+105 -> Verified -> Already Fixed
+114 -> Already Fixed
+119 -> Made
+131 -> Verified -> Already Fixed
+137 - Made  -> Fixed
+216 -> Corrected -> Marked for Negative case info
+226 - Corrected -	Invalid
+269 -> Corrected
+
+432 -> Infy might be referring wrong error key
+
+
+ITR3 Excel 
+Blocker for error message?? -> Waiting for reply (Done) - Pending with Infy
+
+ITR3 VF
+3 Rules to update (RA updated) -> Need to push - Pending with me - Done
+
+ITR2 VF
+FSI issue -> IPIP-36899 -> JSON not available - To be done
+
+ITR4 VF
+Rule 197 -> See why regression issue came -> Pending with Infy
+
+ITR6 VF - To push the ITR6 -> Pending with me - Done
+16 issues - Ishita
+
+ITR7 VF - Chirag
+27 issues
+
+ITR7 Excel Issues
+27 count -> First trial by Satyaprakash
+
+SIT-55211 -> ITR7 CYLA formula of 4Xiv -> value out of nowhere -> there was some issue of schedule CYLA (SIT-54933) here so formula was updated
+	now this SIT tells that this value is to be removed. But this formula seems to be changed by someone else => who??
+
+
+ITR3 Duplicate Keys identified
+429 and 43
+359 and 223
+
+ITR3 Required Clarifications
+329	Require Clarification regarding DPM and BP Fields
+333	Require Clarification -> Better mapping
+551	Require  Clarification  for and/or
+632	Require Clarification about what to consider for DI blank
+824	Require Clarification for negative values
+834	Require Clarification for negative values
+
+
+Pending discussions with Infy Team
+1. Deferred Prefill Issues of ITRs
+2. 112A and 115AD decimal issue
+3. ITR1 and ITR4 Regression issue to be taken up by Arun Sir Team.
+
+
+out of 25 issues
+Rohan -> 3 issues
+Aleena -> 2 issues
+Leena -> 4 issues
+Jaya -> 2 issues
+
+
+ITR3 Excel utility to update
+Discussion with Shruthi/Girish for XML status
+Discussion with Aravind for log environment variables
+
+
+Works to do
+1. ITR3 20-21 Run the test cases -> Might need to hold a meeting with Shruthi team
+2. ITR5 20-21 Hold the meeting
+3. Production Issues if they come in the abscence of Ishita and Chirag
+4. Work on Utility
+
+23-24 -> Ishita, Chirag, Satyaprakash
+22-23 -> Ishita, Chirag, Satyaprakash
+20-21 -> Piyush and team
+
+Works not to do
+1. Non-priority excel and VF issues
+2. Be part of any meeting that is non priority
+3. Explaining Rules to internal devs -> Clarification Tracker -> 5-6 PM Meeting
+
+
+production_support_91@arundataprocessing.co.in
+ProdSup@Infy
+
+Dear Madhu,
+
+After the last production build was sent by ADP, some changes related to SIT JIRA issues/enhancements were 
+made in the utilities.
+
+ITR2 -> SIT-56552
+
+ITR5 -> TR enhancement, CSV module update, ISIN Database update
+
+ITR7 -> SIT-56919, SIT-57204, Decimal issue from Schedule VC as on mail
+
+ITR2 236
+ITR3 558

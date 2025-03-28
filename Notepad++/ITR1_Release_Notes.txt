@@ -1,0 +1,21 @@
+
+ITR1/ITR4_V1.1:21_02_2023
+
+1. ITR1 -
+1.1 Checked in for Issues raised in JIRA, issues related to minimum/maximum as per schema and updated 1 error code for Rule 227.
+1.2 All schedules implemented with "Error Codes", "Error Category", "Error Category Type" as per mapping document
+1.3 Removed additional characters in "Error Codes" for schedule TDS, TCS and 80D
+
+
+2. ITR4 -
+2.1 Sanity completed for all schedules including BP
+2.2 "Error codes", "Error Category", "Error Category Type" e.t.c. mapping completed for prior AY rules
+2.3 pdm. removed from "Error codes"
+
+
+3. Common Notes
+3.1 Validations for non-existent/null elements (for other than schema validations) will not trigger
+3.2 Enum parsing handled for descriptions with "," in them
+
+
+

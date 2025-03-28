@@ -1,0 +1,175 @@
+Works to handle in an IT Company
+1. HR -> For hiring and logins, manage employees, set rules of behaviours and timing, leaves, work from homes.
+2. Lawyer -> To read and sign the agreements, SOWs, Quotations, IP rights
+3. IT helpdesk -> To manage servers, email accounts, buy and manage assets(laptops, wireless, routers), manage bills, control resource usage
+4. A person who gets projects -> Marketing?, Business Analyst?, 
+5. CA -> To handle finance of the company
+6. Director -> To finance everything
+7. Tech lead -> A person who knows the feasibility of a project, a person who can do the pro
+
+To do
+1. To make the POC modular - done
+2. To add absolute paths - done
+3. To make the Excel scripts - 
+	a. Generateu UI - done
+	b. Sort
+
+To do (Making the flow streamlined) --> Avoiding the copy paste of files
+1. From the MakeRuleAuthor -> struct.go is created here, when we do go run main.go > struct.go
+	I need this file in all other following folders, -> Just import this module path and file
+2. In MakeRuleAuthor make a code to Copy the "RuleAuthor" from the MakeRuleAuthorFolder  to RuleAuthorEditing (Absolute Pathing Required)
+3. In SortRuleAuthor -> Use the excel file from the RuleAuthorEditing folder
+4. In UIFromRAS -> Use the excel file from the SortRuleAuthor Folder
+5. Change the struct.go in UIFromRAS to main package and make required changes
+
+
+
+folderRoot := os.Getenv("GOPATH")
+	folderRoot += "\\src\\Version_Conrolled_POC_ITR2\\6. UIFromRAS"
+	fmt.Println("folderRoot is :", folderRoot)
+
+To make homepage in the base rule author
+
+POC - main.go > struct.go
+
+To streamline the process of generating the UI from schema
+
+
+Interview Notes
+There will be total 3 rounds
+first will be hr round (Technical extreme basic)
+second will be with me (Technical basic)
+Third will be with me (Technical advanced) - Logic, Reasoning, Basic logical reasoning, DSA, Tree, Graphs, HTML, CSS, Javascript, Protocols(Network Communication)
+											- Recursion, Async, Promise, DOM
+if 3rd round more than 6 Lakh - (Logical Reasoning and DSA)
+Only for people with DSA are required for DSA.
+
+8 Lak is much more in Ahmedabad (65K/Month)
+
+
+
+Need two beginners -> function, for loop basic 25K (after increment 30K) work will be basic core Java, can be increased later'
+ambitious people will leave the job after 1 year.
+
+
+Good people -> If they are comfortable to work in another language 
+
+adpak1.701005120
+
+Issues :
+1. If we do depth as 1 instead of 0, we are getting array out of bound error in SortSheetN
+2. In sorted rule author, we have to include the home sheet also -> Looking for some way to do it
+3. Do I want to run all the binaries with only input of a json? -> for that i will need to add the code for if error in finding edited rule
+author, then go ahead with the base rule author
+4. to make struct.go file available in every module (whether by pathing, or by creating a copy in each folder
+5. When making ITR1 -> An Issue was found in pattern
+Pattern: "|(\\s*([\\w\\d_=!@#$%\\^*\\(\\){}\\[\\]\\|\\\\:;',\\.\\?/~`\\-\\+<>&\"][\\s\\w\\d_=!@#$%\\^*\\(\\){}\\[\\]\\|\\\\:;',\\.\\?/~`\\-\\+<>&\"]*)\\s*)"
+and getEnum 
+"10(18)": "Sec 10(18)-Pension received by winner of \"Param Vir Chakra\" or \"Maha Vir Chakra\" or \"Vir Chakra\" or such other gallantry award"
+6. Can't find countrycode and statecode dropdown in ITR2
+7. Modified ITR2 to ITR1 in SPA document title
+9. Dropdowns for Filed u/s are not coming (Only 1 is visible in which all are listed separated by comma)
+8. Schedule clubbing
+
+
+
+
+ITR1, ITR2, ITR4
+
+Some changes are remaining
+Testing and issue resolution is remaining
+Import Generate is remaining
+Prefill is remaining
+See the status tracker (If it is being made as it was supposed to be)
+
+
+rishkanabar
+
+1073319
+
+Goal -> 1. To generate the spa home page using home sheet of sorted rule author
+	-> 	2. To identify and make all the templates of the ITR1 (template making will be given to UI devs)
+
+1. code coverage(also called test coverage) - Codegrip (a code review tool)
+It is a software testing metric that can help in assessing test performance and quality aspects of any software
+It is a software testing metric that can help in assessing test performance and quality aspects of any software
+
+SonarQube - Code quality and Code coverage tool	
+
+Compliance standards -> 
+
+2. Workflow design - Only for process of the software (Not for internal processes)
+It is the process of laying out all tasks and processes in a visual map in order to give
+team members and stakeholders a high-level overview of each task involved in a particular process.
+
+
+3. CMMI - Capability Maturity Model - ?
+A maturity level is a well-defined evolutionary plateau toward achieving a mature sofware process.
+a. Initial b. Managed c. Defined d. Quantitatively Managed e. Optimizing
+
+4. Interoperability - ?
+
+
+5. Document Encryption - ?
+PKCS - Public key cryptography standards
+A set of standard protocols, numbered from 1 to 15.
+To secure information exchange on internet by using public key infrstructure(PKI).
+
+
+6. Information Security (ISO 270001 certification) - ?	
+It sets out the specification for an information security management systems(ISMS)
+
+7. Service Management (ISO 20000 specifications) - ?
+
+8. Project Documentation (Not specified -> See 
+
+
+Agile Development
+1. Project Planning
+	a. Feasibility study
+	b. development of scope
+	c. Breaking the project into executable tasks or sprints
+	d. Estimating the amount of time neened to complete those sprints
+2. Roadmap Creation
+	A list of all the features the final product should have.
+	It acts as a plan of action on how a project will evolve.
+3. Release Planning
+	A plan is made for all feature releases, Plan revision
+	Features released at the end of each cycle
+4. Spring Planning
+	Each team member is assigned a task before spring begins
+	Workload is evenly distributed
+5. Daily meeting
+	Helps the team accomplishing tasks efficiently
+	EOD discussion
+6. Spring review and retrospection
+	helps the team to inspect itself and plan to make changes to improve
+	the forthcoming sprints
+
+RCA Documentation - Root cause analysis
+
+KLOC -> thousands of lines of code
+
+
+Anticipated Process of development in context of Client
+
+1. Developing ITR1 offline utility as per current schema and wireframes
+A. We discussing the spring cycle as per agile method
+2. We testing the utility and finding some errors
+A. We discussing the spring cycle as per agile method
+3. We resolving the issues
+A. We discussing the spring cycle as per agile method
+4. We submitting the offline utility
+5. They finding errors
+6. We resolving the errors
+7. We submitting the utility
+8. We giving them the source codes for configurable utility (Although we should not include this in SOW)
+9. We giving them documentation for source code and configuration
+10.we explaining them how the utility works(Knowledge trasfer) -> (This should not be)
+9. They uploading the utility for production
+10. Users getting errors
+11. L2 and L3 support from us
+
+
+
+

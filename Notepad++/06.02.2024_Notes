@@ -1,0 +1,282 @@
+Starting on new PC -> Victus 15L
+
+
+MSP02162998	ygnxYAdB1-	Ankit
+
+
+Some JS error encountered in Schedle BBS for Date field
+
+144 no change in error code, 1 scenario related issue not a blocker. no change between previously shared code and code raised issue in.
+145 no change in error code, 1 scenario related issue not a blocker. no change between previously shared code and code raised issue in.
+149 error code changed in latest code. no change between previously shared code and code raised issue in.
+268 no change in error code, 1 scenario related issue not a blocker. no change between previously shared code and code raised issue in.
+
+
+What to do now in all ITRs
+DPM DOA to be implemented as per discussion with Madhu (in all ITRs) -> Should the issues in ITR5 be marked as fixed or enhancement and fixed?
+Tenant, Co-owner serial number to be implemented as per new implementation (in all ITRs)
+80G formulae to be implemented as per new implementation
+Half to be done after Table C reduction ( Considered ehnancement since the validation is given at wrong place) (in all ITRs)
+80G template for the all total to be added in all the ITRs in sync with ITR2
+Schedule FA Table B issue of Non-editing template
+Defaults to be removed
+234A, 234B approach change in all ITRs
+Schedule CG LTCG cost of acquisition with indexation cost of improvement with indexation to be updated as per given in ITR3/ITR5. (This field is user enterable in ITR2)
+
+
+ITR5
+DPMDOA some issue of not calculating value
+P&L Total field is not available in schema. (is it not applicable or not in schema?)
+
+
+RuleAuthors for all the ITRs to be sent to Arun Sir
+Tomorrow schedule a call with Arun Sir for ITR5 computational issues
+
+
+CSS
+Flex
+Position
+display
+border
+::after, ::before
+selectors -> Advanced
+sizes (pixel, em, rem)
+box-shadow (minimal)
+transform
+animations
+
+website -> css battles
+
+MSP02162998	ygnxYAdB1-	Ankit
+
+ITR6 Pending works
+To correct the Labels of VI-A
+
+SIT-67671
+SIT-67673
+SIT-67677
+SIT-67679
+
+Code change in GetUniqueEnum
+
+Compute Interest due (234A + 234B + 234C + 234F)
+Compute Remaining SAT
+Compute Remaing shortfall
+
+
+234A
+TC_TP0 -> 1030 	| 1030
+TC_TP1 -> 846 	| 847
+TC_TP2 -> 763 	| 763
+TC_TP3 -> 763 	| 763
+TC_TC5 -> 5341	| 4301
+
+234B
+TC_TP0 -> 11330| 11330
+TC_TP1 -> 9674 | 9679
+TC_TP2 -> 9093 | 9097
+TC_TP3 -> 8583 | 8589
+TC_TC5 -> 8193 | 7754
+
+
+in all of these cases, 234C is 4591
+
+
+ITR7 to be discussed with Rishabh
+ITR7JSON(5) is having issue in reaching the internal validations page
+Issue in schedule I (2 issues)
+Details of Author table issue of mandatory and min in case of strings
+Schedule OA table issue
+
+
+There are some places in Schedule I in ITR7 where developer is expected to infer validation based on error message.
+
+
+TPSA formula might be missing
+List of Fields where JSON is not exported with right value and Formula type is changed to 3
+ScheduleTPSA.AdditionalIncTax18PercAbove
+ScheduleTPSA.Surcharge12Perc
+ScheduleTPSA.HealthEducationCess
+ScheduleTPSA.TotalAdditionalTax
+ScheduleTPSA.TaxesPaid
+
+PARTA_PL.CreditsToPL.OthIncome.MiscOthIncome
+PARTA_PL.DebitsToPL.EmployeeComp.TotEmployeeComp
+PARTA_PL.NoBooksOfAccPL.NetProfitPrf
+
+
+-------
+LTCG DTAA should be 0 for 35(4) in the current case
+
+Need to discuss with BA -> DPM and DOA updated implementation (Current implementation might have issues)
+1. How to move in case of DPM, DOA (both have slightly different scenario
+2. It will either be autopopulated field or user editable field
+3. Since it has to be user editable, we are showing validation error message.
+
+CYLA-BFLA working correct or wrong (mostly fixed)
+Other computational issues that are open
+Default values are removed
+
+
+
+git config --global user.email "you@example.com"
+   config --global user.name "Your Name"
+  
+  
+git config user.email "ankit_mangal@arundataprocessing.co.in"
+git config --global user.name "ankitadp"
+
+Some issue in schedule ESR (undefined)
+
+
+ITR3 status
+1 open issue (CG) and 1 fixed issue (EI) -> (Merging of the Piyush's changes are required in the dev_merge )
+2 open issues can be verified after the build is generated (Name of firm, PAN) -> Field is vanishing after entry
+1 open issue need to be done by Rishabh (table is getting saved with 0s even if canceled) -> Pending
+1 open issue (Error message alignment issue to be taken up with UI/UX changes) -> Commented
+
+For schedule DPM and DOA one discussion is required
+234A and 234B is remaining in ITR3
+
+234A and 234B is remaining in ITR2
+OS Jira ticket is remaining in ITR2
+
+
+
+Discussion needs to be scheduled for ITR5 and ITR3 DPM/DOA discussion of the capital gain row (Need to be a minor analysis first)
+
+MSP02162998	ygnxYAdB1-	Ankit
+MSP02162998	1234@Welcome	Ankit
+
+
+Need to discuss about the 
+ITR5 -> Two issues found in regarding the internal_merge_sanity branch
+scheduleesr issues and PAG2 issue of Table where admitteed/retired is coming
+AMT template update to merge (4 issues)
+Computational sheet for ITR5 computation issues, then needs discussion with Arun Sir (9 issues)
+DPM/DOA schedules -> Need a discussion with Rishabh and then BAs. (6 issues, 5 + 1)
+First need to have a discussion with Rishabh
+Note issues (3)
+Schedule SI might need intervention on Arun Sir
+
+
+
+One issue of ITR3 also seems due to branch not merging properly issues
+Need to manage those repos
+
+This note is found in ITR5 BP 7K
+Note : "if autopopuating and making it editable" is not feasible, then don't autopopulate. Please leave the field as user enterable
+
+
+Validation, Label, error messages
+
+Computational issues, Reporting template, JSON file, Utility, Rule Author
+
+To be discussed with Aayushi, to identify which case is not working,
+To be given to Arun Sir, ITR2 234C and ITR5 json with the SIT
+
+
+
+--------------
+04.03.2024
+ITR2 build needs to be shared so that 234A, 234B, 234C can be tested for more cases.
+Awaiting ITR4 RuleAuthor for the computation issues
+
+SIT-70598 -> Firm Tax is not getting calculated
+SIT-70548 -> Not working for 234C and 234F
+SIT-70547 -> Not working for 234C and 234F
+
+MSP02162998	1234@Welcome	Ankit
+MSP021623002 Asterisk#1234
+Today Updated 
+ITR1
+ITR4
+ITR7
+
+ITR2 -> No change required
+ITR3 -> discussio required with BA and then with Rishabh
+
+ITR5 -> Rishabh points pending, Arun Sir points pending, Piyush points merging pending, DPM DOA pending, Discussion required with Rishabh
+ITR6 -> Computation points pending, Discussion might be required.
+ITR7 -> Discussion required with Rishabh
+
+Require discussion with Rishabh for all ITRs so that a build can be submitted and ETAs can be identified for the other builds
+One build for 6 to be shared and ITR will be shared today
+for next builds of ITR5 (AMT, DPM-DOA), ITR6, ITR7 we need confirmation of 
+Sushil and Ishita to check the all issues in ITR1 and ITR4 in Prior AY.
+
+4 issues in ITR5 to be seen by me
+
+ITR1, ITR2, ITR3, ITR4 -> 22-23 and 21-22 to be readied completely.
+ITR1 and ITR4 on priority
+
+------------------
+
+In the schema
+at "PartnerOrMemberInfo", both the elements, "Status" is "INDIVIDUAL", which is not correct, one of them should be "FOREIGN_COMPANY"
+
+To discuss with Rishabh that the computatoinal issues in ITR5 are related to the schema issue table in PAG2 where single fields are in array
+
+Since the field is not mandatory, what to take when field is blank?
+PartnerForeignCompFlg
+PercentageOfShareForeignComp
+TotIncFrmMemberOfAop
+
+------------------------------------------------------------
+AY22-23 build to make
+
+ITR5 discussion with Jay -> To discuss with Rishabh about how this is possible -> Pending with me and Rishabh
+ITR5 build to make -> Done
+
+ITR1 -> UI to update and to discuss with Rishabh
+
+which branch to take for 
+createUIMap -> dev_merge? (Managed by Rishabh)
+EfilingSandbox 23-24 -> internal_merge_sanity (Managed by Who?)
+EfilingSandbox 22-23 -> internal_merge_sanity (Managed by Who?)
+createUIMapv2 -> rishabh (Managed by Rishabh)
+
+the radio button import issue (in the offline for 22-23)-> I thing it was resolved -> no issue found
+
+Corrective action ->Testing team to check whether the 4 label issues for the all ITRs for the (strike off issue), for (wireframe label also coming) -> Mentioned in teams -> Testing team on it
+
+To share the  build for ITR6 and get the status of ITR5 testing -> Pending with Sanket
+To share some files with dipika -> Done
+
+VF for variance to be updated
+learn map service -> radio button reset to no issue (in the online for 23-24) -> Need to discuss with Rishabh
+learn UI for ITR1 -> Self review to be done
+
+Reminder to MadhuKiran -> Done (Meeting for Inconsistencies was conducted, BA team will relook at the change sheet as per the development process that is explained)
+
+
+Meeting with Rubi for ITR7 VF DEF/PFA
+Mail to Jay for ITR5 inconsistent requirement -> First find out the first mail that was written for this inconsistency
+
+RA of VF and VF_PDF to be merged (Since the updates are done on VF RAs, while VF_PDF RAs were to be used)
+
+The code from the VF RA to be merged into VF_PDF RA
+(Rule Numbers to be taken from VF_PDF RA)
+
+Excel to be same for the validations and VF related files (Tip: elementIDs to compare for VF related columns, createalltagmap -> 2 createalltagmap to be generated and compared 
+(FieldName, RuleNumbers, PDFFieldType might be skipped) If JSON tag is blank, row to be skipped since the grouping is done in the VF_PDF RuleAuthor
+Then vf.go files to be compared
+
+Issue identified -> Min to be merged again
+
+merge VF RA to PDF (2,3,5,6,7)
+RuleNumbers to be taken from VFPDF file and put into final merged file (but RuleNumbers are not available in the VFPDF RAs)
+
+ITR1_IncomeDeductions.GrossSalary
+Rule -> 97
+ITR1_IncomeDeductions.Salary
+
+08.04.2024
+ITR2 dev_merge is updated by Rishabh, now I have to test wether ITR2 is working fine or not, 1 issue to be resolved
+ITR5 one label is to be corrected
+AY22-23 and AY 21-22 need updated files from Ishita and Sushil (ITR4 and ITR4)
+
+Test ITR4 once more
+ITR1 to be updated for latest classes and fieldtypes
+
+At Home?? Cleaning, Bhatthi? Mumma??

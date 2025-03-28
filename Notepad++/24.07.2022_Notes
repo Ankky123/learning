@@ -1,0 +1,49 @@
+ITR2 GenerateJson Changes made
+FSI
+FA
+Schedule5A2014
+AL
+AMT
+AMTC
+TCS and TDS1, TDS2 and TDS3
+IT
+PTI
+EI
+SI
+IF - Removed
+CFL
+
+
+Changes to make in Utility
+Schedule FA - Table B, C, D, E, F, G,  (Details of financial interest
+	to remove the "Business" enum from dropdown
+Schedule EI - "OthersIncDtlEI" -> "NatureDesc"
+	to remove two enums
+	To remove Head of Income (T-4) dropdown of PG
+	to make TRC flag mandatory in EI
+	to make "ArticleOfDTAA" mandatory in EI
+Schedule SI - 
+	To remove 2 enums from FSI
+Schedule SPI - 
+	Remove BP enum from Head of income
+
+ITR7 
+Change made in TDS module
+
+
+Made 3 utility functions in itr2 20-21
+YesNo1
+YESNO2
+DformtExcel
+
+
+Next personal work
+Itr2 - 22-23 -> To solve the internal testers issues
+	Generate and Import, Validation
+ITR2 - 20-21-> LTCG xml import to complete
+ITR6 - 22-23-> defect sheet to solve
+all other ITRs - Solve issue on the fly
+to install 32 bit excel
+
+Personal work
+Finish some videos of golang

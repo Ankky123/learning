@@ -1,0 +1,13 @@
+Function isAlphanumeric(field As Variant) As Boolean
+    Dim i As Long
+    isAlphanumeric = True
+    
+    For i = 1 To Len(field)
+        If ((asc(Mid(field, i, i)) > 47) And (asc(Mid(field, i, i)) < 58)) Or ((asc(Mid(field, i, i)) > 64) And (asc(Mid(field, i, i)) < 91)) Or ((asc(Mid(field, i, i)) > 96) And (asc(Mid(field, i, i)) < 123)) Then
+        Else
+            isAlphanumeric = False
+            Exit Function
+        End If
+    Next
+
+End Function

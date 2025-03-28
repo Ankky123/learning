@@ -1,0 +1,60 @@
+-----------------------------------------
+ITR3 prefill requirement to receive
+ITR5 prefill requirement to receive
+ITR6 prefill requirement to receive
+
+ITR5 defect utilities to receive
+--------------------------------------
+
+Why are the following not implemented and tested?
+
+ITR7 -> Part B1 of Part TI -> 3 and 4 are not removed
+
+Part B-TI -> whole schedule to check
+Part B-2
+Part B-3
+
+schedule A is table nature is greyed off
+Some formulae are not updated
+
+Schedule IA -> Total field validation (To be taken from Erorr message column) (sum of columns) (to match exact years)
+Schedule DA -> Same as above
+
+Schedule R -> negative values to accept
+total of dropdowns from schedule J should populate in Schedule R Sr. No. A
+
+Schedule R column C validation and error messages
+
+Part A General -> Sl.No. to be implemented in the Labels
+
+Audit Schedule -> Relation dropdown is not added
+Unique Identification Number -> Dropdown is not added (for two tables)
+
+Schedule J Table A1 validations to verify
+
+Schedule VC - Sr. No. D -> Calculation to get checked
+
+Schedule CG -> C2 and C3 are not added
+		C1 label change not done
+
+Schedule BP -> 3d formula
+
+schedule SI -> 115 BBH changes are not implemented
+
+
+Name of the utility
+
+Import JSON was not working -> (Compile issue) (Utility expected)
+ 
+
+ITR1 and ITR4 -> Achal
+ITR2 -> Ayushi
+ITR3 -> Hitesh/Madhu
+ITR5 -> Jay
+ITR6 -> Tolaram
+ITR7 -> Rubi/Madhu
+
+Two days -> to give confirmation for 0.2 implementation
+
+
+

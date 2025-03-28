@@ -1,0 +1,50 @@
+Country_WithoutIndia
+
+ScheduleVIA->UsrDeductUndChapVIA->Section80MDtls->{(Section80MDate,Section80MAmnt,Section80MType)}
+
+iCountry = addressObject("countryCode")
+sCountry = Findtext(CStr(iCountry), "CountList")
+
+iCountry = UCase(Node("addressDetailWithZipCode")("countryCode"))
+sCountry = Findtext(iCountry, "Country")
+FSI_newcountrycode
+
+import json in ITR6
+
+
+1. OS validation issue - Done
+2. OS screenshot issue - Done
+3. Issue of TDS fields - to do 
+4. CG runtime error issue by jinesh- to do
+5. Compilation error by Nishi - In the json - Done
+5. PI number of users and amount validation - Done
+6. to align all the buttons properly
+
+alt+0130 - to put a comma in a list of excel data validation (escape a comma)
+
+copy import and generate
+make a change of comma in sheet15 
+56(2)(iii)-Rental income from machinery, plants, buildings etc., -> Search term
+change in PI Sheet1 -> LockUnlockSEP (Change-8, ANK, 15.07.2022) - done
+CG - To edit the error message for date in stcg and ltcg
+OS - A comma is extra in 1c - done
+
+VI-A - 80LA is not importing
+TDS validation issue
+CG runtime error by jinesh
+OS dropdowns to change and flow to change
+to remove the millions of lines in the sheets to reduce its size
+to correct the json issues raised by nishi - done
+What schema are they using our testers using?
+
+
+
+ValidatesheetQDTradingRawMatTable
+ValidatesheetQDTradingFinishedGoodsTable
+
+ValidateOL_Table2iii
+ValidateOL_Table2v
+ValidateOL_Table4v
+
+the file they entered was wrong for aadhaar number in csv
+

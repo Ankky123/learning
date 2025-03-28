@@ -1,0 +1,26 @@
+Types of elements in the POC forms
+
+text field
+number field
+	integer field
+	decimal field
+dropdown field
+radio field
+checkbox field
+
+label-field-message
+
+dynamic table with add row
+
+static table
+
+blocks
+	field-table(both type)-field
+
+How to create an automated http page?
+
+Make functions that will add the <div></div> for each element as per its type and its rule author
+Traverse in the Json Schema or In the structs as made by Rishabh to identify elements and create a code
+The Rule Author will decide exact detailing of the generated code.
+
+

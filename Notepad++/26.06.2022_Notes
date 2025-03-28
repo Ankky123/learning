@@ -1,0 +1,345 @@
+schedule d total - Done
+
+scheduleJ financial year - Done
+
+
+
+range BS_InvstmntUS11_5 - Range doesn't have a corresponding tag in schema
+
+
+"IncDisallwnExmpUs10" - this tag doesn't have a field in utility or Rules&DE, seems two different tags for same field
+
+Schedule BP table - Done
+
+
+BP.Total33ABto35ABB - Done
+
+TotAfterAddToPLDeprOthSpecInc - Done
+
+DeductUs32_1_iii - Done
+
+ScheduleBP.A.19iii.Total - Inconsistent Rules&DE and Schema
+
+CG- immovable property table stcg - Done
+
+CG - immovable property table ltcg - Done
+
+1. To correct the problem of schedule FA, comment the initializeallpublicvariablesfa
+InitializeAllPublicVariablesFA
+
+2. Also took care of -ve value in generate json(ScheduleEC) last value
+
+3. Also changed in Schedule J 2021 - 22 to 2021-22 FinacialYr - Generate Json
+3 changes to incorporate in the upcoming file
+
+ITR6
+ShareHolderInfo -> PercentageOfShare - Need to fill the utility and debug
+OwnershipInfo  -> PercentageOfShare - Need to fill the utility and debug
+
+Validation issue = dropdown of SectionCurrAY and Section115CurrAY to check (Range and tag)
+
+ITR6
+ITR6 in 
+schedule OS - in quarterly breakup - 10 + 3c is to correct in the utility
+rishabh has corrected in the the utility with vishal (test 2)
+to incorporate it in the main utility
+
+TCS compile error for clearcontents
+change in tcs sheet - copy the worksheet change
+
+why fsi is not unlocking for resident import the first time
+-probably an error in worksheet change of res
+
+BP
+FSI
+CG
+OS
+
+ITR7 
+changing the import of cg in utility A34
+so change will be reflected from A35 onwards
+In ITR7 - we need conditional import on some schedules
+and also conditional imports of .exists("") to optimize
+in ITR7 fsi and part-bti(asset out of india) - they are
+not getting green if residential status is RES
+but if we manually choose res then, they green out
+schedule fa is hidden 
+ifsc code is not imported - done
+
+
+Conditional Import - in ITR6
+-part bt-btti-2
+
+not defined
+AddRowsSchCG_STCG
+ AddDiffRows_NRIDTAADtls
+ AddDiffRows_UnutilizedLtcg
+ AddDiffRows_Ltcg_NRIDTAADtls
+ AddDiffRows_DeducClaimDtlsUs54B
+ AddDiffRows_DeducClaimDtlsUs54D
+ AddDiffRows_DeducClaimDtlsUs54EC
+ AddDiffRows_DeducClaimDtlsUs54F
+ 
+ AddDiffRows_DeducClaimDtlsUs54GA
+ 
+ ITR6 date is editable now
+ =CONCATENATE(IF(DAY(TODAY())<10,"0",""),DAY(TODAY()),"/",IF(MONTH(TODAY())<10,"0",""),MONTH(TODAY()),"/",YEAR(TODAY()))
+ use this formula for system date
+ 
+ CG - Table problem (STCG Unutilized CG)
+ CG - Whether tax residency is not responding - Done
+ CG - table 54D sl.no not filling - for add row button - Done
+ CG - table 54G sl.no not filling - for add row button - Done
+ CG - table 54GA sl.no not filling - for add row button - Done
+ CG - STCG table 9 database values to modify according to schema - Done
+ CG - LTCG table 12 database values - Done
+ CG - #Values??
+ 
+ why add rows going to calculateAge?
+ 
+ changed cg sheet19 and importjson and generate json
+ 
+ Change- in schcg
+ 
+ to make AddDiffRows_Partner for part a general
+ validate ifsc code in worksheet change to allow 
+ only 4 alphabets followed by 0 followed by 6 digits
+ 
+ ITR7 
+ add row for import of schedulebp table
+ check add rows for all tables import and test them
+ 2 range names changed in si to solve the problem
+ along with import
+ for schema problems probably generate will be changed
+ os quarterly breakup error
+ Schedule BP required tag but no field problem
+ Schedule BP for one field there is no tag available
+  = must discuss
+  
+In schedue Balance sheet - to add the require condition for any other reserve
+Cessasion Mode - Why wrong value in json
+Code sub sector (Nature of Business OA) - why wrong value in json
+
+AddBlockAuditDetails_GiiAOne - Schedule BP in mdBP
+
+AddDiffRows_Partner - PartA_Gen1
+AddDiffRows_Share - PartA_Gen1
+
+
+Changes in Import, Generate, Utility, mdBP(Tables), mdPI(Tables) 
+also in Sheet1(But no use)
+SI_DTAASTCG_Tax
+SI_DTAALTCG_Tax
+
+ CmdAddFirm_Imp, CmdAddshare_Imp, CmdBPOE_Imp
+ AUDIT sheet is unprotected after importing
+ 
+ after import and doing some filling, enable events is false
+ probably due to addrows
+ 
+ 
+problem in table of AI
+ ranges of schedule J, PI, EC, ER are changed to 
+	Schedule AI after import 
+ Workbook unprotected after import
+ 
+ BS table to test
+ 
+ Change in import and mdER and mdEC
+ Change in mdPI, mdAudit
+ ER.NOI
+ ER.Amount
+ 
+ EC.NOI
+ EC.Amount
+ 
+ ScheduleIT.BSRCode
+ ScheduleIT.DateOfDeposit
+ ScheduleIT.ChallanNo
+ ScheduleIT.Amount
+ 
+ AddDiffRows_Sch80DeductAmtDtls - being called at many places
+ 
+ CmdAddAuditDetails_Click
+ 
+ AddDiffRows_IT
+ 
+ Problem found in social research - PI
+ BP dropdown changing its range
+ 
+ A change in sheet1
+ A change in mdSH, import
+ ADD ROWS OF SOME TABLES MIGHT BE CAUSING WORKBOOK TO 
+ GET UNPROTECTED
+ 
+ Need to end this line at the end of the import code
+ ActiveWorkbook.Protect Password:=getmsgstate
+ 
+ To remove 
+     'change-9 MDH 01.07.22
+    If Not Worksheets("Schedule OA").Visible Then
+    Exit Function
+End If
+    '...end change...
+	from the cmdScheduleOAAddNOB
+	
+Check remaining
+	first table in Schedule Audit
+	Add property in Schedule HP
+	Schedule OS tables
+	Schedule CG tables
+	Schedule FA tables to check
+	
+	
+Problem noted - why space character is coming 
+in Schedule OA table - Done
+To add the protect workbook line at the 
+	end of import - Done
+to check the exit function of madhvi - Done
+Schdule BP table disturbed again - Now going to schedule AI
+BP.Dropdown - Solved
+Schedule 115TD range disturbed and not imported anything
+Sch115TD.Date - Solved
+
+workbook problem of protection after closing and opening
+Problem in ScheduleSH second table 
+
+04.08.2022
+ITR7 made a change in import, mdSchJ
+
+
+ 
+ ITR6 
+ current year option of 115BAA, 115BAB, 115AB 
+	-> calculation to be rectified
+ I think that financial statements heading dropdown caused 
+	change in upper prefilled 4 fields -> Verify
+	
+ITR7 check all the add rows
+'Change-10, ANK, 02.07.2022
+Sub CmdBPOE_Imp(Diffrows As Long)
+    Dim vRows As Long
+    Sheets("Schedule BP").Activate
+    mdCommon.DefinedgridNameRange = "Name_1||Amt_1"
+    ActiveCellRange = mdCommon.searchLastRow("Name_1")
+    vRows = mdCommon.insertRowUnderSectionWithFormula(Diffrows)
+End Sub
+'---end change---
+If (TotalDiffRow > 0) Then
+
+Change found and made	
+	import function PI- Details of registration - two ranges added in defined grid range
+	pi - added new function for button of firm table
+	pi - annual receipts table import modified to increment count
+	
+	audit - ranges i 4 tables updated for import and button
+	Schedule D  - Added one range name in the grid
+	six changes till now
+	one change in ie-3 button add row - activate sheet
+	one change in addrow internal function - unprotected sheet
+	eight changes till now
+	this function is modified -> InsertRowsAndFillFormulasBPA
+	Made one change in IE-4 
+	Made one change in import of IE-4 (in import module)
+	Defined 5 functions in schedule OS 
+	Made a change in BP - defined import method for its second table
+	Made 3 changes in Schedule SH
+	Made a change in IT
+	Made changes in TDS2 and TDS3 including import module
+	
+	
+'------------------
+Sub SChIE3_Add_Row()
+    Dim numberofrows As Long
+    Sheets("Schedule IE-3").Activate
+    setTableInfo_IE3_1
+    SelectLastRow ("SchIE3_Objective")
+    numberofrows = InsertRowsAndFillFormulasBPA()
+    Call ExendRangeNameToTable(numberofrows, range_IE3_1)
+End Sub
+'----------------------
+Sub SChIE3_Add_Row_Imp(Diffrows As Long)
+    Dim numberofrows As Long
+    Sheets("Schedule IE-3").Activate
+    numberofrows = Diffrows
+    setTableInfo_IE3_1
+    SelectLastRow ("SchIE3_Objective")
+    numberofrows = InsertRowsAndFillFormulasBPA(numberofrows)
+    Call ExendRangeNameToTable(numberofrows, range_IE3_1)
+End Sub
+'---------------------------
+change the following in the InsertRowsAndFillFormulasBPA function
+'---------
+For Each sht In _
+        Application.ActiveWorkbook.Windows(1).SelectedSheets
+        Sheets(sht.name).Select
+            i = i + 1
+            shts(i) = sht.name
+            x = Sheets(sht.name).UsedRange.Rows.count 'lastcell fixup
+        
+            Selection.Resize(rowsize:=2).Rows(2).EntireRow. _
+            Resize(rowsize:=vRows).Insert Shift:=xlDown
+            Sheets(sht.name).Unprotect Password:=getmsgstate
+            Selection.AutoFill Selection.Resize( _
+            rowsize:=vRows + 1), xlFillDefault
+            Sheets(sht.name).Unprotect Password:=getmsgstate
+            On Error Resume Next
+            Selection.Offset(1).Resize(vRows).EntireRow. _
+            SpecialCells(xlConstants).ClearContents
+    Next sht
+'---------
+Sub Sch_IE4_Add_Row(Diffrows As Long)
+'Change-10, ANK, 05.07.2022
+    Dim numberofrows As Long
+    Sheets("Schedule IE-4").Activate
+'---
+    set_TableInfo_IE4_1
+    SelectLastRow ("SchIE4_Objective")
+    numberofrows = InsertRowsAndFillFormulasBPA(Diffrows)
+    Call ExendRangeNameToTable(Diffrows, range_IE4_1)
+End Sub
+'--------------------
+	
+	IE-3, IE-4, fa has different definition for add row button and import (Call extendrangenametotable)
+	
+leaving HP due to block (Blocks and tables)
+leaving Cg due to block (Blocks and tables)
+leaving Pti due to block (Only block) - Trusting for now
+leaving FSI due to block (Only block) - Trusting for now
+leaving fa for now - Done
+Problem in link check boxes in part btti
+
+'Change-30, ANK, 02.07.2022
+Sub CmdTCS_Imp(Diffrows As Long)
+    Dim vRows As Long
+    Sheets("TCS").Activate
+    mdCommon.DefinedgridNameRange = "TCS.TAN||TCS.Name||TCS.FY||TCS.Forward||TCS.TCSCy||TCS.7.Amount||TCS.8.Amount"
+    ActiveCellRange = mdCommon.searchLastRow("TCS.TAN")
+    vRows = mdCommon.insertRowUnderSectionWithFormula(Diffrows)
+End Sub
+'---end change---
+tds or tcs click to imp
+problem seen in it and tcs2 ranges
+
+ITR 6 issues
+ra total issue is previous year
+os trc issue is previous year
+compile issue - set table info 112a
+and spassword not defined
+
+CmdAddAuditDetails_Click having problem of sheet activation - Done
+issue of importing in audit details
+Btti refund check mark not imported
+btti greyoff
+
+If Not Application.Intersect(Sheet1.Range("sheet1.ResidentialStatus1"), Sheet1.Range(target.Address)) Is Nothing Then
+
+when I send a utility X against a defect sheet D then i need to ask them that
+they will put a "closed" tag against those issues in the next defect sheet E
+and put the latest utility in "Closed in Utility" version
+I will then again work on the Defect sheet E
+If an issue is unsolved Don't put anything infront of it in Remarks column
+
+ITR6 
+'Change-26, ANK, 28.06.2022
+Acknowledge number

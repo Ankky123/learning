@@ -1,0 +1,114 @@
+Team tasks
+ITR3 Issue resolution, Prefill Issue resolution 1 or 2 new issue to be given tomorrow
+ITR5 Issue resolution
+ITR6 Issue resolution
+
+ITR2 0.4 VF submission
+ITR7 Schema to submit
+
+ITR7 Missing schedules
+HP - Ishita
+Bti-tti (4) - Not Yet Made by Anyone
+TCS - Naveen
+BBI - Ishita
+
+PartAGen1 - Suraj
+
+FA - No Rules
+IE I - No Rules
+IE II - No Rules
+IE III - No Rules
+IE IV - No Rules
+SH - No Rules
+ScheduleOA - No Rules
+Verification - No Rules
+
+
+Reopen issues
+
+
+To upload ITR1 and ITR4 after resolving issues
+
+
+80D issue
+2a
+if (@FilingStatus.NewTaxRegime  == "N") {
+    if (this.value > 25000){
+	 addError(1)
+       }
+    if (this.value != Min(@Schedule80D.Sec80DSelfFamSrCtznHealth.HlthInsPremParents + @Schedule80D.Sec80DSelfFamSrCtznHealth.PrevHlthChckUpParents, 25000)){
+         addError(2)
+       }   
+}
+
+
+    if (@FilingStatus.NewTaxRegime  == "N") {
+    if (this.value > 25000){
+	 addError(1)
+       }
+    if (this.value != (@Schedule80D.Sec80DSelfFamSrCtznHealth.HlthInsPremParents + @Schedule80D.Sec80DSelfFamSrCtznHealth.PrevHlthChckUpParents)){
+         if (this.value < 25000) {
+            addError(2)
+         }
+         
+       }   
+    }
+
+    if (@FilingStatus.NewTaxRegime  == "N") {
+    if (this.value > 25000){
+	 addError(1)
+       }
+    if (this.value != (@Schedule80D.Sec80DSelfFamSrCtznHealth.HlthInsPremParents + @Schedule80D.Sec80DSelfFamSrCtznHealth.PrevHlthChckUpParents)){
+         if (@Schedule80D.Sec80DSelfFamSrCtznHealth.HlthInsPremParents + @Schedule80D.Sec80DSelfFamSrCtznHealth.PrevHlthChckUpParents < 25000) {
+            addError(2)
+         }
+         
+       }   
+    }
+
+C1 -> sum <= 25000 
+2a -> 24000,
+i -> 22000,
+ii -> 4000
+ideally should be detected but will not be detected
+
+C2 -> this.value <= 25000
+2a -> 25000,
+i -> 23000,
+ii -> 3000
+ideally should not be detected but detected
+
+C3 -> this.value < 25000
+2a -> 25000,
+i -> 23000,
+ii -> 1000
+ideally should be detected but not detected
+
+C4 -> sum < 25000
+2a -> 23000,
+i -> 23000,
+ii -> 2000
+ideally should be detected but not detected
+
+
+1b
+
+if (@Schedule80D.Sec80DSelfFamSrCtznHealth.SelfAndFamilySeniorCitizen != @Schedule80D.Sec80DSelfFamSrCtznHealth.HlthInsPremSlfFamSrCtzn + @Schedule80D.Sec80DSelfFamSrCtznHealth.PrevHlthChckUpSlfFamSrCtzn + @Schedule80D.Sec80DSelfFamSrCtznHealth.MedicalExpSlfFamSrCtzn) {
+		addError(3)
+	}
+
+
+
+if (@Schedule80D.Sec80DSelfFamSrCtznHealth.PrevHlthChckUpSlfFam + @Schedule80D.Sec80DSelfFamSrCtznHealth.PrevHlthChckUpSlfFamSrCtzn + @Schedule80D.Sec80DSelfFamSrCtznHealth.PrevHlthChckUpParents + @Schedule80D.Sec80DSelfFamSrCtznHealth.PrevHlthChckUpParentsSrCtzn > 5000) {
+	addError(1)
+}
+if (@FilingStatus.NewTaxRegime  == "N")  && @Schedule80D.Sec80DSelfFamSrCtznHealth.SelfAndFamily < 25000 {
+	if (@Schedule80D.Sec80DSelfFamSrCtznHealth.SelfAndFamily != @Schedule80D.Sec80DSelfFamSrCtznHealth.HealthInsPremSlfFam + @Schedule80D.Sec80DSelfFamSrCtznHealth.PrevHlthChckUpSlfFam){
+		addError(2)
+	}
+	if (@Schedule80D.Sec80DSelfFamSrCtznHealth.SelfAndFamilySeniorCitizen != @Schedule80D.Sec80DSelfFamSrCtznHealth.HlthInsPremSlfFamSrCtzn + @Schedule80D.Sec80DSelfFamSrCtznHealth.PrevHlthChckUpSlfFamSrCtzn + @Schedule80D.Sec80DSelfFamSrCtznHealth.MedicalExpSlfFamSrCtzn) {
+		addError(3)
+	}
+}
+
+46616 -> 

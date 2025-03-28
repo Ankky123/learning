@@ -1,0 +1,1028 @@
+Duplicate Dropdowns is in ITR2 Salary is pending -> 17_1
+Duplicate Dropdowns is in ITR2 Salary is pending -> 17_2
+Duplicate Dropdowns is in ITR2 Salary is pending -> 17_3
+Duplicate Dropdowns is in ITR2 Salary is pending -> 17_4 -> Notified Country 89A
+In Schedule Salary, no exempt allowance drop down can be selected more than once.
+If  exempt allowance u/s 10(13A) is claimed, hence deduction u/s 80GG above Rs 55,000 not allowed. -> To be put in VIA
+Variable dropdowns to be displayed for Nature of exempt allowance -> Pending, to be added in the enum column
+
+Natures to be set mandatory when amount is filled to be discussed. -> Done
+Amount to be set mandatory when amount is filled to be discussed. -> Done
+
+Some messages that are used when DE sheet doesn't mention the message
+TAN Mandatory DummyMessage
+Quarterly breakup Winnings, Lottery DummyMessage
+Schema Mandatory DE Not
+
+
+Basically -> All the fields to be filled in a row -> to be set only if their mandatory is conditional. If they are mandatory, only true is enough
+
+other description when nature is other is filled (a, b, c) pending to discuss with Rishabh (i, i can be used) -> parentArrayObject
+i-message -> Where to put? -> currently put in Note column -> Note
+The issue in 10(10AA), 300000 -> To apply on amount or nature -> can be bypassed if applied on only one condition -> affectedIDs is used here
+
+If a field is mandatory in schema but non mandatory in the DE sheet
+	-> Keep it return true (By default 0 will be filled there in those value fields)
+
+
+adpak1.701005120
+adpak1.m.701005120
+
+Sub setDiffTblinfo_IT()
+    Dim rangecells As Range
+    Dim mIntCells As Long
+    Dim mIntCtr As Long
+    Dim ccount As Long
+    
+    ccount = 0
+    mIntCells = Sheet2.Range("TaxP.BSRCode").count
+    Set rangecells = Sheet2.Range("TaxP.BSRCode").Cells
+    For mIntCtr = 1 To mIntCells
+        If Not rangecells.item(mIntCtr).Value = "" Then
+            ccount = ccount + 1
+        End If
+    Next
+    end_TaxP = ccount
+'Change-28.07.2023.101 -> Discussion with Arun Sir
+'    DefinedgridNameRange = "TaxP.BSRCode||TaxP.DateDep||TaxP.SrlNoOfChaln||TaxP.Amt"
+    DefinedgridNameRange = "TaxP.BSRCode||TaxP.DateDep||TaxP.SrlNoOfChaln||TaxP.Amt||IT.FormulaOFS||FormulaOfQ||FormulaOfSAT||FormulaOfSAT1"
+End Sub
+
+
+ITR6 20-21 error key sheet - Shared
+22-23 Error key sheets for all ITRs
+
+
+22-23 Status?
+22-23 i18 Keys?
+20-21 ITR6 evening status
+
+20-21 ITR7 DEMapper sheet to share -> Poing of backlash -> Prepared but not shared
+23-24 remaining 3 sheets to share the development rules -> Point of backlash - Done
+To share the ruleauthor points with Arun Sir -> Done
+22-23 Keys?
+
+golang learn
+93270 05120
+
+To do 
+1. Take the rule author of ITR2 22-23, Mapper sheet is good, map should be according
+Error key will be unique
+wertw -> Rule 1
+xcbsf -> Rule 2
+xbdsi -> Rule 2.01
+
+A map will be created for error keys from the RuleAuthor
+a new sheet will be made which will indicate the error keys of ITR2 22-23
+These keys will be compared in the consolidated sheet columns for both updated key and old key,
+for the key which is found, rule number will be taken and mapping, error message, suggestion
+will be taken and pasted to the new sheet
+
+if key is not found, they key will be pasted in a different sheet (Unfound Keys)
+Multiple Error Keys for a single rule -> Keys having same rule number are to be clubbed
+
+
+1. Make a map from the Consolidated Error Keys Sheet
+2. Search for each error key in the Rule Author
+	i. -> If they key is found the RuleAuthor, 
+		a -> The key might be the one that is used to output the failure
+		b -> They key might be a waste key that is just there with no addError(x) to call it
+		c -> It might be one of the key for a Rule that has multiple keys
+	ii. -> If the key is not found in the RuleAuthor,
+		a -> a different error key might be used in place of it (updated, older) -> To make a list of unused keys by their rule number
+		b -> Rule might not be developed (External Rules, Missed Rules) -> To be added in the list of unused keys
+
+Another map will be created which will be from Rule number to Error Key, the keys that are found and are being used in the Rule Author
+	this map can be added in a file and shared to infy
+
+
+Pending Rules in ITR5 109, 355, 350, 467, 262
+
+ITR7 mail to be put for delays in clarifications
+
+VF 23-24 can't handle 2 error in schema,
+type of tag value is different -> If integer value is passed for an object tag -> Error comes about root failure
+extra tags are not pointed out by the VF Schema stage -> This is completely ignored now
+
+ITR7 and ITR6 to check-in on 22-23 server
+ITR3 20-21 testing execution to do
+22-21 Error keys to identify via golang script
+
+
+AY 22-23 Release Notes:
+ITR3 -> ITR3 module added in the VF API over 23-24. 23-24 VF decremented as per DE sheet for all internal rules to make 22-23 VF.
+ITR5 -> ITR5 module added in the VF API over 23-24. 23-24 VF decremented as per DE sheet for all internal rules to make 22-23 VF.
+ITR6 -> ITR6 module added in the VF API over 23-24. 23-24 VF decremented as per DE sheet for all internal rules to make 22-23 VF.
+ITR7 -> ITR7 module added in the VF API over 23-24. 23-24 VF decremented as per DE sheet for all internal rules to make 22-23 VF.
+
+
+
+Varshil Interview
+Graduation Year? -> 
+
+
+MOM
+
+VF Stage
+
+PDF Stage
+
+
+We have a JSON Schema
+1. We make a struct for the schema
+2. We make the RuleAuthor
+3. We update the RuleAuthor Manually for various changes and Rules in the DE sheet
+4. We generate the validation rules file (How to write a rule)
+
+
+What we wil do? -> Meeting with Sushant
+
+1st Task -> 
+reading the file from local system -> excel reader -> data (go map)
+fetch the data from mongoDB -> mongo DB Driver -> data (go map) (For now the data will stay as in the Rule Author)
+
+Excel document with a button for getData(Fill another excel with the Rule Author)
+
+Binary -> Will fetch the ruleAuthor which will the data from mongoDB and convert it to excel (Just for Visuals)
+This excel file will have a button of "Update", latest file data will be used to create a map ---
+A map will be generated and it will be sent
+
+UI Dashboard -> Who will work on it? React/Angular -> Some template will be given by Sushant
+Golang-VanillaJS, Wails
+
+UI functionality discussion (Nivedita to be included so that she can create proper documentation)
+Designer we have, he will create wireframe of the UI - Pushkar
+
+
+Step 1-> Store the RuleAuthor in the mongoDB
+
+Step 2->
+	-get RA GET/rule-auth
+	-update RA PUT/rule-auth
+
+	-generate output from VF GET/generate-validation-rule (Ankit)
+
+	-dockerfile conversion
+
+
+Dear Shruthi,
+
+In this point wise reply you had mentioned that clarification is provided to the both teams at the same time.
+There were two points you had mentioned to refute some of our points, 
+1. The issues that are coming for ITR6 and ITR7, testing is done only as per the same mapping given to us.
+If you see this SIT-58175 (Just an exampe of what the dev team had pointed out multiple times before), the issues was raised on date 8th August. As of 8th August, there was no clarification procided, that means the testing team should have been using the saame mapping as us.
+If that would have been the case, while analysis the testing team would have found this xml to be invalid. Anyhow this issue was opened. On 10th August the testing added that they have been provided with a new mapping. Obviously till then this xml was invalid. So why was this issue raised for, we can't understand.
+
+2. The same clarification which testing team received on 10th August was received by us on 11th August in the clarification tracker. Attaching the row of clarification tracker.
+
+For a clarification tracker, obviously the rule is not implemented they why this issue was reopened on 10th August? How can there be a developemental defect of something we have not even received a requirement for. 
+
+This is a question I want to ask, does the testing team use some separate DE sheet to verify the xmls?. Also at the same time you had mentioned that clarification tracker received by both team at the same time. So why is this time gap? And why raise an issue for something which is not implemented? 
+
+Going forward none of these will be marked as fixed but as invalids.
+
+@Rishabh, request you to discuss the same with Rajendra/Adrian as this is increasing effort continuously and showing an incorrect report of dev team even after so many discussions we have already had.
+Development team will be inclined to mark issues invalid for any issue raised based on the mapping of that particular day. I hope that is obvious.
+
+Thanks,
+Ankit
+
+Steps to reconcile
+1. First match every 20th rule in the "All Matching Keys" with the Rule Author. Check if the Rule and Erorr key are matching or not
+2. Check if any extarnal rule is present in the list
+3. Check the "RA Completely Wasted Keys". Check if the keys mentioned in this sheet are used or not in the Rule Author and remove the associated rules from the "All Matching Keys" sheet if not used.
+4. Check the "RA Wasted Keys". See if any is any inconsistency for these keys in the RuleAuthor and the "All Matching Keys" sheet.
+5. Check the "1. duplicateKeysConsolidatedSheet" file in the folders. Check if those keys are present in the "All Matching Keys" with the Rule numbers that are used in the Rule Author
+
+
+ITR6 -> 163 Total issues, All Status, All Assignee.
+81 Issues are now pending in open/Reopen.
+
+I am hoping rest of the (11 issues are pending for clarification).
+Am I correct?
+
+Dear All,
+
+Raising an alarm in reference to SIT-58356 wherein as per scenario 2 the SIT should have been marked as enhancement.
+
+Thanks,
+Ankit
+Please refer SIT-58356, where in invalid in being reopened even after providing updated mapping. This is in conflict
+
+
+History of 164
+1. 5 different issues raised for the same issue
+
+
+ITR5 Excle utility to be shared by EOD
+Schema validation to apply in AY 21-22 (EOD)
+ITR6 20-21 to check-in 
+
+PFA (A) and PFA(B) to be implemented as discussed with Rishabh
+UI Walkthrough
+Nandani and Archit -> Angular review
+Ishita and Chirag followup
+ITR2 21-22 error keys base sheet
+
+
+My part on Angular in Online Utility
+
+
+Pending Works
+ITR7 Error Key for missing keys in 22-23
+ITR3 23-24 ESR Rules to be modified
+ITR6 23-24 New Rules required on priority basis (Excel and VF)
+ITR5 23-24 New Rules required on priority basis (Excel and VF) ( Excel already Shared)
+ITR7 23-24 Excel Utility page refreshment issue by Rubi?
+ITR6 ITR 6 AY 2022-23 Rule no 61,138,725,744 i18 is not mention in list (Shared by Nivedita already)
+
+
+
+ITR2 21-22 Error consolidated sheet to be shared?
+Prefill on Satyaprakash -> He will start working on it from today -> Will need to take a follow up
+ITR3 21-22 base to be prepared and shared -> Ishita will start working on it from 06-09-2023.
+PFA/PFB -> Different repo created by Aravind for them (ETA -> 13th October)
+ITR5 21-22 Base to be prepared and shared with Ishita so that it can be shared
+21-22 Consolidated Sheet strategy to change
+
+
+
+ITR7 i18 Key sheet verification
+AY 23-24 Rule 10 mapped with Rule 10 of AY 22-23 -> Verified as per DE sheet of 23-24
+AY 23-24 Rule 43 mapped with Rule 47 of AY 22-23 -> Verified as per DE sheet of 23-24
+AY 23-24 Rule 83 mapped with Rule 87 of AY 22-23 -> Verified as per DE sheet of 23-24
+AY 23-24 Rule 143 mapped with Rule 171 of AY 22-23 -> Verified as per DE sheet of 23-24
+AY 23-24 Rule 183 mapped with Rule 222 of AY 22-23 -> Verified as per DE sheet of 23-24
+AY 23-24 Rule 243 mapped with Rule 295 of AY 22-23 -> Verified as per DE sheet of 23-24
+AY 23-24 Rule 283 mapped with Rule 363 of AY 22-23 -> Verified as per DE sheet of 23-24
+AY 23-24 Rule 343 mapped with Rule 429 of AY 22-23 -> Verified as per DE sheet of 23-24
+AY 23-24 Rule 383 mapped with Rule 471 of AY 22-23 -> Verified as per DE sheet of 23-24
+AY 23-24 Rule 443 mapped with Rule 538 of AY 22-23 -> Verified as per DE sheet of 23-24
+AY 23-24 Rule 483 mapped with Rule 581 of AY 22-23 -> Verified as per DE sheet of 23-24
+AY 23-24 Rule 524 mapped with Rule 626 of AY 22-23 -> Verified as per DE sheet of 23-24
+
+----------
+Schedule TR is pending since the requirement doesn't has any such implementation yet - Done
+
+ITR6 21-22 Can be now started -> Base under preparation -> Sent to Ishita 
+
+Ishita -> To update the 21-22 Updated returns Rule authors from ITR1 to ITR5 after the closure of 22-23 for the ITR
+
+Need to take a look on the ITR3 21-22. They are having 4300+ failures -> Schema failures
+ITR5 21-22 to be submitted on 22-Sep - Ishita
+Prefill and 0.5 are onhold
+
+AY 20-21 meeting - Done -> To test the Rule 3 for ITR2 (Use of isNull()) - Done
+mail of itr1 22-23 zero to fifty percent - Done by Nivedita
+
+DFA/PFA Rules -> Submit ITR3 23-24 Today -> Assigned to Ishita -> Need to go through the ETAs provided -> Done
+Schedule Salary update the prefill column -> Done
+Arun Sir Needs a walkthrough for prefill and schedule Salary -> The gaps in the prefill Requirements - To be discussed with Rishabh or read the requirements
+Updated Returns ETA to be shared -> Shared by Nivedita
+
+
+Utility Validation to be written
+Ruby's Mail
+VF as a service 
+	-> To modify for all ITRs
+	-> To modify the getClientCode() for the updated JSON format - Format is not clear yet
+
+
+ITR1 Updated Returns
+Rule 5, 11, 12, 14, 30, 31, 39
+
+
+
+Dear Ayushi,
+
+Based on the following comment from you,
+"Please disable this rule for AY 2020.
+Please note this in all cases where AY is specified in Category column"
+
+Please confirm the following rules that are to be disabled for ITR2 AY 20-21.
+ITR2 Updated Returns
+Rule 4, 11, 14, 30, 31, 39
+
+Since these rules specify "A/Schema AY 2021" or "A_AY 2021" in the category column.
+
+Thanks,
+Ankit
+
+ ITR1_PDM_Group6_139_8A.PartB_ATI_NetPayable_5g7ic
+ITR2 Updated Returns
+Rule 4, 11, 14, 30, 31, 39, 
+
+
+Dear Madhu,
+
+Based on the following comment from Aayushi,
+"Please disable this rule for AY 2020.
+Please note this in all cases where AY is specified in Category column"
+
+Please confirm the following rules that are to be disabled for ITR3 AY 20-21.
+ITR3 Updated Returns
+Rule 4, 11, 12, 30, 31, 39
+
+Since these rules specify "A/Schema AY 2021" or "A_AY 2021" in the category column.
+
+The DE sheet is "Rules and DE_ITR 3_AY 2020-21_V 0.9.4" and worksheet is "Upload level rules_139_8A"
+
+Thanks,
+Ankit
+
+
+Dear Aparna,
+
+Based on the following comment from Aayushi,
+"Please disable this rule for AY 2020.
+Please note this in all cases where AY is specified in Category column"
+
+Please confirm the following rules that are to be disabled for ITR4 AY 20-21.
+ITR4 Updated Returns
+Rule 5, 11, 12, 14, 30, 31, 39
+
+Since these rules specify "A/Schema AY 2021" or "A-AY 2021" in the category column.
+
+The DE sheet is "Rules and DE_ITR 4_V16.8_AY 2020-21" and worksheet is "Upload Validations_139_8A"
+
+Thanks,
+Ankit
+
+
+
+Mail to Bharathi is to be written
+
+
+Dear Jay,
+
+Based on the following comment from Aayushi,
+"Please disable this rule for AY 2020.
+Please note this in all cases where AY is specified in Category column"
+
+Please confirm the following rules that are to be disabled for ITR5 AY 20-21.
+ITR5 Updated Returns
+Rule 10, 11, 29, 30, 38
+
+Since these rules specify "A/Schema AY 2021" or "A-AY 2021" in the category column.
+
+The DE sheet is "Rules and DE_ITR 5_AY 2020-21_V1.07_ updated return" and worksheet is "Upload level rules_139_8A"
+
+Thanks,
+Ankit
+
+Dear Megha,
+
+Based on the following comment from Aayushi,
+"Please disable this rule for AY 2020.
+Please note this in all cases where AY is specified in Category column"
+
+Please confirm the following rules that are to be disabled for ITR5 AY 20-21.
+ITR5 Updated Returns
+Rule 10, 11, 29, 30, 38
+
+Since these rules specify "A/Schema AY 2021" or "A-AY 2021" in the category column.
+
+The DE sheet is "Rules and DE_ITR 5_AY 2020-21_V1.07_ updated return" and worksheet is "Upload level rules_139_8A"
+
+Thanks,
+Ankit
+
+Dear Rubi,
+
+Based on the following comment from Aayushi,
+"Please disable this rule for AY 2020.
+Please note this in all cases where AY is specified in Category column"
+
+Please confirm the following rules that are to be disabled for ITR6 AY 20-21.
+ITR6 Updated Returns
+Rule 4, 11, 12, 29, 30, 38, 
+
+Since these rules specify "A/Schema AY 2021" or "A-AY 2021" in the category column.
+
+The DE sheet is "Rules and DE_ITR 6_V 0.15.4_AY2020-21" and worksheet is "Upload level rules_139_8A"
+
+Thanks,
+Ankit
+
+
+What to be done by Arun Sir
+Schedule CG -> Table E validations
+Schedule BTTI -> Purple Fields (Surcharge, Interest and tax Calculations)
+Schedule CYLA/BFLA -> (All the fields)
+Schedule CFL -> (Purple Fields)
+Schedule 80G/80GGA -> Eligible donation
+
+
+
+Works for today 03.10.2023
+10. ITR7 21-22 Base RA to prepare -> Done
+1. DEF/PFA Rules to complete -> ITR3 Checkin Done -> Awaiting for Test Cases
+2. AY 20-21 error category to make -> Done, Nivedita is informed
+3. Remaining Validation Points -> (112A, 115AD, VDA on Priority, then merging the Arun Sir's Files, then) -> Done
+4. Angular Learn Continuation -> Done for today
+5. UI help
+6. Discussion with Aleena -> Done (New Work Added) -> Conversion of the Database json to the vf-generator required format
+7. Discussion with the team for status tracker -> Done (ETAs are expected from team -> Mostly this weekend -> For Infosys, next weekend)
+8. Some more issues can come
+9. 0.5 VF Implementation Status
+11. ITR 0.5/0.6/0.7 Excel Implementation
+12. The 4 Devs to be made as testers for the utility -> Meeting Done -> To see how is their testing going
+13. ITR6 AutoSuggestion Code to Run on the latest file that is to be received from Ishita -> Should I run it??
+14. Status Tracker to Verify that came from Ishita
+15. Discussion with Amol for the excel reader function -> Done
+
+
+DEF/PFA rules are to be filtered
+ITR1 -> Not to be developed
+ITR2 -> Not to be developed
+ITR3 -> "Defective" -> Approved from BA and Verified at our end with the DE sheet
+ITR4 -> Not to be developed
+ITR5 -> "Defective" -> Approved from BA ("Upload B & Defective" in the DE sheet)
+ITR6 -> "Defective" -> Approved from BA ()
+ITR7 -> "PFA(B)
+
+
+
+PartB_TI_Salaries_o4KyW
+PartB_TI_TotalTI_Paexg
+
+
+Tasks for me
+1. DEF/PFA Rules to complete -> ITR3 Checkin Done -> Awaiting for Test Cases -> Test Cases Status?
+2. AY 20-21 error category to make -> To verify the changes by the team and make a check-in (Today)
+3. 0.5 VF Implementation Status -> Done When to checkin -> Need to checkin
+4. Status Tracker to Verify that came from the team -> Saturday final date
+5. ITR 0.5/0.6/0.7 Excel Implementation -> To get the ETA from the team
+6. Prefill Issues for ITR 5, 6, 7 -> Being done by Satyaprakash
+7. The 4 Devs and 3 testers to be explained the testing of the Online/Offline Utility -> They need to meet with Sanket
+8. ITR1 and ITR4 UI Schema creation -> 4 Devs -> Meeting scheduled -> Done
+9. UI Help 
+
+
+Unit test case ->
+Positive json -> to create a fully filled positive json, generated from schema
+	This json will hopefully pass in all the test cases
+
+Negative json -> Will update the values of the json randomly in all the number/integer/float fields.
+	This json will hopefully trigger majority of the rules
+
+Some Rules might require special jsons prepared for them
+
+
+PPT for Utility Template 
+ITR7 excel to share for the due date changes
+Unit testing report
+Generate JSON
+Reconciliation of Utility Validations
+Excel timelines
+def pfa issue
+
+
+How many have been asked for?
+In total -> 9 were asked
+How many has been given?
+8 Approve, VPN approved
+
+When were they given?
+3 -> Mail receipt Yesterday night (12-Oct) (Piyush, Brijesh, Sanket)
+1 (Ankit) -> VPN Access was provided (VPN Credintials were sent to us on 11-Oct)
+	-> Access was not given before 12-EOD. Nivedita checked
+Before that we have in total 4
+We only had 1 element ID before 5th Oct	
+Chirag Sir 7th October -> The second ID
+	Approval -> 9th October
+Ishita(Password reset, not received), Manisha -> 10th October (Approval)
+Now on the 10th October we have 4 ID, not before that
+
+4 More Ids are now enabled (on Mail)
+
+Roshni Proforma rejected -> Not rejected -> Now awaiting Aravind's bridge for group change
+These 9 IDs were asked very earlier August -> VF/PDF/Excel
+
+Utitliy -> 4 more IDs are required -> Their background verification is going on (Not to be revealed to Infosys)
+			-> These IDs are not yet requested from Infy
+
+
+How many extra are needed?
+
+ID issue
+20-21 issue -> EOD
+21-22 checkin -> EOD
+Utility
+
+
+
+ITR7 190 -> Done
+0.5 ITR6 VF in track -> 20th October -> On track - Done
+21-22 for ITR5 and ITR6 ticket?? -> H2
+21-22 Multiple error keys sheet to be shared -> Ishita (ITR5)-??
+Reshare the ETAs for Excel 0.5 and UR -> Done
+
+
+Utility Conditional Enums to Update -> Done 
+Utility Validations testing PAG -> Done
+Utility Pop Ups -> No pop ups to be shown, the i-messages and the notes will be shown as messages below the fields
+
+Check-ins?
+DEF/PFA Issue?
+
+HTML Tag identification
+PPT for Utility Template
+
+Base ITRs (ITR3 and ITR5 for Utilty) to send - Done
+Status Tracker Meeting - Done
+ITR1 and ITR4 Schema meeting - Done
+Excel utility to share for due date changes to Arun Sir (Waiting for Beri Madhu's reply) -> Sent
+A list of deviation with screenshots for the UI -> Done by Sanket
+
+
+
+getEnumKeyOfOutput
+
+ITR2 Excel issus -> Label Issues -> To be taken up along with the 0.6 implementation -> Informed Chirag
+
+
+SIT-61558 -> Excel Utilities
+SIT-61560 -> Change Document
+
+Excel 0.5 Meeting??
+UI Schema Meeting?? - Not required Anymore
+ITR6 struct issue (Jaya)
+Pushkar Meeting??
+Excel Utility to be shared - Done
+ITR7 Excel issue shared by Rubi 5 days ago - Chirag -> Shared
+Prefill Testing remaining
+Sanket testing report to verify -> Unit testing cases to be developed
+DEF/PFA -> Nivedita is Informed (Need to follow the timelines) (AY 23-24 and AY 22-23)
+Need test Cases for ITR5 and ITR6 DEF/PFA - Nivedita
+HTML Tag identification
+PPT for Utility Template
+VPN Issue for Roshni -> Aravind to call again
+VPN BGV for next four IDs
+ITR1 and ITR4 to make new Utility from the New Schema
+To share the automation code with Aleena for the consolidated sheet??
+Utility to share with Arun Sir for SI formula
+Depth Issue in the Rule Authors due to copy pasting from hidden column
+
+Utility Defects
+Timeline making for the ITR3 and ITR5
+
+DEF/PFA Rules for ITR7 what is the status??
+ITR1 Utility merging and base integration testing and remaining validation writing -> Prefill on Priority
+	->Field names to be given
+	->k
+ITR3 Utility Validations status
+VF as a service -> The code for making RA and incremental code to me integrated with it.
+Excel status??
+
+Schema Issues is in latet UI Schema ->
+TaxSummaryDetails.Calculation_Taxable_Income.GTI_Summary.IncomeOthSrc
+	Should be dummy a dummy in the TaxSummaryDetails
+TaxSummaryDetails.Calculation_Taxable_Income.TotalIncome_Dummy1
+	This tag should be removed, also this is for GrossTotalIncome
+
+ITR2 HTML issues
+
+
+To check
+clauseiv array
+Pan/Tans are not restricted to 10 digits??
+Autopopulation of state based on Pincode???
+OS PTI Table enums doesn't have description
+ISIN Data might not be getting validated on save sheet when it did not come from imported JSON
+
+
+Two elements are being deleted at once if any top row element is deleted in a self array
+Also, other elements dropdown are being reset if any top row elemenet is deleted
+
+
+Pending Works in ITR2 Utility
+Max are to be set for the fields -> Done (Some Max are not responding)
+Enum condition for Duplicate to be written
+State Autopopulation is not written yet
+When non editable, fields are supposed to take 0 value (Better to make the field as non available)
+
+Issues to discuss with Rishabh in ITR2------------------
+PAN/Aadhaar MaX is not working in Schedule HP Co-owners table
+Allowing E and + inside HP and CG (issue raised for CG)
+Decimal digit acceptance limit
+
+AutoCapitalization Issue in schedule EI dropdown -> Done
+Schedule Salary description box is not coming on selection of Others -> Issue resolved
+
+Director details valus are not visible in the NE -> Issue resolved
+
+What are all resolved in 0.2.1 Version??
+
+
+ITR3 schedules checking that are new
+ITR3 log file errors resolution
+ITR3 prefill addition
+
+
+Schedules Remaining to be done
+PAG2
+
+BS
+CG
+112A
+115AD
+Verification
+
+BTTI
+
+Prefill for PAG and PAG2
+
+ITR3 SI issue
+ITR3 BTTI formula of 234C by Dipika in the latest RA
+
+ITR5 remaining things
+PAG2
+BTTI Merge
+Prefill for PAG1 and PAG2
+
+Base RA Preparation for any ITR for HTML Utility
+Take the schema, generate the Rule Author (Or use the latest available RA from Drive)
+Add new columns in the RA (ChangeValidation|SaveValidation|Warning Messages|Mandatory/Min/Max/Pattern/EnumError|AffectedIDs Formula|Formula Type|CSV|EnumCondition)
+Convert True/False to return true/ return false
+Set the sheets for a good view for Validation writers
+Sort the Sheets as per the excel for faster future work
+Sort the schedule Rows as per the sequence of the UI (To be done by Piyush)
+
+UI Schema that is shared by Archit for ITR4 to be verified
+
+Enhancements
+->Dropdown Sequencing
+
+
+
+-> Schedules are not getting disabled even if isAvailable is is written for them (SIT-61995, SIT-62152, SIT-61997)
+-> ISIN Code autopopulation (SIT-62087, SIT-61803, )
+-> 19 Characters and 4 decimal values (SIT-62144, SIT-62142, SIT-62138, SIT-61932, SIT-61877, SIT-61941, SIT-61822, SIT-61936, 
+-> Label "Deductions under section 48" is missing
+
+
+Table is getting saved even after cancelling the page
+
+
+ITR6 -> 170A dropdown is given, to make it or not?
+ITR7 -> DEF/PFA ETA missed for the issues raised.
+
+
+SIT-62054
+SIT-61988
+SIT-62009
+SIT-62524
+
+
+Please discuss with Requirement/Functional team if tester has an issue in the comprehension of the wide requirements overall. Not an issue.
+
+
+92CD to be removed from the manual template
+
+To do for VF as a service
+to enable all the ITRs for the getclientcode
+to tweak the generation code to use the Aleena DB format
+
+
+Issues,
+0. OptedOutTaxRegime is Autoimporting as Yes even if the JSON doesn't have any value for it.
+1. Receipt No, Date of original Return etc 4 fields might be at wrong place
+2. Schedule TR Blocker of Section dropdown
+3. Nature Of Business is not opening and after clicking on it, in any other schedule page, other buttons (back to schedules, confirm are not working)
+4. Other Information -> Same issue as NOB
+5. BP table is not visible, As per Piyush, it should be visible (check if merged)
+
+Formula Type blank/0 -> Every time it will be calculated
+Formula Type 1 -> Same page only (ISIN Code)
+Formula Type 2 -> Confirm/Save
+Formula Type 3 -> Every time but also during json modification on validation
+
+
+([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))
+([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))
+
+PAG Issues for Rishabh/Piyush
+Verfication Page and Validation Errors Table page are not proper - Done
+TR1 -> Section under which relief -> Is non editable (should be editable) - Done
+CFL Blocker -> Done
+Piyush->CFL Label Issues - Done
+
+Piyush->Address Contact Details alignment issue -> Minor issue in phone number
+
+Blocker -> After Confirming PAG, Internal Validation page is getting blank
+Blocker->(Same as above)Internal Validation Page is getting blank after resolving error of PAG2 (That error should not have come in the first place)
+Blocker->Partner firm table one row validation is not working (Message is not showing only)
+
+Residential Status is coming in as a radio instead of Dropdowns unlike other ITRs (is it ok?)
+PAG2 table of the schema issue is remaining
+The field Renumeration paid is vanishing(console error) even if the condition is true for availability (can't enter the value) (Not a blocker)
+	Same table details are not getting saved
+Prefill -> showing Individual and HUF on after import window
+Filed u/s error message for blank is coming at wrong place
+Co-Browsing pop appears on confirming Schedule-OI (not always)
+BP 35AD dropdown not appearing in the table
+Radio is not disabling
+
+Large changes done by me in ITR5(other than the changes that are coloured blue)
+Replaced "<delete>" with "" (46 replacements)
+Label changes from Sanket will need to be merged (except HP and OS since they are done by Ishita already) -> P&L is remaining (Will be merged in Piyush)
+Replaced "@PartA_GEN1.FilingStatus.ReturnFileSec.OptingNewTaxRegime == 3" with "@PartA_GEN1.FilingStatus.ReturnFileSec.NewTaxRegime == "Y""(50 replacements)
+		  @PartA_GEN1.FilingStatus.OptingNewTaxRegime == 3
+
+AdjustAccTax115BADAmt
+AdjustAccTax115BACAmt
+
+Following fields need to be merged from VF RA to PDF RA
+
+Validation - Q
+Pattern - R
+Enum - S
+Error Message - T
+Min Value - V
+Max Value - W
+Error Code - AD
+Error Category - AE
+Error Category Description - AF
+Error Category Type - AG
+Suggestion - AH
+Rule Number - AI
+
+
+ITR5 Sanity - Ongoing
+ITR3 Excel remaining defects - Date is 9th Dec (HTML Util takes priority)
+ITR7 Rule Author is needed by Arun Sir - Done
+
+SIT-63481 -> This ticket of ITR1 is a label issue and is marked as a blocker to ADP.
+
+PAG - No issue found
+Verification Prefill - Done
+
+HP issue of If let out -> Rishabh needs to check
+OS issue of fields -> Rishabh part remaining
+Self, Date, Place is getting blank in verification
+CurrAsYr (AMTC)
+AMTC import Issue
+
+
+DEF PFA new requirement for ITR7 
+
+ITR7 Object to be modified
+
+BP Spec Income formlae
+ScheduleIE i, ii, iii, iv are not opening
+
+
+ITR3 blocker to check
+
+Static table in scheduleI, scheduleIA, - To disable duplicate dropdown
+ScheduleI, ScheduleJ is having issue of total coming NaN due to amount not entered in a non mandatory field (Null check to be applied)
+Alignment issue in PAG2
+BP47 dropdown
+BP formula
+
+BP is not coming fully console error and some non editable fields are showing as editable even if RA is correct
+Internal Validation page is not working properly
+CG Table E is not showing
+
+CYLA to be merged when received from Dipika
+SI some enums of CG are dependend upon BFLA, awaiting Dipika response
+
+git checkin for ITR3 and ITR5
+
+ITR4 latest RuleAuthor to Dipika
+
+ITR6 VF to checkin
+ITR7 HTML to merge and check
+Prod issue 22-23 and checkin
+
+ITR4 total deductions
+prefill
+sanity
+enums
+max
+tax calculation by dipika
+csv
+
+ITR6 to merge and prepare for sanity
+
+ITR3 HTML Utility json schema issue is resolved but it may seem that regression issue has come due to it
+SIT-63747
+
+
+P0 -> DEF/PFA checkin for ITR3
+P1 -> ITR3 Excel Utility and 4 JIRA tickets - (2 tickets remaining, 1 for Arun Sir and One for Rishabh)
+To get what delays are from our side
+ITR6 sanity for HTML
+
+ProjectID-1272 : DEF/PFA ITR3 Module added.................................................................
+
+
+MATC needs to be remade (Made by Nandini) -> Done
+SI percentage updated for 4 enums
+
+1. VIA to be revisited
+2. CFL Pending
+3. Dipika's formulae yet to be received and merged
+4. Need to look formulae of BP, MATC (Done), ESR, CG Table E (Dipika)
+5. Then will move on to look for blockers -> Require me only
+DPM, DOA, DEP, DCG -> Working as per requirements
+6. Prefill for PAG1 and then other
+
+ITR6 Issues for Rishabh
+NaN and blank formula seen in CG - Not seen anymore
+Schedule  ICDS last value
+and TPSA 5 values are not exporting correct
+Radio Autoselection may cause problems in PAG
+
+Verification Capacity dropdown is not available
+PI name is not visible
+Contact details poor alignment
+PartA_GEN1.FilingStatus.Section115CurrAYDate -> Calendar is required
+PartA_GEN1.FilingStatus.DateOfFilingForm2 -> Calendar is required
+PartABS -> 1. ShareHolderFund -> Reserve and Surplus -> vii.OtherReserve -> Details are not saving
+Trading Account -> 4. Revenue from operations -> iii. Other operating revenues -> Details are not saving
+Trading Accouont IndAS -> 9. Direct expenses -> iii. Other direct expenses -> Details are not saving
+
+
+Things to check when a new Author is out for HTML
+Sanity 1 ->
+State, Country, Nature of Business Enums should have their code with -
+Some enums needs to be changed from (Y:Y,N:N) to (Y:Yes, N:No)
+Some enums might need be added from pattern (like in BP and PTI)
+Some enums might need addition of description (like in OS)
+PAN, TAN, Aadhaar max restriction
+All the formulae fields must be non editable (except requirements ofcourse)
+Check direct blockers in Max/Min filled JSON
+Dipika formulae to merge (CYLA, BFLA, CG table E, CFL)
+return "<delete>" to be replace with "" or 0
+Some formulae might need Max(0,)
+Some formulae might not be working
+Some formulae might need Round(,0)
+CSV
+OS quarterly breakup validation from object to leaf
+JSON tags might require update due to titlex conversion
+Import and Generate a JSON, compare them and remove the differences that can be and should be
+
+Sanity 2 ->
+Enter values, Add Rows and Generate a JSON 
+Ensure PAG is working fine
+Verification Page must work fine
+Label check for presence of JSON tags
+Conditional Enums (Dropdown Duplicate and Conditional)
+Prefill verification
+
+
+DPM and DOA to set 0
+BP one conflicting field to set 0
+Then identify any issue in CG Table E
+
+Formulae Issues are being done currently
+VI-A 80GGA
+Piyush merge for Contact alignment issue
+PAG Prefill is MP
+then import a prefill and identify blockers
+
+ITR2, ITR3 -> To check HP Income in CYLA
+ITR1 build to confirm and release (Try to avoid any change due to demo in the morning)
+ 
+
+ITR1 fixed issues status
+SIT-62369 -> No
+SIT-62984 -> No (Not working when we add new value)
+SIT-62485 -> No (Rs is still visible)
+SIT-62954 -> No
+
+
+
+
+HTML ITR1 Online/Offline Utility AY 23-24
+HTML ITR2 Online/Offline Utility AY 23-24
+HTML ITR3 Online/Offline Utility AY 23-24
+HTML ITR4 Online/Offline Utility AY 23-24
+HTML ITR5 Online/Offline Utility AY 23-24
+HTML ITR6 Online/Offline Utility AY 23-24
+HTML ITR7 Online/Offline Utility AY 23-24
+
+HTML Computation ITR2 Offline
+
+VF defects 22-23 All ITRs
+
+
+EITR-855
+EITR-856
+EITR-857
+EITR-858
+EITR-859
+
+VF defects 21-22 All ITRs
+
+EITR-873
+
+VF defects 20-21 All ITRs
+
+Epic Link" = EITR-866
+
+VF defects 23-24 All ITRs
+EITR-777 (Section Details: ITR VF)
+
+Excel defects 23-24 All ITRs
+EITR-777 (Seciton Details New: ITR Excel
+
+
+To discuss with Rishabh
+ITR2
+SIT-62003 -> Invalid is reopened (Prefill of "clause (iv) of seventh proviso") -> Rubi suggested meeting in comment, what to do?
+ITR3
+SIT-64150 -> Circular Referencing (The complex validation of DOA)
+SIT-64054 -> Circular Referencing (The complex validation of DPM)
+
+To let Arun Sir know
+ITR2
+SIT-62739
+SIT-62060
+
+For Piyush
+SIT-64287
+SIT-64246
+SIT-64856
+
+ITR7 UR to checkin
+ITR1 and ITR4 error keys to check
+ITR2 issues to look
+
+ITR7 HTML Prefill to check for the blocker fight schedule
+ITR7 HTML Blocker
+ITR5 new formula received from Dipika, to be merged
+
+for Piyush
+ITR7 Schedule OA Table is not visible due to None1 (Blocker in Prefilling)
+
+Probable regex for account number
+^(?!0+$)(?!.*[-/]{2,})(?!.*[a-zA-Z][-/]*$)[a-zA-Z0-9]+[-/]?[1-9]?[0-9]*$
+
+Issues for piyush in ITR2
+headers missing
+SIT-63249
+SIT-63308
+SIT-63607
+SIT-63573
+SIT-63569
+SIT-63538
+SIT-63554
+SIT-63769
+SIT-63744
+SIT-63754
+SIT-63718 -> BFLA
+SIT-63716
+SIT-63693
+SIT-64291
+SIT-64311
+SIT-63292
+SIT-63331
+SIT-63292
+
+
+
+
+Mail to be sent -> ITR7 Inconsistency between schema, wireframe, DE sheet for schedule OA
+
+DE sheet labels are to be taken as per discussions.
+
+Utterly Dumb issue in ITR2 -> SIT-63421 (Invalid Aadhaar No.) -> Need to put a mail for such issues. Just trying to make issues. Not an actual issue.
+SIT-63355 -> Double quotes.
+SIT-63373 -> Doulbe quotes.
+
+
+SIT-63554 -> The error message is coming from en.json
+
+Some sequencing issues are raised.
+
+
+sbi.14892@sbi.co.in
+
+
+Dear Ma'am,
+
+I have completed the repayment of the loan in the loan account number 00000035155157933. The recovery of the remaining balance (34 Rs as of now) to be done from the savings account 00000035137775394.
+
+Thanks,
+Ankit Mangal
+Alumni IITJ
+
+
+Hi,
+
+As discussed in the call for invalid issues, there were around 80 issues marked as invalid or duplicate out of 250 issues. For an issue to be marked as invalid we need approval from senior developer and it will take a longer time to provide the build.
+
+Just a few example of invalid issues:
+
+Many of the issues raised were found to be duplicates.
+Many issues that are raised for error messages and label issues as well.
+Further many issues have inconsistent requirements as well as shown during the call.
+
+Because of these issues deliverables of the ETAs already given will be affected, because ETAs given are based on assumptions that issue raised are valid and will be resolved quickly.
+
+So request you to have check the issues before raising them as these are not at all issues for us.
+
+--

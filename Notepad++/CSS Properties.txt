@@ -1,0 +1,189 @@
+
+div {
+	background-color:Tomato;
+	background-image:url("");
+	background-repeat:repeat-x;
+	background-position: right top;
+	background-attachment:fixed;
+	background: p1 p2 p3 p4 p5;
+
+	border-style:dotted;
+	border-width:5px;
+	border-color:red;
+	border-top-style:dotted;
+	border:2px solid Violet;
+	border-radius:5px;
+
+/* Margins are used to create space around elements, outside of any defined borders. */
+	margin:70px;
+	margin-top:80px;
+	margin: 10px 20px 30px 40px;
+	width:300px;
+	margin:auto;
+	margin:inhert;
+
+/* Paddin is used to create space around element's content, inside of any defined borders. */
+	padding:20px;
+	padding-top:50px;
+	padding: 10px 20px 30px 40px;
+	box-sizing:border-box;
+
+/*Text */
+	
+	color:DodgerBlue;
+
+	text-align:center;
+	vertical-align:baseline;
+
+	text-decoration-line: underline;
+	text-decoration-style: double;
+	text-decoration-color:blue;
+	text-decoration-thickness:auto;
+	text-decoration:underline red double 5px;
+
+	text-transform:capitalize;
+	text-indent: 50px;
+	letter-spacing:2px;
+	line-height:2px;
+	word-spacing:3px;
+	white-space:nowrap;
+
+	text-shadow: 2px 2px  red;
+	opacity:0;
+}
+
+*/Flexbox*/
+<div class="flexbox1">
+</div>
+.flexbox1{
+	border:2px solid grey;
+	height:45px;
+	display:flex;
+
+	flex-direction:column-reverse;
+	justify-content:flex-end;
+	align-items:flex-start;
+	flex-wrap:wrap;
+	flex-flow:column wrap;
+
+}	
+
+/*Font*/
+	font-family:Arial, Helvetica, sans-serif;
+	font-style:italic;
+	font-weight:bold;
+	font-variant:small-caps;
+	font-size:13px;
+	
+}
+
+
+Most common properties (https://edtechbooks.org/elearning_hacker/common_css_properties)
+	
+background
+	Set a background color using a common color name: background: pink;
+	Set a background color using rgba notation: background: rgba(200,200,200,1);
+	Set a background color using hexadecimal notation: background: #e5e5e5;
+
+color
+	Set the font color of text using a common color name: color: blue;
+	Set the font color of text using rgba notation: color: rgba(40, 40, 220, 1);
+	Set the font color of text using hexadecimal notation: color: #2222ee;
+
+font-family
+	Set the font of the element: font-family: Courier, 'Times New Roman';
+
+height
+	Set the size of the element: height: 80px;
+
+width
+	Set the size of the element: width: 50%;
+
+float
+	Set the alignment of an element on the page: float: right;
+
+padding -> Padding represents the amount of space between the edge of an element and the text or other content inside it.
+	Set the padding of all four edges: padding: 40px;
+	Set the padding of the y-edges and x-edges separately: padding: 20px 40px;
+	Set the padding of each edge separately, moving clockwise: padding: 10px 20px 30px 40px;
+	
+margin -> Margin represents the amount of space between an element and its surrounding or parent element.
+	Set the margin of all four edges: margin: 40px;
+	Set the margin of the y-edges and x-edges separately: margin: 20px 40px;
+	Set the margin of each edge separately, moving clockwise: margin: 10px 20px 30px 40px;
+
+text-align
+	Set the horizontal alignment of an element: text-align: center;
+
+border
+	Set the border size, color, and type of the element: border: 1px black solid;
+
+border-radius
+	Make all the corners of the element rounded: border-radius: 10px;
+
+diplay
+align-items
+
+max-width
+min-width
+
+margin-right
+margin-left
+margin-top
+margin-bottom
+
+padding-left
+
+flex
+flex-wrap
+flex-direction
+justify-content
+gap
+
+font-size
+font-weight
+font-stretch
+font-style
+
+overflow
+overflow-x
+
+vertical-align
+
+.itr-form-ap .d-flex.flex-column {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+the element which have a class itr-form-ap, inside that element the element which have the classes d-flex and flex-column
+
+Useful in the utility
+R_Schedule
+MatCard
+Display
+DisplayMatCard
+MatExpansion
+R_MatExpansion
+BlockList
+R_MatExpansionTable
+R_MatExpansionBlockList
+E_BlockList
+R_List
+R_Table
+E_TextArea
+E_Output
+Output
+TextBox
+Dropdown
+RadioButton
+TextArea
+TableDropDown
+TableText
+TableRadio
+TableGroup
+TableNone
+TableDate
+None
+
+
+R_Schedule v/s R_MatCard ???
+

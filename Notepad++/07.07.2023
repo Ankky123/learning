@@ -1,0 +1,184 @@
+'Change-07.07.2023.101 -> Updated TCS
+TR_DTAA_Countries
+'Change-07.07.2023.101 -> Updated TR
+
+To Do All ITRs
+TR validation update
+ISINListTable
+CSV Updated for TCS
+
+ITR3 20-21 
+Pending Rules
+279, 344, 442, 578, 
+
+1004, 1013, 1023
+
+ITR6 Schema Changes -> Done
+ITR6 Excel utility to submit with 20 issue fixes -----???
+ITR6 CSV and TR update - Done
+ITR2 Excel Prod Issue -> SatyaPrakash - Done
+
+ITR1 VF prod issue -> Chirag ->
+ITR5 Jay discussion -> Chirag - Done
+ITR7 Rules to disable -> Chirag -> Done
+ITR 1-6 list of rules implemented -> Chirag------???
+
+ITR6 20-21 Sanitization Confirmation -> Done
+ITR3 20-21 50 Issues 
+ITR5 20-21 -> Mapper Sheet to share with Shruthi -> Done
+
+
+
+866 Fixed
+872 Fixed
+875 Invalid
+880 Invalid
+829 Invalid
+906 Invalid
+925 Fixed
+852 -> Require Clarification -> DI -> Which fields to consider? -> Require Detailed Mapping
+851 -> Require Clarification -> DI -> Which fields to consider? -> Require Detailed Mapping
+850 -> Require Clarification -> What constitutes as details filled in Schedule 10AA
+		Flag in DI should have "No" as a value or no value?
+849 -> Require Clarification -> What constitutes as details filled in Schedule 10AA -> row wise mapping is not possible due to abscence of mapping tags
+848 -> Such mapping is not possible due to abscence of mappable tags
+857 -> Invalid
+813 -> Invalid
+804 -> Fixed
+805 -> Fixed
+
+
+AY 23-24 VF Issues ->
+IPIP-38816
+IPIP-38821
+IPIP-38946
+IPIP-38839
+SIT-56162
+
+
+To discuss with Rishabh,
+ITR1 23-24 Regression issues of prior AY
+ITR7 0.5 DE sheet?
+
+ITR3 20-21 14.07.2023
+
+833 -> fixed
+830 -> fixed
+844 -> Invalid (from Reopen)
+881 -> Invalid
+735 -> Invalid (Duplicate so disabled)
+737 -> Fixed
+732 -> Invalid
+
+
+Project-1188 : ITR3 JIRA Issues resolution ->
+    SIT-56021
+
+Discuss Rule 850 with Aishwarya
+
+
+3 without marking invalid were closed
+8 abandon  
+43 rejected/closed after bein invalid
+10 currently in invalid
+2 invalid are reopened
+199 Total issues
+
+199 -> 43 approved to be invalid, 10 currently in invalid,  2 positive related test cases (where in 15 test cases were tested but all were invalid) out of 199 
+This 199 also contains issues which were from clarification tracker (where in clarification tracker had roughly 58 rule updates (which excludes 5 rules related to schedule DI as clarifications)
+
+
+//------------------------------------Rule 279---------------------------------------------
+	// clarification required
+	// one tag CG2a is updated from SlumpSaleInStcg.FMV11UAEii to SlumpSaleInStcg.FullConsideration as per JIRA comment -> SIT-56363
+	// CGB5a and CGB8a removed as per updated clarificaions and added max with postiive for sum
+	STCGarray := SchemaData.ITR.ITR3.ScheduleCGFor23.ShortTermCapGainFor23
+	LTCGarray := SchemaData.ITR.ITR3.ScheduleCGFor23.LongTermCapGain23
+	var CGA1ai = STCGarray.SaleofLandBuild.SaleofLandBuildDtls
+	var CGA2a = STCGarray.SlumpSaleInStcg.FullConsideration
+	var CGA3ia = STCGarray.EquityMFonSTT
+	var CGA3iia = STCGarray.NRISecur115AD.FullConsideration
+	var CGA5a = STCGarray.NRISecur115AD.FullValueConsdRecvUnqshr
+	var CGA6a = STCGarray.SaleOnOtherAssets.FullValueConsdRecvUnqshr
+	var CGA8 = STCGarray.PassThrIncNatureSTCG
+
+	var CGB1a = LTCGarray.SaleofLandBuild.SaleofLandBuildDtls // array
+	var CGB2a = LTCGarray.SlumpSaleInLtcg.FullConsideration
+	var CGB3a = LTCGarray.SaleofBondsDebntr.FullConsideration
+	var CGB4a = LTCGarray.Proviso112Applicable
+	// var CGB5a = LTCGarray.SaleOfEquityShareUs112A.BalanceCG
+	var CGB7aiii = LTCGarray.NRIOnSec112and115.NRIOnSec112and115Dtls //array
+	// var CGB8a = LTCGarray.NRISaleOfEquityShareUs112A.BalanceCG
+	var CGB9a = LTCGarray.NRISaleofForeignAsset.SaleonSpecAsset
+	var CGB12 = LTCGarray.PassThrIncNatureLTCG
+
+	var Sch112Acol6 = SchemaData.ITR.ITR3.Schedule112A.SaleValue112A
+	var Sch115ADcol6 = SchemaData.ITR.ITR3.Schedule115AD.SaleValue115AD
+	var DPM5R15 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate15.DepreciationDetail.RealizationTotalPeriod
+	var DPM5R30 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate30.DepreciationDetail.RealizationTotalPeriod
+	var DPM5R40 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate40.DepreciationDetail.RealizationTotalPeriod
+	var DPM5R45 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate45.DepreciationDetail.RealizationTotalPeriod
+	var DPM8R15 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate15.DepreciationDetail.RealizationPeriodLessThan180days
+	var DPM8R30 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate30.DepreciationDetail.RealizationPeriodLessThan180days
+	var DPM8R40 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate40.DepreciationDetail.RealizationPeriodLessThan180days
+	var DPM8R45 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate45.DepreciationDetail.RealizationPeriodLessThan180days
+	var DOA5R5 = SchemaData.ITR.ITR3.ScheduleDOA.Building.Rate5.DepreciationDetail.RealizationTotalPeriod
+	var DOA5R10 = SchemaData.ITR.ITR3.ScheduleDOA.Building.Rate10.DepreciationDetail.RealizationTotalPeriod
+	var DOA5R40 = SchemaData.ITR.ITR3.ScheduleDOA.Building.Rate40.DepreciationDetail.RealizationTotalPeriod
+	var DOA8R5 = SchemaData.ITR.ITR3.ScheduleDOA.Building.Rate5.DepreciationDetail.RealizationPeriodLessThan180days
+	var DOA8R10 = SchemaData.ITR.ITR3.ScheduleDOA.Building.Rate10.DepreciationDetail.RealizationPeriodLessThan180days
+	var DOA8R40 = SchemaData.ITR.ITR3.ScheduleDOA.Building.Rate40.DepreciationDetail.RealizationPeriodLessThan180days
+	var DCG6 = SchemaData.ITR.ITR3.ScheduleDCG.SummaryFromDeprSchCG.TotalDepreciation
+	var sumCG279 float64 = 0
+
+	for i := range CGA1ai {
+		sumCG279 += common_functions.Max(0, float64(CGA1ai[i].FullConsideration))
+	}
+
+	sumCG279 += float64(common_functions.MaxI(0, CGA2a))
+
+	for j := range CGA3ia {
+		sumCG279 += common_functions.Max(0, float64(CGA3ia[j].EquityMFonSTTDtls.FullConsideration))
+	}
+
+	sumCG279 += float64(common_functions.MaxI(0, CGA3iia) + common_functions.MaxI(0, CGA5a) + common_functions.MaxI(0, CGA6a))
+
+	sumCG279 += float64(common_functions.MaxI(0, CGA8))
+	for k := range CGB1a {
+		sumCG279 += float64(common_functions.MaxI(0, CGB1a[k].FullConsideration))
+	}
+
+	sumCG279 += float64(common_functions.MaxI(0, CGB2a) + common_functions.MaxI(0, CGB3a))
+
+	for l := range CGB4a {
+		sumCG279 += float64(common_functions.MaxI(0, CGB4a[l].Proviso112Applicabledtls.FullConsideration))
+	}
+
+	// sumCG279 += float64(CGB5a)
+	for m := range CGB7aiii {
+		// sumCG279 += float64(common_functions.MaxI(0, CGB7aiii[m].FullValueConsdOthUnqshr))
+		sumCG279 += float64(common_functions.MaxI(0, CGB7aiii[m].FullConsideration))
+	}
+
+	sumCG279 += float64(common_functions.MaxI(0, CGB9a))
+
+	sumCG279 += float64(common_functions.MaxI(0, CGB12))
+
+	// sumCG279 += float64(CGB8a) + Sch112Acol6 + Sch115ADcol6
+	sumCG279 += common_functions.Max(0, Sch112Acol6) + common_functions.Max(0, Sch115ADcol6)
+	sumDOA_DPM_5_8 := common_functions.MaxI(0, DPM5R15) + common_functions.MaxI(0, DPM5R30) + common_functions.MaxI(DPM5R40, 0) + common_functions.MaxI(DPM5R45, 0) + common_functions.MaxI(DPM8R15, 0) + common_functions.MaxI(0, DPM8R30) + common_functions.MaxI(0, DPM8R40) + common_functions.MaxI(0, DPM8R45) + common_functions.MaxI(0, DOA5R5) + common_functions.MaxI(0, DOA5R10) + common_functions.MaxI(0, DOA5R40) + common_functions.MaxI(0, DOA8R5) + common_functions.MaxI(0, DOA8R10) + common_functions.MaxI(0, DOA8R40)
+	if sumDOA_DPM_5_8 != 0 {
+		sumCG279 += float64(sumDOA_DPM_5_8)
+	} else {
+		sumCG279 += float64(common_functions.MaxI(0, DCG6))
+	}
+
+	if float64(SchBP3c) > sumCG279 {
+		// fmt.Println("SchBP3c", SchBP3c)
+		// fmt.Println("float64(SchBP3c)", float64(SchBP3c))
+		// fmt.Println("sumCG279", sumCG279)
+
+		AddError(Temp, 279)
+	}
+
+	//-----------------------------------------------------------------------------------------

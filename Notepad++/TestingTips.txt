@@ -1,0 +1,50 @@
+Time taken to clean the file is - 15 mins max
+Time taken to refill the utililty file is - 40 min max
+export and import errorless - 10 min max
+time to find and note the issues - 40 min max
+
+Don't put many values in cg and os - only the new
+ones
+
+Don't copy paste the values
+
+Some green fields in the table is autocalculated
+don't fill them
+
+Remember to select "yes" when confirmation prompt 
+window appears (notwithstanding the entry "yes"
+or "no" in opted for previous year
+
+the learning from previous delays?
+
+
+	
+Types of testing
+	(the testing is to be done for Current AY and Previous AY)
+	(Utility can be filled manually or by importing a json file)
+1. Min fill tests (only the bare minimum fields to be filled)
+2. Medium fill tests (Fill many fields ank keep some blank, fill bare minimum fields in the tables)
+3. Max fill tests (fill all the visible and allowed fields)
+4. Add rows testing (Use add rows buttons for all the tables and add block buttons for all the blocks)
+4. json validation tests (against schema)
+5. Import tested (verify that all the fields are imported as they were filled in the utility)
+6. json tag verification tests ( verify that all tags are generated with the right value
+9. Identical json test (to fill the utility -> to generate json -> to import the json -> to generate json -> find the difference between the two)
+10. Data type testing (Verify the data being accepted is as per the rules- No more no less)
+11. Validation testing (Verify the fields and sheets are getting activated and deactivated as per rules)
+12. Error messages testing (Verify the error messages are as per rules - (when wrong input provided, when mandatory left blank, when validation or calculation rule is not met)
+13. Label testing (Verify all the labels are as per rules and de)
+14. Business rules and calculation testing (Verify all the calculation are as per rules)
+15. Defect Sheet testing( Verify wether the issues received in the defect are valid or not)
+16. Bifurcation (Bifurcate the issues in Current AY and Previous category)
+17. Prefill testing - (Verify the issues are correct in the defect sheet for their validation)
+18. Prefill testing (make the tags with proper values in a file in the json format and import the prefill to find any defects)
+
+
+
+
+
+
+		
+
+

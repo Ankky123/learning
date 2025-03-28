@@ -1,0 +1,72 @@
+Useful info regarding infy
+
+Below are the EPIC links for ADP AY20-21, 21-22 and 22-23.	
+	
+ADP AY 22-23	Epic links
+ITR-1	EITR-855
+ITR-2	EITR-853
+ITR-3	EITR-854
+ITR-4	EITR-856
+ITR-5	EITR-857
+ITR-6	EITR-858
+ITR-7	EITR-859
+	
+ADP AY 20-21	Epic links
+ITR-1	EITR-860
+ITR-2	EITR-861
+ITR-3	EITR-862
+ITR-4	EITR-863
+ITR-5	EITR-864
+ITR-6	EITR-865
+ITR-7	EITR-866
+	
+ADP AY 21-22	Epic links
+ITR-1	EITR-867
+ITR-2	EITR-868
+ITR-3	EITR-869
+ITR-4	EITR-870
+ITR-5	EITR-871
+ITR-6	EITR-872
+ITR-7	EITR-873
+
+
+Production Build -
+ITR2 -> SIT-50641
+
+
+
+
+Please find the URLs, all the deployments till today are done from ADP branch.
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2324/health
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2223/health
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2021/health
+
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2324/itrintval/api/1.0.0
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2223/itrintval/api/1.0.0
+https://eportalst.incometax.gov.in/cpcenv/foitrgovalidations2021/itrintval/api/1.0.0
+
+
+PFB required details:-	
+	
+ITR	Excel Query
+ITR1	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-777 AND "Section Details" = "ITR Excel" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR2	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-778 AND "Section Details" = "ITR Excel" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR3	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-779 AND "Section Details" = "ITR Excel" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR4	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-780 AND "Section Details" = "ITR Excel" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR5	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-781 AND "Section Details" = "ITR Excel" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR6	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-782 AND "Section Details" = "ITR Excel" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR7	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-783 AND "Section Details" = "ITR Excel" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+	
+ITR	VF Query
+ITR1	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-777 AND "Section Details" = "ITR VF" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR2	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-778 AND "Section Details" = "ITR VF" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR3	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-779 AND "Section Details" = "ITR VF" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR4	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-780 AND "Section Details" = "ITR VF" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR5	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-781 AND "Section Details" = "ITR VF" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR6	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-782 AND "Section Details" = "ITR VF" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+ITR7	project = SIT AND issuetype = Bug AND "Epic Link" = EITR-783 AND "Section Details" = "ITR VF" ORDER BY cf[10100] ASC, cf[10140] ASC, summary ASC
+
+
+Git commit message
+IPIP-0000: Added ITR1 22-23 VF module................................................................................
+

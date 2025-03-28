@@ -1,0 +1,31 @@
+ScheduleOS
+1b v vi vii viii
+
+
+ScheduleEsop
+importJson Pending
+
+ScheduleBP
+needs to be verified
+35AD1
+
+PartAOI
+S.No. 10DA
+
+ScheduleAMTC
+complete test
+
+ScheduleAMT
+3a and 3b
+
+Part A general
+Benefit u/s 115H flag
+Date of audit
+
+
+
+ScheduleSI
+not importing properly
+
+
+

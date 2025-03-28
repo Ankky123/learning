@@ -1,0 +1,37 @@
+Link for Lexium Infosys 24-24 utility
+https://eportaldev.incometax.gov.in/cpcenv/utilityra
+https://eportaldev.incometax.gov.in/cpcenv/utilityra/login
+infy15
+adpinfy@123
+
+infy2
+adpinfy@123
+http://localhost:8181/cpcenv/utilityra/
+
+43.242.116.150
+
+/cpcenv/utilityra
+/cpcenv/utilityra -> To run in local system, this path has to be replaced with blank, but if you want to make a push, this has to be reverted
+
+D:\ADP\Infy_Dev\Lexium\lexium_client_v2
+
+env GOOS=linux GOARCH=ppc64le go build -o client
+env GOOS=linux GOARCH=ppc64le go build -o server
+
+
+PDFFieldType
+Directive -> PDFLabel()
+		  -> PDFClasses()
+
+build.sh file contents---------
+cd /d/ADP/Lexium/lexium_client_v2
+env GOOS=linux GOARCH=ppc64le go build -o client
+mv client ../
+cd /d/ADP/Lexium/lexium_server
+env GOOS=linux GOARCH=ppc64le go build -o server
+mv server ../
+-------------------------------
+-> Steps to deploy(check-in the Lexium code given to Infy)
+run the build.sh file to create client and server file
+paste the file in utilityRA folder
+before pasting and replacing, remember to take a pull

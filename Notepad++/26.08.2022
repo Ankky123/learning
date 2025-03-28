@@ -1,0 +1,51 @@
+Testers - ITR7 Verification - Complete
+		- ITR 5 and ITR6 are nearly done (to verify finishing of IDS) (80G issue of Nishi - No issue)
+		- ITR3, ITR2 and ITR7 IDS to get 
+		- (Got ITR2 IDS - Compiled by Vishal - Solved by Ishita - Mail Sent to Vishal (OS to test also)
+		- (Got ITR7 IDS - Compiled by Jinesh - Sent to Ishita for resolution)
+		- (Geting ITR3 IDS - Compiled by Ami - Sending to Chirag for resolution)
+
+IDS Track   - IDS 2 26.08.2022
+			- IDS 3 16.08.2022
+			- IDS 5 25.08.2022
+			- IDS 6 25.08.2022
+			- IDS 7 16.08.2022
+
+ITR2 22(P0) - Then give it to Chirag - Receiving the file from Chirag -> Giving it to Nishi for testing again
+			- Give it for Verification - Given to Nishi - Verification Complete
+			- Status - 3 issues not solved, Both Chirag and Nishi failed
+			- Chirag is solving the issues now
+			- Submit
+			
+ITR6 22P(0) - Ask Chirag to merge the changes of Prefill into the latest file - Done
+			- Then give ITR6 22 to Chirag for csv issues - Done
+			- Give it to Jinesh for testing (Mail Sent) - He has reverted
+			- Then solve the issue for cyla and ud
+			- Then give it to Rishabh for OS issues
+
+ITR7 22(P2) - Some Json Issue (??SatyaPrakash/Ankit)(P2) - Waiting for Latest Utility from Rishabh
+			- Submit
+
+
+ITR2 21(P0) - Some Validation Issue (??Ankit)(P0) - Changed partAgeneral in main file, changed import in test file - taken
+			- 2 more works - stringislargenumber - Already done
+			- Validation Problem -> CG(13), 80D(55), AL(43) are very hidden for no apparant reason
+			- bbti ifsc - Import Problem and table problem - was an import problem
+			- Mail to take one more day
+			- get it tested
+			- Submitted
+
+
+ITR2 20(P4) 	- Resolve the OS issue(P4) - Get it tested - Vishal - Done - Final Closing - Pending with Vishal
+ITR3 20(P4) 	- Pending with Ami ->Legacy Issues sent by gopal, IDS - Pending with Chirag
+ITR5 20(P4) 	- Verify Issue of 80G and 80GGA(P4) - No Issue - Ishita/Nishi - Done - Final Closing - Pending with Vishal - Pending with Ankit
+ITR6 20(P4) 	- Resolve the OS issue(P4) - Get it tested - Nishi - No issue found - Final Closing - Pending with Ami 
+ITR7 20(P4) 	- Pending with Ishita
+
+Check VIA, FA validation for all the ITRs
+Check mails for further work
+Attend meeting at 4 - Done
+Talk To tolaram
+Flow tomorrow
+
+

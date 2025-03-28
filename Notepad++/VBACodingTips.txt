@@ -1,0 +1,15 @@
+1. If a validation can be applied on input and worksheet change event, then it should be applied there
+2. If a validation has dependenies that are efore or after it, it should be applied on validate call
+3. Mandatory check should be applied on validate call
+3. There is no need to apply fmsgbox -> just use msgbox, If a common string like schedule name is to be used,
+	use a string to add the messages to that will be initiated on the call of validate button
+4. Messages should come in order of the fields so that an updated entry will not cause contradictory messages
+5. Worksheet Change can be called manually
+
+6. Prohibited/Invalid entries should be blocked at key stroke level
+
+If Application.intersect is inside the sub, we get info of it being called in worksheet change but it is useless at any place
+	-> But we can pass the range and call the sub and it will show intended changes
+If application.intersect is outside the sub, we cannot get info of where is it being called, so changing something can trigger unexpected consequences
+
+Correcting some issue in the code may generate another issue and this cycle can continue

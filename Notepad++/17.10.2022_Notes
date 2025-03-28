@@ -1,0 +1,82 @@
+ITR5 AY 22-23 Production Build Mail - Done
+
+ITR7 AY 22-23 -> to send for due date implementation - done
+
+ITR5 and ITR2 defect sheet to be resolved - tomorrow - >Mail to be done to proper person
+
+ITR1 resend the utility - Done
+
+ITRs ETA for All the ITRs to give. - done
+
+ITR6 AY 22-23 Mail for due date implementation - done
+
+Mail Ayushi for clarification of A12 B table - Done
+
+validation to work upon
+
+
+shared ITR5, ITR6, ITR2, ITR3
+to look into the itr7 issue
+
+adpak1.701005120
+
+<input type="Submit" value="Submit">
+<input type="Submit" value="Submit" onclick="validate()">
+
+validateSheetsNames
+
+minlength="2" maxlength="10"
+pattern="[A-Za-z]{3}" title="Three letter country code">
+
+Work to do
+ITR7 22-23 To share the latest utility to Team, - friday submission - can send to devs - done
+ITR3 22-23 to share the latest utility to team - friday submission
+ITR3 22-23 due date version to be shared with infosys tomorrow
+ITR6 22-23 to share the latest utility to team - friday submission - can send to devs - done
+ITR6 22-23 to implement calculation change as sent by Arun Sir
+ITR6 22-23 to update tolaram on the import issue - It will take time but it will happen
+
+ITR5 22-23 to share the utiity to infy on UR thread and due date thread after resolving the d1-1 issue and epay issue
+	1. delete MsgBox "d1" & delayedInMonths from the Calculate_InterestPayable234A function
+	
+	2. make a range named EPayTaxCell and put the following -
+	If Sheet7.Range("Sheet9.BalTaxPayable1").Value > 0 Then
+        Sheet7.Shapes("Button 118").Visible = msoTrue
+        Sheet7.Shapes("Button 118").Left = Range("EPayTaxCell").Left
+        Sheet7.Shapes("Button 118").Top = Range("EPayTaxCell").Top
+        'MsgBox "Please ensure that the taxes are paid before the submission of the return, else return shall be treated as defective.", vbExclamation, "Info"
+    Else
+        Sheet7.Shapes("Button 118").Visible = msoFalse
+    End If
+
+-----------------
+ITR5 22-23 date editable and non editable to be converted to blank - send to devs
+ITR5 22-23 implement the changes in the non-editable
+
+21-22 and 22-23 computation issue to be resolved
+
+
+20-21 and 21-22
+To share all the utilities. - done
+
+Submitted ITR3, ITR5, ITR6, ITR7 Production builds today - (27/10/2022)
+These to be submitted to Updated Returns teams tomorrow.
+
+Dear All,
+As discussed please take care of following points in future - 
+1. If defect description of an issue is changed, the current issue has to be closed and a new issue has to be opened.
+2. If ADP remark of an issue is "Require Clarification" then it cannot be reopened without discussion.
+3. Incorrect bifurcation of issues will result in delayed submissions.
+4. If the field is to be reverted back to the original value, then mark the issue as Not an issue and request on call to revert it back to its original form.
+	It should not come in the defect list
+5. If an issue is Reopened for other than the above mentioned points, it needs to be discussed before reopening, otherwise it will be again raised as Not an Issue.
+
+
+
+
+ITR3 22-23-> to discuss with Sunil
+ITR5 22-23-> pending with satyaprakash
+
+ITR 7 21-22-> Mashusudan issue - pending with satyaprakash
+
+Production versions after the ITR5 issue.

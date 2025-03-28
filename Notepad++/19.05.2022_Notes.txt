@@ -1,0 +1,16 @@
+17.05.2022-
+Change in generate, import, mdTPSA, mdIT(ITR5)
+18.05.2022-
+Change in generate, import, mdPARTAGeneral, mdCG
+	
+Change in generate, import, mdBA, mdHP, 
+mdCommon(ITR7)
+Make a validation in date of sale (CG)
+
+Changes made in ITR5 on 19.05.2022
+?DIN-to change number string conversion to 100?
+
+Important - In Schedule BP, one indexing is
+	going wrong
+
+

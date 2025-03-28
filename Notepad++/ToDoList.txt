@@ -1,0 +1,20 @@
+to add code for os 5Ac1a and 5ac1b
+these to be changed to 5ac1ab and 5ac1abd
+in import and generate, for dtaa - change
+value, for lookup-> for generate, after lookup
+					-> for import, before lookup-
+
+?-> Who makes the utility file?
+?-> How are values linked from database to utility
+	dropdowns? - Data Validation button
+?-> How a value is looked up from the database
+	-Variables, rangenames
+Might have a change in utility
+Might have a change in database
+Might have a change in GenerateJson
+Might have a change in ImportJson
+Might have a change in the validation modules
+Might have a change in data entry validation
+Might have a change in other modules
+Might have a change in sheet codes
+

@@ -1,0 +1,397 @@
+Please mark the Epic link correctly. VF team might miss the issue that are filtered in Excel.
+
+Issues Identified in the UI schedules
+
+1. Schedules are not as per the sequence of the Utility
+
+->Schedule OS
+1. Labels are not maching
+2. Label colours are not matching
+3. Second label is missing
+4. Underscores in lables
+5. Rupee symbol not present, Rupee symbol box is not present (Sr. No. 4, 5, 5a)
+6. Card colours are not matching
+7. Cards distancing is not proper
+8. Cards heights are not proper
+9. Alignment Issue from Sr. No. 6
+	-> Accordian Sl. No. 1 ->
+	1. All the Fields/Labels are given on one page (This is due to schema, already discussed with Rishabh)
+	2. Horizontal Lines are missing
+	3. Rupee Symbol is missing for the values
+	4. "Add Details", "Delete" buttons are missing (This is due to schema, already discussed with Rishabh)
+
+
+->Schedule B_TI
+0. This schedule is serialized after Schedule OS, it should be serialized in the last
+1. Field names are not proper (neither on the routed page, nor more deeper)
+2. Serial Numbers are not added (Everywhere this issue persists)
+3. Label not left aligned (Everywhere this issue persists)
+4. Value field not right aligned (Most of the fields)
+5. View Schedule XYZ Link is not visible for any of the field
+6. "Back To Schedules" button is not working
+7. "Confirm" button is not working
+
+->Schedule B_TTI
+0. This schedule is serialized after Schedule OS, it should be serialized in the last
+1. Top heading sub label is wrong -> showing "details of income from salaries"
+2. Labels ->
+	a. Labels are not as required
+	b. Labels are having underscores
+	c. Labels are not bold
+	d. Labels are not left aligned
+3. Values -> 
+	a. Values are not bold
+	b. Values are not right aligned
+	c. Values do not have rupee symbol with them
+4. "TaxesPaid" label is missing label
+5. "TaxedPaid", "Amount Payable", "Refund" is not colored light blue
+6. "Do you at any time during the previous year," question card radio button should be just below the first label
+	it then should have 3 bullet points
+7. "Pay Later" and "Pay Now" buttons are missing 
+8. "Confirm" button should not be present
+9. "Back To Schedules" button is not working
+
+
+
+->Schedule CYLA
+1. Top heading sub label is wrong -> showing "details of income from salaries"
+2. Labels of header are having underscores and not having brackets
+2. Headers are not bold
+3. All rows height is much larger than expected
+4. Values are shown in the boxes -> Should be without any borders
+5. Fields are user enterable
+6. Row xiii and xiv are not visible
+7. Value fields are overflowing out of the table width
+8. "Back To Schedules" button is not working
+9. "Confirm" button is not working
+
+-> Schedule BFLA
+Most issues in this schedules are same as Schedule CYLA
+
+-> Schedule CFL
+Most issues in this schedules are same as Schedule CYLA
+with additional issues being
+1. "Edit" button is not working
+2. Default values of 0 are not being autopopulated in the corresponding AY rows.
+3. Horizontal scrolbar is not available
+4. Buttons -> "Confirm", "Back To Schedules" are not working
+
+-> Schedule AMTC
+1. Schedule is not opening
+
+
+
+PartA General Issues ->
+
+Date of Birth/Formation-> 
+	Calander is not given, 
+	error message is not going after coming -> Resolved (pattern \ to \\)
+	() to be used on the 0001-01-01
+Pan and other fields are missing the max even if they are present in DE sheet (Put the stress on PAN and TAN and Date field)
+Pattern -> \ to be converted to \\
+Error messages is coming in black colour. It should come in red colour. Marging to reduce
+Date picker should be changed to vanilla from mat datepicker
+In schedule TDS2 -> Value fields are not user enterable even if they are not greyed off
+
+Min/Max/Pattern -> Testing done
+Handwritten validation in the checkChange -> Error resolved (index was reduced by 1)
+
+Error message on array items???
+Salary ->Outer, Internal
+TDS
+
+Error message is being shown even if the field is greyed off -> isEditable was not getting caught
+change-map -> changeValidation -> getWarning(elem.id,1) -> id to be replaced by name
+assesee rep flag is not visible
+
+
+1. showData -> Uncomment -> ChangeValidation testing -> done
+2. Radio button changeValidation Verification -> Working -> done
+3. getData -> same page array values to be used
+4. showData functionality verification
+5. Formula Verification
+6. IsMandatory and IsEditable verification
+7. IsAvailable to modify
+
+
+ValidateSheet will put error at all the places where error is
+if the element value is blank, check whether if mandatory is true/false for the current field -> Get the error and move forward
+if err is blank from previous step then only check the changeValidations for the current field -> Get the error and move forward
+if err is blank from the previous step then only check the saveValidations for the current field -> Get the error and move forward
+
+if err is not blank, then set the error for the current field
+
+due to different kind of fields, there might arise various issues, 
+
+if (Object is conditional Mandatory, also make it conditional available)
+
+
+json Service
+this.setJSONDataByKey(
+
+output -> if enum exists, return the key for the given value
+
+input, output, select
+
+Utility Issue identified
+Sch 5A some issue in opening
+Schedule HP
+Name of the other Co-Owner?? What is this tag for? Need to verify from Excel utility
+Co-owners and tenant table is not visible even if their conditions are so
+
+Schedule SI
+CG to SI flow is not working
+
+
+Dear Team,
+
+A gentle reminder.
+Still not able to connect to JIRA with the MSP ID : MSP02162998.
+
+Also 3 other MSP IDs credentials are not received yet. (MSP02162999, MSP02163005, MSP02163006).
+
+@Rajendra V. Shanbhogue, Team will not be able to follow through your comment since VPN poses a hard bottleneck for the development.
+
+Thanks,
+Ankit
+
+
+MSP02162998 ankit_mangal@arundataprocessing.co.in
+MSP02162999 piyush_soni@arundataprocessing.co.in
+MSP02163005 brijesh_tank@arundataprocessing.co.in
+MSP02163006 casanketruparel@arundataprocessing.co.in
+
+
+
+
+
+"Production Support ADP" <production_support_91@arundataprocessing.co.in>
+
+
+Why the getData(), getEnum() is being called frequently?? without any event trigger??
+getData() in the map.service.ts has return statement on the first line that is not commented why??
+getData() in the json.service.ts is getting jm as undefined always (false alarm) console shows a value
+
+PartB_TTI.Refund.BankAccountDtls.AddtnlBankDetails -> This ids getData() seems wrong
+
+
+
+For PinCode to State -> Create a CommonFunction which will return the "state enum -> Enum Condition" and "value -> Formula" for given pincode
+
+SI Issues
+112A Tax ThereOn Issue
+PTI_STCG15P
+PTI_STCG30P
+PTI_LTCG10P112A
+PTI_LTCG10P
+PTI_LTCG20P
+
+DTAAOS, DTAASTCG, DTAALTCG
+
+Conditional Dropdowns
+PAG
+Salary
+CG
+OS
+EI
+
+Utilty Testing points
+Any functionality in the utility will be required to be tested for the below points
+
+1. Text Field -> string
+2. Text Field -> integer
+3. Text Field -> float (number, decimal)
+4. Select Field (Schema Enum) -> key -> string
+5. Select Field (Schema Enum) -> key -> integer
+6. Select Field (Schema Enum) -> key -> float (number, decimal)
+7. Select Field (Schema Pattern) -> key -> string
+8. Select Field (Schema Pattern) -> key -> integer (is it a possible combination?)
+9. Select Field (Schema Pattern) -> key -> float (number, decimal) (is it a possible combination?)
+4. Radio Field (Schema Enum) -> key -> string
+5. Radio Field (Schema Enum) -> key -> integer
+6. Radio Field (Schema Enum) -> key -> float (number, decimal)
+
+EITR-934 -> Epic link for Online/Offline utility
+
+
+Some General Issues in the utility
+
+----------------------------------------------------------------------------------------------------------------------------------
+For Piyush (UI RA)
+	*-> Schedule AL Zipcode fieldtype is None -> To be changed to same as pincode (also validation should work on both of these fields)
+	*-> Arnnbr in 80G label is wrong
+	**-> State and Country are not enum in HP Blocks (SIT-61741) && (SIT-62030) && (SIT-62068) && (SIT-62065) && (SIT-61911) && (SIT-61913)
+		Temperory to be done
+	-> TDS2/TDS3/TCS fields are not getting getting greyed off (Although they are not taking any values)
+	->TDS2 NE table values alignment issue
+	R**-> STCG Mutual Fund block is blocked (SIT-62090) Add Another button is missing, to be added
+	R**-> OS quarterly breakup is not triggering (SIT-62063)
+	Temp*-> Schedule Pass through Income >The field Net Income/loss(7-8) not provided in Utility(Schedule PTI) (SIT-61846)
+	*-> Schedule FA >Incorrect date format provided instead of "DD/MM/YYYY" given "MM/DD/YYYY"(SIT-61878)
+	*-> Schedule EI label (SIT-62059)
+	*-> Schedule FA label (SIT-62041)
+	*-> Schedule HP The field "Name of other Co-owner" is at wrong sequence(SIT-61920)
+	Temp*-> Schedule FSI "Total" fields are missing (SIT-61809) && (SIT-61810)
+	Temp*-> Schedule TR some fields are missing (SIT-61833)
+	*-> Schedule PAG1-> Country/Region label mismatch (SIT-61798)
+	*-> Salary ZipCode validation is not working ?? Present in the RA 
+
+----------------------------------------------------------------------------------------------------------------------------------
+To be discussed With Rishabh issues ->
+**->Country Code to be displayed in the dropdown of the countries in all the schedules (Also alphabetical order is required) (SIT-61812) && (SIT-61817) && (SIT-61938, SIT-62150)
+->Default Values of country in Schedule AL -> Most countries are not having default set
+->Default formulae are not working (SIT-61748)
+Error message is coming without clicking validate (Their validations are also not working) (Might be associated with Piyush) -> Done by Rishabh
+	Wether TRC obtained
+	Type of Company
+	Self/Other
+Radio in the Array (TDS2 is not giving its right value as it is giving in PartAGen flags -> Giving (enumVal.value) (SIT-61717) -> Done by Rishabh
+Should the imported JSON be validated before importing or after importing or not at all (SIT-61741) -> Importing JSON wil not be validated
+Schedule SPI -> Deleted value are not going from the Non-editing after save and coming back on Edit -> Blank needs to be deleted -> Done by Rishabh
+Schedule SI is not coming -> ShowData is having some issue in setting map variable (SIT-61977) -> Done by Rishabh
+Unlisted Equity Shared (values are not getting saved) -> They are getting saved but not reflecting in the NE page -> Done by Rishabh	
+	But the details are visible after clicking confirm on PAG page
+->In TDS2 ->
+	Why in TDS2 even if the deductedYr is not mandatory as per the written condition, the error message is trigerring
+	Why Col9 TDS(Curr Fin Yr, deduction in hands of spouse), if the value is updated, the formula is not updated for the affected ID??
+**->Schedule TR not showing in schedules summary page (SIT-6190)
+-> Validation issue in schedule AMTC
+->Calender dates to limit, use of internal directives
+Dsync found between DE sheet and schema for addreds of House property field (Updated in RA as per DE sheet due to error message)
+*-> Limit the percentage value to 5 digits in HP (SIT-61796) && (SIT-61879) -> Technically incorrect to define length on decimal
+The amount of rent which cannot be realized accepting letter E in the number field(SIT-61948) && (SIT-61951) - Done by Rishabh
+PAG Status error message of dropdown - Done
+
+
+*-> Description box for other nature of salary (SIT-61952) && SIT-62006
+*-> System date restriction/validation for the dates (SIT-61715)
+*-> Array event listener issue (SIT-61835 && SIT-61864 && SIT-61862 && SIT-61847 && SIT-61889 && SIT-61890 && SIT-61909 && SIT-61770 && SIT-61894, SIT-62066)
+*-> Dropdown default of Select is not coming (SIT-62043) and two others
+*-> Duplicate Dropdown Validation is not trigerring (SIT-61945) SIT-62036, SIT-62017, SIT-62053
+*-> 112A fields are not accepting decimal even if they are number 
+*-> Should we disable copy paste in the input fields??
+*-> 80D dropdown issue, some js runtime issue (el.value.contains is not a function) (SIT-61752) (Also seen while validation CFL, TDS1, 112A)
+*-> Verification schedule "Father Name" mandator is not being displayed"
+-> TRP Validations are not triggering SIT-62018 && SIT-62021 && SIT-62023 && SIT-62024 && SIT-62024
+*-> Autopopulation
+	State Code on entering the pincode (SIT-61769) && SIT-62001
+	ISIN list Autopopulation (SIT-61803, SIT-62087)
+*-> Amount Fields are accepting "+" Operator(SIT-62080)
+**->Dropdown specific order is required (Alphabetical/asending/descending/as per DE sheet) (SIT-61812) && (SIT-61817) && (SIT-61938, SIT-62150, SIT-62094)
+*->112A and 115AD issue of 19 characters for decimal field (SIT-62137, SIT-62138, SIT-62145, SIT-61941, SIT-62144, SIT-61936, SIT-62142, SIT-61932, SIT-61877, SIT-61822
+----------------------------------------------------------------------------------------------------------------------------------
+For Manisha ->
+R->Edit Response -> (SIT-61947)
+R->Seventh Provisio fields issue after prefill json
+->112A Upload CSV is required (SIT-62079)
+->115AD Upload CSV is required (SIT-62067)
+R->clauseiv of seventh provisio is not visible in Tax selection page (SIT-62003)
+R**->The prefill confirm and save issue (SIT-62078)
+R**->After prefill/import, Back To Schedules is not working
+
+----------------------------------------------------------------------------------------------------------------------------------
+For Me ->
+Values to clean when field is getting non editable via formula in all the schedules
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+For Infosys Mail -> 
+
+1. Label issue is a blocker?? (SIT-62093) -> Not a label issue
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+For Sanket and Testers
+
+Check the fixed issues in the previous build 0.1.3 for the issues raised (SIT-62078, SIT-61981)
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+For Arun Sir ->
+**->Schedule OS- Deduction u/s 57(i)-"Eligible amount of interest expenditure" (SIT-62060)
+**->Autopopulation fields are giving negative values -> SIT-62157, 
+**->SIT-62046 (CFL, Total Loss Carried forward, HP)
+
+Schema UI -> Array in the OS to be converted to Object or what -> Done
+
+Tax Deductions -> 80G can't convert into the format of VIA
+	80G, 80GGA, 80D to be set into VIA?? -> Done
+
+In the UI schema, 
+the abc_Dummy1 -> These tags are the extra tags that were not present in the main schema but required for UI (Is copy of another tag)
+the abc_Extra1 -> These tags are the extra tags that were not present in the main schema but required for UI (Not a copy of another tag)
+the abc_Unused1 -> These tags are the tags that are present in the main schema but could not be used in the UI
+Some tags have their names changed
+
+Show calculation of 234A, B, C are not made yet -> Pending
+
+SIT for save button issue -> Issue resolved. Same as SIT-61724
+
+Issues to discuss with Rishabh
+
+
+*High(SIT-62044)->STCG date validation is not given in the DE sheet but validation error message is also not triggering
+*High(SIT-62133)->Prefill Bank Account number issue due to two different sources (for same output array)
+*High(SIT-62155)->Foreign bank account details are not getting prefilled
+*High(SIT-62215)->Two different sources for a primitive tag (How to add it??)	
+
+**-> HP Tenant table is not getting added now after filling the details
+**-> SI values are blank but the total is populated??
+**-> Rishabh has made some changes in the RA for the autopopulation of state based on the pincode -> what are those changes??
+
+**Blocker(SIT-61902)-> TR is not coming 
+**Blocker(SIT-62067)-> 112A and 115AD CSV functionality -> Invalid
+**Critical(SIT-62154)-> Aadhaar Decryption
+**Critical(SIT-62249)-> Able to fill schedule 5A even if the flag is "No" -> Invalid
+**Critical(SIT-62060) -> OS "Eligible Amount of interest expenditure" is not working as expected -> Please have a separate track of computational issues
+**Critical(SIT-62063) -> OS Quarterly breakup table messages are not triggering (Critical -> SIT-61992)
+**Critical(SIT-62147)-> Provide your confirmation is enabling after confirmation any of the schedule.
+
+Issues to discuss with Arun Sir
+SIT-61933 -> Negative values in 234A calculation - Done
+
+Piyush
+SIT-63268
+
+ITR2 -> 19 Characters issues.
+1.    SIT-63336
+2.    SIT-62368
+3.    SIT-62492
+4.    SIT-63471
+
+ITR1 
+1.    SIT-61894
+2.    SIT-61877
+3.    SIT-61932
+4.    SIT-61890
+5.    SIT-62138
+
+ITR2 Piyush---------
+SIT-63615 -> See if Sl. no. Col[1] is possible
+SIT-63196 -> Header needs at the edit page also as per tester
+SIT-63249 -> See if it can be given in newline
+SIT-63823 -> See if the header can be added
+SIT-63604 -> See if the fields can be added (available in schema)
+SIT-64311 -> Check if note can be added
+SIT-64070 -> Check if totals can be added
+SIT-63607 -> Check if possible
+SIT-63554 -> Required from the template
+
+
+Sanket to verify from Arun Sir
+SIT-63760
+SIT-62739
+SIT-62060
+
+
+
+Two major works for me in ITR2
+->Dropdown EnumConditions to be written for duplicates
+->if field is getting disabled -> Its value to set 0 or blank
+
+Issues to discuss with Piyush
+Sending on teams directly
+
+
+

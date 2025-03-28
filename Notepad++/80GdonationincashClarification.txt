@@ -1,0 +1,66 @@
+Table A -
+if cash donation is more than 2000 then eligible amount donation should not be more than 100% of other donation
+
+
+Table B -
+if cash donation is more than 2000 then eligible amount donation should not be more than 50% of other donation
+
+Table C -
+if cash donation is more than 2000 then eligible amount donation should not be more than 100% of other donation
+
+
+Table D -
+if cash donation is more than 2000 then eligible amount donation should not be more than 50% of other donation
+
+Sum = Gross Total Income - Total Deductions + 80G deduction 
+10%Sum
+
+
+Ananya: If ‘donation in cash’ is more than 2000, then ‘eligible amount of donation’ shall not be more than 100% of  ‘donation in other mode’ for Table A & C
+If ‘donation in cash’ is more than 2000, then ‘eligible amount of donation’ shall not be more than 50% of ‘donation in other mode’ for Table B & D
+
+
+if(@elig > @ oth) {
+	if (this.value > 2000) {
+		addError(1)
+	}
+}
+
+if (@elig > @ oth/2) {
+	if (this.value > 2000) {
+		addError(1)
+	}
+}
+
+if (@FilingStatus.NewTaxRegime == "N" && this.value > 2000) {
+	if (@Schedule80G.Don100Percent.DoneeWithPan[i]DonationAmtOtherMode < @Schedule80G.Don100Percent.DoneeWithPan[i]EligibleDonationAmt) {
+		addError(2)
+	}
+	
+}
+
+if (@FilingStatus.NewTaxRegime == "N" && this.value > 2000) {
+	if (@Schedule80G.Don50PercentNoApprReqd.DoneeWithPan[i]DonationAmtOtherMode/2 < @Schedule80G.Don50PercentNoApprReqd.DoneeWithPan[i]EligibleDonationAmt) {
+		addError(2)
+	}	
+}
+
+if (@FilingStatus.NewTaxRegime == "N" && this.value > 2000) {
+	if (@Schedule80G.Don100PercentApprReqd.DoneeWithPan[i]DonationAmtOtherMode < @Schedule80G.Don100PercentApprReqd.DoneeWithPan[i]EligibleDonationAmt) {
+		addError(2)
+	}	
+}
+
+if (@FilingStatus.NewTaxRegime == "N" && this.value > 2000) {
+	if (@Schedule80G.Don50PercentApprReqd.DoneeWithPan[i]DonationAmtOtherMode/2 < @Schedule80G.Don50PercentApprReqd.DoneeWithPan[i]EligibleDonationAmt) {
+		addError(2)
+	}	
+}
+
+if (@FilingStatus.NewTaxRegime == "N" && this.value > 2000) {
+	if (@Schedule80G.Don50PercentApprReqd.TotDon50PercentApprReqdOtherMode/2 < Schedule80G.Don50PercentApprReqd.TotEligibleDon50PercentApprReqd) {
+		addError(1)	
+	}
+	
+}
+

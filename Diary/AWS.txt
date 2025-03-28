@@ -1,0 +1,38 @@
+What is AWS? -> "Infrastructure" as a "Service" business model
+A subsidiary of Amazon.com that provides on-demand cloud computing platforms to individuals, companies and governments, on a paid subscription basis.
+
+1st player in cloud computing
+Pay as you go
+Manage computer systems and servers for you
+basically rented computing power
+
+Provides many services
+AWS certification - Tells one that someone knows and can help you in setting and using that specific service of the AWS.
+
+Most common services -
+1. EC2 - Secure and resizable compute capacity for virtually any workload
+2. S3 - Object storage built to retrieve any amount of data from anywhere
+3. RDS - Set up, operate, and scale a relational database in the cloud with just a few clicks.
+It provieds many other services relating to managing data, exchanging data, computing power, storage, etc,.
+
+Infrastructure technologies -> Compute, Storage, Databases
+Emerging technologies -> Machine learning, Artificial Intelligence, Data lakes and analytics, Internet of things
+
+Databases -> Wide variety -> Purpose build for different types of applications
+
+E.g.
+Lamba - Server Computing Space (lets developers run their code without provisioning or managing servers)
+Sagemaker - A fully managed machine learning service that empowers every day developers and scientists to use machine learning without any previous experience
+
+It makes it easy to design and operate applications that are -
+	scalable, fault tolerant, highly available
+	able to satisfy the security standards of the most risk-sensitive organzations
+
+Access to AWS Partner Network -> thousands of integrators -> who specilize in AWS services
+Access to tens of thousands of independent software vendors -> who adapt their technologies to work on AWS
+
+
+
+
+
+

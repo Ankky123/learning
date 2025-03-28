@@ -1,0 +1,23 @@
+143.110.254.23
+
+
+server {
+    server_name 143.110.254.23;
+
+    location / {
+        proxy_pass http://localhost:8080;
+    }
+}
+
+sudo ln -s /etc/nginx/sites-available/mydomain /etc/nginx/sites-enabled/mydomain
+
+ankit_mangal@arundataprocessing.co.in
+rishabh@arundataprocessing.co.in
+
+ravikiran_t@infosys.co.in
+
+In FortiClient, issue
+The port was changed to 10448, then I was able to Log In
+
+In jira URL, the default URL was not working, I used, 
+http://10.144.25.85:8080/jira/secure/WelcomeToJIRA.jspa

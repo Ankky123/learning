@@ -1,0 +1,56 @@
+To be informed to the team
+
+Please refer comments of infy before marking fixed or RTT
+Any change in status warrants a comment
+Reponsibility division of ITR git push
+When resolving issues, to take blockers on priority
+
+23-24 -> Me
+22-23 -> Chirag
+21-22 -> Amol
+20-21 -> Alina
+
+
+What is to be done by my team?
+Ankit -> Ishita commented code to review in ITR2 excel, ITR3 3+1 issues remaining Excel, ITR2 2 issues Excel, ITR5 12 issues, ITR6 24 issues (latest version to identify), 
+			ITR2 VF 1 issue, 
+Shubham -> 
+Satyaprakash -> ITR3 23-24, 
+
+19.04.2023 Internal Meeting MOM
+
+Task should not be taken up by individual himself. Complete the task that is assigned.
+sanket, roshini, shubham to screen JIRA Issues 
+roshini and sanket will try to resolve the issues before assigning (this is for faster exposure to the Rules and DE and requirements)
+10 tickets per day per person -> At least 2 of them can be solved by roshini and sanket individually
+Excel document -> a new "assigner" and a "Comment" column
+
+Screening Process for JIRA issues
+-------
+Lets say any issue is picked up by Roshini, 
+enter
+	Rule no., SIT ID, FY, others...
+Defect status -> Fixed, Invalid, Open
+If fixed by Roshini -> "Resolved by" is also Roshini
+	if not solved -> Status to be kept Open/Invalid
+--------
+The issues will then be taken up by team leaders.
+
+Team members will not ask their doubts randomly, they will keep a list and a meeting will be scheduled with the team leader for doubt resolutio
+Ishita Meeting with team for doubt resolution -> 2 PM
+Chirag Meeting with team for doubt resolution -> 2:30 PM
+Ankit Meeting with team for doubt resolution -> 3PM
+
+
+Task whatever is assigned is to be completed,
+Extra task not to be taken up until emergency tasks come up which will mostly be given by Rishabh, Nivedita
+What will be the impact of the emergency task on other tasks to be shared in advance
+Some communications or doubts resolving can take time, so remember to include it in the task list, to avoid overloading on team leader
+
+Teams leads will not explain the testing process to testers, Nishi will take a session to explain them how to test.
+If a utility is going for testing (Internal) then a json will go along with it which will be valid against schema 
+
+Ankit Team -> Sanket, Satyaprakash, Roshni, Shubham
+
+Testers now know the sanity of VF, they will now do it.
+

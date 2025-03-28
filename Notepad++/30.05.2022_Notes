@@ -1,0 +1,20 @@
+ITR2 - Testing remaing for the defects-Nishi
+	-
+	- Get the unsolved issues to solved them
+ITR3 - To solve the issues (new defect list)
+	- GET THE MERGED ISSUE LIST(IMPORT/GENERATE) FROM AMI
+	-Prefill issues being solved by chirag(300)
+	- Change-> if bacvalue not 1 then import prodecures
+ITR5 - Test for solved defects & Solve the remaining
+	-GET THE MERGED ISSUE LIST(Import/Generate) FROM AMI
+	-GET THE MERGED ISSUE LIST(VALIDATION) FROM AMI
+ITR7 - To create new schedules - P1
+
+
+ITR7 New Addition
+ScheduleD - Inconsistency observed - "ReasonDesc" tag
+		field not present in the utility
+ScheduleAudit - PMinfo -> wrong addrow is used
+	-> to remove wrong columns
+
+

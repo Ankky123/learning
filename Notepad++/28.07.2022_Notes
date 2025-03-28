@@ -1,0 +1,46 @@
+ITR2 22-23
+	OS to improve
+	Cg to disable events for tables
+	PI to get yes and no for opting for new tax regime
+
+copy import, generate, md112, md115
+
+Two error messages to correct - Tan invalid and 
+		you can enter amount only in one out of the
+
+tax regime no then yes causing 3aii to unclock
+but we need to lock it so add the sub in the worksheet 
+of sheet1
+
+gen imp sheet28, schtds, partageneral, sheet14
+
+change in import and sheet28, partA general, generate
+
+ITR6 ->22-23
+	to solve defect sheet
+
+ITR2 -> 22-23
+	Blocker found in TDS2
+	Import, Generate
+	Validation issues
+
+ITR2 -> 20-21
+	ImportXML ltcg to incorporate
+	Testing issues to resolve
+	Generate tag to resolve
+
+ITR3 -> 20-21
+	To copy PartAGeneral
+	cg is being completed by chirag
+
+ITR5 -> 20-21
+	being done by satryprakash
+
+Block count function in cg(ltcg, stcg, salary - 5)
+
+Chirag and ishita commited a mistake for salary
+and 115
+To ask them to check their add rows, The autopopulate
+fields are also set in definedgridrange
+Used column number instead of range in definedgridnamedrange
+

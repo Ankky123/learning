@@ -1,0 +1,94 @@
+//------------------------------------Rule 279---------------------------------------------
+	// clarification required
+	// one tag CG2a is updated from SlumpSaleInStcg.FMV11UAEii to SlumpSaleInStcg.FullConsideration as per JIRA comment -> SIT-56363
+	// CGB5a and CGB8a removed as per updated clarificaions and added max with postiive for sum
+	STCGarray := SchemaData.ITR.ITR3.ScheduleCGFor23.ShortTermCapGainFor23
+	LTCGarray := SchemaData.ITR.ITR3.ScheduleCGFor23.LongTermCapGain23
+	var CGA1ai = STCGarray.SaleofLandBuild.SaleofLandBuildDtls
+	var CGA2a = STCGarray.SlumpSaleInStcg.FullConsideration
+	var CGA3ia = STCGarray.EquityMFonSTT
+	var CGA3iia = STCGarray.NRISecur115AD.FullConsideration
+	var CGA5a = STCGarray.NRISecur115AD.FullValueConsdRecvUnqshr
+	var CGA6a = STCGarray.SaleOnOtherAssets.FullValueConsdRecvUnqshr
+	var CGA8 = STCGarray.PassThrIncNatureSTCG
+
+	var CGB1a = LTCGarray.SaleofLandBuild.SaleofLandBuildDtls // array
+	var CGB2a = LTCGarray.SlumpSaleInLtcg.FullConsideration
+	var CGB3a = LTCGarray.SaleofBondsDebntr.FullConsideration
+	var CGB4a = LTCGarray.Proviso112Applicable
+	// var CGB5a = LTCGarray.SaleOfEquityShareUs112A.BalanceCG
+	var CGB7aiii = LTCGarray.NRIOnSec112and115.NRIOnSec112and115Dtls //array
+	// var CGB8a = LTCGarray.NRISaleOfEquityShareUs112A.BalanceCG
+	var CGB9a = LTCGarray.NRISaleofForeignAsset.SaleonSpecAsset
+	var CGB12 = LTCGarray.PassThrIncNatureLTCG
+
+	var Sch112Acol6 = SchemaData.ITR.ITR3.Schedule112A.SaleValue112A
+	var Sch115ADcol6 = SchemaData.ITR.ITR3.Schedule115AD.SaleValue115AD
+	var DPM5R15 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate15.DepreciationDetail.RealizationTotalPeriod
+	var DPM5R30 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate30.DepreciationDetail.RealizationTotalPeriod
+	var DPM5R40 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate40.DepreciationDetail.RealizationTotalPeriod
+	var DPM5R45 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate45.DepreciationDetail.RealizationTotalPeriod
+	var DPM8R15 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate15.DepreciationDetail.RealizationPeriodLessThan180days
+	var DPM8R30 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate30.DepreciationDetail.RealizationPeriodLessThan180days
+	var DPM8R40 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate40.DepreciationDetail.RealizationPeriodLessThan180days
+	var DPM8R45 = SchemaData.ITR.ITR3.ScheduleDPM.PlantMachinery.Rate45.DepreciationDetail.RealizationPeriodLessThan180days
+	var DOA5R5 = SchemaData.ITR.ITR3.ScheduleDOA.Building.Rate5.DepreciationDetail.RealizationTotalPeriod
+	var DOA5R10 = SchemaData.ITR.ITR3.ScheduleDOA.Building.Rate10.DepreciationDetail.RealizationTotalPeriod
+	var DOA5R40 = SchemaData.ITR.ITR3.ScheduleDOA.Building.Rate40.DepreciationDetail.RealizationTotalPeriod
+	var DOA8R5 = SchemaData.ITR.ITR3.ScheduleDOA.Building.Rate5.DepreciationDetail.RealizationPeriodLessThan180days
+	var DOA8R10 = SchemaData.ITR.ITR3.ScheduleDOA.Building.Rate10.DepreciationDetail.RealizationPeriodLessThan180days
+	var DOA8R40 = SchemaData.ITR.ITR3.ScheduleDOA.Building.Rate40.DepreciationDetail.RealizationPeriodLessThan180days
+	var DCG6 = SchemaData.ITR.ITR3.ScheduleDCG.SummaryFromDeprSchCG.TotalDepreciation
+	var sumCG279 float64 = 0
+
+	for i := range CGA1ai {
+		sumCG279 += common_functions.Max(0, float64(CGA1ai[i].FullConsideration))
+	}
+
+	sumCG279 += float64(common_functions.MaxI(0, CGA2a))
+
+	for j := range CGA3ia {
+		sumCG279 += common_functions.Max(0, float64(CGA3ia[j].EquityMFonSTTDtls.FullConsideration))
+	}
+
+	sumCG279 += float64(common_functions.MaxI(0, CGA3iia) + common_functions.MaxI(0, CGA5a) + common_functions.MaxI(0, CGA6a))
+
+	sumCG279 += float64(common_functions.MaxI(0, CGA8))
+	for k := range CGB1a {
+		sumCG279 += float64(common_functions.MaxI(0, CGB1a[k].FullConsideration))
+	}
+
+	sumCG279 += float64(common_functions.MaxI(0, CGB2a) + common_functions.MaxI(0, CGB3a))
+
+	for l := range CGB4a {
+		sumCG279 += float64(common_functions.MaxI(0, CGB4a[l].Proviso112Applicabledtls.FullConsideration))
+	}
+
+	// sumCG279 += float64(CGB5a)
+	for m := range CGB7aiii {
+		// sumCG279 += float64(common_functions.MaxI(0, CGB7aiii[m].FullValueConsdOthUnqshr))
+		sumCG279 += float64(common_functions.MaxI(0, CGB7aiii[m].FullConsideration))
+	}
+
+	sumCG279 += float64(common_functions.MaxI(0, CGB9a))
+
+	sumCG279 += float64(common_functions.MaxI(0, CGB12))
+
+	// sumCG279 += float64(CGB8a) + Sch112Acol6 + Sch115ADcol6
+	sumCG279 += common_functions.Max(0, Sch112Acol6) + common_functions.Max(0, Sch115ADcol6)
+	sumDOA_DPM_5_8 := common_functions.MaxI(0, DPM5R15) + common_functions.MaxI(0, DPM5R30) + common_functions.MaxI(DPM5R40, 0) + common_functions.MaxI(DPM5R45, 0) + common_functions.MaxI(DPM8R15, 0) + common_functions.MaxI(0, DPM8R30) + common_functions.MaxI(0, DPM8R40) + common_functions.MaxI(0, DPM8R45) + common_functions.MaxI(0, DOA5R5) + common_functions.MaxI(0, DOA5R10) + common_functions.MaxI(0, DOA5R40) + common_functions.MaxI(0, DOA8R5) + common_functions.MaxI(0, DOA8R10) + common_functions.MaxI(0, DOA8R40)
+	if sumDOA_DPM_5_8 != 0 {
+		sumCG279 += float64(sumDOA_DPM_5_8)
+	} else {
+		sumCG279 += float64(common_functions.MaxI(0, DCG6))
+	}
+
+	if float64(SchBP3c) > sumCG279 {
+		// fmt.Println("SchBP3c", SchBP3c)
+		// fmt.Println("float64(SchBP3c)", float64(SchBP3c))
+		// fmt.Println("sumCG279", sumCG279)
+
+		AddError(Temp, 279)
+	}
+
+	//-----------------------------------------------------------------------------------------

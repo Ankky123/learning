@@ -1,0 +1,38 @@
+Testers Work
+Ami - ITR2 Testing - IDS issues remaining (Discuss and close with Chirag)
+Vishal - ITR7 status trakcer ongoing
+Nishi - ITR1 Testing completed, ITR6 Testing Completed?
+
+Developers Work
+Ishita - ITR5 development ongoing
+Chirag - ITR2 runtime error, prefill of tds and via then ITR7
+Satyaprakash - ITR3 development ongoing
+
+ITR5 and ITR6 acknowledgement number coming as long but it should come as string - done
+To send ITR1 and ITR4 to ADP for calculation correction
+ITR4 clarification tracker to send and confirm
+
+personal database to be updated
+
+
+ITR3 21-22 Issue - Pincode - Infosys shared the master sheet -> Does it needs to be developed - TODO (In all the utilities)
+ITR6 21-22 Issue - 170A issue -> New request is raised for Integrating 170A with Updated Returns Utilities (TODO)
+ITR6 21-22 Issue - Json Issue of Digest value -> Not an issue -> They have to install the dot net framework
+ITR6 20-21 Issue - 170 A issue -> New request is raised for Integrating 170A with Updated Returns Utilities (TODO)
+ITR6 20-21 Issue - Mailed. Why the salaris tag is generated in XML - (Still waiting for reply) - TODO
+ITR2 22-23 Issue - To see what the issue is -> AMTC Issue Prior Issue - TODO
+
+Ishita and Satyaprakash doubts and then these works
+To share pincode master with developers
+
+ITR4 Schema was sent on 29th december (2 weeks ago) Too many schema change(which are not known)
+
+
+fullstack using (golang + html,css,javascript)
+
+ITR4 Correction 
+reset10IE is corrected for unlocking condition
+seventhprovisio flag, import json events set to enabled
+
+
+

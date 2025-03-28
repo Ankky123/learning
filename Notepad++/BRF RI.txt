@@ -1,0 +1,17 @@
+BRF Requirement Clarifications
+
+ITR1
+Deductions -> 80DD, 80DDB, 80U -> User value to ignore to compute minimum, flat values to provide when claimed of more than 0 rs. -> BA discussion (JIRA ticket)(Just Clarification)
+Rebate -> to ignore user value (mail) (JIRA ticket) (Just Clarification)
+234B -> to use newly added schema field AdditionalDetails.DateOfProcessing (mail received) (JIRA ticket)
+Allowance Exempt -> 10(10AA) -> if TAN is not in the list, allowance to be restricted to 25L for PSU, PSU-Pensioners -> (mail received)(Just Clarification)
+In deductions, which value to use to compute min?? -> User field value, system field value -> system field value
+80GGA(VIA) -> DeductUndChapVIA to be referred for considerations of min (Usr value to ignore) -> (mail received)
+Deductions -> DeductUndChapVIA to be referred for considerations of min. (for 80U, 80DD, 80DDB -> JIRA tickets were closed based on Usr field value of claim (mail received)
+
+
+
+
+
+
+

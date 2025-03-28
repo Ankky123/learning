@@ -1,0 +1,50 @@
+Testers - 	Nishi, Jinesh - Calculation rules for autopopulated fields -- ITR2 22-23 (Rules and DE, Utility)
+			Ami, Vishal - ITR3 Mapping (Utility and Schema)
+			Nishi - ITR2 21-22 Updated Returns Json creation - Received, Given itr4 - Received
+			Jinesh - ITR1 21-22 Updated Returns Json creation - Received, Given itr7 - Received
+			Vishal - ITR5 21-22 Updated Returns Json creation - Received - Get it max filled - Received - Some more Issues found
+			Ami - ITR6 21-22 Updated Returns Json creation	- Received, Given ITR3
+
+
+Developers
+
+Ishita and chirag - Received jsons of ITR1, 5, 6, (2,3,4,7 remaining)
+
+ITR1 21 - 
+ITR2 21 - 
+ITR3 21 - CDS (??Satyaprakash) - Received from Satyaprakash - Verified
+ITR4 21 - CDS (??Chirag) - Received from Chirag - Verified
+ITR5 21 - Compile Error Reported in a json - To submit on Monday
+ITR6 21 - CDS (??Ishita) - Received from Ishita - Issues were wrong according to Rules and DE - She should have referred Rules and DE. - Done
+ITR7 21 - CDS (??Satyaprakash) - Wrong defect sheet from Infosys
+
+
+
+ITR2 22-23 - Calculation issue of 234B and 234c is resolved but it now coming for 234F - No issue found
+			- To submit Production Version on confirmation
+
+ITR1 22-23 - To rectify the Updated Returns
+ITR4 22-23 - To rectify the Updated Returns
+
+
+ITR6 22-23 - Verify wether Changes in Rules and DE are implemented or not
+			- 2 issues as told by Tolaram - lesser than 1 lac is not allowed in p&l but copy paster allows
+			- MAT and MATC to be greyed-off
+
+
+Schemas AY 	20 - In pendrive
+			21 - In pendrive
+			22 - In pendrive
+Prefill Schema - In pendrive
+
+
+Rules and DE AY 20 - In Pendrive
+				21 - In Pendrive
+				22 - In Pendrive
+
+Works
+1. To submit 7 jsons 3 ready
+2. To submit 4 21-22 utilities
+3. To test and resolve itr5 21-22 utility - Many Issues seen - To submit on Monday
+4. to submit prod version of itr2 - Confirmation not received
+5. To submit itr4 updated returns changes - Pending for night

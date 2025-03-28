@@ -1,0 +1,101 @@
+Hi Ankit,
+
+Below issues were raised in filing updated return for which fix is still pending to be received.
+Kindly prioritize and provide fix for below issues at the earliest.
+
+Production Issues - Done
+ITR6 Sanity and ITR7 Integration
+
+ITR1 Issues - 
+ITR4 and ITR2 blocker issues
+ITR3 Utility Blocker
+
+ITR2 Utility
+
+
+Need to check on the Excel Utilities
+
+VF -
+
+
+Excel -
+ITR1 - Shared today
+ITR2 - Status from Rishabh then merge with satyaprakash, to give some ETA for defect sheet
+ITR3 - 
+ITR4 - Shared today
+ITR5 - Calculaltio and Defect sheet (Satyaprakash doing prefill issues first)
+ITR6 - Calculation and Defect sheet(No one)
+
+Niv ->
+ITR2 50 JIRA target
+ITR6 Sanity
+ITR7 Integration
+
+
+Production Issues
+
+
+Mails
+
+
+23-24 -> 
+
+ITR1 22-23 all the issues to be closed
+
+Credentials for Ishita and Amol
+
+23-24
+22-23
+21-22
+20-21
+
+Git check in
+
+ITR4 Blocker Issues -> 2
+
+ITR2 i18 Keys - Shubham
+
+ITR1 23-24 Utility fixes - Ishita
+
+ITR2 Utility fixes - Ishita
+
+ITR3 Utility fixes - Me - To be done
+
+ITR4 Utility fixes - Ishita
+
+ITR3 23-24 VF-> CG, OS, SI are implemented or not
+
+
+
+Rule: 226
+Rule: 361
+Rule: 368
+Rule: 369
+Rule: 370
+
+Did Shubham shared the error codes after verifying that there is no change in them?
+
+
+
+Tax_Paid.TotalTaxesPaid_SelfAssessmentTax_7pBEi
+Tax_Paid.TotalTaxesPaid_SelfAssessmentTax_OqMmX
+
+
+Error codes itr2 23-24
+itr4 sanity
+itr1 and itr4 keys
+
+
+Satyapraksah -> ITR5 defect log to send
+
+Doubts in Prefill
+Other source of income is remaining
+refund array takes input from two different arrays -> How to navigate?
+
+onkeyup
+min max pattern -> onkeyup
+change
+
+http://143.110.254.23/errors
+
+

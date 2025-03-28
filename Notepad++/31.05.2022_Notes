@@ -1,0 +1,25 @@
+Schedule I -> Range names not added in Utility
+Schedule LA -> Range names not added in Utility
+Schedule ER -> Table E 3 fields not added in Utility
+Schdedule IE_II -> Yes/NO 4 fields not added
+Schedule CYLA -> One row field missing
+Schedule TDS2 -> Dropdown value not changed to include 2020
+Schedule TDS3 -> Dropdown value not changed to include 2020
+Schedule TCS -> Dropdown value not changed to include 2020
+
+ScheduleBP-> Field Sl 23 needed to be added in Gen and Imp
+ScheduleBP-> One name range is missing from utility(last one T113)
+
+
+Verify how does the SECTIONREGISTEREDCODE and ProjectsOtherSection
+works - does the xml module functions are accessible?? yes it is accessible
+
+
+Important changes to make - 
+Schedule I - total row ranges name defined -(Be careful if new version comes)
+Schedule HP - Asseessee's percentage of share is not calculating
+
+
+
+
+

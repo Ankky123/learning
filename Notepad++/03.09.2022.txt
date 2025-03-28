@@ -1,0 +1,32 @@
+Testers - 	Mapping format for ITR2 Ay 22-23 is distributed
+			Vishal - 81 Fields Mapped (PartAGeneral) ITR2
+
+ITR2 21 - Json Issue (??Ankit) - Apart from decimal issue, two import(CG and EI) issues are also corrected.(Rishabh sent a version, Need to add these changes on confirmation)
+		- To submit on confirmation - Received Confirmation
+		- Submitted
+
+			
+ITR7 22(P2) - Some Json Issue - Waiting for Latest Utility from Rishabh
+			- Runtime error in tds and exit function validation issue in TDS
+			- To Submit in the BetaD1 version
+			- Sent to Rishabh 
+			- Again awaiting for latest utility from rishabh
+
+
+ITR 20-> 2, 3, 5, 7 - Production Version Submission - Submitted
+Check mails for further work
+Talk To tolaram
+
+To learn golang
+To learn fyne
+
+Jinesh-	Thursday - leave
+		friday - available from 1 pm to 
+		Saturday - work from home (Whole day)
+
+Nishi - Thursday - WFH
+		friday - available from 1 pm to 
+		Saturday - leave
+
+		
+Need to keep a count on how many issues opened, how many issues closed, by each person

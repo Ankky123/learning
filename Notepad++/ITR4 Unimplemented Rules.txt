@@ -1,0 +1,37 @@
+ITR4 Rules Not implemented
+184
+220 -> External
+259 -> due to  null or blank object handling
+261 -> External
+285 -> Out of context
+286 -> Out of context
+221 -> External
+215 -> External
+
+
+
+
+Pending for implemented in another field
+216 - done
+51 - for verification capacity
+78 - for Entertainment allowance
+
+ITR2 Amruta -> 46215
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

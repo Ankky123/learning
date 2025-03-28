@@ -1,0 +1,77 @@
+schedule la has a condition of section 13a
+other wise it should not be present due to other tags required that can't be null
+
+schedule et has a if condition of section 13b
+otherwise it should not be present due to other tags required that can't be null
+
+schedule ie 3 will only be generated if following section is selected (Change-1)
+Section 10(23C)(iiiab)
+Section 10(23C)(iiiac)
+
+schedule ie 4 will only be generated if following section is selected (Change-2)
+Section 10(23C)(iiiad)
+Section 10(23C)(iiiae)
+
+Schedule HP is not required and it is completely blank
+
+ScheduleFA will now not produce empty object (Change-3)
+ScheduleSH will not not produce empty object (Change-4)
+
+BalDeemed inc in BS is an autocalculated field.(either some calculation change or rules and de change or schema change)
+
+OS_Section_Normal
+os_check
+Section_OS1
+OS_Section_Normal_Lookup
+
+OS_Section_PTI
+
+ER_NOI
+'Change-1, 24.06.2022
+OthNatOfInc
+
+OS - Database change - 
+2c - OtherGrossDtls - modified description for  
+				115BBC Anonymous Donations
+		Modified range for lookup to add 5bbc
+	
+ItemNoincl
+
+In stcg and ltcg - Amount deemed to be stcg - 
+		PrvYrInWhichAsstTrnsfrd only 1 enum 2018-19 is given in schema
+
+In ltcg(7) - NRIOnSec112and115 - 
+	5AB1b is not present in utility but present in schema
+	
+'Change-20, ANK, 24.06.2022, What is the range here?
+SchCG
+'If Range("Ltcg_DTAA_B5c").value > 0 Then
+'    If Range("LTCG.5.LTCG_AfterThreshold").value = 0 Then
+'        Msgbox_LTCGDTAA = Msgbox_LTCGDTAA + "* The value in B5a should not be zero as there is an entry in DTAA table.in schedule CG" & Chr(13)
+'        ValidatesheetLTCGDTAASection = False
+'    End If
+'End If
+'---end change--
+
+Issues observed on 25.06.2022
+
+Audit - Date of Audit is not getting greyed off for 
+	-Whether the account have been audit set as "No"
+IE-3 - Total receipts including any voluntary contri
+		should be autocalculated??
+
+(Blocker)HP - Percentage Share of co-owners is not reflecting
+	in assesee's percentage of share
+	-co-owners fields are not greyeing off
+	-Percentage share is not going to 100
+115TD - date validation is coming for every field
+PartB-TI-TTI - Error of u/s 10
+TDS - to improve
+Verification - pan is asking p at fourth place
+
+
+26-06-2022
+HP - Added the following formula in the percentage share bar
+=IF(MID(HP.CoOwnedYN1,1,1)="Y",100-SUM(HP.Co.Share1),IF(MID(HP.CoOwnedYN1,1,1)="N",100,0))
+	Not done
+OS - 3 changes in database required

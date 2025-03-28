@@ -1,0 +1,42 @@
+To test cfl properly
+	1. Fill all the values (1st try)
+	2. unlock 115BAD column (2nd try)
+	
+Json issues given by Vishal solved (Schedule CFL)
+	Solved - Made two change in GenerateJson
+Part A General2 - Field should either by gray with
+
+default value No or should be green(on 4 and 5 of substatus)
+
+Remove the msg box from os
+
+DPM-> point14-> to lock the field for 45%
+	Solved - Made two changes in mdPartAGeneral
+
+TDS -> mdCG greaterthan
+
+PartAGeneral2 -> clearcontents
+
+PreviousYear
+NewTaxRegime-BacYes(Shape), BacNo(Shape)
+	oldbacValue - 1 or 2 (Range in sheet 31)
+BacYesValueChange (from NewTaxRegime)
+BacNoValueChange (from NewTaxRegime)
+
+2a,2b,2c,2f values are to be removed from partb ti-tti
+
+
+
+Current Year
+OptinNewTaxRegime-
+	1-Opting in now, 2-Not opting
+	bacValue - 1 or 2 (Range in sheet 31)
+NewBacYesValueChange (from OptinNewTaxRegime)
+NewBacNoValueChange (from OptinNewTaxRegime)
+
+To test - All the quarterly values fields generate
+		and import
+
+In AMT false is coming due to mainstatus is 
+selected as 1-Firm (There is no condition set
+for else in the formula of if)

@@ -1,0 +1,62 @@
+ITR6 prefill compile error - Resolved
+ITR7 21-22 Import Json issues - 
+ITR4 prefill issues - (Given for testing to Jinesh)
+ITR 6 22-23 - Consolidated sheet
+ITR7 22-23 - Issues to resolve
+
+Changes made in 
+PreFillJson Module - Done
+ImportJson Module - Done
+
+Issues in ITR6 
+Schedule 80 -> compilation error for addrow - Nishi
+
+ITR7 21-22
+Changes made
+
+
+	for field "sheet3.DoYouHave"
+monthdiffTE - this function is being called for no 
+apparent reason
+monthdiff -  this function is being called for no 
+apparent reason
+they are being called many times 
+	for field "sheet3.DoYouHave"
+
+Sheet9.IBan is having problem 
+Redifining it and implementing as single cell import
+
+AddDiffRows_804
+
+ITR6 discussion idssues
+os sl no issue - done
+os comma issue - done
+
+OS - 5a1b in 2c
+
+-----
+ITR 7 22-23 Issues
+ITR5 and 6 2020 GenerateXML issues
+ITR6 22-23 - 2 other issues - defect sheet - discussion
+	OS - TRC flag grey off for non-resident
+	defect sheet issues of messages and database
+		validation
+	compilation error in CG after import
+	Schedule MATC and UD - One green column can't 
+		have any values due to comparison with calculated field
+	Schedule HP - One green field value gets erased 
+		after calcuate tax
+	Schedule - TDS - Validation issue
+	Remove the duplicate public variables
+	workbook getting unlocked on 112A 115Ad and RA activation
+
+
+ITR7 Dformat comparison is not working
+	
+ITR6 
+	calculate tax issue
+	ei total issue
+
+ITR7
+115ac1a
+115ac1b
