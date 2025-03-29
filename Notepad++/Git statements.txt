@@ -85,3 +85,8 @@ git remote -v
 
 
 git config --global credential.useHttpPath true
+
+escape vim > :wq
+
+Ammending Commits
+
