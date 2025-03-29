@@ -56,7 +56,7 @@
 
 }
 
-.answer:hover, .answer.active{
+.answer:hover .answer.active{
   background: mediumblue;
 }
 
@@ -75,23 +75,6 @@
       background : green;
   }
 }
-
-.answer.wrong {
-  animation: wrong 3s ease forwards;
-}
-
-@keyframes wrong {
-  0%, 22%, 42% {
-      background:mediumblue
-  }
-  20%, 40%, 60% {
-      background: linear-gradient(#0e0124, #22074d);
-  }
-  62%, 100% {
-      background : crimson;
-  }
-}
-
 
 .timer {
   width: 70px;
@@ -145,13 +128,4 @@
 .moneyListItemAmount {
   font-size: 20px;
   font-weight: 300;
-}
-
-.endText {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
 }
