@@ -86,26 +86,58 @@ Sub lockAllSheet()
 End Sub
 
 Sub SetWorksheetsDiplayForUtilValidation()
+	On Error Resume Next
+	Dim currSheet As Worksheet
+
+	For Each currSheet In ThisWorkbook.Worksheets
+	currSheet.ShowAllData
+	currSheet.Range("A:AP").EntireColumn.Hidden = False
+	currSheet.Range("A:AP").EntireColumn.WrapText = False
+	currSheet.Columns("A:AP").ColumnWidth = 10
+	currSheet.Columns("G").ColumnWidth = 50
+	currSheet.Columns("H").ColumnWidth = 10
+	currSheet.Columns("Q").ColumnWidth = 10
+	currSheet.Columns("P").ColumnWidth = 10
+
+	currSheet.Range("A:F").EntireColumn.Hidden = True
+	currSheet.Columns("I").EntireColumn.Hidden = True
+	currSheet.Columns("J").EntireColumn.Hidden = True
+	'currSheet.Columns("P").EntireColumn.Hidden = True
+	currSheet.Range("X:AH").EntireColumn.Hidden = True
+	currSheet.Columns("AI").EntireColumn.Hidden = True
+	currSheet.Columns("AL").EntireColumn.Hidden = True
+	currSheet.Select
+	ActiveWindow.Zoom = 85
+	ActiveWindow.FreezePanes = False
+	Rows("1:1000").RowHeight = 15
+
+	Next currSheet
+
+End Sub
+
+Sub SetWorksheetsDiplayValidation()
     On Error Resume Next
     Dim currSheet As Worksheet
 
     For Each currSheet In ThisWorkbook.Worksheets
     currSheet.ShowAllData
-    currSheet.Range("A:AS").EntireColumn.Hidden = False
-    currSheet.Range("A:AS").EntireColumn.WrapText = False
-    currSheet.Columns("A:AS").ColumnWidth = 10
+    currSheet.Range("A:AP").EntireColumn.Hidden = False
+    currSheet.Range("A:AP").EntireColumn.WrapText = False
+    currSheet.Columns("A:AP").ColumnWidth = 10
     currSheet.Columns("G").ColumnWidth = 50
-    currSheet.Columns("H").ColumnWidth = 10
     currSheet.Columns("Q").ColumnWidth = 10
-    currSheet.Columns("P").ColumnWidth = 10
 
-    currSheet.Range("A:F").EntireColumn.Hidden = True
-    currSheet.Columns("I").EntireColumn.Hidden = True
-    'currSheet.Columns("J").EntireColumn.Hidden = True
-    'currSheet.Columns("P").EntireColumn.Hidden = True
-    currSheet.Range("X:AH").EntireColumn.Hidden = True
-    currSheet.Columns("AI").EntireColumn.Hidden = True
-    'currSheet.Columns("AL").EntireColumn.Hidden = True
+    currSheet.Range("A:AJ").EntireColumn.Hidden = True
+    currSheet.Columns("G").EntireColumn.Hidden = False
+    currSheet.Columns("Q").EntireColumn.Hidden = False
+    currSheet.Columns("T").EntireColumn.Hidden = False
+    currSheet.Columns("AD").EntireColumn.Hidden = False
+    currSheet.Columns("AE").EntireColumn.Hidden = False
+    currSheet.Columns("AF").EntireColumn.Hidden = False
+    currSheet.Columns("AG").EntireColumn.Hidden = False
+    currSheet.Columns("AH").EntireColumn.Hidden = False
+    currSheet.Columns("AI").EntireColumn.Hidden = False
+
     currSheet.Select
     ActiveWindow.Zoom = 85
     ActiveWindow.FreezePanes = False
@@ -115,6 +147,25 @@ Sub SetWorksheetsDiplayForUtilValidation()
 
 End Sub
 
+node --max_old_space_size=8024 node_modules/\@angular/cli/bin/ng serve
+
+
+Sub RemovePDFFieldlType()
+
+    'On Error Resume Next
+    Dim currSheet As Worksheet
+    Dim cell As Range
+
+    For Each currSheet In ThisWorkbook.Worksheets
+
+        For Each cell In currSheet.Range("AC2:AC1000")
+                cell.Value = ""
+        Next cell
+
+    Next currSheet
+
+
+End Sub
 
 node --max_old_space_size=8024 node_modules/\@angular/cli/bin/ng serve
 

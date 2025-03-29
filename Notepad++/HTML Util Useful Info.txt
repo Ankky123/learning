@@ -24,16 +24,19 @@ querySelectorAll() -> The Document method querySelectorAll() returns a static (n
 
 
 Global("systemDate")
-SetG("PAGAadhaarPrefilled", true)
 
 GenericDropDown
 GenericTextBox
 
+Please mark the Epic link correctly. VF team might miss the issue that are filtered in Excel.
 
 Formula type 3 will be triggered in the end only (used when the element is not present in the utility but required as per schema also it is not affected by any 
 	other elements) hence during the final generation of the json, the formula of the field will be called to set the computed value.
 	
 Formula type 1 will be triggered only on change of the element by which the current field is affected.
+Formula typ1
+1 -> Save (formula will be triggered on change in same page with related affecting ID)
+
 
 unique([[]], [], [])
 Argument 1 will be an array of array, every internal array is a group representing that only 1 option of that group will be allowed to be selected
@@ -41,14 +44,215 @@ Argument 2 will be an array which represents the options that are allowed to be 
 Argument 3 will be an array which represents what all the options are to be displayed.
 to give nil argument, use "NA"
 
+Formula typ1
+1 -> Save (formula will be triggered on change in same page with related affecting ID)
 
-FURTHER IMPROVEMENTS SUGGESTIONS FOR UTILITY
+Piyush
+SIT-63268
+
+ITR2 -> 19 Characters issues.
+1.    SIT-63336
+2.    SIT-62368
+3.    SIT-62492
+4.    SIT-63471
+
+ITR1 
+1.    SIT-61894
+2.    SIT-61877
+3.    SIT-61932
+4.    SIT-61890
+5.    SIT-62138
+
+ITR2 Piyush---------
+SIT-63615 -> See if Sl. no. Col[1] is possible
+SIT-63196 -> Header needs at the edit page also as per tester
+SIT-63249 -> See if it can be given in newline
+SIT-63823 -> See if the header can be added
+SIT-63604 -> See if the fields can be added (available in schema)
+SIT-64311 -> Check if note can be added
+SIT-64070 -> Check if totals can be added
+SIT-63607 -> Check if possible
+SIT-63554 -> Required from the template
+
+
+Sanket to verify from Arun Sir
+SIT-63760
+SIT-62739
+SIT-62060
+
+
+MSP02162998	ygnxYAdB1-	Ankit
+
+Improvements
 Dynamic error message -> That uses variable to show any desired value in the display
 Pop Up facility
 Field to be autopopulated and User Enterable at the same time (for limiting the value but not telling the exact limit)
-Multiple pattern to be given, Availability of string methods/int methods -> kind of provided
+Multiple patter to be given
 Customizable decimal limit
 Note/label easier addition within any object
+Availability of string methods/int methods
+
+
+if (ntr == 1) {
+	exem = 250000
+}
+
+2 apr and after -> Normal
+1 apr or before -> Senior
+
+33 lakh - 6 lakh = 27 lakh (15%) - 4 lakh
+
+6 
+15
+
+-----------Code Block for Aggregate Income------------------
+if((@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 1)|| (@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 3)){
+ xntr = 1
+}
+if (DateDiff(@PartA_GEN1.PersonalInfo.DOB,"1963-04-01")>0) {
+xnr = 1
+}else if (DateDiff(@PartA_GEN1.PersonalInfo.DOB,"1943-04-01")>0) {
+xsr =1
+}else {
+xssr=1
+}
+
+if (xntr == 1) {
+	Exem_TI = 250000
+} else {
+	if (status == "I" && (res == "RES" || res == "NOR") && xsr == 1) {
+		Exem_TI = 300000
+	} else {
+		if (status == "I" && (res == "RES" || res == "NOR") && xssr == 1) {
+			Exem_TI = 500000
+		} else {
+			if (status == "I" || status == "H") {
+				Exem_TI = 250000
+			} else {
+				Exem_TI = 0
+			}
+		}
+	}
+}
+----------
+
+-------------Code block for Tax at normal rates--------
+if (DateDiff(@PartA_GEN1.PersonalInfo.DOB,"1963-04-01")>0) {
+xnr = 1
+}else if (DateDiff(@PartA_GEN1.PersonalInfo.DOB,"1943-04-01")>0) {
+xsr =1
+}else {
+xssr=1
+}
+var txn = 0.0
+var status = @PartA_GEN1.PersonalInfo.Status
+var res = @PartA_GEN1.FilingStatus.ResidentialStatus
+var  aggregateInc = @PartB_TI.AggregateIncome
+
+if((@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 2)|| (@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 4)|| (@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 5)){
+txn = Max(0,  ( aggregateInc - 250000 )*5/100) + Max(0,  ( aggregateInc - 500000 )*15/100)+ Max(0,  ( aggregateInc - 1000000 )*10/100) 
+if ((status == "I") && (res == "RES" || res == "NOR")) {
+if (xssr == 1) {
+txn = Max(0,  ( aggregateInc - 500000 )*5/100) + Max(0,  ( aggregateInc -500000 )*15/100)+ Max(0,  ( aggregateInc - 1000000 )*10/100)
+}else if (xsr == 1) {
+txn = Max(0,  ( aggregateInc - 300000 )*5/100) + Max(0,  ( aggregateInc -500000 )*15/100)+ Max(0,  ( aggregateInc - 1000000 )*10/100)
+}
+}
+}
+
+if((@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 1)|| (@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 3)){
+ txn = Max(0,  ( aggregateInc - 250000 )*5/100) + Max(0,  ( aggregateInc - 500000 )*5/100) + Max(0,  ( aggregateInc - 750000 )*5/100) + Max(0,  ( aggregateInc - 1000000 )*5/100) + Max(0,  ( aggregateInc - 1250000 )*5/100) + Max(0,  ( aggregateInc - 1500000 )*5/100)
+}
+-----------------
+General Interpretation-----
+
+if((@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 1)|| (@PartA_GEN1.FilingStatus.OptingNewTaxRegime == 3)){
+ xntr = 1
+}
+if (DateDiff(@PartA_GEN1.PersonalInfo.DOB,"1963-04-01")>0) {
+xnr = 1
+}else if (DateDiff(@PartA_GEN1.PersonalInfo.DOB,"1943-04-01")>0) {
+xsr =1
+}else {
+xssr=1
+}
+
+if (xntr == 1) {
+	some code // 250000
+} else {
+	some code // 250000
+	if ((status == "I") && (res == "RES" || res == "NOR")) {
+		if (xssr == 1) {
+			some code // 500000
+		}else if (xsr == 1) {
+			some code // 300000
+		}
+	}
+}
+--------------------------
+
+{
+    "itrServiceFile":"D:/ADP/Infy_Dev/E-Filing-Sandbox/projects/ay/itr-shared/src/lib/service/NameITR",
+    "childComponents": "D:/ADP/Infy_Dev/E-Filing-Sandbox/projects/ay/nameitr/src/lib",
+    "itrServiceFileu":"D:/ADP/Infy_Dev/adp_offline_utility/frontend/projects/ay/itr-shared/src/lib/service/NameITR",
+    "childComponentsu": "D:/ADP/Infy_Dev/adp_offline_utility/frontend/projects/ay/nameitr/src/lib",
+    "environment":"sanity",
+    "assessmentYear":"2024"
+}
+
+for (let j = 0; j < els.length; j++) {
+										el = els[j]
+										if (tempObj[keys[i]] != undefined) {
+
+Validation
+CSS list of HTML pages -> List is made
+
+ITR5 the issue (two issues, one is of DOA, and one is of PaG (point 6) -> Done
+ITR2 -> AMTC merged by Rishabh?
+
+ITR7 DEF/PFA -> Done
+Lexium Update as explained by Ishita -> 
+
+
+npm config set registry
+http://nexus.incometax.gov.in:8081/repository/ITD_NPM_GROUP/
+
+
+npm config set registry
+https://registry.npmjs.org/
+
+---------------
+{
+    "itrServiceFile":"C:/Users/Ankit Mangal/Documents/goworkspace/src/TempITR4Validation/E-Filing-Sandbox/projects/itr_ay/itr-shared/src/lib/service/NameITR",
+    "itrPDFComps":"C:/Users/Ankit Mangal/Documents/goworkspace/src/TempITR4Validation/E-Filing-Sandbox/projects/itr_ay/itr-shared/src/lib/components/pdf-preview/nameitr-preview/",
+    "childComponents": "C:/Users/Ankit Mangal/Documents/goworkspace/src/TempITR4Validation/E-Filing-Sandbox/projects/itr_ay/nameitr/src/lib",
+    "itrServiceFileu":"NA",
+    "childComponentsu": "NA",
+    "itrPDFCompsu":"NA",
+    "environment":"sanity",
+    "assessmentYear":"2023",
+    "enPath":"C:/Users/Ankit Mangal/Documents/goworkspace/src/TempITR4Validation/E-Filing-Sandbox/projects/itr_ay/itr-online/src/assets/itr-online/i18n"
+}
+ 
+{
+    "itrServiceFile":"NA",
+    "itrPDFComps":"NA",
+    "childComponents": "NA",
+    "itrServiceFileu":"C:/Users/Ankit Mangal/Documents/goworkspace/src/TempITR4Validation/adp_offline_utility_v2/frontend/projects/itr_ay/itr-shared/src/lib/service/NameITR",
+    "childComponentsu": "C:/Users/Ankit Mangal/Documents/goworkspace/src/TempITR4Validation/adp_offline_utility_v2/frontend/projects/itr_ay/nameitr/src/lib",
+    "itrPDFCompsu":"C:/Users/Ankit Mangal/Documents/goworkspace/src/TempITR4Validation/adp_offline_utility_v2/frontend/projects/itr_ay/itr-shared/src/lib/components/pdf-preview/nameitr-preview/",
+    "environment":"dev",
+    "assessmentYear":"2021",
+    "enPath":"C:/Users/Ankit Mangal/Documents/goworkspace/src/TempITR4Validation/adp_offline_utility_v2/frontend/projects/itr_ay/itr-online/src/assets/itr-online/i18n"
+}
+ 
+Node versioin 14.12.0 > for ITD utility
+Latest Node 20.3.1 > for react
+nvm install 12.14.1
+nvm use 12.14.1
+the latest nvm 1.2.2 have some bug causing failure installing 14.12.0 > roll back to 1.1.12
+use nvm ls to get list of all the installed versions
+
 Warning message to be shown for the autopopulated field (can be merged with pop up facility)
 
 npm run-script start

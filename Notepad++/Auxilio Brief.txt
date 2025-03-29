@@ -1,0 +1,70 @@
+Auxilio -> ERM
+Purpose -> Supposed to help our company in day to day acitivities
+	-> Admin
+	-> Employee Info
+	
+Backend -> No SQL
+	1. Employee basic info
+		Contact Details
+		DOJ
+		DOB
+		Salary Details
+		Bank Details
+		Documents
+	2. Leave Details, 
+		Paid, Casual, Sick
+		WFH
+		Leave request system
+		->Task Details 
+			TL, Manager, Teammates, Task
+	3. Miscellaneous
+		Notice Board Detais
+		Bills
+		Holiday List
+		Leave Breakdown
+		
+Roles -> Admin (Super User) (Rishabh, Parv)
+		User (Manager, TL, Developer)
+As of now there is no onboarding
+HR module development is ongoing
+
+
+Nivedita's Role -> Managing functionalities
+Ankit's Role -> Task Management
+Development going from Jan 8th
+
+Sushant -> Technical Advisor, Temporary TL
+Suresh, Sushil -> (Frontend)
+Aleena, Suraj -> (Backend)
+Pushkar
+
+It is a relational database problem
+What if employee leaves the company?
+
+Useful Link
+https://www.figma.com/file/fbLNBZ81N2D062ESSYKJWh/Auxilio?type=design&node-id=0-1&mode=design&t=MO7ue07GEKn7EJG1-0
+--------------
+
+If a rule is already made, there is no need to update the key
+ITR3 -> error keys updated from the error key sheet
+
+ITR5 -> keys are already as per DE sheet
+
+common changes and the dropdown for formula
+
+6 Rules for ITR7 are pending
+to checkin the defpfa for all the ITRs
+reconciliation for ITR7 is to be done
+do a sample basis test for ITR6 and ITR7
+
+
+cttpm4960r08011997
+
+15560151774808011997
+
+ANKI0801
+
+Schedule OS c field not visible in NE page
+CFL grouped headere for business -> ?
+CFL extra field for UI purpose
+Held Unlisted shares

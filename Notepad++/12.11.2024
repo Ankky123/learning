@@ -1,0 +1,71 @@
+Builds can not be made, although branch can be pulled to check the regression issue in itr1-4 build
+Auxilio timelines to check
+	Database migration 
+	Finance Module
+Lexium -> To check the pushed code
+
+BRF issue for 234C
+
+122.177.223.149
+152.58.100.23
+
+CreateFiles
+
+64.227.179.38:8181
+64.227.179.38:8181/cpcenv/utilityra/
+
+ITR6 CY -> issue of date format
+map.go file to check
+
+lexium to submit today
+itr6 build one change to discuss with rishabh
+
+
+
+printWarningMessages
+printErrorMessages
+func(inps map[string]*bytes.Buffer, op datahandler.OutputPaths)
+func(inps map[string]*bytes.Buffer, op datahandler.OutputPaths)
+
+convertStringToEnumMap
+var enumCount int
+
+pathing issue in ITR2
+
+BRF 234C and 234B -> With Arun Sir for now
+Auxilio -> To check the timelines
+Lexium -> Download and check -> ITR3 not working
+Utility -> Verification alignment issue along with pdf for 2 and 3
+ETAs to share for prior AY -> ITR1 -> Wednesday, ITR2 -> Tuesday, 
+
+pop up issue to discuss with manisha for ITR5
+send a build for ITR5 23-24
+
+
+npm install -g create-react-app
+npx create-react-app my-app
+cd my-app
+npm start
+
+
+ http://nexus.incometax.gov.in:8081/repository/ITD_NPM_GROUP/
+
+npm config set registry https://registry.npmjs.org/
+
+17.01.2025 -> WFH
+
+Issue 1
+Tax Paid schedule, delete everything, then a tag is not coming > Not generating "TaxPaid.TaxesPaid.TotalTaxesPaid"
+	Total Taxes Paid
+
+from disclosure exempt income to total tax liability -> all are zero -> 
+
+Employee details on HR admin > Archit
+Overview > Edit -> Personal details, academic details, professional details -> Archit
+
+5. Need to check Rule Author as Bank Details PDF are not coming in ITR4. > Parent was changed by someone, w-100border-bottom-ap (class space missing)
+
+6. Prefill point of deductions to be added in other ITRs. > The array elementID was missing its prefill formula "Gross_Total_Income.Income_From_OS.OthersIncDtlsOthSrc"
+
+
+Testing Automation

@@ -1,0 +1,118 @@
+
+ITR1 and ITR4 issue of routing back to homepage
+ITR3 pincode issue
+ITR5 discussion dipika
+ITR5 jira tickets to check and discussion with Rishabh
+
+Common changes in ITR2 RA?
+
+ITR1-4 one build to go today for critical issues
+ITR5 build to be given to sanket for computation testing
+To start work on prior AY
+
+
+build for ITR5, Dipika formula, common changes to merge
+ITR 1 and ITR4 UR tickets
+
+ITR7 tickets
+ITR2 and ITR3 UR submission
+ITR6 JIRA tickets
+
+----------
+234B -> Updated return logic might not be implemented for refund
+
+ITR1 and ITR4 -> 234A, 234B, 234C 234F need to be updated for UR ITR1 and ITR4
+ITR1 and ITR4 -> one enhancement, e2e issue for json tags
+
+
+ITR2 -> CSV update -> later
+	 -> OS labels -> later
+	 -> OS 2f dropdown validation -> later
+
+
+Notes issue for ITRs
+
+DEFPFA
+ITR3----------------------------------
+327 -> JSON not as per mapping for negative (CYLA 2i is not greater than 0 -> ScheduleCYLA.TotalCurYr.TotHPlossCurYr
+753 -> Corrected
+873 -> JSON not negative
+			fmt.Println("\ninto the ITR3ScheduleBP.BusinessIncOthThanSpec.IncCredPL.TotExempIncPL")
+			fmt.Println("BP_5a", BP_5a)
+			fmt.Println("BP_5d", BP_5d)
+			fmt.Println("sum", sum)
+			fmt.Println("sumif", sumif)	
+		(
+		BP_5a 500000
+		BP_5d 500000
+		sum   545877
+		sumif 120322
+		(5a is > 0 so, for error to trigger, 5d (500000) should have been greater than sum+sumif (666199))
+
+ITR5 -> No issues
+ITR6----------------------------------
+47a -> @PartA_GEN1.FilingStatus.Section115BA != "115BAB" -> Note says applicability of the rule (applicability of the note) (JSON not negative) -> Corrected
+265 ->	(JSON is not negative)
+			fmt.Println("\nsum = 5+8-3-4-7-16 ")
+			fmt.Println("sum = RealizationTotalPeriod + RealizationPeriodDuringYear - WDVFirstDay - AdditionsGrThan180Days - AdditionsLessThan180Days - ExpdrOnTrforSaleAsset ")
+			fmt.Printf("sum = %v+%v-%v-%v-%v-%v\n", dataD.ITR.ITR6.ScheduleDOA.Building.Rate5.DepreciationDetail.RealizationTotalPeriod, dataD.ITR.ITR6.ScheduleDOA.Building.Rate5.DepreciationDetail.RealizationPeriodDuringYear, dataD.ITR.ITR6.ScheduleDOA.Building.Rate5.DepreciationDetail.WDVFirstDay, dataD.ITR.ITR6.ScheduleDOA.Building.Rate5.DepreciationDetail.AdditionsGrThan180Days, dataD.ITR.ITR6.ScheduleDOA.Building.Rate5.DepreciationDetail.AdditionsLessThan180Days, dataD.ITR.ITR6.ScheduleDOA.Building.Rate5.DepreciationDetail.ExpdrOnTrforSaleAsset)
+			fmt.Println("sum = ", sum)
+			fmt.Println("ScheduleDOA.Building.Rate5.DepreciationDetail.CapGainUs50", dataD.ITR.ITR6.ScheduleDOA.Building.Rate5.DepreciationDetail.CapGainUs50)
+	sum = 5+8-3-4-7-16
+	sum = RealizationTotalPeriod + RealizationPeriodDuringYear - WDVFirstDay - AdditionsGrThan180Days - AdditionsLessThan180Days - ExpdrOnTrforSaleAsset
+	sum = 500+200-10000-1000-100-0
+	sum =  -10400
+	computed value is -ve where as Capgainus50 is positive (400) (JSON is not negative)
+
+773 ->(JSON is not negative)
+			fmt.Println("\nsum = 5+8-3-4-7-16 ")
+			fmt.Println("sum = RealizationTotalPeriod + RealizationPeriodDuringYear - WDVFirstDay - AdditionsGrThan180Days - AdditionsLessThan180Days - ExpdrOnTrforSaleAsset ")
+			fmt.Printf("sum = %v+%v-%v-%v-%v-%v\n", dataD.ITR.ITR6.ScheduleDPM.PlantMachinery.Rate15.DepreciationDetail.RealizationTotalPeriod, dataD.ITR.ITR6.ScheduleDPM.PlantMachinery.Rate15.DepreciationDetail.RealizationPeriodDuringYear, dataD.ITR.ITR6.ScheduleDPM.PlantMachinery.Rate15.DepreciationDetail.WDVFirstDay, dataD.ITR.ITR6.ScheduleDPM.PlantMachinery.Rate15.DepreciationDetail.AdditionsGrThan180Days, dataD.ITR.ITR6.ScheduleDPM.PlantMachinery.Rate15.DepreciationDetail.AdditionsLessThan180Days, dataD.ITR.ITR6.ScheduleDPM.PlantMachinery.Rate15.DepreciationDetail.ExpdrOnTrforSaleAsset)
+			fmt.Println("sum = ", sum)
+			fmt.Println("ScheduleDPM.PlantMachinery.Rate15.DepreciationDetail.CapGainUs50", dataD.ITR.ITR6.ScheduleDPM.PlantMachinery.Rate15.DepreciationDetail.CapGainUs50)
+	sum = 5+8-3-4-7-16
+	sum = RealizationTotalPeriod + RealizationPeriodDuringYear - WDVFirstDay - AdditionsGrThan180Days - AdditionsLessThan180Days - ExpdrOnTrforSaleAsset
+	sum = 500+1000-10000-1000-2000-0
+	sum =  -11500
+	ScheduleDPM.PlantMachinery.Rate15.DepreciationDetail.CapGainUs50 -> 0
+	computed value is -ve where as Capgainus50 is positive (0) (JSON is not negative)
+	
+
+ITR7--------------------------------------
+
+Rule1 and Rule2 -> correction to make
+
+
+----------------------
+
+ITR2 UR interim build
+ITR3 issues JIRA 
+	DTAA to SI flow
+	P&L or NOB
+ITR
+
+
+
+
+ITR7 
+Dipika Changes
+B2 -> Aggregate Income (13)
+BTTI -> Tax at normal rates (1a)
+
+2 validations are to be discussed with Rubi about can't be implemented
+
+TR Update for UR de sheets are remaining
+
+PDF field type to be blanked for all the RAs
+ITR7 UR sheet remaining
+
+AY 21-22 branch to make
+AY 21-22 build to make and give for testing
+AY 22-23 issues to update
+ITR5 and ITR6 issues to resolve
+
+ITR6 
+Computation issues in mail
+Order change for CYLA
+
+amtc and matc issue

@@ -72,11 +72,14 @@ OS dropdowns needs checking
 
 What to do now in all ITRs
 DPM DOA to be implemented as per discussion with Madhu (in all ITRs) -> Should the issues in ITR5 be marked as fixed or enhancement and fixed?
-Tenant serial number to be implemented as per new implementation (in all ITRs)
-80G formulae to be implemented as per new implementation ( Considered ehnancement since the validation is given at wrong place) (in all ITRs)
+Tenant, Co-owner serial number to be implemented as per new implementation (in all ITRs)
+80G formulae to be implemented as per new implementation
+Half to be done after Table C reduction ( Considered ehnancement since the validation is given at wrong place) (in all ITRs)
 80G template for the all total to be added in all the ITRs in sync with ITR2
 Schedule FA Table B issue of Non-editing template
 Defaults to be removed
+234A, 234B approach change in all ITRs (Some changes that were done in ITR1 and ITR4 to be done in ITR2 and ITR3)
+
 
 ITR5
 DPMDOA some issue of not calculating value
@@ -112,3 +115,199 @@ SIT-67677
 SIT-67679
 
 Code change in GetUniqueEnum
+
+Compute Interest due (234A + 234B + 234C + 234F)
+Compute Remaining SAT
+Compute Remaing shortfall
+
+
+234A
+TC_TP0 -> 1030 	| 1030
+TC_TP1 -> 846 	| 847
+TC_TP2 -> 763 	| 763
+TC_TP3 -> 763 	| 763
+TC_TC5 -> 5341	| 5344
+TC_TP0,31-07-2023 Sys -> 0
+TC_TP0,DOB 02-04-1963 -> 1030
+
+234B
+TC_TP0 -> 11330| 11330
+TC_TP1 -> 9674 | 9679
+TC_TP2 -> 9093 | 9097
+TC_TP3 -> 8583 | 8589
+TC_TC5 -> 8193 | 8199
+TC_TP0,31-07-2023 Sys -> 4120
+TC_TP0,DOB 02-04-1963 -> 11330
+
+in all of these cases, 234C is 4591
+
+
+ITR7 to be discussed with Rishabh
+ITR7JSON(5) is having issue in reaching the internal validations page
+Issue in schedule I (2 issues)
+Details of Author table issue of mandatory and min in case of strings
+Schedule OA table issue
+
+
+There are some places in Schedule I in ITR7 where developer is expected to infer validation based on error message.
+
+Interest calculation is monthly, so is SAT payments reduction
+234A -> From when upto when -> From end of the due date upto the month of Filing the return (if revised return, then upto original date of filing)
+		How much (ShortFall at the end of July * 0.01)
+
+234B -> From when upto when (From start of April upto the month of Filing the return)
+		How much (ShortFall at the end of each month * 0.01)
+
+How are SAT payments offset -> (
+Reduced from the interestDue first and then from ShortFall, 
+Interest is calculated first upto the month of calculation and then SAT is reduced)
+
+--> System date is truncated to (0,10)
+itr1 Senior citizen, b and c -> 0
+itr4 Senior citizen -> b and c -> if No Business income then b and c will be 0
+itr2 Senior citizen, b and c -> 0
+
+MSP02162998	1234@Welcome	Ankit
+
+665917958
+
+ITR5 -> the pending point of table E
+DEF/PFA -> the pending rule due to the requirements
+prior AY -> the pending discussion points
+
+ITR7 DEF-PFA
+errmsg -> to be kept blank
+errcategorydesc to be populated with column G values (strike off to be removed)
+asPerITR -> 4+
+
+As per BA, the testing of DEF/PFA is not completed (only 2-3 rules were tested) -> it was put on hold from that time
+
+asPerITR, computed, variance should come serial wise
+New set of requirements are received for DEF/PFA from Rubi
+
+
+ "PartnerForeignCompFlg", "PercentageOfShareForeignComp", "TotIncFrmMemberOfAop".
+
+Compare Differences
+datatypes -> The one in the PDF are to be used
+formula -> to ignore
+josntag -> corrected in the UI_file
+ElementID errors -> corrected in the UI file
+
+
+Rule Numbers -> first merge the rule numbers from the sanitized file and then compare and then verify the rulenumbers
+ITR1 and ITR4 -> Rule Numbers to be received from Ishita (1 is received)
+Rest of the ITRs, to get the file from Nivedita (
+Plan -> Compare the Nivedita's sanitized authors and then get the updated RuleNumbers into the VFRA and then merge them also
+ITR2, ITR3 might need be rechecked
+Rule Numbers are found to have spaces, commented addErrors() are found
+
+Currently the new merged file has the latest PDF from Piyush and VF from Ankit/Ishita
+Apart 
+Lexium issue identified -> Validatons that are written on the schedule top row are to be written on the home page row
+
+
+Seed the latest Authors
+ITR1 and ITR4 -> 22-23 and 21-22 issues merging with prior AY (Need to know which RA they used for last sync)
+ITR2 Utility needs to be finished today by Piyush
+
+Pending Task ->
+ITR6 RA in Lexium 
+
+---------------
+Issues found while validation testing
+1. Canceling and reloading is causing "Loading" screen
+2. Warning for "Filing Section" is going on the bottom page
+3. Bank account is not getting deleted
+4. Table Serial number is starting from 0 instead of 1
+5. Annual Value of Outward Supplies as per the GST Return Filed, Exempt Income (Table header is visible even for 0 elements) -> if statement to be written
+
+Some schema issues found in the ITR4 (latest generated file)
+
+Todo
+ITR4 FieldType/ Classes to update as per the latest code -> Done
+make fresh pulls
+make sense of what functions are sent by Rishabh on teams -> Done
+get the latest ITR1/ITR4 234C build that is sent by Rishabh to Dipika tested by Sanket for computations -> Sent to Sanket -> Status??
+ITR2 and ITR3 meeting with BA for 2-3 jira tickets -> Done
+
+
+16.04.2024
+how to use RA V2
+Groups  -> elemendID, Parent1 to set
+			elementID -> ScheduleID.ScheduleID.Gr<SqID>
+			Parent1 -> elementID of Parent of this particular group
+
+FieldTypes/Classes -> updated fieldtypes are to be taken from ITR1 and ITR4 as reference
+		TextBox, Dropdown, RadioButton, TextArea
+		Table, TableText,..... (<td> <tr>)
+
+
+Directives ->
+work Todo -> In the prepared priorAY RAs, the updated V2 fieldtypes, classes, directives are to be put automatically
+
+schedule BTTI -> Label to be updated for ITR2 (to de made in sync with ITR3) -> Already done
+
+
+Release Notes
+One round of testing is completed for the build.
+In ITR3, Schedule P&L, DPM-DOA, CFL will reqiured discussion with BAs before complete implementation of the enhancements
+
+-------------
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baba's survey form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 id="title">Want to go heaven?</h1>
+  <p id="description">Enter the required info into the form check eligibility</p>
+
+  <form id="survey-form">
+    <fieldset>
+      <legend id="Select-gender">Personalia</legend>
+    <label id="name-label">Name: </label>
+    <input id="name" type="text" placeholder="Your name here" required>
+    <label id="email-label">Email: </label>
+    <input id="email" type="email" placeholder="enter your mail id" required>
+    <label id="number-label">Age: </label>
+    <input id="number" type="number" min="15" max="120" placeholder="enter your age">
+    <label id="reason-label">Reason: </label>
+    <select id=dropdown>
+      <option>Bored of this old world</option>
+      <option>Want to see what the famed heaven looked like</option>
+      <option>Missing that ever happy paradise that was home once</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>Select Gender</legend>
+      <label id="gender-male-label">Male </label>
+      <input id="gender-male" type="radio" name="gender">
+      <label id="gender-female-label">Female</label>
+      <input id="gender-female" type="radio" name="gender">
+      <label id="gender-other-label">Other</label>
+      <input id="gender-female" type="radio" name="gender">
+  </fieldset>
+  <fieldset>
+    <legend>Which of the following habits do you possess</legend>
+    <input id="dharana-option1" type="checkbox">
+    <label id="dharana-option1-label">Amrutvela</label>
+    <input id="dharana-option2" type="checkbox">
+    <label id="dharana-option2-label">Daily Murli class</label>
+    <input id="dharana-option3" type="checkbox">
+    <label id="dharana-option3-label">Pure food</label>
+    <input id="dharana-option4" type="checkbox">
+    <label id="dharana-option4-label">Royalty</label>
+  </fieldset>
+  <button id="button" type="submit">Submit</button>
+
+
+    </form>
+</body>
+
+</html>

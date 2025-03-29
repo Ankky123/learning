@@ -6,6 +6,7 @@ git pull origin rishabh
 git checkout -b ankit (make local branch)
 git push origin ankit (if ankit not available on remote, branch will be added)
 
+
 git config --global user.name "ankitmangal"
 git config --global user.email "ankitmangal@arundataprocessing.com"
 
@@ -21,6 +22,20 @@ git rm -r --cached <folder>
 
 Abort a git merge
 git merge --abort
+
+Bash commands
+start . (will open file explorer for pwd)
+ls
+ls Desktop/
+ls -a (will show hidden files also)
+pwd
+cd
+cd ..
+touch purple.txt (will make a file named purple.txt)
+mkdir (will make a folder)
+rm (delete a file)
+rm -rf folderName (will delete a folder)
+
 
 Set upstream
 git branch --set-upstream-to <remote-branch>
