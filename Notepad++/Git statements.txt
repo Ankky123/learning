@@ -98,4 +98,6 @@ git diff --staged or --cached > will list the changed between the staging area a
 "Show me what will be included in my commit if I run git commit right now"
 This also works with file name at the end
 git diff HEAD <fileName>
+git diff branch1..branch2
+
 
