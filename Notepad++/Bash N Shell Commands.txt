@@ -1,0 +1,12 @@
+Bash commands
+start . (will open file explorer for pwd)
+ls
+ls Desktop/
+ls -a (will show hidden files also)
+pwd
+cd
+cd ..
+touch purple.txt (will make a file named purple.txt)
+mkdir (will make a folder)
+rm (delete a file)
+rm -rf folderName (will delete a folder)

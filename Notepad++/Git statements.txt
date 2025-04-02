@@ -23,19 +23,6 @@ git rm -r --cached <folder>
 Abort a git merge
 git merge --abort
 
-Bash commands
-start . (will open file explorer for pwd)
-ls
-ls Desktop/
-ls -a (will show hidden files also)
-pwd
-cd
-cd ..
-touch purple.txt (will make a file named purple.txt)
-mkdir (will make a folder)
-rm (delete a file)
-rm -rf folderName (will delete a folder)
-
 
 Set upstream
 git branch --set-upstream-to <remote-branch>
@@ -59,6 +46,7 @@ git ls-files | xargs cat | wc -l
 To unstage a file from staging area (git add)
 git reset <file>
 
+To add the differences of a git patch file
 git diff and git apply file.patch
 
 git add -p (this will ask us to add hunkwise)
@@ -89,4 +77,7 @@ git config --global credential.useHttpPath true
 escape vim > :wq
 
 Ammending Commits
+git commit --amend
 
+Rename a branch (switch on to the branch you want to rename)
+git branch -m main 
