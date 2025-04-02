@@ -81,3 +81,21 @@ git commit --amend
 
 Rename a branch (switch on to the branch you want to rename)
 git branch -m newName 
+
+Branch > A branch is a reference that points to a commit
+HEAD is a reference that points to a branch
+
+Merge branches
+Switch or checkout the branch you want to merge the changes into (the receiving branch)
+Use the git merge command to merge the changes from a specific branch into the current branch
+
+git differences commands
+git diff > Compares Staging Area and Working Directory
+How to read git diff??
+without additional options, git diff lists all the changes in our working directory that are not staged for next commit.
+git diff HEAD > lists all changes in the working tree since your last commit (this will include the staged changes)
+git diff --staged or --cached > will list the changed between the staging area and our last commit
+"Show me what will be included in my commit if I run git commit right now"
+This also works with file name at the end
+git diff HEAD <fileName>
+
