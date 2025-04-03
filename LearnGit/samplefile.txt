@@ -1,2 +1,4 @@
 Adding the content in the sampleFile.txt, this will be added in the ammended commit
 Adding change 2
+
+Stash 1 change 

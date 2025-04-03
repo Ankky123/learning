@@ -100,4 +100,39 @@ This also works with file name at the end
 git diff HEAD <fileName>
 git diff branch1..branch2
 
+stashing
+git stash
+git stash pop 
+git stash apply > without removing the changes from the stash 
+stashing can be done multiple times
+git stash list > to view the list of stashes
+stashes are stacked on top of each other, they can be popped by their index number
+git stash drop stash@{2}
+
+the branch reference is a pointer to the last commit made on a particular branch
+HEAD is a pointer to the current branch reference
+
+git checkout commitid.... > this will put the HEAD in a detached state and HEAD will refer to the commit 
+to get back into the attached HEAD state, just switch to a branch 
+making a new branch in the detached head, git switch -c branchname, will make a new branch and HEAD will re-attach to the new branch 
+
+this can be useful in branching off from history
+
+git checkout HEAD~1 > this will point to the parent of HEAD 
+
+git switch - > this will take you to the last branch (when you are in detached HEAD)
+
+to discard changes, we can use checkout command 
+git checkout HEAD <fileName>
+git checkout -- <filename>
+or one can use 
+git restore <filename>
+git restore --source HEAD~1 file.txt > this will restore the file named file.txt to the state of HEAD's parent 
+git restore --staged filename.txt > this will remove the file from staging area
+
+git reset commit-hash > this will reset the repo back to the specific commit. the commits are gone, the changes are kept in the working directory though
+git reset --hard <commit> > if you want to undo the commit and the actual changes in your file, use this.
+
+
+
 
