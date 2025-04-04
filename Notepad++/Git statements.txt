@@ -1,11 +1,5 @@
 Git help
 git init
-git remote add origin https://github.com/Rishabh-ADP/Offline_Utility.git
-git pull origin	
-git pull origin rishabh
-git checkout -b ankit (make local branch)
-git push origin ankit (if ankit not available on remote, branch will be added)
-
 
 git config --global user.name "ankitmangal"
 git config --global user.email "ankitmangal@arundataprocessing.com"
@@ -57,19 +51,6 @@ git config --get remote.origin.url
 
 If you require full output, and you are on a network that can reach the remote repo where the origin resides:
 git remote show origin
-
-git remote -v
-# View existing remotes
-# origin  https://github.com/user/repo.git (fetch)
-# origin  https://github.com/user/repo.git (push)
-
-git remote set-url origin https://github.com/user/repo2.git
-# Change the 'origin' remote's URL
-
-git remote -v
-# Verify new remote URL
-# origin  https://github.com/user/repo2.git (fetch)
-# origin  https://github.com/user/repo2.git (push)
 
 
 git config --global credential.useHttpPath true
@@ -133,6 +114,48 @@ git restore --staged filename.txt > this will remove the file from staging area
 git reset commit-hash > this will reset the repo back to the specific commit. the commits are gone, the changes are kept in the working directory though
 git reset --hard <commit> > if you want to undo the commit and the actual changes in your file, use this.
 
+git revert <commit-hash> > this will revert the repo back to the specific commit. a new commit is created.
+
+reset v/s revert 
+if you want to reverse some commits that other people already have on their machines, you should use revert 
+if you want to revers some commits that you haven't shared with others, use reset 
 
 
+Github--------
 
+git remote add origin https://github.com/Rishabh-ADP/Offline_Utility.git
+git pull origin	
+git pull origin rishabh
+git checkout -b ankit (make local branch)
+git push origin ankit (if ankit not available on remote, branch will be added)
+
+git remote -v
+# View existing remotes
+# origin  https://github.com/user/repo.git (fetch)
+# origin  https://github.com/user/repo.git (push)
+
+git remote set-url origin https://github.com/user/repo2.git
+# Change the 'origin' remote's URL
+
+git remote -v
+# Verify new remote URL
+# origin  https://github.com/user/repo2.git (fetch)
+# origin  https://github.com/user/repo2.git (push)
+
+git remote rename <old> <new>
+git remote remove <name>
+
+git push <remote> <branch>
+git push origin master > this tells git to push up the master branch to our origin remote 
+
+git push remote <local-branch>:<remote-branch>
+Running git push -u origin master sets the upstream of the local master branch so that it tracks the master branch on the origin repo
+Once we have set the upstream for a branch, we can use the git push shorthand which will push our current branch to the upstream.
+
+flag -u is same as flag --set-upstream 
+
+git push -u origin dogs:cats > this will set the local dog branch upstream with origin branch cats 
+
+origin/master > references the state of the master branch on the remote repo named origin.
+
+git branch -r > to view the remote branches our local repo knows about

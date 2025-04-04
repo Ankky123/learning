@@ -1,0 +1,40 @@
+To discuss about
+The config.data file that is to be kept ITRwise or Ay wise
+R_MatcardNonEdit, R_Taxsummary field as raised by Nivedita
+Ishita to put RA files on drive after internal testing completion
+ITR2 CG sequencing to correct to Rishabh
+ITR4 unit test cases in case of blank string return, need to check by Rishabh
+
+UAN?? > PC is formatted, clean
+
+
+MOM 04.04.2025
+If personal mail id is repeated then flagging is to be used.
+*Reporting Manager > All employees > suggestive list instead of dropdown
+*Reporting HR > down the line of this HR > suggestive list instead of dropdown
+*Performance chart to be replaced with Leave balance in the overview page
+Department > populate some departments
+Invite mail > content to update
+Second time click the invite link after resetting the password should lead to the login page
+default font size > 14 (to change to 12), check if default font size is 16.
+The fields that cannot be changed by the user, should be shown as output instead of disabled input 
+	Reporting Manager, Reporting HR, Department, Designation
+save draft option -> to submit, all the fields must be filled. This will allow ease of life while filling
+reduce negative white space (reference of the details page when edited by an employee) > Add progress bar
+
+Since onboarding is now working, 
+Now one account for Parv can be made, he will then add other employees > One such trial can be done
+
+Team > what employees are under this employee (API should be available, so that Reporting HR can be identified)
+wherever image is being used, maintain the aspect ratio
+12 to 32 inch screens responsive should be covered while development of UI
+
+Leave balance Card in the overview page, font issue
+	Table can have more styling > Arindam
+Add Serial Number in the the EOD report (Daily Task table)
+EOD form > Close and Save buttons should be sticky towards bottom right
+EOD form > All the fields validation on change and on save
+
+
+
+
